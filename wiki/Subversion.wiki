@@ -7,9 +7,6 @@ Unter einer Versionsverwaltung versteht man ein System, welches typischerweise i
 Diese Seite soll dazu dienen, das Arbeiten mit Versionsverwaltungssystemen - im Detail mit dem System [http://subversion.tigris.org Subversion] - zu erlernen, welches auch bei [http://code.google.com Google Code] genutzt wird.
 
 
-= Details =
+== Arbeiten mit BlueJ ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Arbeiten mit Eclipse ==
