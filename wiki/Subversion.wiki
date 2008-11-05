@@ -1,8 +1,8 @@
-#summary One-sentence summary of this page.
+#Arbeiten mit Versions-Kontrolle (Subversion)
 
-= Introduction =
+= Einleitung =
 
-Add your content here.
+Unter einer Versionsverwaltung versteht man ein System, welches typischerweise in der Softwareentwicklung zur Versionierung und um den gemeinsamen Zugriff auf Quelltexte zu kontrollieren, eingesetzt wird (http://de.wikipedia.org/wiki/Versionsverwaltung).
 
 
 = Details =
