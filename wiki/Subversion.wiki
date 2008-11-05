@@ -4,7 +4,7 @@
 
 Unter einer Versionsverwaltung versteht man ein System, welches typischerweise in der Softwareentwicklung zur Versionierung und um den gemeinsamen Zugriff auf Quelltexte zu kontrollieren, eingesetzt wird ([http://de.wikipedia.org/wiki/Versionsverwaltung Wikipedia]).
 
-Diese Seite soll dazu dienen, das Arbeiten mit dem Versionsverwaltungssystem [http://subversion.tigris.org Subversion] zu erlernen, welches auch bei [http://code.google.com Google Code] genutzt wird.
+Diese Seite soll dazu dienen, das Arbeiten mit Versionsverwaltungssystemen - im Detail mit dem System [http://subversion.tigris.org Subversion] - zu erlernen, welches auch bei [http://code.google.com Google Code] genutzt wird.
 
 
 = Details =
