@@ -1,4 +1,4 @@
-#Arbeiten mit Versions-Kontrolle (Subversion)
+#summary Arbeiten mit Versions-Kontrolle (Subversion)
 
 = Einleitung =
 
