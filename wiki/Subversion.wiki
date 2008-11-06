@@ -12,4 +12,4 @@ Diese Seite soll dazu dienen, das Arbeiten mit Versionsverwaltungssystemen - im 
 
 == Arbeiten mit [http://www.eclipse.org Eclipse] ==
 
-[WikiSyntax Generics]
+[[Generics]]
