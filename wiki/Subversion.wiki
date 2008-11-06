@@ -30,13 +30,13 @@ http://pr-gse.googlecode.com/svn/wiki/images/Team-Settings.png
 Mit "Check connection" kann man feststellen, ob die Verbindung zum Server funktioniert.
 Mit "OK" kommt man zu dem Fenster zur Auswahl des Projekts:
 
-http://pr-gse.googlecode.com/svn/wiki/images/Select-Project-to-checkout
+http://pr-gse.googlecode.com/svn/wiki/images/Select-Project-to-checkout.png
 
-Hier kann man noch mit "show" alle verfügbaren Projekte sehen.
+Hier kann man noch mit "show" alle verfÃ¼gbaren Projekte sehen.
 
-Wählt man eines aus und klickt man auf "OK", dann muss man noch ein Verzeichnis auswählen, 
+WÃ¤hlt man eines aus und klickt man auf "OK", dann muss man noch ein Verzeichnis auswÃ¤hlen, 
 wo die Dateien lokal abgelegt werden sollen.
-Die darauffolgende Warnung bezüglich "Package Line Mismatches" kann man ruhig ignorieren.
+Die darauffolgende Warnung bezÃ¼glich "Package Line Mismatches" kann man ruhig ignorieren.
 (BlueJ macht da normalerweise alles richtig.)
 
 
