@@ -25,7 +25,7 @@ Später werden diese Einstellungen unter "Checkout" eingestellt.
 
 Für das Laden von Dateien von diesem Repository ist folgendes einzustellen:
 
-[images/Team-Settings-png]
+[WikiSyntax images/Team-Settings.png]
 
 
 
