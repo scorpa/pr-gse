@@ -1,3 +1,4 @@
+package person_v1;
 /**
  Musterlösung für Aufgabe 02
  @author Rudolf Radlbauer

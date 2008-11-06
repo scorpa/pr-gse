@@ -1,3 +1,4 @@
+package mitglied;
 /**
  * 
  * @author Rudolf Radlbauer
