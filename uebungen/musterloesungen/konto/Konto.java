@@ -1,3 +1,4 @@
+package konto;
 /**
  * Musterlösung für Konto-Klasse (prakt. Prüfung vom 1.10.2008)
  * 
