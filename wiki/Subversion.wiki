@@ -1,5 +1,4 @@
 #summary Arbeiten mit Versions-Kontrolle (Subversion)
-#labels Featured
 
 = Einleitung =
 
