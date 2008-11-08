@@ -1,3 +1,5 @@
 #summary Übungen.
 
 = Aufgaben =
+
+[http://pr-gse.googlecode.com/svn/wiki/uebungen]
