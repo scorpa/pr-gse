@@ -2,4 +2,5 @@
 
 = Aufgaben =
 
-[http://pr-gse.googlecode.com/svn/wiki/uebungen]
+== Erste Versuche mit ArrayList ==
+[http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2]
