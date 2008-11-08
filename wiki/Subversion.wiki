@@ -25,12 +25,12 @@ Später werden diese Einstellungen unter "Checkout" eingestellt.
 
 Für das Laden von Dateien von diesem Repository ist folgendes einzustellen:
 
-http://pr-gse.googlecode.com/svn/wiki/images/Team-Settings.png
+http://pr-gse.googlecode.com/svn/wiki/images/Subversion/Team-Settings.png
 
 Mit "Check connection" kann man feststellen, ob die Verbindung zum Server funktioniert.
 Mit "OK" kommt man zu dem Fenster zur Auswahl des Projekts:
 
-http://pr-gse.googlecode.com/svn/wiki/images/Select-Project-to-checkout.png
+http://pr-gse.googlecode.com/svn/wiki/images/Subversion/Select-Project-to-checkout.png
 
 Hier kann man noch mit "show" alle verfügbaren Projekte sehen.
 
