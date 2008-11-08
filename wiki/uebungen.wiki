@@ -4,7 +4,7 @@
 
 == Erste eigene Klasse ==
 
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe02_Person.doc Person] || [http://pr-gse.googlecode.com/source/browse/svn/trunc/uebungen/musterloesungen/person_v1 Musterlösung] ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe02_Person.doc Person] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/person_v1 Musterlösung] ||
 
 
 
