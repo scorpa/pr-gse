@@ -2,11 +2,11 @@
 
 = Aufgaben =
 
-Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung existiert, kann normalerweise das Projekt vom Repository-Pfad /svn/trunk/uebungen/musterloesungen unter dem angegebenen Projektnamen ausgechecked werden (siehe [Subversion Versionskontrolle]).
+Die Aufgaben sind meist als PDF-Datei vorhanden. Falls eine Musterlösung existiert, kann normalerweise das Projekt vom Repository-Pfad /svn/trunk/uebungen/musterloesungen unter dem angegebenen Projektnamen ausgechecked werden (siehe [Subversion Versionskontrolle]).
 
 == Erste eigene Klasse ==
 
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe02_Person.doc Person] || Projekt:  [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/person_v1 person_v1] ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe02_Person.pdf Person] || Projekt:  [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/person_v1 person_v1] ||
 
 
 
