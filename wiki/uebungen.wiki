@@ -1,8 +1,10 @@
-#summary Übungen.
+#summary Übungen - derzeit für Programmieren 1. Semester Tageskolleg
 
-= Aufgaben =
 
 Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung existiert, kann normalerweise das Projekt vom Repository-Pfad /svn/trunk/uebungen/musterloesungen unter dem angegebenen Projektnamen direkt mit BlueJ oder Eclipse ausgechecked werden (siehe [Subversion Versionskontrolle]).
+
+= 1. Semester Tageskolleg =
+
 
 == Erste eigene Klasse ==
 || *Aufgabe* || *Projekt* ||
