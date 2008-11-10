@@ -44,3 +44,18 @@ Die darauffolgende Warnung bezüglich "Package Line Mismatches" kann man ruhig i
 
 
 == Arbeiten mit [http://www.eclipse.org Eclipse] ==
+
+=== Installation des Eclipse-Plugins [http://subclipse.tigris.org/ Subclipse] ===
+
+Installationsanleitung unter [http://subclipse.tigris.org/install.html]
+
+Update-URLs:
+
+    Name: Subclipse 1.4.x (Eclipse 3.2+)
+    URL:  http://subclipse.tigris.org/update_1.4.x
+
+    Name: Subclipse 1.2.x (Eclipse 3.2+)
+    URL:  http://subclipse.tigris.org/update_1.2.x
+    
+    Name: Subclipse 1.0.x (Eclipse 3.0/3.1)
+    URL:  http://subclipse.tigris.org/update_1.0.x
