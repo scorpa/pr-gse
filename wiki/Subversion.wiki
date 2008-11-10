@@ -49,7 +49,7 @@ Die darauffolgende Warnung bezüglich "Package Line Mismatches" kann man ruhig i
 
 Installationsanleitung unter [http://subclipse.tigris.org/install.html]
 
-Update-URLs:
+Update-Site:
 
     Name: Subclipse 1.4.x (Eclipse 3.2+)
     URL:  http://subclipse.tigris.org/update_1.4.x
