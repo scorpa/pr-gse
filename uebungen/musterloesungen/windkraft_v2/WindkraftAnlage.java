@@ -15,6 +15,7 @@ public class WindkraftAnlage
     public void aufnehmen(Windrad w)
     {
         windraeder.add(w);
+        w.setAnlage(this);
     }
     
     public void entfernen(Windrad w)
