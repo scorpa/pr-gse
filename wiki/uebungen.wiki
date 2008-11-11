@@ -13,7 +13,6 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 
 == Assoziation mehrerer Klassen ==
 
-[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/Aufgabe12_Windkraft_V2.htm]
 
 == String-Operationen & !JavaDoc ==
 
