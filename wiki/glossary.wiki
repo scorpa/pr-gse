@@ -1,5 +1,7 @@
 #summary Glossary (Erklärung verschiedener Begriffe der Objektorientierten Programmierung)
 
+Siehe auch [http://de.wikipedia.org/wiki/Objektorientierte_Programmierung Wikipedia]
+
 ----
 <wiki:toc max_depth="3" />
 
