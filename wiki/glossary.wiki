@@ -14,7 +14,7 @@ Eine Klasse ist eine Beschreibung für Objekte eines bestimmten Typs. Jede Klass
 
 Klassen bestehen aus Attributen und Methoden. Betrachtet man eine Klasse als Datentyp, so ergibt sich der Wertebereich des Datentyps aus den Attributen und die möglichen Operation aus den Methoden der Klasse.
 
-Definiert wird die Klasse durch ihren [[summary#Quellcode]].
+Definiert wird die Klasse durch ihren Quellcode.
 
 
 ----
