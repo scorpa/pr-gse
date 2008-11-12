@@ -1,6 +1,9 @@
 #summary Glossary (Erklärung verschiedener Begriffe der Objektorientierten Programmierung)
 
 ----
+<wiki:toc max_depth="3" />
+
+----
 == Attribut ==
 In den Attributen eines Objekts sind dessen Daten gespeichert. Die Attribute werden in der Klasse definiert. In den einzelnen Instanzen enthalten sie dann konkrete Werte.
 ----
