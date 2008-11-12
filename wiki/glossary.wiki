@@ -2,10 +2,16 @@
 
 
 == Attribut ==
+In den Attributen eines Objekts sind dessen Daten gespeichert. Die Attribute werden in der Klasse definiert. In den einzelnen Instanzen enthalten sie dann konkrete Werte.
 ----
 
 == Instanz ==
 Als Instanz bezeichnet man ein konkretes Objekt einer Klasse.
+Eine Instanz wird mit dem Schlüsselwort {{{new}}} erzeugt; z.B.:
+
+{{{ new MeineKlasse(); }}}
+
+Die in der Klasse definierten Attribute enthalten in jeder Instanz konkrete Werte. An eine Instanz kann eine Nachricht gesandt (eine Methode aufgerufen) werden.
 
 ----
 
@@ -20,6 +26,8 @@ Definiert wird die Klasse durch ihren Quellcode.
 ----
 
 == Methode ==
+Die Methoden definieren die Operationen, welche ich mit einem Objekt einer Klasse durchführen kann. Häufig werden bei Methodenaufrufen die Werte von Attributen verändert.
+
 ----
 
 == Quellcode (= Source-Code) ==
