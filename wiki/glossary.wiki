@@ -1,4 +1,4 @@
-#summary Glossary
+#summary Glossary: Erklärung verschiedener Begriffe der Objektorientierten Programmierung
 
 
 == Attribut ==
