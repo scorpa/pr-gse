@@ -21,4 +21,4 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2] ||  [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/windkraft_v2 windkraft_v2] || hier gab es kürzlich eine kleine Änderung ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2] || ||
 || Millionenshow || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/millionenshow millionenshow] || vereinfachte Simulation der Millionenshow; nach dem Unterricht wurden noch ein paar kleine Änderungen eingebaut. ||
-|| [[http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek Bibliothek]] || || noch keine Musterlödung vorhanden ||
+|| [bibliothek] || || noch keine Musterlödung vorhanden ||
