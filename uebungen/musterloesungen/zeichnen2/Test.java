@@ -6,7 +6,7 @@ package zeichnen2;
 
 public class Test
 {
-    public static void main(String[] args)
+    public void test()
     {
         Punkt p1 = new Punkt(200,100);
         Punkt p2 = new Punkt(p1);
