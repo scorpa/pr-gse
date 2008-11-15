@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>320</w><h>190</h></coordinates><panel_attributes>Rechteck
+--
+linksOben : Punkt
+laenge : int
+breite : int
+--
+_&lt;&lt;constructor&gt;&gt; Rechteck(laenge : int, breite : int)_
+setLinksOben(p : Punkt)
+berechneUmfang() : int
+vertikalVerschieben(pix : int)
+horizontalVerschieben(pix : int)
+enthaelt(p : Punkt) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>420</x><y>40</y><w>270</w><h>150</h></coordinates><panel_attributes>Punkt
+--
+x : int
+y : int
+--
+_&lt;&lt;constructor&gt;&gt; Punkt(x : int, y : int)_
+_&lt;&lt;constructor&gt;&gt; Punkt(p : Punkt)_
+getX() : int
+getY() : int
+verschieben(horizontal : int, vertikal : int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>320</x><y>90</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>100;20;20;20</additional_attributes></element></umlet_diagram>

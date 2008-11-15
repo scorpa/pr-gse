@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>270</w><h>270</h></coordinates><panel_attributes>Datum
+--
+tag : int
+monat : int
+jahr : int
+--
+&lt;constructor&gt; Datum()
+&lt;constructor&gt; Datum(t : int, m : int, j : int)
+getTag() : int
+getMonat() : int
+getJahr() : int
+setTag(t : int)
+setMonat(m: int)
+setJahr(j : int)
+print()
+morgen()
+gestern()</panel_attributes><additional_attributes></additional_attributes></element></umlet_diagram>

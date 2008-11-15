@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>450</x><y>180</y><w>310</w><h>130</h></coordinates><panel_attributes>Platte
+--
+laenge : double
+breite : double
+--
+_&lt;&lt;constructor&gt;&gt; Platte(laenge : int, breite : int)_
+berechneGewicht() : double
+getLaenge() : double
+getBreite() : double
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>450</x><y>30</y><w>140</w><h>100</h></coordinates><panel_attributes>Kunde
+--
+name : String
+adresse : String
+--
+/// Konstruktor,/
+/// getter und setter /</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>370</x><y>200</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;80;20</additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>370</w><h>270</h></coordinates><panel_attributes>Container
+--
+platten : ArrayList&lt;Platte&gt;
+maximalesLadegewicht : double
+laenge : double
+breite : double
+kunde : Kunde
+lieferDatum : GregorianCalendar
+--
+_&lt;&lt;constructor&gt;&gt; Container(laenge : double, breite : double)_
+setMaximalesLadegewicht(gewicht : double)
+getMaximalesLadegewicht() : double
+aufladen(p : Platte) : boolean
+setKunde(k : Kunde)
+getKunde() : Kunde
+setLieferDatum(datum : GregorianCalendar)
+getLieferDatum() : GregorianCalendar
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>370</x><y>60</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>20;20;80;20</additional_attributes></element></umlet_diagram>
