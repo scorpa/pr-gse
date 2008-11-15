@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>330</w><h>170</h></coordinates><panel_attributes>BuchVerwaltung
+--
+buecher : ArrayList&lt;Buch&gt;
+--
+&lt;&lt;constructor&gt;&gt; BuchVerwaltung()
+anlegen(b : Buch)
+ausmustern(b : Buch)
+liste()
+listeEntlehnt()
+listeVerfuegbar()
+anzahlEntlehnt() : int</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>410</x><y>20</y><w>310</w><h>360</h></coordinates><panel_attributes>Buch
+--
+isbn : String
+autor : String
+titel : String
+verlag : String
+seiten : int
+kunde : String
+--
+&lt;&lt;constructor&gt;&gt; Buch(isbn : String)
+getIsbn() : String
+setAutor(autor : String)
+getAutor() : String
+setTitel(titel : String)
+getTitel() : String
+setVerlag(verlag : String)
+getVerlag() : String
+setSeiten(seiten : int)
+getSeiten() : int
+getKunde() : String
+entlehnen(kunde : String) : boolean
+retour()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>330</x><y>110</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;80;20</additional_attributes></element></umlet_diagram>
