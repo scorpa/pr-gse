@@ -41,6 +41,8 @@ public class Container
             gewicht += p.berechneGewicht();
         if (gewicht + platte.berechneGewicht() > maximalesLadegewicht)
             return false;
+        if (platte.getBreite() > this.breite || platte.getLaenge() > this.laenge)
+            return false;
         return platten.add(platte);
     }
 
