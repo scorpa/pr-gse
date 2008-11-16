@@ -94,7 +94,7 @@ public class Buch
     
     public boolean entlehnen(String kunde)
     {
-        if (kunde != null)
+        if (this.kunde != null)
         {
             System.out.println("Buch ist bereits entlehnt");
             return false;
