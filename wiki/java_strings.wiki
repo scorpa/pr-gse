@@ -23,7 +23,9 @@ In Wirklichkeit vergleicht man hier jedoch bloß, ob die beiden String-Referenze
 Um 2 Strings auf gleichheit zu überprüfen muss man die Methode {{{equals()}}} verwenden:
 {{{
 if (str1.equals(str2))
-...
+{
+    ...
+}
 }}}
 
 == Umwandeln von Strings ==
@@ -41,3 +43,5 @@ int ganzZahl = Integer.parseInt(str);
 float dezimalZahl = Float.parseFloat(str);
 double genaueDezimalZahl = Double.parseDouble(str);
 }}}
+
+== Wichtige String-Operationen ==
