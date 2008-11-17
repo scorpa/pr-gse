@@ -1,5 +1,10 @@
 #summary Arbeiten mit Strings in Java
 
+
+
+<wiki:toc max_depth="3" />
+
+
 == Besonderheiten der Klasse String ==
 
 Die Klasse String ist im Prinzip eine Klasse wie jede andere nur mit ein paar Besonderheiten:
@@ -44,4 +49,3 @@ float dezimalZahl = Float.parseFloat(str);
 double genaueDezimalZahl = Double.parseDouble(str);
 }}}
 
-== Wichtige String-Operationen ==
