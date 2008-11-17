@@ -1,0 +1,43 @@
+#summary Arbeiten mit Strings in Java
+
+== Besonderheiten der Klasse String ==
+
+Die Klasse String ist im Prinzip eine Klasse wie jede andere nur mit ein paar Besonderheiten:
+  * Eine Instanz kann nicht nur mit {{{new}}} angelegt werden sondern auch mit der Zuweisung eines String-Literals:
+   {{{String name = "Max ";}}}
+  * Zwei String-Objekte können mit {{{+}}} zusammengesetzt werden, und es entsteht daraus ein neues String-Objekt:
+   {{{String neuerName = name + "Müller";}}}
+
+== Vergleichen von Strings ==
+Man ist sehr leicht versucht, folgendermaßen zu vergleichen, ob 2 Strings gleich sind:
+{{{
+String str1 = ...;
+String str2 = ...;
+
+if (str1 == str2)
+{
+    ....
+}
+}}}
+In Wirklichkeit vergleicht man hier jedoch bloß, ob die beiden String-Referenzen {{{str1}}} und {{{str2}}} auf das identische String-Objekt zeigen (also ob es sich um lediglich 1 Objekt handelt).
+Um 2 Strings auf gleichheit zu überprüfen muss man die Methode {{{equals()}}} verwenden:
+{{{
+if (str1.equals(str2))
+...
+}}}
+
+== Umwandeln von Strings ==
+Will man aus einer Zahl (z.B. {{{int x}}}) einen String machen, dann gibt es den einfachen Trick:
+{{{
+String str = "" + x;
+}}}
+Etwas sauberer ist diese Lösung:
+{{{
+String str = String.valueOf(x);
+}}}
+Die Umwandlung eines Strings (z.B. {{{String str = "4711"}}}) in eine Zahl funktioniert folgendermaßen:
+{{{
+int ganzZahl = Integer.parseInt(str);
+float dezimalZahl = Float.parseFloat(str);
+double genaueDezimalZahl = Double.parseDouble(str);
+}}}
