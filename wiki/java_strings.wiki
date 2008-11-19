@@ -47,5 +47,12 @@ Die Umwandlung eines Strings (z.B. {{{String str = "4711"}}}) in eine Zahl funkt
 int ganzZahl = Integer.parseInt(str);
 float dezimalZahl = Float.parseFloat(str);
 double genaueDezimalZahl = Double.parseDouble(str);
+...
 }}}
 
+== Wichtige String-Methoden (siehe [http://java.sun.com/javase/6/docs/api/ API-Doc]) == 
+Um einen Teil eines Strings zu erhalten, kann man die Methode {{{substring(...)}}} verwenden. Diese gibt es in 2 Versionen:
+{{{
+    "Max und Moritz".substring(8)  // liefert "Moritz" (vom Index 8 bis zum Ende)
+    "Max und Moritz".substring(4, 7)  // liefert "und" (Beginn-Index, End-Index (exklusiv))
+}}}
