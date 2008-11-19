@@ -53,8 +53,35 @@ double genaueDezimalZahl = Double.parseDouble(str);
 == Wichtige String-Methoden  == 
 (siehe [http://java.sun.com/javase/6/docs/api/ API-Doc])
 
+=== Teilstrings ===
+
 Um einen Teil eines Strings zu erhalten, kann man die Methode {{{substring(...)}}} verwenden. Diese gibt es in 2 Versionen:
 {{{
     "Max und Moritz".substring(8)  // liefert "Moritz" (vom Index 8 bis zum Ende)
     "Max und Moritz".substring(4, 7)  // liefert "und" (Beginn-Index, End-Index (exklusiv))
+}}}
+
+=== Einzelnes Zeichen extrahieren ===
+
+Das Zeichen an einer bestimmten Stelle (Index) im String bekommt man mit der Methode {{{charAt(...)}}}. Das erste Zeichen hat den Index 0:
+{{{
+    "Max und Moritz".charAt(0)  // liefert 'M'
+}}}
+
+=== Suche von Zeichen(folgen) im String ===
+
+Dafür verwendet man eine der 4 Versionen der Methode {{{indexOf()}}}:
+{{{
+    "ein Hund und eine Katze".indexOf('u')  // liefert 5 (Position des 'u' in "Hund")
+    "ein Hund und eine Katze".indexOf('u', 6)  // liefert 9 (Position des 'u' in "und" - die Suche wird erst ab Index 6 begonnen)
+    "ein Hund und eine Katze".indexOf('s')  // liefert -1 ('s' kommt nicht vor)
+
+    "ein Hund und eine Katze".indexOf("und")  // liefert 5 (Startposition von "und" in "Hund")
+    "ein Hund und eine Katze".indexOf("und", 6)  // liefert 9 (Startosition von "und" - die Suche wird erst ab Index 6 begonnen)
+
+}}}
+
+Soll die Suche von hinten begonnen werden, dann verwendet man die Methode {{{lastIndexOf()}}} in ihren verschiedenen Varianten:
+{{{
+    "ein Hund und eine Katze".lastIndexOf("und")  // liefert 9 (Startosition von "und")
 }}}
