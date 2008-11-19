@@ -13,8 +13,6 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe04_Zaehler.doc Zähler] || (im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit])   || Zähler wie im Amt ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue01_konto.doc Konto] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/konto konto]   || Prüfungsaufgabe ||
 
-
-
 == Assoziation mehrerer Klassen ==
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe06_Uhrzeit.doc Uhrzeit] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit] || Digitale Zeitanzeige (einzelne Klasse oder mit Zähler-Klasse) ||
@@ -39,3 +37,4 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2] || ||
 || Millionenshow || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/millionenshow millionenshow] || vereinfachte Simulation der Millionenshow; nach dem Unterricht wurden noch ein paar kleine Änderungen eingebaut. ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/bibliothek bibliothek] || Bücherverwaltung ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uni uni] || Prüfungsaufgabe ||
