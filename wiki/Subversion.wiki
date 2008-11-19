@@ -9,6 +9,8 @@ Diese Seite soll dazu dienen, das Arbeiten mit Versionsverwaltungssystemen - im 
 
 == Arbeiten mit [http://www.bluej.org BlueJ] ==
 
+_(ab Version 2.5.0)_
+
 Im BlueJ gibt es unter
  * Tools - Preferences 
 einen Karteireiter mit der Überschrift "Miscellaneous".
