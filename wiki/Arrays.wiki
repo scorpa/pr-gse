@@ -1,0 +1,53 @@
+#summary Arrays in Java
+
+== Was ist ein Array ==
+
+Im folgenden Code-Fragment werden 3 Variablen deklariert (es wird hier angenommen, dass es eine Klasse {{{Buch}}} gibt):
+
+{{{
+int i;
+double d;
+Buch b;
+}}}
+
+Es wird hierbei Speicherplatz für eine ganze Zahl (Variable {{{i}}}), für eine Gleitkommazahl (Variable {{{d}}}) und für eine Referenz (Variable {{{b}}}) angelegt, wobei die Refernz auf eine {{{Buch}}}-Instanz verweisen kann.
+
+In jeder dieser 3 Variablen passt aber immer nur exakt 1 Zahl bzw. Referenz.
+Es gibt jedoch oft Situationen, in denen man z.B. 100 Zahlen bzw. Referenzen abspeichern will, beispielsweise in einem Programm zur Buchverwaltung.
+Für diesen Zweck gibt es Arrays.
+
+In Java ist ein Array ein *Objekt*, in dem Beispielsweise 100 Zahlen, Refernzen, etc. abgespeichert werden können. Auf dieses Objekt wird wiederum (so wie auf alle anderen Objekte auch) über eine Referenz zugegriffen:
+
+{{{
+int[] zahlen;
+}}}
+deklariert beispielsweise die Variable {{{zahlen}}}, in welche eine Referenz auf ein Array passt. 
+
+Um das Array dann wirklich zu anzulegen, muss wie bei jedem anderen Objekt auch der Operator {{{new}}} verwendet werden:
+
+{{{
+zahlen = new int[100];
+}}}
+
+Nun verweist die Referenz {{{zahlen}}} auf ein Array-Objekt, welches Platz für 100 Ganzzahlen bietet:
+
+http://pr-gse.googlecode.com/svn/wiki/images/Arrays/array_objekt.png
+
+Ganz gleich ist der Sachverhalt bei einem Array von Referenzen:
+
+Der Code
+
+{{{
+Buch[] buecher = new Buch[100];
+}}}
+
+erzeugt ein Array-Objekt, in dem 100 Referenzen auf Buch-Instanzen Platz haben:
+
+http://pr-gse.googlecode.com/svn/wiki/images/Arrays/referenz-array.png
+
+
+Vorerst haben alle 100 Referenzen den Wert {{{null}}}, da nur das Array-Objekt angelegt wurde, jedoch keine einzige {{{Buch}}}-Instanz. Die {{{Buch}}}-Instanzen, auf welche die einzelnen Referenzen im Array verweisen sollen, müssen selbst erst mit {{{new}}} erzeugt werden.
+
+----
+
+== Zugriff auf einzelne Elemente des Arrays ==
