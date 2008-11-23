@@ -3,7 +3,7 @@
 
 ----
 
-== Was ist ein Array ==
+== Was ist ein Array? ==
 
 Im folgenden Code-Fragment werden 3 Variablen deklariert (es wird hier angenommen, dass es eine Klasse {{{Buch}}} gibt):
 
@@ -13,20 +13,21 @@ double d;
 Buch b;
 }}}
 
-Es wird hierbei Speicherplatz für eine ganze Zahl (Variable {{{i}}}), für eine Gleitkommazahl (Variable {{{d}}}) und für eine Referenz (Variable {{{b}}}) angelegt, wobei die Refernz auf eine {{{Buch}}}-Instanz verweisen kann.
+Es wird hierbei Speicherplatz für eine ganze Zahl (Variable {{{i}}}), für eine Gleitkommazahl (Variable {{{d}}}) und für eine Referenz (Variable {{{b}}}) angelegt, wobei die Referenz auf eine {{{Buch}}}-Instanz verweisen kann.
 
-In jeder dieser 3 Variablen passt aber immer nur exakt 1 Zahl bzw. Referenz.
-Es gibt jedoch oft Situationen, in denen man z.B. 100 Zahlen bzw. Referenzen abspeichern will, beispielsweise in einem Programm zur Buchverwaltung.
+In jeder dieser 3 Variablen passt aber immer nur exakt 1 Zahl bzw. 1 Referenz.
+Es gibt jedoch oft Situationen, in denen man z.B. 100 Zahlen bzw. 100 Referenzen abspeichern will, beispielsweise in einer Klasse, welche Messwerte bzw. Bücher verwaltet.
 Für diesen Zweck gibt es Arrays.
 
-In Java ist ein Array ein *Objekt*, in dem Beispielsweise 100 Zahlen, Refernzen, etc. abgespeichert werden können. Auf dieses Objekt wird wiederum (so wie auf alle anderen Objekte auch) über eine Referenz zugegriffen:
+In Java ist ein Array ein *Objekt*, in dem beispielsweise 100 Zahlen, Refernzen, etc. abgespeichert werden können. Auf dieses Objekt wird wiederum (so wie auf alle anderen Objekte auch) über eine Referenz zugegriffen:
 
 {{{
 int[] zahlen;
 }}}
-deklariert beispielsweise die Variable {{{zahlen}}}, in welche eine Referenz auf ein Array passt. 
+deklariert die Variable {{{zahlen}}}, in welche eine Referenz auf ein Array passt. 
 
-Um das Array dann wirklich zu anzulegen, muss wie bei jedem anderen Objekt auch der Operator {{{new}}} verwendet werden:
+Vorerst hat die Variable {{{zahlen}}} den Wert {{{null}}}.
+Um das Array dann wirklich anzulegen, muss wie bei jedem anderen Objekt auch der Operator {{{new}}} verwendet werden:
 
 {{{
 zahlen = new int[100];
@@ -44,7 +45,7 @@ Der Code
 Buch[] buecher = new Buch[100];
 }}}
 
-erzeugt ein Array-Objekt, in dem 100 Referenzen auf Buch-Instanzen Platz haben:
+erzeugt ein Array-Objekt, in dem 100 Referenzen auf {{{Buch}}}-Instanzen Platz haben:
 
 http://pr-gse.googlecode.com/svn/wiki/images/Arrays/referenz-array.png
 
