@@ -86,7 +86,7 @@ buecher[2].setTitel("Schneewittchen");
 ...
 }}}
 
-Folgendermaßen könnte ich z.B. die Titel aller im Array vorhandenen Buecher ausgeben:
+Folgendermaßen könnte ich z.B. die Titel aller im Array vorhandenen Referenzen auf {{{Buch}}}-Instanzen ausgeben:
 {{{
 for (int inx = 0; inx < buecher.length; inx++)
 {
@@ -97,6 +97,6 @@ for (int inx = 0; inx < buecher.length; inx++)
 }
 }}}
 
-Hier wurde das Attribut {{{length}}} verwendet, welches in jedem Array-Objekt existiert. Es gibt an, aus wieviele Elementen das Array besteht.
+Hier wurde das Attribut {{{length}}} verwendet, welches in jedem Array-Objekt existiert. Es gibt an, aus wievielen Elementen das Array besteht.
 
 In diesem Beispiel wird für jedes Element abgefragt, ob es auch wirklich auf eine {{{Buch}}}-Instanz verweist. Diese Möglichkeit habe ich bei Arrays von Referenzen, da bei Referenzen der spezielle (_nicht_)-Wert {{{null}}} existiert. Bei Arrays von Zahlen habe ich diese Möglichkeit normalerweise nicht, da es keinen solchen speziellen (_nicht_)-Wert gibt (die Zahl 0 ist auch eine ganz normale Zahl). Ich muss mir dann auf eine andere Art und Weise merken, welche Zahlen in meinem Array eine Bedeutung haben, und welche rein zufällig im Array sind, weil einfach in jeder {{{int}}}-Variable eine Zahl steht (und daher auch in jedem Element eines {{{int}}}-Arrays).
