@@ -1,5 +1,8 @@
 #summary Arrays in Java
 
+
+----
+
 == Was ist ein Array ==
 
 Im folgenden Code-Fragment werden 3 Variablen deklariert (es wird hier angenommen, dass es eine Klasse {{{Buch}}} gibt):
@@ -48,6 +51,51 @@ http://pr-gse.googlecode.com/svn/wiki/images/Arrays/referenz-array.png
 
 Vorerst haben alle 100 Referenzen den Wert {{{null}}}, da nur das Array-Objekt angelegt wurde, jedoch keine einzige {{{Buch}}}-Instanz. Die {{{Buch}}}-Instanzen, auf welche die einzelnen Referenzen im Array verweisen sollen, müssen selbst erst mit {{{new}}} erzeugt werden.
 
+Die Größe eines Arrays ist unveränderlich. Sollte ich also mit dem Platz nicht auskommen, so gibt es keine Möglichkeit, das Array zu vergrößern, sondern ich kann nur ein neues Array anlegen.
+
 ----
 
 == Zugriff auf einzelne Elemente des Arrays ==
+
+Die einzelnen Elemente eines Arrays verhalten sich ihrerseits wieder wie einfache Variablen des entsprechenden Datentyps. Die einzelnen Elemente werden mit dem sogenannten Index durchnummeriert. Dieser beginnt bei 0:
+
+http://pr-gse.googlecode.com/svn/wiki/images/Arrays/index.png
+
+_(Dabei ist bei Ganzzahl-Arrays wichtig, den Index eines Elements nicht mit seinem Wert zu verwechseln.)_
+
+Auf ein einzelnes Element eines Arrays greift man zu, indem man hinter den Namen der Referenz auf das Array eckige Klammern stellt, welche den Index des Elements beinhalten:
+{{{
+zahlen[3]
+}}}
+ist somit in unserem Beispiel das 4. Element (wir beginnen bei 0 zu nummerieren!) im dargestellten Ganzzahlen-Array. Dieses ist als ganz normale {{{int}}}-Variable zu betrachten (genauso wie die durch {{{int i;}}} deklarierte Variable {{{i}}} - ich kann deshalb mit {{{zahlen[3]}}} alles das machen, was ich auch mit {{{i}}} machen kann; z.B.:
+
+{{{
+zahlen[3] = 5;
+zahlen[3] += 3;
+i = zahlen[3];
+...
+}}}
+
+Hier wird zuerst einmal der Wert des Elements mit dem Index 3 auf 5 gesetzt, dann wird er um 3 erhöht, dann wird der Wert des Elements mit dem Index 3 an die Variable {{{i}}} zugewiesen.
+
+Genau das gleiche gilt auch für ein Array von Referenzen: Alles was ich mit der Variable {{{Buch b;}}} machen kann, kann ich auch mit einem beliebigen Element des oben dargestellten Arrays {{{buecher}}} machen; z.B.:
+{{{
+buecher[2] = new Buch();
+buecher[2].setTitel("Schneewittchen");
+...
+}}}
+
+Folgendermaßen könnte ich z.B. die Titel aller im Array vorhandenen Buecher ausgeben:
+{{{
+for (int inx = 0; inx < buecher.length; inx++)
+{
+    if (buecher[inx] != null)   // überprüfe, ob die Referenz auf ein Buch verweist
+    {
+        System.out.println(buecher[inx].getTitel();
+    }
+}
+}}}
+
+Hier wurde das Attribut {{{length}}} verwendet, welches in jedem Array-Objekt existiert. Es gibt an, aus wieviele Elementen das Array besteht.
+
+In diesem Beispiel wird für jedes Element abgefragt, ob es auch wirklich auf eine {{{Buch}}}-Instanz verweist. Diese Möglichkeit habe ich bei Arrays von Referenzen, da bei Referenzen der spezielle (_nicht_)-Wert {{{null}}} existiert. Bei Arrays von Zahlen habe ich diese Möglichkeit normalerweise nicht, da es keinen solchen speziellen (_nicht_)-Wert gibt (die Zahl 0 ist auch eine ganz normale Zahl). Ich muss mir dann auf eine andere Art und Weise merken, welche Zahlen in meinem Array eine Bedeutung haben, und welche rein zufällig im Array sind, weil einfach in jeder {{{int}}}-Variable eine Zahl steht (und daher auch in jedem Element eines {{{int}}}-Arrays).
