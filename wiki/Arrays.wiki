@@ -100,3 +100,58 @@ for (int inx = 0; inx < buecher.length; inx++)
 Hier wurde das Attribut {{{length}}} verwendet, welches in jedem Array-Objekt existiert. Es gibt an, aus wievielen Elementen das Array besteht.
 
 In diesem Beispiel wird für jedes Element abgefragt, ob es auch wirklich auf eine {{{Buch}}}-Instanz verweist. Diese Möglichkeit habe ich bei Arrays von Referenzen, da bei Referenzen der spezielle (_nicht_)-Wert {{{null}}} existiert. Bei Arrays von Zahlen habe ich diese Möglichkeit normalerweise nicht, da es keinen solchen speziellen (_nicht_)-Wert gibt (die Zahl 0 ist auch eine ganz normale Zahl). Ich muss mir dann auf eine andere Art und Weise merken, welche Zahlen in meinem Array eine Bedeutung haben, und welche rein zufällig im Array sind, weil einfach in jeder {{{int}}}-Variable eine Zahl steht (und daher auch in jedem Element eines {{{int}}}-Arrays).
+
+----
+
+== Beispiele ==
+
+=== Buchverwaltung ===
+
+_der komplette Quellcode befindet sich im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arrays/bibliothek bibliothek]_
+
+Ein typisches Beispiel für die Verwendung eines Arrays ist eine Verwaltung irgendwelcher Objekte (in diesem Beispiel {{{Buch}}}-Instanzen).
+In der Praxis würde man allerdings so eine Verwaltungsklasse eher mit einer {{{Collection}}} (z.B. {{{ArrayList}}}) realisieren. Aber es ist auch durchaus möglich, ein Array dafür zu verwenden.
+
+Als Attribute in der Verwaltungsklasse benötigt man ein Array für die verwalteten Objekte und sinnvollerweise auch eine Veriable, in der man sich merkt, wieviele Objekte gerade verwaltet werden:
+{{{
+public class BuchVerwaltung
+{
+    private Buch[] buecher;  // das Array mit den Büchern
+    private int anzahl;      // hier wird die aktuelle Anzahl der Bücher gespeichert.
+    
+}}}
+
+Im Konstruktor wird das Array instanziiert und das Attribut {{{anzahl}}} auf 0 gesetzt (in einer neuen Buchverwaltung befinden sich noch keine Bücher). Hier kann man leicht den entscheidenden Nachteil der Verwendung eines Arrays (gegenüber einer {{{Collection}}}) erkennen: Ich muss mich am Anfang festlegen, wie viele Bücher ich maximal verwalten kann.
+
+{{{
+    public BuchVerwaltung(int kapazitaet)   // wieviele Bücher kann ich maximal speichern
+    {
+        // Array anlegen (hier wird keine Buch-Instanz angelegt!!!)
+        buecher = new Buch[kapazitaet];
+        anzahl = 0;   // zu Beginn ist noch kein Buch in der Verwaltung
+    }
+}}}
+
+Mit der folgenden Methode wird eine Buch-Referenz in die Verwaltung aufgenommen. Am Beginn muss überprüft werden, ob überhaupt noch Platz für ein weiteres Buch ist (oder ob das Array schon voll belegt ist). Wenn das Array vom Index 0 weg befüllt wird, ist der nächste freie Index immer gleich dem Wert im Attribut {{{anzahl}}}. Beispiel: wenn in meiner Verwaltung 5 Bücher sind, sind die Elemente 0 bis 4 belegt, das nächste freie Element ist jenes mit dem Index 5. 
+
+Wenn die neue Buch-Referenz aufgenommen ist, sollte man nicht darauf vergessen, die Anzahl zu erhöhen.
+
+{{{
+    public boolean aufnehmen(Buch b)
+    {
+        boolean aufgenommen = false;
+        
+        if (b != null)  // wir wollen keine null-Referenz aufnehmen
+        {
+            // ist überhaupt noch Platz für ein Buch?
+            if (anzahl < buecher.length)
+            {
+                // beim Index anzahl ist der nächste freie Platz
+                buecher[anzahl] = b;
+                anzahl++;
+                aufgenommen = true;
+            }
+        }
+        return aufgenommen;
+    }
+}}}
