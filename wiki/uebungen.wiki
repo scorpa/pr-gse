@@ -38,3 +38,14 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 || Millionenshow || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/millionenshow millionenshow] || vereinfachte Simulation der Millionenshow; nach dem Unterricht wurden noch ein paar kleine Änderungen eingebaut. ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/bibliothek bibliothek] || Bücherverwaltung ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uni uni] || Prüfungsaufgabe ||
+
+== Aufgaben mit Arrays ==
+
+Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch mit einem Array gelöst werden.
+
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+||  !Windkraft_V2 ||   || noch keine Musterlösung ||
+|| !Transport_V2 ||  ||  noch keine Musterlösung ||
+|| Millionenshow ||  || vereinfachte Simulation der Millionenshow; noch keine Musterlösung ||
+||  Bibliothek ||  || noch keine Musterlösung||
+||  Uni ||  ||  noch keine Musterlösung ||
