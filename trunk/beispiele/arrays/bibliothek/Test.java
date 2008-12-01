@@ -2,7 +2,7 @@ package bibliothek;
 
 public class Test
 {
-    public static void main(String[] args)
+    public static void test()
     {
         BuchVerwaltung verwaltung = new BuchVerwaltung(8);
 
