@@ -155,3 +155,27 @@ Wenn die neue Buch-Referenz aufgenommen ist, sollte man nicht darauf vergessen, 
         return aufgenommen;
     }
 }}}
+
+Soll eine Buch-Referenz entfernt werden, so ist die "Lücke" zu schließen. (Die Bücher sollen lückenlos von vorn weg im Array angeordnet sein.) Im folgenden Beispiel wird die Referenz beim Index 1 ("Schneewittchen") gelöscht, die Referenzen in den folgenden Feldern müssen daher um 1 nach oben verschoben werden: 
+
+ 
+
+http://pr-gse.googlecode.com/svn/wiki/images/Arrays/loeschen.png
+
+{{{
+    public boolean ausmustern(int index)
+    {
+        boolean ausgemustert = false;
+        if (index >= 0 && index < anzahl)
+        {
+            for (int i = index; i < anzahl - 1; i++)
+                buecher[i] = buecher[i+1];
+            anzahl--;
+            ausgemustert = true;
+        }
+        
+        
+        return ausgemustert;
+    }
+    
+}}}
