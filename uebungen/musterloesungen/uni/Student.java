@@ -48,11 +48,16 @@ public class Student
     
     public void add(Pruefung p)
     {
-        // eine Prüfung darf nur zu einem Fach abgelegt werden, welches inskribiert wurde
-        if (faecher.contains(p.getFach()))
-            pruefungen.add(p);
+        if (p != null)
+        {
+            // eine Prüfung darf nur zu einem Fach abgelegt werden, welches inskribiert wurde
+            if (faecher.contains(p.getFach()))
+                pruefungen.add(p);
+            else
+                System.out.println("dieses Fach wurde nicht inskribiert");
+        }
         else
-            System.out.println("dieses Fach wurde nicht inskribiert");
+            System.out.println("null-Referenz nicht erlaubt");
     }
     
     public int berechneNote(String fach)
