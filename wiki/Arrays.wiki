@@ -1,5 +1,6 @@
 #summary Arrays in Java
 
+<wiki:toc max_depth="3" />
 
 ----
 
@@ -105,7 +106,7 @@ In diesem Beispiel wird für jedes Element abgefragt, ob es auch wirklich auf ei
 
 == Beispiele ==
 
-=== Eigene Implementierung von ArrayList ===
+=== Eigene Implementierung von !ArrayList ===
 
 [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arrays/liste Code vom Unterricht]
 
