@@ -120,9 +120,9 @@ public class BuchVerwaltung
     public int mehrSeiten(int seiten)
     {
         int n = 0;
-        for (Buch b : buecher)
+        for (int i = 0; i < anzahl; i++)
         {
-            if (b.getSeiten() > seiten)
+            if (buecher[i].getSeiten() > seiten)
                 n++;
         }
         return n;
@@ -132,8 +132,8 @@ public class BuchVerwaltung
     public void liste()
     {
         System.out.println("============ Bücherliste =====================");
-        for (Buch b : buecher)
-            System.out.println(b.getAutor() + "\t" + b.getTitel() + "\t" + b.getSeiten() + " Seiten");
+        for (int i = 0; i < anzahl; i++)
+            System.out.println(buecher[i].getAutor() + "\t" + buecher[i].getTitel() + "\t" + buecher[i].getSeiten() + " Seiten");
     }
     
 

@@ -38,7 +38,7 @@ public class Test
         
 
         verwaltung.liste();
-        verwaltung.aufnehmen(b2);
+        verwaltung.ausmustern(b2);
         verwaltung.liste();
         System.out.println(verwaltung.mehrSeiten(10) + " Bücher mit mehr als 10 Seiten");
         
