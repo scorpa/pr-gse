@@ -1,0 +1,12 @@
+#summary relevante WEB-Links.
+
+<wiki:toc max_depth="3" />
+
+== Resourcen, Software, ... ==
+ * [http://java.sun.com Die Java-Seite von SUN]
+ * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u11-oth-JPR@CDS-CDS_Developer Java Development Kit]
+
+== Online-Bücher ==
+
+ * Christian Ullenboom: [http://openbook.galileocomputing.de/javainsel7/ Java ist auch eine Insel]
+ * Guido Krüger, Thomas Stark: [http://www.javabuch.de/ Handbuch der Java-Programmierung]
