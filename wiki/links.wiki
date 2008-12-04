@@ -18,7 +18,8 @@
  * Guido Krüger, Thomas Stark: [http://www.javabuch.de/ Handbuch der Java-Programmierung]
  * David J. Barnes, Michael Kolling: [http://ebook-downloads.blogspot.com/2007/11/objects-first-with-java-practical.html Objects First With Java] (eine alte Version)
  * David J. Barnes, Michael Kolling: [http://www.bluej.org/objects-first/evaluation.html Objects First With Java] (Kapitel 1, 2, 7; aktuelle Version)
-
+ * [http://de.wikibooks.org/wiki/Java WIKI-Buch]
+ * [http://www-user.uni-bremen.de/~wboeck/java/javabook/javabo.htm Java-Buch der Uni Bremen]
 
 == Sonstige Dokumentation ==
  * [http://java.sun.com/javase/6/docs/api/ API-Doc V6]
@@ -27,3 +28,4 @@
 
 == Aktuelles ==
  * [http://www.javaworld.com JavaWorld]
+ * [http://java.net]
