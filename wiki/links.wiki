@@ -4,9 +4,26 @@
 
 == Resourcen, Software, ... ==
  * [http://java.sun.com Die Java-Seite von SUN]
- * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u11-oth-JPR@CDS-CDS_Developer Java Development Kit]
+ * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u11-oth-JPR@CDS-CDS_Developer Java Development Kit V6.11]
+ * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u10-docs-oth-JPR@CDS-CDS_Developer API-Doc V6 zum Download]
+ * [http://www.bluej.org/ BlueJ]
+ * [http://www.bluej.org/objects-first/resources/projects.zip Objects First Beispielprojekte]
+ * [http://www.eclipse.org Eclipse]
+ * [http://www.netbeans.org NetBeans]
+
+
 
 == Online-Bücher ==
-
  * Christian Ullenboom: [http://openbook.galileocomputing.de/javainsel7/ Java ist auch eine Insel]
  * Guido Krüger, Thomas Stark: [http://www.javabuch.de/ Handbuch der Java-Programmierung]
+ * David J. Barnes, Michael Kolling: [http://ebook-downloads.blogspot.com/2007/11/objects-first-with-java-practical.html Objects First With Java] (eine alte Version)
+ * David J. Barnes, Michael Kolling: [http://www.bluej.org/objects-first/evaluation.html Objects First With Java] (Kapitel 1, 2, 7; aktuelle Version)
+
+
+== Sonstige Dokumentation ==
+ * [http://java.sun.com/javase/6/docs/api/ API-Doc V6]
+ * [http://java.sun.com/docs/books/jls/index.html Java Language Specification]
+ * [http://java.sun.com/docs/books/tutorial/index.html Java Tutorial]
+
+== Aktuelles ==
+ * [http://www.javaworld.com JavaWorld]
