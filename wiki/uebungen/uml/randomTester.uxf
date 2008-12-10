@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>490</w><h>340</h></coordinates><panel_attributes>RandomTester
+--
+rnd : Random
+zahlen : int[]
+--
+&lt;&lt;constructor&gt;&gt; RandomTester(groesse : int)
+test(anzahl : int)
+reset()
+ausgeben()
+mittelwert() : double
+stdAbweichung() : double
+histogramm()
+
+</panel_attributes><additional_attributes></additional_attributes></element></umlet_diagram>
