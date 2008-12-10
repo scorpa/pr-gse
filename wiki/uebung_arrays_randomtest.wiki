@@ -1,0 +1,11 @@
+#summary Übung: Test für Zufallszahlengenerator
+
+= Test für Zufallszahlen-Generator =
+
+Erstellen Sie eine Klasse {{{RandomTest}}}, mit der der Zufallszahlengenerator {{{Random}}} getestet werden kann:
+
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/randomTester.jpg
+
+
+Das Attribut {{{random}}} enthält eine Referenz auf eine Instanz von {{{Random}}}.
+Das Attribut {{{zahlen}}} ist eine Referenz auf ein {{{int}}}-Array, in welchem gespeichert wird, wie oft welche Zahl in einer Serie von Zufallszahlen vorkommt.
