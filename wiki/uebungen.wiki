@@ -1,5 +1,6 @@
 #summary Übungen - derzeit für Programmieren 1. Semester Tageskolleg
 
+<wiki:toc max_depth="3" />
 
 Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung existiert, kann normalerweise das Projekt vom Repository-Pfad /svn/trunk/uebungen/musterloesungen unter dem angegebenen Projektnamen direkt mit BlueJ oder Eclipse ausgechecked werden (siehe [Subversion Versionskontrolle]).
 
@@ -49,3 +50,4 @@ Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch m
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow; noch keine Musterlösung ||
 ||  Bibliothek ||  || noch keine Musterlösung||
 ||  Uni ||  ||  noch keine Musterlösung ||
+||  !RandomTest || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  derzeit Code vom Unterricht; erweiterte Aufgabenstellung folgt ||
