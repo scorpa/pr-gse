@@ -51,3 +51,12 @@ Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch m
 ||  Bibliothek ||  || noch keine Musterlösung||
 ||  Uni ||  ||  noch keine Musterlösung ||
 ||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit nur Code aus dem Unterricht. ||
+
+
+Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
+
+|| 07_Array_Simple || Uebung_002.pdf ||
+|| 08_Array_Medium || Uebing_002.pdf <br/> Uebung_003.pdf <br/> Uebung_003.pdf ||
+|| 09_Array_Hard|| Uebing_002.pdf <br/> Uebung_003.pdf <br/> Uebung_003.pdf ||
+
+Eine ganz amüsante Übung befindet sich in 10_Gefangen.
