@@ -4,8 +4,9 @@
 
 Erstellen Sie eine Klasse {{{RandomTest}}}, mit der der Zufallszahlengenerator {{{Random}}} getestet werden kann:
 
+<p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/randomTester.jpg
-
+</p>
 
  * Das Attribut {{{random}}} enthält eine Referenz auf eine Instanz von {{{Random}}}.
  * Das Attribut {{{zahlen}}} ist eine Referenz auf ein {{{int}}}-Array, in welchem gespeichert wird, wie oft welche Zahl in einer Serie von Zufallszahlen vorkommt.
