@@ -26,13 +26,13 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 
 
 
-== String-Operationen & !JavaDoc ==
+== String-Operationen & JavaDoc ==
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe08_String.doc Mitglied] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/mitglied mitglied] ||  ||
 
 
 
-== Aufgaben mit !ArrayList ==
+== Aufgaben mit ArrayList ==
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2] ||  [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/windkraft_v2 windkraft_v2] || hier gab es kürzlich eine kleine Änderung ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2] || ||
