@@ -50,4 +50,4 @@ Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch m
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow; noch keine Musterlösung ||
 ||  Bibliothek ||  || noch keine Musterlösung||
 ||  Uni ||  ||  noch keine Musterlösung ||
-||  !RandomTest || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  derzeit Code vom Unterricht; erweiterte Aufgabenstellung folgt ||
+||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit nur Code aus dem Unterricht. ||
