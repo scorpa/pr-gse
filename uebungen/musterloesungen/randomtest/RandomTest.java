@@ -50,7 +50,7 @@ public class RandomTest
     }
     
     
-    public double berechneDurchschnitt()
+    public double mittelwert()
     {
         double summe = 0;
         for (int i = 0; i < zahlen.length; i++)
@@ -58,7 +58,10 @@ public class RandomTest
         return summe / zahlen.length;
     }
     
-    // noch nicht fertig
+    /**
+     * gibt eine Referenz auf ein Histogramm der Zähltabelle zurück
+     * @return Histogramm als Array
+     */
     public int[] histogramm()
     {
         int[] histo = new int[maximum()+1];
