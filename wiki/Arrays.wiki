@@ -2,6 +2,10 @@
 
 <wiki:toc max_depth="3" />
 
+Literatur:
+
+[http://openbook.galileocomputing.de/javainsel7/javainsel_03_009.htm#mj84ea4c087f52181d51b2462a54c220ca Java ist auch eine Insel]
+
 ----
 
 == Was ist ein Array? ==
