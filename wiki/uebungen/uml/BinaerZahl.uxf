@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>200</w><h>210</h></coordinates><panel_attributes>BinaerZahl
+--
+bits : boolean
+--
+BinaerZahl(groesse : int)
+setString(binaer : String)
+getString() : String
+setInt(zahl : int)
+getInt() : int
+setHex(hex : String)
+getHex() : String
+add(z : BinaerZahl)
+bitSumme() : int
+
+
+</panel_attributes><additional_attributes></additional_attributes></element></umlet_diagram>
