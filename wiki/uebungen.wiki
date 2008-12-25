@@ -11,7 +11,7 @@ Die Aufgaben sind meist als WORD-Datei vorhanden. Falls eine Musterlösung exist
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe02_Person.doc Person] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe05_Datum.doc Datum] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/datum datum] || Datums-Klasse, die es schon etwas in sich hat ||
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe04_Zaehler.doc Zähler] || (im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit])   || Zähler wie im Amt ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe04_Zaehler.doc Zähler] || (im Projekt [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit])   || Zähler wie im Amt ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue01_konto.doc Konto] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/konto konto]   || Prüfungsaufgabe ||
 
 == Assoziation mehrerer Klassen ==
