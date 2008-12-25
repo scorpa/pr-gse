@@ -57,8 +57,8 @@ Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch m
 Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
 
 || 07_Array_Simple || Uebung_002.pdf ||
-|| 08_Array_Medium || Uebung_002.pdf <br/> Uebung_003.pdf <br/> Uebung_003.pdf ||
-|| 09_Array_Hard|| Uebung_002.pdf <br/> Uebung_003.pdf <br/> Uebung_003.pdf ||
+|| 08_Array_Medium || Uebung_002.pdf <br/> Uebung_003.pdf ||
+|| 09_Array_Hard|| Uebung_002.pdf <br/> Uebung_003.pdf ||
 
 [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/lotto Musterlösung für 08_Array_Medium Uebung_001.pdf (Lotto)]
 
