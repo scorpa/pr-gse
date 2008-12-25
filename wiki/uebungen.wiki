@@ -52,7 +52,7 @@ Alle Aufgaben aus dem vorigen Abschnitt (Aufgaben mit !ArrayList) können auch m
 ||  Uni ||  ||  noch keine Musterlösung ||
 ||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit nur Code aus dem Unterricht. ||
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue04_Sensor.doc Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
-||  [uebungen_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
+||  [uebung_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
 
 
 Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
