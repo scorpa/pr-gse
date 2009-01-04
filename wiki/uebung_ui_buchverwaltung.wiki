@@ -1,4 +1,4 @@
-#summary Buchverwaltung mit Benutzerinteraktion
+#summary Übung: Buchverwaltung mit Benutzerinteraktion
 
 = Buchverwaltung mit Benutzerinteraktion =
 
