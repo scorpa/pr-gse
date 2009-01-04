@@ -4,7 +4,7 @@
 
 Erstellen Sie eine zeilenorientierte Benutzerschnittstelle für die [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothek Buchverwaltung] von der Übung [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek].
 
-Für das Einlesen von Informationen vom Benutzer verwenden Sie die Klasse http://pr-gse.googlecode.com/svn/trunk/vorgabe/io/Input.java Input.java]
+Für das Einlesen von Informationen vom Benutzer verwenden Sie die Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/eingabe/Input.java Input.java]
 ----
 
 === Hauptmenü ===
