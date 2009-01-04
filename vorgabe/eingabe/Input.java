@@ -26,7 +26,7 @@ public class Input
     {
         String str = null;
         
-        System.out.println(prompt);
+        System.out.print(prompt);
         try
         {
             str = reader.readLine();
