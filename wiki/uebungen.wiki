@@ -68,3 +68,6 @@ Eine ganz amüsante Übung befindet sich in 10_Gefangen.
 
 == Übungen mit Benutzerinteraktion ==
 Für diese Übungen wird die folgende Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/eingabe/Input.java Input] benötigt.
+
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+||  [uebung_io_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
