@@ -16,14 +16,16 @@ public class UI
             System.out.println("4) beenden");
             
             option = Input.readInt("Ihre Auswahl: ");
+            
+            if (option == 1)
+                neuerContainer();
+            else if (option == 2)
+                auflisten();
+            else if (option == 3)
+                neuePlatte();
         }
         
-        if (option == 1)
-            neuerContainer();
-        else if (option == 2)
-            auflisten();
-        else if (option == 3)
-            neuePlatte();
+
     }
     
     private void neuerContainer()
