@@ -72,4 +72,4 @@ Für diese Übungen wird die folgende Klasse [http://pr-gse.googlecode.com/svn/t
 Ein Beispiel befindet sich [http://pr-gse.googlecode.com/svn/trunk/beispiele/ui/transport hier]
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
+||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothekUI bibliothekUI] ||  zeilenorientierte Benutzerschnittstelle für [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothek Bücherverwaltung] ||
