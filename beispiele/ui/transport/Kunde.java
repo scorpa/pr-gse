@@ -38,7 +38,10 @@ public class Kunde
     }
     
     
-    
+    public void ausgeben()
+    {
+        System.out.println(name + ", " + adresse);
+    }
     
 
 }
