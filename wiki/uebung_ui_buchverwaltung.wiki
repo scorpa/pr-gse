@@ -58,4 +58,4 @@ Der Benutzer wird nach der ISBN-Nummer gefragt. Wird das Buch nicht in der Verwa
 
 Beim Entlehnen muss geprüft werden, ob das Buch verfügbar ist. Falls ja, wird der Benutzer nach dem Kundennamen gefragt. Dieser wird dann eingetragen.
 
-Beim Zurückgeben wird der aktuell eingetragene Kunde ausgegeben.
+Beim Zurückgeben wird der aktuell eingetragene Kunde ausgegeben, dann wird das Buch zurückgegeben.
