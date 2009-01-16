@@ -73,6 +73,6 @@ Ein Beispiel befindet sich [http://pr-gse.googlecode.com/svn/trunk/beispiele/ui/
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 ||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||=======
-||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothekUI bibliothekUI] ||  zeilenorientierte Benutzerschnittstelle für [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothek Bücherverwaltung] ||>>>>>>> .r219
+||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||
+||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothekUI bibliothekUI] ||  zeilenorientierte Benutzerschnittstelle für [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothek Bücherverwaltung] ||
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||
