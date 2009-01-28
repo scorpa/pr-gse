@@ -1,0 +1,6 @@
+#summary Vererbung
+
+=== Literatur ===
+[http://openbook.galileocomputing.de/javainsel7/javainsel_06_007.htm#mjcdc0fb3601215318f116491f7552c8a6 Java ist auch eine Insel]
+
+=== Übungen ===
