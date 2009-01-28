@@ -1,1 +1,11 @@
 #summary Objekte und Klassen
+
+
+= Objekte und Klassen =
+
+=== Literatur ===
+[http://www.u-helmich.de/inf/BlueJ/kurs11/seiten/seite01.html Ulrich Helmich: Einführung BlueJ]
+
+[http://www.u-helmich.de/inf/BlueJ/kurs11/seiten/seite02.html Ulrich Helmich: Erste eigene Klasse]
+
+[http://www.mathematik.uni-marburg.de/~gumm/Skripten/PraktischeInformatikI/Kapitel03.pdf Folien H.P. Gumm]
