@@ -8,3 +8,4 @@
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_vererbung_lohnverrechnung Lohnverrechnung] || || ||
+|| [uebung_vererbung_transport_v3 Transport_V3] || || ||
