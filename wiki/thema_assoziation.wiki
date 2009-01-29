@@ -1,0 +1,7 @@
+#summary Assoziation mehrerer Klassen
+
+= Assoziation mehrerer Klassen =
+
+=== Literatur ===
+
+=== Übungen ===
