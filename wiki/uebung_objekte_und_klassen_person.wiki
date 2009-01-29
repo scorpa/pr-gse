@@ -1,4 +1,4 @@
-#summary Person
+#summary Übung: Person
 
 = Person =
 
