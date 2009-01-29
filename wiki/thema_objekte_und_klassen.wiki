@@ -9,3 +9,7 @@
 [http://www.u-helmich.de/inf/BlueJ/kurs11/seiten/seite02.html Ulrich Helmich: Erste eigene Klasse]
 
 [http://www.mathematik.uni-marburg.de/~gumm/Skripten/PraktischeInformatikI/Kapitel03.pdf Folien H.P. Gumm]
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [uebung_objekte_und_klassen_person Person] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
