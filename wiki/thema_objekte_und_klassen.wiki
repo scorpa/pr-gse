@@ -13,3 +13,4 @@
 === Übungen ===
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_objekte_und_klassen_person Person] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
+|| [uebung_objekte_und_klassen_datum Datum] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/datum datum] || Datums-Klasse, die es schon etwas in sich hat ||
