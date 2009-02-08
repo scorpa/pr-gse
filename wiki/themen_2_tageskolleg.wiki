@@ -4,6 +4,3 @@
 
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
-
-[thema_subversion Versionskontrolle (mit Subversion)] -
-praktische Anleitung
