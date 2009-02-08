@@ -4,3 +4,15 @@
 
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
+
+[thema_abstraktion Abstraktion]
+
+
+[thema_exceptions Exceptions] -
+Fehlerbehandlung in Java (und anderen objektorientierten Sprachen)
+
+[thema_streams Dateianbindung und Streams] -
+Wir wollen unsere Daten auch speichern
+
+[thema_swing GUI] -
+Graphische Oberfläche
