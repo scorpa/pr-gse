@@ -1,0 +1,24 @@
+#summary 1. Semester Tageskolleg
+
+
+= 1. Semester Tageskolleg =
+
+[thema_objekte_und_klassen Objekte und Klassen] -
+Einstieg in die Objektorientierte Programmierung
+
+[thema_assoziation Assoziation mehrerer Klassen] -
+Objekte interagieren
+
+[thema_string_operationen_javadoc String-Operationen und Java-Doc] -
+Arbeiten mit Text, Dokumentation
+
+[thema_arraylist ArrayList] -
+Verwalten vieler Objekte gleichen Typs
+
+[thema_arrays Arrays]
+
+[thema_benutzerinteraktion Benutzerinteraktion (Eingabe)] -
+Zeilenorientierte Benutzerschnittstelle
+
+[thema_eclipse Eclipse] -
+(Entwicklungsumgebung)
