@@ -2,6 +2,9 @@
 
 = 2. Semester Tageskolleg =
 
+_(hier befinden sich noch einige tote Links)_
+
+
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
 
