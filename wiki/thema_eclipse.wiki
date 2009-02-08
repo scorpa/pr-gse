@@ -1,5 +1,7 @@
 #summary Arbeiten mit Eclipse
 
+= Arbeiten mit Eclipse =
+
 Für das Arbeiten mit [http://www.eclipse.org Eclipse] gibt es genügend gute Tutorials online - z.B.:
 
 http://www.del-net.com/download/Eclipse31Einfuehrung.pdf
