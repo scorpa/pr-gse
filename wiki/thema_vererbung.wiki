@@ -7,6 +7,7 @@
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_vererbung_schulverwaltung Schulverwaltung] || || ||
 || [uebung_vererbung_lohnverrechnung Lohnverrechnung] || || ||
 
 <wiki:comment>
