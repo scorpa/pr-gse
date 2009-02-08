@@ -1,0 +1,13 @@
+#summary Benutzer-Interaktion (Eingabe)
+
+= Benutzer-Interaktion (Eingabe) = 
+
+
+== Übungen  ==
+Für diese Übungen wird die folgende Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/eingabe/Input.java Input] benötigt. 
+
+Ein Beispiel befindet sich [http://pr-gse.googlecode.com/svn/trunk/beispiele/ui/transport hier]
+
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
+||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||
