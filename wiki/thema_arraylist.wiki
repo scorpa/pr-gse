@@ -1,0 +1,13 @@
+#summary ArrayList
+
+= ArrayList = 
+
+=== Literatur ===
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2] ||  [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/windkraft_v2 windkraft_v2] || hier gab es kürzlich eine kleine Änderung ||
+|| [uebung_arraylist_transport_v2 Transport_V2] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2] || ||
+|| Millionenshow || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/millionenshow millionenshow] || vereinfachte Simulation der Millionenshow; nach dem Unterricht wurden noch ein paar kleine Änderungen eingebaut. ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/bibliothek bibliothek] || Bücherverwaltung ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/uni uni] || Prüfungsaufgabe ||
