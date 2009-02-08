@@ -2,28 +2,28 @@
 
 = Themenübersicht =
 
-[thema_objekte_und_klassen Objekte und Klassen]
+[thema_objekte_und_klassen Objekte und Klassen] -
 Einstieg in die Objektorientierte Programmierung
 
-[thema_assoziation Assoziation mehrerer Klassen]
+[thema_assoziation Assoziation mehrerer Klassen] -
 Objekte interagieren
 
-[thema_string_operationen_javadoc String-Operationen und Java-Doc]
+[thema_string_operationen_javadoc String-Operationen und Java-Doc] -
 Arbeiten mit Text, Dokumentation
 
-[thema_arraylist ArrayList]
+[thema_arraylist ArrayList] -
 Verwalten vieler Objekte gleichen Typs
 
 [thema_arrays Arrays]
 
-[thema_benutzerinteraktion Benutzerinteraktion (Eingabe)]
+[thema_benutzerinteraktion Benutzerinteraktion (Eingabe)] -
 Zeilenorientierte Benutzerschnittstelle
 
-[thema_eclipse Eclipse]
+[thema_eclipse Eclipse] -
 (Entwicklungsumgebung)
 
-[thema_vererbung Vererbung]
+[thema_vererbung Vererbung] -
 Super- und Sub-Typen
 
-[thema_subversion Versionskontrolle (mit Subversion)]
+[thema_subversion Versionskontrolle (mit Subversion)] -
 praktische Anleitung
