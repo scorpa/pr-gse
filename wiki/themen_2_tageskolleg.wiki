@@ -2,8 +2,11 @@
 
 = 2. Semester Tageskolleg =
 
-_(hier befinden sich noch einige tote Links)_
+_(Baustelle)_
 
+
+[thema_klassendesign Klassendesign] - 
+guter und schlechter Code
 
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
