@@ -34,7 +34,7 @@ Durch das Konzept der Datenkapselung wird in der objektorientierten Programmieru
 
 Als Kohäsion bezeichnet man es, wenn sich eine Komponente oder auch nur eine Methode auf eine einzige Funktionalität beschränkt.
 
-Wie könnte man die Kohäsion der Methode `aufladen(...)` aus der Klasse [pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/transport_v2/Container.java  `Container`] ([pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2]) erhöhen?
+Wie könnte man die Kohäsion der Methode `aufladen(...)` aus der Klasse [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/transport_v2/Container.java  `Container`] ([http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/transport_v2 transport_v2]) erhöhen?
 
 {{{
     public boolean aufladen(Platte platte)
@@ -49,4 +49,3 @@ Wie könnte man die Kohäsion der Methode `aufladen(...)` aus der Klasse [pr-gse
         return platten.add(platte);
     }
 }}}
-
