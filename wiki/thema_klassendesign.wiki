@@ -49,3 +49,32 @@ Wie könnte man die Kohäsion der Methode `aufladen(...)` aus der Klasse [http:/
         return platten.add(platte);
     }
 }}}
+
+Die Methode `aufladen(...)` erfüllt eigentlich 2 Funktionalitäten:
+  * es wird das Ladegewicht berechnent
+  * es wird geprüft, ob die Platte noch aufgeladen werden darf, und sie wird gegebenenfalls in die Liste eingefügt.
+(Eventuell könnte man auch das Prüfen und das eigentliche Einfügen noch aufteilen, was aber dann doch etwas übertrieben wäre, weil das Einfügen ohnehin nur aus 1 Anweisung besteht.) 
+
+Spendiert man für die Berechnung des Ladegewichts eine eigene Methode, dann kann diese möglicherweise auch wo anders verwendet werden.
+Der Code sieht dann folgendermaßen aus:
+
+{{{
+    public double berechneLadeGewicht()
+    {
+        double gewicht = 0;
+        for (Platte p : platten)
+            gewicht += p.berechneGewicht();
+        return gewicht;
+    }
+    
+    public boolean aufladen(Platte platte)
+    {
+        double gewicht = berechneLadeGewicht();
+        if (gewicht + platte.berechneGewicht() > maximalesLadegewicht)
+            return false;
+        if (platte.getBreite() > this.breite || platte.getLaenge() > this.laenge)
+            return false;
+        return platten.add(platte);
+    }
+}}}
+
