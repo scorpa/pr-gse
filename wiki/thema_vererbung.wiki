@@ -7,7 +7,7 @@
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_vererbung_schulverwaltung Schulverwaltung] || || [http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung.jpg erster Ansatz für UML-Diagramm] ||
+|| [uebung_vererbung_schulverwaltung Schulverwaltung] || || [uebung_vererbung_schulverwaltung_uml1 erster Ansatz für UML-Diagramm] [uebung_vererbung_schulverwaltung_uml2 UML-Diagramm mit Vererbung] ||
 || [uebung_vererbung_lohnverrechnung Lohnverrechnung] || || ||
 
 <wiki:comment>
