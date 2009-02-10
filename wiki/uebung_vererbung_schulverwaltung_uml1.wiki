@@ -1,0 +1,3 @@
+#summary Übung: Schulerwaltung (UML 1. Ansatz)
+
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung.jpg
