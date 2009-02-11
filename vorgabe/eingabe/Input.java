@@ -4,6 +4,10 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  * Hilfsklasse für Eingabe von Konsole
@@ -206,12 +210,54 @@ public class Input
         return zahl;
     }
     
+    
+    /**
+     * liest ein Datum ein und liefert eine Date-Instanz
+     * Die Eingabeaufforderung wird so lange wiederholt, bis der Benutzer ein gültiges Datum eingibt
+     * @param prompt Eingabeaufforderung
+     * @param format Format-String
+     * @return Referenz auf Date-Instanz
+     * @throws IllegalArgumentException falls Format-String nicht passt.
+     */
+    public static Date readDate(String prompt, String format)
+    {
+        Date date = null;
+        do
+        {
+            try
+            {
+                SimpleDateFormat formatter = new SimpleDateFormat(format);
+                date = formatter.parse(readText(prompt));
+            } 
+            catch(ParseException pe)
+            {
+                System.out.println("ungültiges Datumsformat");
+            }
+        } while(date == null);
+        return date;
+    }
+    
+    /**
+     * liest ein Datum ein und liefert eine Date-Instanz
+     * Die Eingabeaufforderung wird so lange wiederholt, bis der Benutzer ein gültiges Datum eingibt.
+     * Das Datum muss im Format "t.m.j" eingegeben werden.
+     * @param prompt Eingabeaufforderung
+    * @return Referenz auf Date-Instanz
+     */
+
+    public static Date readDate(String prompt)
+    {
+        return readDate(prompt, "d.m.y");
+    }
+    
+    
     /**
      * nur zum Testen
      * @param args
      */
     public static void main(String[] args)
     {
+        System.out.println(Input.readDate("Date"));
         System.out.println(Input.readBoolean("boolean"));
         System.out.println(Input.readChar("char"));
         System.out.println(Input.readDouble("double"));
