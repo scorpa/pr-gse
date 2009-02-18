@@ -1,0 +1,7 @@
+#summary Abstraktion
+
+= Abstraktion =
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_vererbung_transport_v3 Transport_V3] || || ||
