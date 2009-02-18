@@ -11,7 +11,8 @@ guter und schlechter Code
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
 
-[thema_abstraktion Abstraktion]
+[thema_abstraktion Abstraktion] -
+Schnittstellen für derzeit noch unbekannte Klassen oder Methoden
 
 
 [thema_exceptions Exceptions] -
