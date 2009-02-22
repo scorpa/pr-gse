@@ -1,3 +1,0 @@
-#summary Übung: Schulverwaltung UML mit Vererbung
-
-http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung_vererbung.jpg
