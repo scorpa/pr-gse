@@ -5,11 +5,40 @@
 === Literatur ===
 [http://openbook.galileocomputing.de/javainsel7/javainsel_06_007.htm#mjcdc0fb3601215318f116491f7552c8a6 Java ist auch eine Insel]
 
+== Beispiel ==
+_(Dieses Beispiel ist identisch mit der ersten Übung)_
+
+Für die Verwaltung der Schüler und Lehrer einer Schule soll ein Programm erstellt werden, mit welchem im Wesentlichen die Daten erfasst und wieder abgerufen werden können.
+
+Für jeden Schüler werden folgende Daten erfasst:
+  * Vorname
+  * Nachname
+  * Geburtsdatum
+  * Schülernummer  (int)
+  * aktuelle Klasse (5 bis 6 alphanumerische Zeichen)
+
+
+Für jeden Lehrer sollen folgende Daten erfasst werden:
+  * Vorname
+  * Nachname
+  * Geburtsdatum
+  * Lehrerkürzel (2 bis 3 Buchstaben)
+  * Klassen, die der Lehrer aktuell unterrichtet
+
+
+Es soll auch eine (zeilenorientierte) Benutzerschnittstelle für die Ein- und Ausgabe der Daten erstellt werden. Folgende Funktionalitäten sind gefordert:
+  * Anlegen eines neuen Schülers oder Lehrers mit Erfassung aller Daten
+  * Auflisten aller verwalteten Personen
+  * Anzeigen der Daten eines Schülers oder Lehrers
+
+Ein erster Ansatz für die Realisierung der Fachlogik könnte folgendermaßen aussehen:
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung.jpg
+</p>
+Ein Nachteil dieser Lösung ist einfach zu erkennen: Die allgemeinen Personendaten sind sowohl in der Klasse `Schueler` als auch in der Klasse `Lehrer` enthalten. Dies führt mit den zugehörigen `get-` und `set-`Methoden zu dupliziertem Code, was wir im Allgemeinen zu vermeiden versuchen.
+
+
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_vererbung_schulverwaltung Schulverwaltung] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/schulverwaltung schulverwaltung] || [uebung_vererbung_schulverwaltung_uml1 erster Ansatz für UML-Diagramm] [uebung_vererbung_schulverwaltung_uml2 UML-Diagramm mit Vererbung] ||
+|| [uebung_vererbung_schulverwaltung Schulverwaltung] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/schulverwaltung schulverwaltung] || Dieses Beispiel ist oben besprochen ||
 || [uebung_vererbung_lohnverrechnung Lohnverrechnung] || || ||
-
-<wiki:comment>
-|| [uebung_vererbung_transport_v3 Transport_V3] || || ||
-</wiki:comment>
