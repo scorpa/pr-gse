@@ -17,7 +17,7 @@ klasse : String
 --
 _&lt;&lt;constructor&gt;&gt; Schueler(schNr : int)_
 /// getter, setter/
-ausgeben()</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>810</x><y>150</y><w>220</w><h>110</h></coordinates><panel_attributes>PersonenDaten
+ausgeben()</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>810</x><y>150</y><w>220</w><h>130</h></coordinates><panel_attributes>PersonenDaten
 --
 vorname : String
 nachname : String
