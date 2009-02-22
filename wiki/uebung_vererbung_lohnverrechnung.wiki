@@ -46,3 +46,9 @@ Folgende Funktionalität ist gefordert:
     || Mitarbeiternummer || Name ||  Gehalt ||
 
   * Gesamte Lohnkosten für aktuelles Monat berechnen
+
+
+=== UML-Diagramm ===
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/lohnverrechnung.jpg
+</p>
