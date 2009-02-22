@@ -1,33 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>40</y><w>230</w><h>130</h></coordinates><panel_attributes>LohnVerrechnung
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>40</y><w>230</w><h>150</h></coordinates><panel_attributes>LohnVerrechnung
 --
 liste : ArrayList&lt;Mitarbeiter&gt;
 --
+_&lt;&lt;constructor&gt;&gt; LohnVerrechnung()_
 einstellen(m : Mitarbeiter)
 liste()
 gehaltsTabelle()
 suchen(nr : int) : Mitarbeiter
+lohnkosten() : double
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>230</x><y>90</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;190;20</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>520</x><y>160</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>520</x><y>160</y><w>300</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;50;280;50;280;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>240</x><y>160</y><w>320</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;20;300;50;20;50;20;100</additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>410</x><y>260</y><w>240</w><h>120</h></coordinates><panel_attributes>Arbeiter
---
-stunden : int
---
-_&lt;&lt;constructor&gt; Arbeiter(nr : int)_
-///getter und setter/
-berechneLohn() : double</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>140</x><y>260</y><w>250</w><h>120</h></coordinates><panel_attributes>Angestellter
---
-gehaltsStufe : int
---
-_&lt;&lt;constructor&gt; Angestellter(nr : int)_
-///getter und setter/
-berechneLohn() : double
-</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>670</x><y>260</y><w>240</w><h>120</h></coordinates><panel_attributes>Vertreter
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>670</x><y>260</y><w>240</w><h>150</h></coordinates><panel_attributes>Vertreter
 --
 grundgehalt : double
 umsatz : double
 --
 _&lt;&lt;constructor&gt; Arbeiter(nr : int)_
 ///getter und setter/
-berechneLohn() : double</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>420</x><y>40</y><w>230</w><h>140</h></coordinates><panel_attributes>Mitarbeiter
+berechneLohn() : double
+einlesen()
+ausgeben()</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>410</x><y>260</y><w>240</w><h>150</h></coordinates><panel_attributes>Arbeiter
+--
+stunden : int
+--
+_&lt;&lt;constructor&gt; Arbeiter(nr : int)_
+///getter und setter/
+berechneLohn() : double
+einlesen()
+ausgeben()</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>140</x><y>260</y><w>250</w><h>150</h></coordinates><panel_attributes>Angestellter
+--
+gehaltsStufe : int
+--
+_&lt;&lt;constructor&gt; Angestellter(nr : int)_
+///getter und setter/
+berechneLohn() : double
+einlesen()
+ausgeben()
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>420</x><y>10</y><w>230</w><h>170</h></coordinates><panel_attributes>Mitarbeiter
 --
 name : String
 nr : int
@@ -35,4 +43,6 @@ eintritt : int
 --
 _&lt;&lt;constructor&gt; Mitarbeiter(nr : int)_
 ///getter und setter/
-berechneLohn() : double</panel_attributes><additional_attributes></additional_attributes></element></umlet_diagram>
+berechneLohn() : double
+einlesen()
+ausgeben()</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>230</x><y>90</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;190;20</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>520</x><y>160</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>520</x><y>160</y><w>300</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;50;280;50;280;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>240</x><y>160</y><w>320</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;20;300;50;20;50;20;100</additional_attributes></element></umlet_diagram>
