@@ -37,6 +37,20 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung.jpg
 </p>
 Ein Nachteil dieser Lösung ist einfach zu erkennen: Die allgemeinen Personendaten sind sowohl in der Klasse `Schueler` als auch in der Klasse `Lehrer` enthalten. Dies führt mit den zugehörigen `get-` und `set-`Methoden zu dupliziertem Code, was wir im Allgemeinen zu vermeiden versuchen.
 
+Dieses Problem könnten wir eventuell auf folgende Weise lösen:
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung_personendaten.jpg
+</p>
+Sowohl `Schueler-` als auch `Lehrer-`Objekte haben in den Attributen eine Referenz auf ein weiteres Objekt vom Typ `PersonenDaten`, in welchem eben genau diese allgemeinen Personendaten enthalten sind.
+
+Noch eleganter geht es jedoch mit dem Konzept der *Vererbung*:
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/schulverwaltung_vererbung.jpg
+</p>
+Sowohl `Schueler` als auch `Lehrer` erben von einer gemeinsamen Basisklasse `Person`.
+Diese Klasse enthält die allgemeinen Personendaten. Sowohl `Schueler` als auch `Lehrer` sind Personen mit jeweils unterschiedlichen zusätzlichen Eigenschaften.
+
+Die Implementierung dieser Lösung befindet sich in den Übungen.
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
