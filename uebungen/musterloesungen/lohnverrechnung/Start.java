@@ -4,11 +4,17 @@
  */
 package lohnverrechnung;
 
+/**
+ * nur zum Starten
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Start
 {
 
     /**
-     * @param args
+     * 
+     * @param args ignoriert
      */
     public static void main(String[] args)
     {
