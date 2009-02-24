@@ -4,10 +4,19 @@
  */
 package lohnverrechnung;
 
+/**
+ * zeilenorientierte Benutzerschnittstelle
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Menu
 {
-    private LohnVerrechnung lohnverrechnung;
+    private LohnVerrechnung lohnverrechnung;  // Lohnverrechnungs-Instanz
 
+    /**
+     * Im Konstruktor wird die Benutzerschnittstelle gestartet
+     *
+     */
     public Menu()
     {
         lohnverrechnung = new LohnVerrechnung();
@@ -57,26 +66,38 @@ public class Menu
         }
     }
 
+    /**
+     * Ausgeben der Mitarbeiterdaten
+     *
+     */
     private void mitarbeiterDaten()
     {
         int nr = Input.readInt("Mitarbeiternummer: ");
         Mitarbeiter m = lohnverrechnung.suchen(nr);
         if (m != null)
-            m.ausgeben();
+            m.ausgeben();  // jeder Mitarbeitertyp kann selbst seine Daten ausgeben
         else
             System.out.println("Kein Mitarbeiter mit dieser Mitarbeiternummer");
     }
 
+    /**
+     * Ändern der Mitarbeiterdaten
+     *
+     */
     private void datenAendern()
     {
         int nr = Input.readInt("Mitarbeiternummer: ");
         Mitarbeiter m = lohnverrechnung.suchen(nr);
         if (m != null)
-            m.einlesen();
+            m.einlesen();  // jeder Mitarbeitertyp kann selbst seine Daten einlesen
         else
             System.out.println("Kein Mitarbeiter mit dieser Mitarbeiternummer");
     }
 
+    /**
+     * Anlegen eines neuen Mitarbeiters
+     *
+     */
     private void neuerMitarbeiter()
     {
         int nr = Input.readInt("Mitarbeiternummer: ");
@@ -96,6 +117,7 @@ public class Menu
             System.out.println("------------------------------------");
             int option = Input.readInt("Ihre Auswahl: ");
 
+            // erstellen des richtigen Mitarbeitertyps
             switch (option)
             {
             case 1:
@@ -112,8 +134,8 @@ public class Menu
             }
 
         } while (m == null);
-        m.einlesen();
-        lohnverrechnung.einstellen(m);
+        m.einlesen();  // jeder Mitarbeitertyp liest selbst seine Daten richtig ein
+        lohnverrechnung.einstellen(m);  // der Mitarbeiter muss auch in die Lohnverrechnung aufgenommen werden.
     }
 
 }
