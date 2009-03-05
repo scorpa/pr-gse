@@ -1,4 +1,4 @@
-package liste;
+package arrays.liste;
 
 public class MeineArrayList
 {

@@ -1,4 +1,4 @@
-package transport;
+package ui.transport;
 
 /**
  * Transport-Beispiel V2

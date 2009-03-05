@@ -1,4 +1,4 @@
-package transport;
+package ui.transport;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

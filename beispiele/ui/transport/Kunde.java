@@ -1,4 +1,4 @@
-package transport;
+package ui.transport;
 
 public class Kunde
 {
