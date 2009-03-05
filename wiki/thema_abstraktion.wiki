@@ -2,6 +2,8 @@
 
 = Abstraktion =
 
+Das Beispiel aus dem Unterricht vom 4.3.2009 befindet sich hier: [http://pr-gse.googlecode.com/svn/trunk/beispiele/zeichnen Zeichenprogramm].
+
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_vererbung_transport_v3 Transport_V3] || || ||
