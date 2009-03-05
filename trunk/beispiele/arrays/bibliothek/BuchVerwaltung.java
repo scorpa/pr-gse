@@ -2,7 +2,8 @@
  * Created on 24.11.2008
  *
  */
-package bibliothek;
+package arrays.bibliothek;
+
 
 public class BuchVerwaltung
 {

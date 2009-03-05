@@ -2,7 +2,7 @@
  * Created on 24.11.2008
  *
  */
-package bibliothek;
+package arrays.bibliothek;
 
 /**
  * Buch-Klasse für Buchverwaltungs-Beispiel.
