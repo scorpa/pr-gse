@@ -15,7 +15,7 @@
 --
 /istWahr() : boolean/</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>150</x><y>320</y><w>290</w><h>140</h></coordinates><panel_attributes>Praemisse
 --
-aussage : String
+satz : String
 wahr : boolean
 --
 &lt;&lt;constr.&gt;&gt; Praemisse(aussage : String)
