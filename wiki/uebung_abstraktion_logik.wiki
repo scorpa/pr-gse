@@ -15,9 +15,9 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/logik.jpg
 
  * Eine Instanz der Klasse `Oder` hat 2 Referenzen auf andere `Aussage`-Objekte. Die Methode `istWahr()` liefert genau dann `true`, wenn *eines* der referenzierten Objekte `true` liefert, ansonsten `false`. Die Methode `toString()` liefert die beiden Aussagen mit dem Wort "oder" verknüpft. 
 
- * Eine Instanz der Klasse `Nicht` hat 1 Referenzen auf ein anderes `Aussage`-Objekt. Die Methode `istWahr()` liefert genau dann `true`, wenn das referenzierte Objekt `false` liefert und umgekehrt. Die Methode `toString()` liefert die referenzierte Aussage mit dem Wort "nicht" vorangestellt.
+ * Eine Instanz der Klasse `Nicht` hat 1 Referenz auf ein anderes `Aussage`-Objekt. Die Methode `istWahr()` liefert genau dann `true`, wenn das referenzierte Objekt `false` liefert und umgekehrt. Die Methode `toString()` liefert die referenzierte Aussage mit dem Wort "nicht" vorangestellt.
 
-Mit Objekten dieser Klasse lässt sich dann beispielsweise die folgende Objektstruktur zusammenbauen. Erstellen Sie eine Klasse `Test` mit einer `main(...)`-Methode, in welcher genau diese Struktur aufgebaut wird. Dann sollen der Wahrheitswert und das Resultat der Methode `toString()` der gesamten Struktur ausgegeben werden.
+Mit Objekten dieser Klassen lässt sich dann beispielsweise die folgende Objektstruktur zusammenbauen. Erstellen Sie eine Klasse `Test` mit einer `main(...)`-Methode, in welcher genau diese Struktur aufgebaut wird. Dann sollen der Wahrheitswert und das Resultat der Methode `toString()` der gesamten Struktur ausgegeben werden.
 
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/logik2.jpg
