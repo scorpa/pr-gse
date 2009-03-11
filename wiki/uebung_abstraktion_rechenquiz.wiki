@@ -8,7 +8,7 @@ Bei einem Rechenquiz für Kinder sollen verschiedene Rechnungen der Grundrechnun
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/rechenquiz.jpg
 </p>
 
-=== Klasse `Rechnung` ===
+=== Klasse Rechnung ===
 
 Die abstrakte Klasse `Rechnung` speichert die beiden Operanden einer Rechnung, definiert jedoch noch nicht, was damit gemacht werden soll. Das wird erst in den abgeleiteten Klassen implementiert; z.B. `Addition` --> die Operanden werden addiert. Die Operanden werden im Konstruktor mit Zufallszahlen zwischen 0 und 100 initialisiert. Im Konstruktor wird auch der Wert für das Attribut `punkte` als Parameter übernommen.
 
@@ -18,7 +18,7 @@ In jeder Abgeleiteten Klasse liefert die Methode `toString()` die jeweilige Rech
 
 Die Methode `getErgebnis()` liefert das richtige Ergebnis der Rechnung zurück. Sie ist in der Basisklasse abstrakt und wird erst in den abgeleiteten Klassen implementiert.
  
-=== Klasse `RechenQuiz` ===
+=== Klasse RechenQuiz ===
 
 Eine Instanz der Klasse `RechenQuiz` verwaltet die Rechnungen. 
 
