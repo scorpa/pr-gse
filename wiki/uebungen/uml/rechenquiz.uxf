@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>340</x><y>30</y><w>220</w><h>220</h></coordinates><panel_attributes>/Rechnung/
+--
+operand1 : int
+operand2 : int
+tipp : int
+punkte : int
+--
+&lt;&lt;constr.&gt;&gt; Rechnung(punkte : int)
+tippen(tipp : int)
+/getErgebnis() : int/
+berechnePunkte() : int
+getOperand1() : int
+getOperand2() : int
+getTipp() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>260</x><y>110</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;80;20</additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>30</x><y>50</y><w>250</w><h>150</h></coordinates><panel_attributes>RechenQuiz
+--
+rechnungen : ArrayList&lt;Rechnung&gt;
+next : int
+--
+&lt;&lt;constr.&gt;&gt; RechenQuiz()
+add(r : Rechnung)
+naechste() : Rechnung
+gesamtPunkte() : int
+toString() : String
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>520</x><y>330</y><w>110</w><h>70</h></coordinates><panel_attributes>Multiplikation
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>240</x><y>330</y><w>120</w><h>70</h></coordinates><panel_attributes>Addition
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>380</x><y>330</y><w>120</w><h>70</h></coordinates><panel_attributes>Subtraktion
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>280</x><y>230</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>160;20;160;60;20;60;20;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>420</x><y>230</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;100</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>420</x><y>230</y><w>180</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;60;160;60;160;100</additional_attributes></element></umlet_diagram>
