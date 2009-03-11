@@ -21,13 +21,12 @@ wahr : boolean
 &lt;&lt;constr.&gt;&gt; Praemisse(aussage : String)
 setWahr(wahr : boolean)
 istWahr() : boolean
-toString() : String</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>550</x><y>300</y><w>190</w><h>160</h></coordinates><panel_attributes>Nicht
+toString() : String</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>550</x><y>300</y><w>190</w><h>120</h></coordinates><panel_attributes>Nicht
 --
 a : Aussage
 --
 &lt;&lt;constr.&gt;&gt; Nicht()
-setAussage1(a : Aussage)
-setAussage2(a : Aussage)
+setAussage(a : Aussage)
 istWahr() : boolean
 toString() : String
 
