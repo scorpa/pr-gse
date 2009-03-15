@@ -25,5 +25,13 @@ Zeilenorientierte Benutzerschnittstelle
 [thema_vererbung Vererbung] -
 Super- und Sub-Typen
 
+[thema_abstraktion Abstraktion] -
+Schnittstellen für derzeit noch unbekannte Klassen oder Methoden
+
+[thema_collections Collections] -
+Listen und andere Container
+
+
+
 [thema_subversion Versionskontrolle (mit Subversion)] -
 praktische Anleitung
