@@ -22,8 +22,8 @@ public interface Reversi
 	 * 
 	 * @param x  Zeilennummer
 	 * @param y  Spaltennummer
-	 * @return  's' -- schwarz <br/>
-	 * 			'w' -- weiss <br/>
+	 * @return  'r' -- rot <br/>
+	 * 			'g' -- grün <br/>
 	 *          ' ' -- leer
 	 */
 	public char get(int x, int y);
@@ -58,20 +58,20 @@ public interface Reversi
 	 * 
 	 * @param x Zeilennummer
 	 * @param y Spaltennummer
-	 * @param farbe 'w' -- weiss; 	's' -- schwarz; ' ' -- leer
+	 * @param farbe 'r' -- rot; 	'g' -- grün; ' ' -- leer
 	 */
 	public void set(int x, int y, char farbe);
 	
 	/**
 	 * Damit ist es möglich zu erzwingen, mit welcher Farbe der nächste Stein gesetzt wird.
-	 * @param farbe 'w' -- weiss; 	's' -- schwarz
+	 * @param farbe 'r' -- rot; 	'g' -- grün
 	 */
 	public void next(char farbe);
 	
 	
 	/**
 	 * Damit kann man abfragen, mit welcher Farbe der nächste Stein gesetzt wird
-	 * @return 'w' -- weiss; 	's' -- schwarz
+	 * @return 'r' -- rot; 	'g' -- grün
 	 */
 	public char next();
 	
