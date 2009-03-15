@@ -4,12 +4,11 @@ public class ReversiTestImpl implements Reversi
 {
     private char[][] feld = new char[8][8];
     private char next = 'r';
+    private int counter = 0;
     
     public ReversiTestImpl()
     {
-        for (int i = 0; i < feld.length; i++)
-            for (int j = 0; j < feld[0].length; j++)
-                feld[i][j] = ' ';
+        neuesSpiel();
     }
     
     
@@ -30,7 +29,7 @@ public class ReversiTestImpl implements Reversi
 
     public boolean set(int x, int y)
     {
-        System.out.println("x=" + x + " y=" + y + " farbe=" + next );
+        counter++;
         if (feld[x][y] != ' ')
             return false;
         feld[x][y] = next;
@@ -43,7 +42,25 @@ public class ReversiTestImpl implements Reversi
 
     public void set(int x, int y, char farbe)
     {
-        feld[x][y] = farbe;        
+        feld[x][y] = farbe;    
+    }
+
+
+    public void neuesSpiel()
+    {
+        counter = 0;
+        next = 'r';
+        for (int i = 0; i < feld.length; i++)
+            for (int j = 0; j < feld[0].length; j++)
+                feld[i][j] = ' ';        
+    }
+
+
+    public char sieger()
+    {
+        if (counter < 10)
+            return ' ';
+        return 'r';
     }
 
 
