@@ -1,0 +1,5 @@
+#summary Übung: Erweiterung der Buchverwaltung
+
+= Erweiterung der Buchverwaltung =
+
+Das ist eine Erweiterung der Übung 
