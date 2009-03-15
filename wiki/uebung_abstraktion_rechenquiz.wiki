@@ -38,3 +38,15 @@ Rechnung		Ergebnis	Tipp		Punkte
 …
 ===============================================================
 }}}
+
+
+=== Erweiterung === 
+
+Erweitern Sie die oben beschriebenen Klassen wo es notwendig ist und erstellen Sie eine zeilenorientierte Benutzeroberfläche, die folgendermaßen funktioniert:
+
+Nach dem Start des Programms kann der Benutzer eingeben, wie viele Rechnungen er haben will. Die entsprechende Anzahl von Rechnungen wird generiert, und zwar in zufälliger Reihenfolge Additionen, Subtraktionen und Multiplikationen.
+
+Der Benutzer bekommt dann die Rechnungen nacheinander präsentiert und kann jeweils seinen Tipp eingeben.
+
+Am Ende werden alle Rechnungen noch einmal in der oben dargestellten Form aufgelistet, und zum Schluss wird die Anzahl der Gesamtpunkte ausgegeben.
+
