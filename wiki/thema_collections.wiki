@@ -5,3 +5,7 @@
 == Literatur ==
  * [http://www.javabuch.de/ Handbuch der Java-Programmierung (Kapitel 15)]
  * [http://openbook.galileocomputing.de/javainsel8/javainsel_12_001.htm##mj56473f9ef96ebf07a99f30f1dd64f7df Java ist auch eine Insel (Kap. 12)]
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_collections_bibliothek Bibliothek mit Sortieren und Iterator] || || ||
