@@ -75,6 +75,17 @@ public interface Reversi
 	 */
 	public char next();
 	
-	
+	/**
+     * Wird aufgerufen, wenn ein neues Spiel begonnen wird. 
+     * Das Spiel soll also in den Grundzustand versetzt werden. 
+     *
+	 */
+    public void neuesSpiel();
+    
+    /**
+     * Liefert die Siegerfarbe zurück oder ' ' wenn das Spiel noch nicht beendet ist.
+     * @return 'r' -- rot hat gewonnen;     'g' -- grün hat gewonnen;    ' ' -- das Spiel ist noch nicht beendet
+     */
+    char sieger();
 
 }

@@ -24,12 +24,12 @@ public class ReversiPanel extends JPanel implements Observer
 
     
     
-    public ReversiPanel(Reversi r)
+    public ReversiPanel(Reversi reversi)
 	{
         red = createIcon("/reversi/rss-red-32.png");
         green = createIcon("/reversi/rss-green-32.png");
         
-        this.reversi = r;
+        this.reversi = reversi;
         
         createButtons();
         initPanel();
@@ -68,14 +68,18 @@ public class ReversiPanel extends JPanel implements Observer
     
     private void click(ActionEvent e)
     {
-        for (int x = 0; x < buttons.length; x++)
-            for (int y = 0; y < buttons[0].length; y++)
-            {
-                if (buttons[x][y] == e.getSource())
-                    reversi.set(x, y);
-            }
-        update(null, null);
+        if (reversi.sieger() == ' ')
+        {
+            for (int x = 0; x < buttons.length; x++)
+                for (int y = 0; y < buttons[0].length; y++)
+                {
+                    if (buttons[x][y] == e.getSource())
+                        reversi.set(x, y);
+                }
+            update(null, null);
+        }
     }
+        
 
     public void update(Observable o, Object arg)
     {
@@ -91,11 +95,35 @@ public class ReversiPanel extends JPanel implements Observer
                     buttons[x][y].setIcon(null);
                 
             }
-        char next = reversi.next();
-        if (next == 'g')
-            status.setText("nächster Zug: grün");
-        else
-            status.setText("nächster Zug: rot");            
+        char sieger = reversi.sieger();
+        switch (sieger)
+        {
+        case 'r':
+            status.setText("Rot hat gewonnen");
+            break;
+            
+        case 'g':
+            status.setText("Grün hat gewonnen");
+            break;
+            
+        default:
+            char next = reversi.next();
+            switch(next)
+            {
+            case 'r':
+                status.setText("nächster Zug: rot");
+                break;
+                
+            case 'g':
+                status.setText("nächster Zug: grün");
+                break;
+                
+            default:
+                throw new Error("unbekannte Farbe");
+
+            }
+        }
+            
     }
     
     private ImageIcon createIcon(String datei)
