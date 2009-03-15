@@ -9,3 +9,4 @@
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_collections_bibliothek Bibliothek mit Sortieren und Iterator] || || ||
+|| [uebung_collections_bibliothek_map Bibliothek mit Map] || || ||
