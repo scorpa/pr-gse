@@ -1,0 +1,9 @@
+#summary Übung: Bibliothek mit Map
+
+= Bibliothek mit Map =
+
+Das ist eine Erweiterung der Übung [uebung_arraylist_bibliothek Buchverwaltung].
+
+Implementieren Sie die Buchverwaltung mit einer `Map` anstatt mit einer `ArrayList`:
+
+Als Schlüssel dient jeweils die ISBN-Nummer.
