@@ -14,6 +14,9 @@ Super- und Sub-Typen
 [thema_abstraktion Abstraktion] -
 Schnittstellen für derzeit noch unbekannte Klassen oder Methoden
 
+[thema_collections Collections] -
+Listen und andere Container
+
 
 [thema_exceptions Exceptions] -
 Fehlerbehandlung in Java (und anderen objektorientierten Sprachen)
