@@ -8,6 +8,10 @@
 
 === Interfaces und Klassen ===
 
+In den folgenden beiden Abbildungen werden die wesentlichsten Interfaces und Klassen mit den jeweils wesentlichsten Methoden dargestellt.
+
+Für weitere Details sei auf die Java API-Dokumentation verwiesen.
+
  * Collection-Klassen
 
 http://pr-gse.googlecode.com/svn/wiki/images/uml/collections.jpg
