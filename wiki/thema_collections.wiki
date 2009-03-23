@@ -20,6 +20,8 @@ http://pr-gse.googlecode.com/svn/wiki/images/uml/collections.jpg
 
 http://pr-gse.googlecode.com/svn/wiki/images/uml/map.jpg
 
+=== Utility-Klasse Collections ===
+[http://pr-gse.googlecode.com/svn/trunk/beispiele/collections/transport Beispiel für das Sortieren mit Collections] aufbauend auf der Musterlösung der Übung [uebung_arraylist_transport_v2 Transport_V2]
 
 === Ãœbungen ===
 || *Aufgabe* || *MusterlÃ¶sung* || *Bemerkungen* ||
