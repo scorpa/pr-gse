@@ -3,6 +3,7 @@ package collections.transport;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 
 public class Container
 {
@@ -38,8 +39,15 @@ public class Container
     public boolean aufladen(Platte platte)
     {
         double gewicht = 0;
+/*        
         for (Platte p : platten)
             gewicht += p.berechneGewicht();
+*/
+        // Variante mit Iterator
+        Iterator<Platte> iter = platten.iterator();
+        while (iter.hasNext())
+        	gewicht += iter.next().berechneGewicht();
+        
         if (gewicht + platte.berechneGewicht() > maximalesLadegewicht)
             return false;
         if (platte.getBreite() > this.breite || platte.getLaenge() > this.laenge)
@@ -115,8 +123,9 @@ public class Container
 		str.append(" Max.Ladegewicht=").append(maximalesLadegewicht);
 		str.append("\n").append(kunde);
 		str.append("\n=============== Platten ==============");
-		for (Platte p : platten)
-			str.append("\n").append(p);
+		Iterator<Platte> iter = platten.iterator();
+		while (iter.hasNext())
+			str.append(iter.next());
 		return str.toString();
 	}
     
