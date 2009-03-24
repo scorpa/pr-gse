@@ -44,3 +44,9 @@ http://pr-gse.googlecode.com/svn/wiki/images/fahrtenbuch/Tankstop.png
 Erscheint beim Betätigung der Schaltfläche "Ausgabe" bzw. wenn eine andere Ausgabe in der Liste ausgewählt ist bei "BEARBEITEN".
 
 http://pr-gse.googlecode.com/svn/wiki/images/fahrtenbuch/Ausgabe.png
+
+== 4. UML ==
+
+Erster Entwurf.
+
+http://pr-gse.googlecode.com/svn/wiki/images/fahrtenbuch/fachlogik.jpg
