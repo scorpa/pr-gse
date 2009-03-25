@@ -47,6 +47,6 @@ http://pr-gse.googlecode.com/svn/wiki/images/fahrtenbuch/Ausgabe.png
 
 == 4. UML ==
 
-Erster Entwurf.
+Erster Entwurf für die Fachlogik:
 
 http://pr-gse.googlecode.com/svn/wiki/images/fahrtenbuch/fachlogik.jpg
