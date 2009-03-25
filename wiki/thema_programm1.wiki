@@ -1,7 +1,7 @@
 #summary Erstes umfangreicheres Programm
 = Erstes umfangreicheres Programm =
 
-An diesem Beispiel soll eine mögliche Vorgangsweise für das erstellen des ersten größeren Programms demonstriert werden.
+An diesem Beispiel soll eine mögliche Vorgangsweise für das Erstellen des ersten größeren Programms demonstriert werden.
 
 == 1. Wozu soll das Programm dienen ==
 
