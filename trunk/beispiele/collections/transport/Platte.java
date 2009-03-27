@@ -57,7 +57,6 @@ public class Platte implements Comparable<Platte>
 	/**
 	 * vergleicht Gewicht
 	 */
-	@Override
 	public int compareTo(Platte p2)
 	{
 		return (int) (this.berechneGewicht() - p2.berechneGewicht());
