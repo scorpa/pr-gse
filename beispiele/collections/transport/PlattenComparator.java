@@ -17,7 +17,6 @@ public class PlattenComparator implements Comparator<Platte>
 		this.kriterium = kriterium;
 	}
 
-	@Override
 	public int compare(Platte p1, Platte p2)
 	{
 		switch(kriterium)
