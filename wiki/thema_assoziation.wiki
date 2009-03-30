@@ -7,7 +7,7 @@
 === Übungen ===
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_assoziation_uhrzeit Uhrzeit] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit] || Digitale Zeitanzeige (einzelne Klasse oder mit Zähler-Klasse) ||
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe07_Referenzen.doc Referenzen] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/referenzen referenzen] || Arbeiten mit Referenzen / Debugger (Projekt ist in diesem Fall Teil der Angabe) ||
+|| [uebung_assoziation_referenzen Referenzen] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/referenzen referenzen] || Arbeiten mit Referenzen / Debugger (Projekt ist in diesem Fall Teil der Angabe) ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe10_Sitznachbarn.doc Sitznachbarn] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/sitznachbarn sitznachbarn] || ziemlich knifflige Aufgabe mit Rekursion ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue02_zeichenen_A.doc Rechteck (A)] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/zeichnen1 zeichnen1] || Prüfungsaufgabe ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue02_zeichenen_A.doc Rechteck (B)] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/zeichnen2 zeichnen2] || Prüfungsaufgabe ||
