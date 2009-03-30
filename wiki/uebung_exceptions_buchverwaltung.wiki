@@ -1,0 +1,10 @@
+#summary Übung: Buchverwaltung mit Exceptions
+
+= Buchverwaltung mit Exceptions =
+
+Noch einmal verbessern wir das [uebung_ui_buchverwaltung Buchverwaltungs-Programm (in der Version mit Benutzerschnittstelle)].
+
+In den Fachklassen (`Buch` und `BuchVerwaltung`) wird in allen möglichen Fehlerfällen eine `BibliothekException` "geworfen" (diese `Exception`-Klasse muss natürlich erstellt werden).
+
+In der Benutzerschnittstelle wird die `BibliothekException` gefangen und eine Fehlermeldung ausgegeben.
+
