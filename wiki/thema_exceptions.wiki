@@ -1,0 +1,7 @@
+#summary Exceptions
+
+= Exceptions =
+
+=== Literatur ===
+[http://openbook.galileocomputing.de/javainsel8/javainsel_08_001.htm#mj0abf9e20a417f31d72c30d02f3fbffd2 Java ist auch eine Insel - Kapitel 8]
+[http://www.javabuch.de Handbuch der Java-Programmierung - Kapitel 12]
