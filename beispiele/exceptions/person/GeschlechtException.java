@@ -5,12 +5,12 @@ package exceptions.person;
  * @author Rudolf Radlbauer
  *
  */
-public class NameException extends Exception
+public class GeschlechtException extends Exception
 {
 
-	public NameException(String arg0)
+	public GeschlechtException(String message)
 	{
-		super(arg0);
+		super(message);
 	}
 
 }
