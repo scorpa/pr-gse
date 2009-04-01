@@ -1,5 +1,10 @@
 package exceptions.person;
 
+/**
+ * Beispiel zum Thema Exceptions
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Test
 {
 
@@ -15,7 +20,7 @@ public class Test
 			ui.einlesen();
 	
 			ui.ausgeben();
-		} catch(Exception e)
+		} catch(Exception e)  // fängt alle Exceptions
 		{
 			System.out.println("irgendein Fehler");
 		}
