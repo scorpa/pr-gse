@@ -16,6 +16,12 @@ public class Fahrer
 		else
 			throw new FahrtenbuchException("ungültiger Name");
 	}
+
+    @Override
+    public String toString()
+    {
+        return name;
+    }
 	
 	
 
