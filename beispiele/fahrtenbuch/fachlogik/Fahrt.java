@@ -1,5 +1,6 @@
 package fahrtenbuch.fachlogik;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -7,8 +8,10 @@ import java.util.Date;
  * @author Rudolf Radlbauer
  *
  */
-public class Fahrt
+public class Fahrt implements Comparable<Fahrt>
 {
+    private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yy/hh:mm     ");
+    
 	private String von;
 	private String nach;
 	private int kmAbfahrt;
@@ -23,8 +26,8 @@ public class Fahrt
 	 */
 	public Fahrt()
 	{
-		von = "unbekannt";
-		nach = "unbekannt";
+		von = "";
+		nach = "";
 		kmAbfahrt = 0;
 		kmAnkunft = 0;
 		abfahrt = new Date();
@@ -145,9 +148,16 @@ public class Fahrt
 	public void setAbfahrt(Date abfahrt) throws FahrtenbuchException
 	{
 		Date heute = new Date();
-		if (abfahrt != null && heute.compareTo(abfahrt) > 0 &&
-				(this.ankunft == null || abfahrt.compareTo(this.ankunft) < 0))
-			this.abfahrt = abfahrt;
+		if (abfahrt != null)
+        {
+		    if (heute.compareTo(abfahrt) < 0)
+                throw new FahrtenbuchException("Abfahrtszeit darf nicht in der Zukunft liegen");
+		    if (this.ankunft == null || abfahrt.compareTo(this.ankunft) < 0)
+			    this.abfahrt = abfahrt;
+            else
+                throw new FahrtenbuchException("Abfahrtszeit muss vor der Ankunftszeit liegen");
+                
+        }
 		else
 			throw new FahrtenbuchException("ungültiges Abfahrtsdatum");
 	}
@@ -169,9 +179,15 @@ public class Fahrt
 	public void setAnkunft(Date ankunft) throws FahrtenbuchException
 	{
 		Date heute = new Date();
-		if (ankunft != null && heute.compareTo(ankunft) > 0 &&
-				(this.abfahrt == null || this.abfahrt.compareTo(ankunft) < 0))
-			this.ankunft = ankunft;
+		if (ankunft != null)
+        {
+		    if (heute.compareTo(ankunft) < 0)
+                throw new FahrtenbuchException("Ankunftszeit darf nicht in der Zukunft liegen");
+			if (this.abfahrt == null || this.abfahrt.compareTo(ankunft) < 0)
+			    this.ankunft = ankunft;
+            else
+                throw new FahrtenbuchException("Abfahrtszeit muss vor der Ankunftszeit liegen");
+        }
 		else
 			throw new FahrtenbuchException("ungültiges Ankunftsdatum");
 	}
@@ -220,6 +236,17 @@ public class Fahrt
 		else
 			throw new FahrtenbuchException("Fahrer darf nicht null sein");
 	}
+
+    @Override
+    public String toString()
+    {
+        return DATE_FORMAT.format(abfahrt) + von + " --> " + nach;
+    }
+
+    public int compareTo(Fahrt f)
+    {
+        return this.abfahrt.compareTo(f.getAbfahrt());
+    }
 	
 	
 

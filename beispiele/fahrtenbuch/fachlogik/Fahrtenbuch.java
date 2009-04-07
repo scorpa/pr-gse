@@ -29,6 +29,16 @@ public class Fahrtenbuch
 			e.printStackTrace();
 		}
 	}
+    
+    public void add(Fahrt fahrt)
+    {
+        fahrten.add(fahrt);
+    }
+    
+    public void remove(Fahrt fahrt)
+    {
+        fahrten.remove(fahrt);
+    }
 		
 	
 	/**
