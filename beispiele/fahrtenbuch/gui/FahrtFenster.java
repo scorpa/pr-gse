@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 
 
+import fahrtenbuch.fachlogik.Fahrer;
 import fahrtenbuch.fachlogik.Fahrt;
 import fahrtenbuch.fachlogik.FahrtenbuchException;
 
@@ -60,7 +61,7 @@ public class FahrtFenster extends JDialog implements ActionListener
         spAbfahrtsZeit.setValue(fahrt.getAbfahrt());
         spAnkunftsZeit.setValue(fahrt.getAnkunft());
 		tfBemerkung.setText(fahrt.getBemerkung());
-		
+		cbFahrer.setSelectedItem(fahrt.getFahrer());
 	}
     
     private void updateDaten() throws FahrtenbuchException
@@ -74,6 +75,7 @@ public class FahrtFenster extends JDialog implements ActionListener
         fahrt.setAbfahrt(spAbfahrtsZeit.getDate());
         fahrt.setAnkunft(spAnkunftsZeit.getDate());
         fahrt.setBemerkung(tfBemerkung.getText());
+        fahrt.setFahrer((Fahrer) cbFahrer.getSelectedItem());
     }
     
 	

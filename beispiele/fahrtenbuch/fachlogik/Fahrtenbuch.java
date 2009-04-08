@@ -39,6 +39,16 @@ public class Fahrtenbuch
     {
         fahrten.remove(fahrt);
     }
+    
+    public void add(Kostenpunkt kp)
+    {
+        kosten.add(kp);
+    }
+    
+    public void remove(Kostenpunkt kp)
+    {
+        kosten.remove(kp);
+    }
 		
 	
 	/**
