@@ -25,9 +25,12 @@ import javax.swing.JScrollPane;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
 
+import fahrtenbuch.fachlogik.Ausgabe;
 import fahrtenbuch.fachlogik.Fahrer;
 import fahrtenbuch.fachlogik.Fahrt;
 import fahrtenbuch.fachlogik.Fahrtenbuch;
+import fahrtenbuch.fachlogik.Kostenpunkt;
+import fahrtenbuch.fachlogik.Tankstop;
 
 public class Hauptfenster extends JFrame
 {
@@ -178,32 +181,102 @@ public class Hauptfenster extends JFrame
 
     private void kostenLoeschen()
     {
-        // TODO Auto-generated method stub
-        
-    }
+        Object kosten = jlKosten.getSelectedValue();
+        if (kosten != null)
+        {
+            lmKosten.removeElement(kosten);
+            fahrtenbuch.remove((Kostenpunkt) kosten);
+        }
+        else
+            JOptionPane.showMessageDialog(this, "Bitte einen Kostenpunkt auswählen", 
+                    "Kosten löschen", JOptionPane.INFORMATION_MESSAGE);
+        }
 
     private void kostenBearbeiten()
     {
-        // TODO Auto-generated method stub
+        Object auswahl = jlKosten.getSelectedValue();
+        if (auswahl != null)
+        {
+            KostenpunktFenster fenster = null;
+            if (auswahl instanceof Tankstop)
+            {
+                TankstopFenster dialog = new TankstopFenster(this, (Tankstop)auswahl);
+                fenster = dialog;
+                dialog.setVisible(true);
+            }
+            else if (auswahl instanceof Ausgabe)
+            {
+                AusgabeFenster dialog = new AusgabeFenster(this, (Ausgabe)auswahl);
+                fenster = dialog;
+                dialog.setVisible(true);
+            }
+            if (fenster != null && fenster.isOk())
+            {
+                jlKosten.repaint();  // Liste neu zeichnen
+            }
+        }
+        else
+            JOptionPane.showMessageDialog(this, "Bitte einen Kostenpunkt auswählen", 
+                    "Kosten bearbeiten", JOptionPane.INFORMATION_MESSAGE);
         
     }
 
     private void ausgabe()
     {
-        // TODO Auto-generated method stub
+        try
+        {
+            Ausgabe a = new Ausgabe();
+            a.setFahrer((Fahrer) cbFahrer.getSelectedItem());
+            AusgabeFenster dialog = new AusgabeFenster(this, a);
+            dialog.setVisible(true);
+            if (dialog.isOk())
+            {
+                lmKosten.addElement(a);
+                fahrtenbuch.add(a);
+            }
         
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void tankstop()
     {
-        // TODO Auto-generated method stub
-        
+        try
+        {
+            Tankstop t = new Tankstop();
+            t.setFahrer((Fahrer) cbFahrer.getSelectedItem());
+            TankstopFenster dialog = new TankstopFenster(this, t);
+            dialog.setVisible(true);
+            if (dialog.isOk())
+            {
+                lmKosten.addElement(t);
+                fahrtenbuch.add(t);
+            }
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+        }    
     }
 
     private void fahrtBearbeiten()
     {
-        // TODO Auto-generated method stub
-        
+        Fahrt fahrt = (Fahrt) jlFahrten.getSelectedValue();
+        if (fahrt != null)
+        {
+            FahrtFenster dialog = new FahrtFenster(this, fahrt);
+            dialog.setVisible(true);
+            if (dialog.isOk())
+            {
+                jlFahrten.repaint();  // Liste neu zeichnen
+            }
+        }
+        else
+            JOptionPane.showMessageDialog(this, "Bitte eine Fahrt auswählen", 
+                    "Fahrt bearbeiten", JOptionPane.INFORMATION_MESSAGE);
     }
     
     private void fahrtLoeschen()
@@ -222,15 +295,24 @@ public class Hauptfenster extends JFrame
 
     private void neueFahrt()
     {
-        Fahrt fahrt = new Fahrt();
-        FahrtFenster dialog = new FahrtFenster(this, fahrt);
-        dialog.setVisible(true);
-        if (dialog.isOk())
+        try
         {
-            lmFahrten.addElement(fahrt);
-            fahrtenbuch.add(fahrt);
+            Fahrt fahrt = new Fahrt();
+            fahrt.setFahrer((Fahrer) cbFahrer.getSelectedItem());
+            FahrtFenster dialog = new FahrtFenster(this, fahrt);
+            dialog.setVisible(true);
+            if (dialog.isOk())
+            {
+                lmFahrten.addElement(fahrt);
+                fahrtenbuch.add(fahrt);
+            }
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
         }
     }
+        
 
 
     

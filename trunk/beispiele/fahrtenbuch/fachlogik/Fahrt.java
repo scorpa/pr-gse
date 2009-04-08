@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class Fahrt implements Comparable<Fahrt>
 {
-    private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yy/hh:mm     ");
+    private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yy   ");
     
 	private String von;
 	private String nach;
@@ -240,7 +240,7 @@ public class Fahrt implements Comparable<Fahrt>
     @Override
     public String toString()
     {
-        return DATE_FORMAT.format(abfahrt) + von + " --> " + nach;
+        return DATE_FORMAT.format(abfahrt) + fahrer + "  " + von + " --> " + nach;
     }
 
     public int compareTo(Fahrt f)
