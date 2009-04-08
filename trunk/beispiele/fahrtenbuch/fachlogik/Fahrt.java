@@ -1,5 +1,6 @@
 package fahrtenbuch.fachlogik;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,7 +9,7 @@ import java.util.Date;
  * @author Rudolf Radlbauer
  *
  */
-public class Fahrt implements Comparable<Fahrt>
+public class Fahrt implements Comparable<Fahrt>, Serializable
 {
     private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yy   ");
     

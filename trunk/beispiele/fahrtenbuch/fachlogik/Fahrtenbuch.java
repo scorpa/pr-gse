@@ -1,10 +1,12 @@
 package fahrtenbuch.fachlogik;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 // TODO: fertig implementieren
-public class Fahrtenbuch
+public class Fahrtenbuch implements Serializable
 {
 	private List<Fahrt> fahrten;
 	private List<Kostenpunkt> kosten;
@@ -49,9 +51,18 @@ public class Fahrtenbuch
     {
         kosten.remove(kp);
     }
-		
 	
-	/**
+    public Iterator<Kostenpunkt> kostenIterator()
+    {
+        return kosten.iterator();
+    }
+	
+	public Iterator<Fahrt> fahrtenIterator()
+    {
+        return fahrten.iterator();
+    }
+
+    /**
 	 * gibt die Liste der Fahrer als Array zurück
 	 * @return Array mit allen Fahrern
 	 */

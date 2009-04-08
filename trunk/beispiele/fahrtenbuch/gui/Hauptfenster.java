@@ -9,6 +9,9 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Iterator;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -29,11 +32,14 @@ import fahrtenbuch.fachlogik.Ausgabe;
 import fahrtenbuch.fachlogik.Fahrer;
 import fahrtenbuch.fachlogik.Fahrt;
 import fahrtenbuch.fachlogik.Fahrtenbuch;
+import fahrtenbuch.fachlogik.FahrtenbuchException;
+import fahrtenbuch.fachlogik.FahrtenbuchSpeicher;
 import fahrtenbuch.fachlogik.Kostenpunkt;
 import fahrtenbuch.fachlogik.Tankstop;
 
 public class Hauptfenster extends JFrame
 {
+    private FahrtenbuchSpeicher speicher;
     private Fahrtenbuch fahrtenbuch;
     
     private JComboBox cbFahrer;
@@ -42,11 +48,29 @@ public class Hauptfenster extends JFrame
     private JList jlFahrten;
     private JList jlKosten;
     
-    public Hauptfenster()
+    public Hauptfenster(FahrtenbuchSpeicher speicher)
     {
-        fahrtenbuch = new Fahrtenbuch();
+        this.speicher = speicher;
+        this.fahrtenbuch = speicher.getFahrtenbuch();
         initFrame();
         initMenu();
+        updateFenster();
+        addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent e)
+            {
+                ende();
+            }});
+    }
+    
+    private void updateFenster()
+    {
+        Iterator<Fahrt> fit = fahrtenbuch.fahrtenIterator();
+        while (fit.hasNext())
+            lmFahrten.addElement(fit.next());
+        Iterator<Kostenpunkt> kit = fahrtenbuch.kostenIterator();
+        while (kit.hasNext())
+            lmKosten.addElement(kit.next());
     }
     
     private void initFrame()
@@ -176,6 +200,14 @@ public class Hauptfenster extends JFrame
     // =================== event handler Methoden ==============================
     private void ende()
     {
+        try
+        {
+            speicher.speichern();
+        } catch (FahrtenbuchException e)
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, e.getMessage(), "Fehler beim Speichern", JOptionPane.ERROR_MESSAGE);
+        }
         System.exit(0);
     }
 
@@ -327,15 +359,4 @@ public class Hauptfenster extends JFrame
         return fahrtenbuch.alleFahrer();
     }
 
-    /**
-     * nur zum Testen
-     * @param args
-     */
-    public static void main(String[] args)
-    {
-        Hauptfenster fenster = new Hauptfenster();
-        fenster.pack();
-        fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fenster.setVisible(true);
-    }
 }
