@@ -1,6 +1,8 @@
 package fahrtenbuch.fachlogik;
 
-public class Fahrer
+import java.io.Serializable;
+
+public class Fahrer implements Serializable
 {
 	private String name;
 

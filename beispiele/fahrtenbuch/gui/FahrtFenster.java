@@ -145,22 +145,5 @@ public class FahrtFenster extends JDialog implements ActionListener
         return ok;
     }
 
-    /**
-     * nur zum Testen
-     * @param args
-     */
-	public static void main(String[] args)
-	{
-        Hauptfenster hf = new Hauptfenster();
-        hf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        hf.setVisible(true);
-		Fahrt f = new Fahrt();
-		FahrtFenster fenster = new FahrtFenster(hf, f);
-		
-		fenster.pack();
-		fenster.setVisible(true);
-	}
-
-
 
 }

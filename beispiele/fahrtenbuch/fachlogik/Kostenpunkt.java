@@ -1,10 +1,11 @@
 package fahrtenbuch.fachlogik;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 // TODO: implementieren
-public class Kostenpunkt
+public class Kostenpunkt  implements Serializable
 {
     private final static SimpleDateFormat DATUMS_FORMAT = new SimpleDateFormat("dd.MM.yy  ");
     
