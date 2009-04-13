@@ -6,11 +6,21 @@ import java.util.Date;
 
 /**
  * Projekt Fahrtenbuch
+ * 
+ * Datenhaltungsklasse.
+ * Speichert alle für eine Fahrt relevanten Daten ab.
+ * Comparable für Sortierung nach Abfahrtsdatum.
+ * 
  * @author Rudolf Radlbauer
  *
  */
 public class Fahrt implements Comparable<Fahrt>, Serializable
 {
+    /**
+     * serialVersionUID für Serialisierung
+     */
+    private static final long serialVersionUID = -4752326474551433943L;
+
     private final static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yy   ");
     
 	private String von;

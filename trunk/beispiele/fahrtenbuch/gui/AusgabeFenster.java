@@ -16,6 +16,13 @@ import javax.swing.JTextField;
 import fahrtenbuch.fachlogik.Ausgabe;
 import fahrtenbuch.fachlogik.FahrtenbuchException;
 
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class AusgabeFenster extends KostenpunktFenster
 {
    

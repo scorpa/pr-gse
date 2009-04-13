@@ -4,9 +4,24 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-// TODO: implementieren
-public class Kostenpunkt  implements Serializable
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * Datenhaltungsklasse.
+ * Speichert die relevanten Daten für einen Kostenpunkt.
+ * Wird von den Klassen Ausgabe und Tankstop erweitert.
+ * Comparable für Sortierung nach Datum
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
+public class Kostenpunkt  implements Serializable, Comparable<Kostenpunkt>
 {
+    /**
+     * serialVersionUID für Serialisierung
+     */
+    private static final long serialVersionUID = 984400720036634722L;
+
     private final static SimpleDateFormat DATUMS_FORMAT = new SimpleDateFormat("dd.MM.yy  ");
     
     private Date datum;
@@ -162,6 +177,11 @@ public class Kostenpunkt  implements Serializable
     public String toString()
     {
         return DATUMS_FORMAT.format(datum) + fahrer;
+    }
+
+    public int compareTo(Kostenpunkt o)
+    {
+        return this.datum.compareTo(o.getDatum());
     }
     
     

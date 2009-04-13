@@ -23,6 +23,13 @@ import fahrtenbuch.fachlogik.Fahrer;
 import fahrtenbuch.fachlogik.Fahrt;
 import fahrtenbuch.fachlogik.FahrtenbuchException;
 
+/**
+ * Projekt Fahrtenbuch
+ * zum Eingeben oder Bearbeiten einer Fahrt
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class FahrtFenster extends JDialog implements ActionListener
 {
 	private Fahrt fahrt;
@@ -40,7 +47,11 @@ public class FahrtFenster extends JDialog implements ActionListener
 
 	
     
-    
+    /**
+     * übernimmt eine Referenz auf das Hauptfenster und auf die Fahrt
+     * @param f
+     * @param fahrt
+     */
 	public FahrtFenster(Hauptfenster f, Fahrt fahrt)
 	{
         super(f, true);  // modaler Dialog
@@ -52,6 +63,10 @@ public class FahrtFenster extends JDialog implements ActionListener
         pack();
 	}
 	
+    /**
+     * holt Daten von Fahrt und setzt diese in die Eingabefelder
+     *
+     */
 	private void updateFenster()
 	{
 		tfVon.setText(fahrt.getVon());
@@ -64,7 +79,12 @@ public class FahrtFenster extends JDialog implements ActionListener
 		cbFahrer.setSelectedItem(fahrt.getFahrer());
 	}
     
-    private void updateDaten() throws FahrtenbuchException
+    /**
+     * holt Daten von den Eingabefeldern und aktualisiert Fahrt
+     * @throws FahrtenbuchException falls inkonsistente Daten eingegeben wurden
+     * @throws NumberFormatException falls die Zahlen nicht richtig eingegeben wurden
+     */
+    private void updateDaten() throws NumberFormatException, FahrtenbuchException
     {
         if (fahrt == null)
             fahrt = new Fahrt();
@@ -78,7 +98,10 @@ public class FahrtFenster extends JDialog implements ActionListener
         fahrt.setFahrer((Fahrer) cbFahrer.getSelectedItem());
     }
     
-	
+	/**
+     * baut das Fenster auf
+     *
+	 */
 	private void initFenster()
 	{
 		tfVon = new JTextField();
@@ -117,7 +140,10 @@ public class FahrtFenster extends JDialog implements ActionListener
 	
 
     
-    
+    /**
+     * Eventhandler-Methode für "SPEICHERN"
+     * ruft updateDaten()
+     */
     public void actionPerformed(ActionEvent ae)
     {
         try

@@ -4,9 +4,23 @@
  */
 package fahrtenbuch.fachlogik;
 
-
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * Datenhaltungsklasse.
+ * Die Klasse Ausgabe repräsentiert eine andere Ausgabe als einen Tankstop.
+ * Als Erweiterung zur Klasse Kostenpunkt kommt die Bezeichnung dazu,
+ * welche nicht leer sein darf.
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Ausgabe extends Kostenpunkt
 {
+    /**
+     * serialVersionUID für Serialisierung
+     */
+    private static final long serialVersionUID = -8764486778160354304L;
     private String bezeichnung;
     
     /**
@@ -40,6 +54,9 @@ public class Ausgabe extends Kostenpunkt
             throw new FahrtenbuchException("Bezeichnung für Ausgabe darf nicht leer sein");
     }
 
+    /**
+     * Die Methode toString() auf für die Darstellung der Liste in der Oberfläche hingetrimmt.
+     */
     @Override
     public String toString()
     {

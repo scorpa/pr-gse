@@ -16,50 +16,30 @@ import fahrtenbuch.fachlogik.Fahrtenbuch;
 import fahrtenbuch.fachlogik.FahrtenbuchException;
 import fahrtenbuch.fachlogik.FahrtenbuchSpeicher;
 
+/**
+ * Projekt Fahrtenbuch
+ * Dient zum Speichern und Laden eines Fahrtenbuches in einer serialisierten Datei
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class FahrtenbuchDateianbindung implements FahrtenbuchSpeicher
 {
     private File datei;
-    private Fahrtenbuch fahrtenbuch;
-    
+
+    /**
+     * Konstruktor bekommt die Datei als Parameter
+     * @param datei Datei zum Laden/Speichern
+     */
     public FahrtenbuchDateianbindung(File datei)
     {
-        super();
         this.datei = datei;
-        
-        if (datei.exists())
-        {
-            ObjectInputStream ois = null;
-            try
-            {
-                ois = new ObjectInputStream(new FileInputStream(datei));
-                fahrtenbuch = (Fahrtenbuch) ois.readObject();
-            } catch (IOException e)
-            {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (ClassNotFoundException e)
-            {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            finally
-            {
-                if (ois != null)
-                    try
-                    {
-                        ois.close();
-                    } catch (IOException e)
-                    {
-                        e.printStackTrace();
-                    }
-            }
-            
-        }
-        else
-            fahrtenbuch = new Fahrtenbuch();
     }
     
-    public void speichern() throws FahrtenbuchException
+    /**
+     * speichert das Fahrtenbuch in der Datei
+     */
+    public void speichern(Fahrtenbuch fahrtenbuch) throws FahrtenbuchException
     {
         ObjectOutputStream oos = null;
         try
@@ -68,8 +48,8 @@ public class FahrtenbuchDateianbindung implements FahrtenbuchSpeicher
             oos.writeObject(fahrtenbuch);
         } catch (IOException e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new FahrtenbuchException("Fehler beim Speichern des Fahrtenbuches");
         }
         finally
         {
@@ -79,14 +59,51 @@ public class FahrtenbuchDateianbindung implements FahrtenbuchSpeicher
                     oos.close();
                 } catch (IOException e)
                 {
-                    // TODO Auto-generated catch block
+                    // sollte normalerweise nicht auftreten
                     e.printStackTrace();
                 }
         }
     }
 
-    public Fahrtenbuch getFahrtenbuch()
+    /**
+     * lädt das Fahrtenbuch aus der Datei
+     */
+    public Fahrtenbuch laden() throws FahrtenbuchException
     {
+        Fahrtenbuch fahrtenbuch = null;
+        if (datei.exists())
+        {
+            ObjectInputStream ois = null;
+            try
+            {
+                ois = new ObjectInputStream(new FileInputStream(datei));
+                fahrtenbuch = (Fahrtenbuch) ois.readObject();
+            } catch (IOException e)
+            {
+                e.printStackTrace();
+                throw new FahrtenbuchException("Fehler beim Laden des Fahrtenbuches");
+            } catch (ClassNotFoundException e)
+            {
+                e.printStackTrace();
+                throw new FahrtenbuchException("Fehler beim Laden der Klasse Fahrtenbuch");
+            }
+            finally
+            {
+                if (ois != null)
+                    try
+                    {
+                        ois.close();
+                    } catch (IOException e)
+                    {
+                        // sollte normalerweise nicht auftreten
+                        e.printStackTrace();
+                    }
+            }
+            
+        } 
+        else
+            fahrtenbuch = new Fahrtenbuch();
+
         return fahrtenbuch;
     }
     
