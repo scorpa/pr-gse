@@ -21,6 +21,13 @@ import fahrtenbuch.fachlogik.FahrtenbuchException;
 import fahrtenbuch.fachlogik.Kostenpunkt;
 import fahrtenbuch.fachlogik.Tankstop;
 
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class KostenpunktFenster extends JDialog implements ActionListener
 {
     protected Kostenpunkt kostenPunkt;

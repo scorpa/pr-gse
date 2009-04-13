@@ -4,8 +4,22 @@
  */
 package fahrtenbuch.fachlogik;
 
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * Datenhaltungsklasse.
+ * Speichert die relevanten Daten für einen Tankstop.
+ * Erweitert die Klasse Kostenpunkt um das Attribut liter.
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Tankstop extends Kostenpunkt
 {
+    /**
+     * serialVersionUID für Serialisierung
+     */
+    private static final long serialVersionUID = 4112859269560145144L;
     private float liter;
     
     

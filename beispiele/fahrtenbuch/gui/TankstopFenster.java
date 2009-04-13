@@ -13,6 +13,13 @@ import javax.swing.JTextField;
 import fahrtenbuch.fachlogik.FahrtenbuchException;
 import fahrtenbuch.fachlogik.Tankstop;
 
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class TankstopFenster extends KostenpunktFenster
 {
     private JTextField tfLiter;

@@ -2,9 +2,23 @@ package fahrtenbuch.fachlogik;
 
 import java.io.Serializable;
 
+/**
+ * Projekt Fahrtenbuch
+ * 
+ * Datenhaltungsklasse.
+ * Speichert im Wesentlichen den Namen der/des Fahrers/in ab.
+ * 
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
 public class Fahrer implements Serializable
 {
-	private String name;
+    /**
+     * serialVersionUID für Serialisierung
+     */
+    private static final long serialVersionUID = -5768946559192668497L;
+    private String name;
 
 	/**
 	 * 

@@ -37,10 +37,18 @@ import fahrtenbuch.fachlogik.FahrtenbuchSpeicher;
 import fahrtenbuch.fachlogik.Kostenpunkt;
 import fahrtenbuch.fachlogik.Tankstop;
 
+/**
+ * Projekt Fahrtenbuch
+ * Hauptfenster der Applikation 
+ * 
+ * @author Rudolf Radlbauer
+ *
+ */
+@SuppressWarnings("serial") // wird icht serialisiert
 public class Hauptfenster extends JFrame
 {
-    private FahrtenbuchSpeicher speicher;
-    private Fahrtenbuch fahrtenbuch;
+    private FahrtenbuchSpeicher speicher;  // Referenz auf die Speicher-Klasse
+    private Fahrtenbuch fahrtenbuch;  // Rererenz auf das Fahrtenbuch (wird von Speicher-Klasse angefordert)
     
     private JComboBox cbFahrer;
     private DefaultListModel lmFahrten;
@@ -48,10 +56,23 @@ public class Hauptfenster extends JFrame
     private JList jlFahrten;
     private JList jlKosten;
     
+    /**
+     * Der Konstruktor holt sich von der Speicher-Klasse das Fahrtenbuch und baut dann das Hauptfenster auf.
+     * Beim Schließen des Fensters wird ende() aufgerufen
+     * @param speicher
+     */
     public Hauptfenster(FahrtenbuchSpeicher speicher)
     {
         this.speicher = speicher;
-        this.fahrtenbuch = speicher.getFahrtenbuch();
+        try
+        {
+            this.fahrtenbuch = speicher.laden();
+        } catch (FahrtenbuchException e1)
+        {
+            e1.printStackTrace();
+            JOptionPane.showMessageDialog(this, e1.getMessage(), "Fehler beim Laden des Fahrtenbuchs",
+                    JOptionPane.ERROR_MESSAGE);
+        }
         initFrame();
         initMenu();
         updateFenster();
@@ -63,19 +84,35 @@ public class Hauptfenster extends JFrame
             }});
     }
     
+    /**
+     * holt die Daten vom Fahrtenbuch und füllt die Listen
+     *
+     */
     private void updateFenster()
     {
+        lmFahrten.removeAllElements();
+        lmKosten.removeAllElements();
+        fahrtenbuch.sortFahrten();
+        fahrtenbuch.sortKosten();
+        
         Iterator<Fahrt> fit = fahrtenbuch.fahrtenIterator();
         while (fit.hasNext())
             lmFahrten.addElement(fit.next());
         Iterator<Kostenpunkt> kit = fahrtenbuch.kostenIterator();
         while (kit.hasNext())
             lmKosten.addElement(kit.next());
+        cbFahrer.removeAllItems();
+        for (Fahrer f : fahrtenbuch.alleFahrer())
+            cbFahrer.addItem(f);
     }
     
+    /**
+     * baut das Fenster auf.
+     *
+     */
     private void initFrame()
     {
-        cbFahrer = new JComboBox(fahrtenbuch.alleFahrer());
+        cbFahrer = new JComboBox();
         lmFahrten = new DefaultListModel();
         lmKosten = new DefaultListModel();
         jlFahrten = new JList(lmFahrten);
@@ -85,30 +122,35 @@ public class Hauptfenster extends JFrame
         
         setLayout(new BorderLayout());
         
+        // Nord-Panel für die Combobox (Fahrer)
         JPanel north = new JPanel();
         add(north, BorderLayout.NORTH);
         north.setLayout(new FlowLayout());
         north.add(new JLabel("Fahrer/in"));
         north.add(cbFahrer);
         
+        // Center-Panel -- wird weiter unterteilt
         JPanel center = new JPanel();
         add(center, BorderLayout.CENTER);
         GridLayout centerLayout = new GridLayout(1,2);
         centerLayout.setHgap(20);
         center.setLayout(centerLayout);
         
+        // linker Teil von Center-Panel für Fahrten-Liste und zugehörige Buttons
         JPanel centerLeft = new JPanel();
         center.add(centerLeft);
         centerLeft.setLayout(new BorderLayout());
         centerLeft.add(new JLabel("Fahrten"), BorderLayout.NORTH);
         centerLeft.add(new JScrollPane(jlFahrten), BorderLayout.CENTER);
-        
+
+        // rechter Teil von Center-Panel für Kosten-Liste und zugehörige Buttons
         JPanel centerRight = new JPanel();
         center.add(centerRight);
         centerRight.setLayout(new BorderLayout());
         centerRight.add(new JLabel("Kosten"), BorderLayout.NORTH);
         centerRight.add(new JScrollPane(jlKosten), BorderLayout.CENTER);
         
+        // Buttons zur Fahrten-Liste
         JPanel buttonsLeft = new JPanel();
         buttonsLeft.setLayout(new GridLayout(10,1));
         centerLeft.add(buttonsLeft, BorderLayout.EAST);
@@ -121,6 +163,8 @@ public class Hauptfenster extends JFrame
         buttonsLeft.add(fahrtBearbeiten);
         buttonsLeft.add(fahrtLoeschen);
         
+        
+        // Buttons zur Kosten-Liste
         JPanel buttonsRight = new JPanel();
         buttonsRight.setLayout(new GridLayout(10,1));
         centerRight.add(buttonsRight, BorderLayout.EAST);
@@ -135,6 +179,7 @@ public class Hauptfenster extends JFrame
         buttonsRight.add(kostenBearbeiten);
         buttonsRight.add(kostenLoeschen);
         
+        // Einhängen der Event-Handler
         neueFahrt.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
@@ -180,6 +225,10 @@ public class Hauptfenster extends JFrame
     }
     
 
+    /**
+     * baut die Menüs auf
+     *
+     */
     private void initMenu()
     {
         JMenuBar menubar = new JMenuBar();
@@ -189,6 +238,7 @@ public class Hauptfenster extends JFrame
         JMenuItem ende = new JMenuItem("beenden");
         datei.add(ende);
         
+        // Einhängen der Event-Handler
         ende.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
@@ -198,11 +248,14 @@ public class Hauptfenster extends JFrame
 
 
     // =================== event handler Methoden ==============================
+    /**
+     * beim Beenden der Applikation wird gespeichert
+     */
     private void ende()
     {
         try
         {
-            speicher.speichern();
+            speicher.speichern(fahrtenbuch);
         } catch (FahrtenbuchException e)
         {
             e.printStackTrace();
@@ -211,6 +264,10 @@ public class Hauptfenster extends JFrame
         System.exit(0);
     }
 
+    /**
+     * löschen eines Kostenpunktes
+     *
+     */
     private void kostenLoeschen()
     {
         Object kosten = jlKosten.getSelectedValue();
@@ -224,19 +281,23 @@ public class Hauptfenster extends JFrame
                     "Kosten löschen", JOptionPane.INFORMATION_MESSAGE);
         }
 
+    /**
+     * bearbeiten eines Kostenpunktes
+     *
+     */
     private void kostenBearbeiten()
     {
         Object auswahl = jlKosten.getSelectedValue();
         if (auswahl != null)
         {
             KostenpunktFenster fenster = null;
-            if (auswahl instanceof Tankstop)
+            if (auswahl instanceof Tankstop)  // Tankstop war ausgewählt
             {
                 TankstopFenster dialog = new TankstopFenster(this, (Tankstop)auswahl);
                 fenster = dialog;
                 dialog.setVisible(true);
             }
-            else if (auswahl instanceof Ausgabe)
+            else if (auswahl instanceof Ausgabe)  // Ausgabe war ausgewählt
             {
                 AusgabeFenster dialog = new AusgabeFenster(this, (Ausgabe)auswahl);
                 fenster = dialog;
@@ -253,6 +314,10 @@ public class Hauptfenster extends JFrame
         
     }
 
+    /**
+     * neue Ausgabe
+     *
+     */
     private void ausgabe()
     {
         try
@@ -274,6 +339,10 @@ public class Hauptfenster extends JFrame
         }
     }
 
+    /**
+     * neuer Tankstop
+     *
+     */
     private void tankstop()
     {
         try
@@ -294,6 +363,10 @@ public class Hauptfenster extends JFrame
         }    
     }
 
+    /**
+     * eine Fahrt bearbeiten
+     *
+     */
     private void fahrtBearbeiten()
     {
         Fahrt fahrt = (Fahrt) jlFahrten.getSelectedValue();
@@ -311,6 +384,10 @@ public class Hauptfenster extends JFrame
                     "Fahrt bearbeiten", JOptionPane.INFORMATION_MESSAGE);
     }
     
+    /**
+     * eine Fahrt löschen
+     *
+     */
     private void fahrtLoeschen()
     {
         Object fahrt = jlFahrten.getSelectedValue();
@@ -325,6 +402,10 @@ public class Hauptfenster extends JFrame
     }
 
 
+    /**
+     * neue Fahrt eingeben
+     *
+     */
     private void neueFahrt()
     {
         try
@@ -354,6 +435,9 @@ public class Hauptfenster extends JFrame
     //================== Delegates für Fahrtenbuch ============================
     
 
+    /**
+     * wird von Dialogen für Fahrt- bzw. Kosteneingabe benötigt
+     */
     public Fahrer[] alleFahrer()
     {
         return fahrtenbuch.alleFahrer();
