@@ -16,3 +16,4 @@ Beispiel aus dem Unterricht: [http://pr-gse.googlecode.com/svn/trunk/beispiele/e
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_exceptions_buchverwaltung Buchverwaltung] || || ||
+|| [uebung_exceptions_kontaktliste Kontaktliste] || || noch nicht fertig ||
