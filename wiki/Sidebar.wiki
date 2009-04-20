@@ -1,4 +1,4 @@
-=== 1. Semester Tageskolleg ===
+* 1. Semester Tageskolleg
   * [thema_objekte_und_klassen Objekte und Klassen]
   * [thema_objekte_und_klassen Objekte und Klassen]
   * [thema_assoziation Assoziation mehrerer Klassen]
