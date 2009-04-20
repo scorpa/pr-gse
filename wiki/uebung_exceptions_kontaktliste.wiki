@@ -3,5 +3,5 @@
 = Kontaktliste =
 
 <p align="center">
-http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/kontaktliste.jpg
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/kontakt.jpg
 </p>
