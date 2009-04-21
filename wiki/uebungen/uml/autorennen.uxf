@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>10</y><w>220</w><h>120</h></coordinates><panel_attributes>AutoRennen
+--
+autos : List&lt;Auto&gt;
+--
+&lt;&lt;constructor&gt;&gt; AutoRennen()
+add(auto : Auto)
+runde(n : int)
+toString() : String
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>310</x><y>10</y><w>280</w><h>210</h></coordinates><panel_attributes>Auto
+--
+kennzeichen : String
+drehzahl : int
+gang : int
+--
+&lt;&lt;constructor&gt;&gt; Auto(kennzeichen : String)
+berechneGeschwindigkeit() : int
+beschleunigen()
+bremsen()
+hinaufSchalten()
+hinunterSchalten()
+toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>30</x><y>160</y><w>120</w><h>30</h></coordinates><panel_attributes>AutoException
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>220</x><y>60</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;20;90;20</additional_attributes></element></umlet_diagram>
