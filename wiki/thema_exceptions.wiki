@@ -17,4 +17,4 @@ Beispiel aus dem Unterricht: [http://pr-gse.googlecode.com/svn/trunk/beispiele/e
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_exceptions_buchverwaltung Buchverwaltung] || || ||
 || [uebung_exceptions_kontaktliste Kontaktliste] || ||  ||
-|| [uebung_exceptions_autorennen Autorennen || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/autorennen autorennen] || Prüfungsbeispiel ||
+|| [uebung_exceptions_autorennen Autorennen] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/autorennen autorennen] || Prüfungsbeispiel ||
