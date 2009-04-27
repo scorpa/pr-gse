@@ -1,0 +1,9 @@
+#summary GUI-Programmierung mit SWING
+
+= GUI-Programmierung mit SWING =
+
+=== Literatur ===
+
+[http://openbook.galileocomputing.de/javainsel8/javainsel_16_001.htm#mjda6f564a051a1270834cc9b46ee6f566 Java ist auch eine Insel - Kapitel 16]
+
+[http://www.javabuch.de/ Handbuch der Java-Programmierung ab Kapitel 27] (hier wird nicht nur SWING sondern auch AWT behandelt.)
