@@ -44,6 +44,8 @@ public class BuchEingabe extends JDialog implements ActionListener, WindowListen
 		initDialog(); // Dialog aufbauen
 		updateDialog(); // Textfelder befüllen
 		setModal(true);  // blockiert, solange Dialog angezeigt wird
+		addWindowListener(this);
+		setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		pack(); // vernünftige Größe einstellen
 	}
 	
@@ -92,7 +94,7 @@ public class BuchEingabe extends JDialog implements ActionListener, WindowListen
 		add(bnOK);
 		bnOK.addActionListener(this);  // Dialog ist selbst ein Actionlistener
 		add(bnCancel);
-		bnCancel.addActionListener(this);  
+		bnCancel.addActionListener(this); 
 		
 	}
 	
@@ -114,7 +116,7 @@ public class BuchEingabe extends JDialog implements ActionListener, WindowListen
 	 * holt die Daten aus den Eingabefeldern und schreibt sie in die
 	 * Buch-Instanz
 	 */
-	private void updateDaten() throws IllegalArgumentException, NumberFormatException
+	public void updateDaten() throws IllegalArgumentException, NumberFormatException
 	{
 		if (buch == null)
 			buch = new Buch();  // Instanz anlegen falls nötig
@@ -176,7 +178,8 @@ public class BuchEingabe extends JDialog implements ActionListener, WindowListen
 
 	public void windowClosing(WindowEvent event)
 	{
-		dispose(); // schließen und Resourcen freigeben
+		if (JOptionPane.showConfirmDialog(this, "Wirklich schließen?") == JOptionPane.OK_OPTION)
+			dispose(); // schließen und Resourcen freigeben
 	}
 
 	public void windowDeactivated(WindowEvent event)
