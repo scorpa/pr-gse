@@ -71,8 +71,4 @@ Eine andere Möglichkeit besteht darin, dass die Fensterklasse selbst das Interf
         }
 }}}
 
-Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) innere Klasse zu verwenden.
-
-Eine innere Klasse ist eine Klasse innerhalb des Körpers einer anderen Klasse.
-
-Eine anonyme innere Klasse ist ein spezielles Konstrukt, wo innerhalb einer Anweisung eine Klasse gleichzeitig definiert und auch instanziiert wird.
+Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_innere_klasse innere Klasse] zu verwenden.
