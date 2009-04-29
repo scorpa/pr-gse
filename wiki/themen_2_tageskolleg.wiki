@@ -20,6 +20,9 @@ Listen und andere Container
 [thema_exceptions Exceptions] -
 Fehlerbehandlung in Java (und anderen objektorientierten Sprachen)
 
+[thema_innere_klassen Innere Klassen] -
+Eine spezielle Konstruktion, um sich Quellcode zu ersparen
+
 [thema_streams Dateianbindung und Streams] -
 Wir wollen unsere Daten auch speichern
 
