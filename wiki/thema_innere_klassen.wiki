@@ -1,0 +1,5 @@
+#summary Innere Klassen
+
+= Innere Klassen=
+
+Hier sei auf folgendes [http://pr-gse.googlecode.com/svn/trunk/beispiele/innere_klassen Beispiel] verwiesen.
