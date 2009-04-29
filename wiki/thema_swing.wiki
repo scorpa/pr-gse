@@ -71,4 +71,4 @@ Eine andere Möglichkeit besteht darin, dass die Fensterklasse selbst das Interf
         }
 }}}
 
-Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_innere_klasse innere Klasse] zu verwenden.
+Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_innere_klassen innere Klasse] zu verwenden.
