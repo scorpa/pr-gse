@@ -13,6 +13,7 @@
     * [thema_abstraktion Abstraktion]
     * [thema_collections Collections]
     * [thema_exceptions Exceptions]
+    * [thema_innere_klassen Innere Klassen]
     * [thema_streams Dateianbindung und Streams]
     * [thema_swing GUI]
     * [thema_programm1 1. umfangreicheres Programm]
