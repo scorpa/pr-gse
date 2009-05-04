@@ -16,7 +16,7 @@ Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Met
 
   * `public int getZeilen()` liefert die Anzahl der Zeilen im Button-Feld zurück.
 
-  * `public int getSpalten()` liefert die Anzahl der Zeilen im Button-Feld zurück.
+  * `public int getSpalten()` liefert die Anzahl der Spalten im Button-Feld zurück.
 
   * `public boolean tipp(int zeile, int spalte)` - diese Methode wird aufgerufen, wenn der Benutzer auf die Schaltfläche in der angegebenen Zeile und Spalte klickt. Die Methode liefert `true` zurück, wenn der Benutzer auf eine gültige Schaltfläche geklickt hat, ansonsten `false`.
 
