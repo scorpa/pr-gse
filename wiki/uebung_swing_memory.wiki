@@ -34,4 +34,6 @@ Das Interface `Memory` ist von einer konkreten Klasse zu implementieren.
 Eine Instanz von `Memory` wird von der Klasse `MemoryGUI` verwendet, welche die Oberfläche des Spieles implementiert.
 
 
-<u>Hinweise:</u>
+<u>Hinweis:</u>
+
+[http://java.sun.com/docs/books/tutorial/uiswing/components/icon.html Hier] ist beschrieben, wie man in Java mit Icons arbeitet.
