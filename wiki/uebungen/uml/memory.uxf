@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>350</x><y>10</y><w>270</w><h>120</h></coordinates><panel_attributes>/Memory/
+<?xml version="1.0" encoding="UTF-8"?><umlet_diagram><element><type>com.umlet.element.base.Class</type><coordinates><x>350</x><y>10</y><w>270</w><h>150</h></coordinates><panel_attributes>/Memory/
 --
 --
+getZeilen() : int
+getSpalten() : int
 /tipp(zeile : int, spalte : int) : boolean/
 /getStatus(zeile : int, spalte : int) : int/
 /getBild(zeile : int, spalte : int) : ImageIcon/
