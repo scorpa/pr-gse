@@ -22,7 +22,7 @@ Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Met
     1: Feld ist aufgedeckt aber noch nicht erraten
     2: Feld wurde bereits erraten
 }}}
-  * `public Image getBild(int zeile, int spalte) - diese Methode liefert das Bild zurück, welches beim Feld in der gegebenen Zeile und Spalte angezeigt werden soll (Referenz auf ein `java.awt.Image`-Objekt)
+  * `public ImageIcon getBild(int zeile, int spalte) - diese Methode liefert das Bild zurück, welches beim Feld in der gegebenen Zeile und Spalte angezeigt werden soll (Referenz auf ein `javax.swing.ImageIcon`-Objekt)
 
   * `public boolean fertig()` - liefert `true` zurück, wenn bereits alle Paare erraten wurden.
 
@@ -32,3 +32,6 @@ Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Met
 Das Interface `Memory` ist von einer konkreten Klasse zu implementieren.
 
 Eine Instanz von `Memory` wird von der Klasse `MemoryGUI` verwendet, welche die Oberfläche des Spieles implementiert.
+
+
+<u>Hinweise:</u>
