@@ -12,7 +12,7 @@ Um eine schöne Schichtentrennung zwischen grafischer Oberfläche (GUI) und Logi
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/memory.jpg
 </p>
 
-Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Methoden aufweisen:
+Eine Instanz einer Klasse, welche das Interface `Memory` implementiert, muss folgende Methoden aufweisen:
 
   * `public int getZeilen()` liefert die Anzahl der Zeilen im Button-Feld zurück.
 
