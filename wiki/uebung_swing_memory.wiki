@@ -27,3 +27,8 @@ Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Met
   * `public boolean fertig()` - liefert `true` zurück, wenn bereits alle Paare erraten wurden.
 
   * `public int tipps()` - liefert die Anzahl der Tipps zurück, welche seit Spielbeginn abgegeben wurden.
+
+
+Das Interface `Memory` ist von einer konkreten Klasse zu implementieren.
+
+Eine Instanz von `Memory` wird von der Klasse `MemoryGUI` verwendet, welche die Oberfläche des Spieles implementiert.
