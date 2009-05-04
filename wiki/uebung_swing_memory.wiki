@@ -14,6 +14,10 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/memory.jpg
 
 Eine Instanz einer Klasse, welche das Interface implementiert, muss folgende Methoden aufweisen:
 
+  * `public int getZeilen()` liefert die Anzahl der Zeilen im Button-Feld zurück.
+
+  * `public int getSpalten()` liefert die Anzahl der Zeilen im Button-Feld zurück.
+
   * `public boolean tipp(int zeile, int spalte)` - diese Methode wird aufgerufen, wenn der Benutzer auf die Schaltfläche in der angegebenen Zeile und Spalte klickt. Die Methode liefert `true` zurück, wenn der Benutzer auf eine gültige Schaltfläche geklickt hat, ansonsten `false`.
 
   * `public int getStatus(int zeile, int spalte)` - diese Methode liefert den Status eines Feldes zurück: 
