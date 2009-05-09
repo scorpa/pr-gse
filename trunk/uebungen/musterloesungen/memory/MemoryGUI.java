@@ -20,11 +20,11 @@ public class MemoryGUI extends JFrame implements ActionListener
     private Memory memory;
     private JButton[][] buttons;
     
-    public MemoryGUI(Memory memory)
+    public MemoryGUI()
     {
-        this.memory = memory;
+        super("Memory");
+        neuesSpiel();
         initFrame();
-        setSize(memory.getSpalten() * 80, memory.getZeilen() * 80);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e)
@@ -33,9 +33,26 @@ public class MemoryGUI extends JFrame implements ActionListener
             }
         });
     }
+    
+    private void neuesSpiel()
+    {
+        AuswahlDialog auswahl = new AuswahlDialog();
+        auswahl.setVisible(true);
+        try
+        {
+            memory = new MemoryImpl(auswahl.getZeilen(), auswahl.getSpalten());
+        } catch (MemoryException e1)
+        {
+            e1.printStackTrace();
+            JOptionPane.showMessageDialog(this, e1.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+            System.exit(-1);
+        }
+    }
+    
 
     private void initFrame()
     {
+        getContentPane().removeAll();   // alle Buttons entfernen
         setLayout(new GridLayout(memory.getZeilen(), memory.getSpalten()));
         buttons = new JButton[memory.getZeilen()][memory.getSpalten()];
         for (int z = 0; z < memory.getZeilen(); z++)
@@ -46,7 +63,8 @@ public class MemoryGUI extends JFrame implements ActionListener
                 buttons[z][s].setText("?");
                 add(buttons[z][s]);
             }
-        
+        setSize(memory.getSpalten() * 80, memory.getZeilen() * 80);
+        validate();
     }
 
     public void actionPerformed(ActionEvent e)
@@ -78,18 +96,23 @@ public class MemoryGUI extends JFrame implements ActionListener
             }
         if (memory.fertig())
         {
-            JOptionPane.showMessageDialog(this, "benötigte Tipps: " + memory.tipps());
+            JOptionPane.showMessageDialog(this, "benötigte Versuche: " + memory.tipps());
             ende();
+            neuesSpiel();  // Falls Benutzer nicht aufhört
+            initFrame();
         }
     }
 
     private void ende()
     {
-        if (JOptionPane.showConfirmDialog(this, "Spiel beenden?") == JOptionPane.OK_OPTION)
+        if (JOptionPane.showConfirmDialog(this, "Spiel beenden?", "Beenden", JOptionPane.YES_NO_OPTION) == JOptionPane.OK_OPTION)
             System.exit(0);
     }
     
-    
+    public static void main(String[] args)
+    {
+        new MemoryGUI().setVisible(true);
+    }
     
     
 
