@@ -36,17 +36,25 @@ public class MemoryGUI extends JFrame implements ActionListener
     
     private void neuesSpiel()
     {
-        AuswahlDialog auswahl = new AuswahlDialog();
-        auswahl.setVisible(true);
-        try
+        setVisible(false);
+        boolean ok = false;
+        
+        while (!ok)
         {
-            memory = new MemoryImpl(auswahl.getZeilen(), auswahl.getSpalten());
-        } catch (MemoryException e1)
-        {
-            e1.printStackTrace();
-            JOptionPane.showMessageDialog(this, e1.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
-            System.exit(-1);
+            AuswahlDialog auswahl = new AuswahlDialog();
+            auswahl.setVisible(true);
+            try
+            {
+                memory = new MemoryImpl(auswahl.getZeilen(), auswahl.getSpalten());
+                ok = true;
+            } catch (MemoryException e1)
+            {
+                e1.printStackTrace();
+                JOptionPane.showMessageDialog(this, e1.getMessage(), "Fehler", JOptionPane.ERROR_MESSAGE);
+            }
         }
+        setVisible(true);
+        
     }
     
 
