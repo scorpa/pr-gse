@@ -77,7 +77,5 @@ Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_inne
 === Übungen ===
 
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_swing_memory Memory] ||   ||  ||
-
-
+|| [uebung_swing_memory Memory] || http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/memory memory  ||  ||
 
