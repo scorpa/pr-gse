@@ -1,0 +1,8 @@
+#summary Dateianbindung und Streams
+
+= Dateianbindung und Streams =
+
+=== Literatur ===
+[http://openbook.galileocomputing.de/javainsel8/javainsel_14_001.htm#mjdb40230f3b27c05e1faa3f8cf6ab830a Java ist auch eine Insel - Kapitel 14]
+
+[http://www.javabuch.de Handbuch der Java-Programmierung] - Kapitel 19-21, 41
