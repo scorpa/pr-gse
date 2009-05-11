@@ -115,7 +115,7 @@ public class BuchVerwaltung
 				if (b.getKunde() != null)
 					dos.writeUTF(b.getKunde());
 				else
-					dos.writeUTF("");
+					dos.writeUTF(" ");
 			}
 		} catch (FileNotFoundException e)
 		{
@@ -156,8 +156,8 @@ public class BuchVerwaltung
 				b.setVerlag(dis.readUTF());
 				b.setSeiten(dis.readInt());
 				String kunde = dis.readUTF();
-				if (kunde.length() > 0)
-					b.entlehnen(dis.readUTF());   
+				if (kunde.trim().length() > 0)
+					b.entlehnen(kunde);   
 				anlegen(b);
 				
 			}
@@ -166,7 +166,7 @@ public class BuchVerwaltung
 			System.out.println("Kann Datei nicht zum Laden öffnen: " + datei);
 		} catch (IOException e)
 		{
-			System.out.println("Feler beim Laden: " + e.getMessage());
+			System.out.println("Fehler beim Laden: " + e.getMessage());
 		} finally
 		{
 			if (dis != null)
