@@ -13,7 +13,11 @@ import java.io.Serializable;
  */
 public class Buch implements Serializable
 {
-    private String isbn;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7631446741218716665L;
+	private String isbn;
     private String autor;
     private String titel;
     private String verlag;
