@@ -7,8 +7,11 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Projekt Fahrtenbuch
@@ -97,6 +100,41 @@ public class Fahrtenbuch implements Serializable
     public void remove(Kostenpunkt kp)
     {
         kosten.remove(kp);
+    }
+    
+    /**
+     * Erstellt eine Liste von Abrechnungen für alle Fahrer 
+     * für den abgefragten Zeitraum
+     * 
+     * @param von Beginn des gefragten Zeitraums
+     * @param bis Ende des gefragten Zeitraums
+     * @return Liste von Abrechnungen
+     */
+    public List<Abrechnung> abrechnen (Date von, Date bis)
+    {
+    	Abrechnung.clear();
+    	Map<Fahrer, Abrechnung> abrechnungen = new HashMap<Fahrer, Abrechnung>();
+    	
+    	for (Fahrer f : fahrer)
+    		abrechnungen.put(f, new Abrechnung(f));
+    	
+    	for (Fahrt f : fahrten)
+    	{
+    		// Fahrt überschneidet sich zumindest teilweise mit abgefragtem Intervall
+    		if (f.getAbfahrt().compareTo(bis) < 0 && f.getAnkunft().compareTo(von) > 0)
+    			abrechnungen.get(f.getFahrer()).addFahrt(f);
+    	}
+
+    	for (Kostenpunkt k : kosten)
+    	{
+    		if (k.getDatum().compareTo(von) > 0 && k.getDatum().compareTo(bis) > 0)
+    			abrechnungen.get(k.getFahrer()).addKostenpunkt(k);
+    	}
+    	
+    	List<Abrechnung> liste = new ArrayList<Abrechnung>();
+    	liste.addAll(abrechnungen.values());
+    	Collections.sort(liste);
+    	return liste;
     }
 	
     /**

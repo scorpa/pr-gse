@@ -11,7 +11,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -28,6 +30,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
 
+import fahrtenbuch.fachlogik.Abrechnung;
 import fahrtenbuch.fachlogik.Ausgabe;
 import fahrtenbuch.fachlogik.Fahrer;
 import fahrtenbuch.fachlogik.Fahrt;
@@ -233,10 +236,16 @@ public class Hauptfenster extends JFrame
     {
         JMenuBar menubar = new JMenuBar();
         setJMenuBar(menubar);
+        
         JMenu datei = new JMenu("Datei");
         menubar.add(datei);
         JMenuItem ende = new JMenuItem("beenden");
         datei.add(ende);
+        
+        JMenu abrechnung = new JMenu("Abrechnung");
+        menubar.add(abrechnung);
+        JMenuItem einzelAbrechnungen = new JMenuItem("für jeden Fahrer");
+        abrechnung.add(einzelAbrechnungen);
         
         // Einhängen der Event-Handler
         ende.addActionListener(new ActionListener(){
@@ -244,10 +253,17 @@ public class Hauptfenster extends JFrame
             {
                 ende();
             }});        
+
+        einzelAbrechnungen.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				new AbrechnungsFenster(fahrtenbuch).setVisible(true);
+			}});
     }
 
 
-    // =================== event handler Methoden ==============================
+
+	// =================== event handler Methoden ==============================
     /**
      * beim Beenden der Applikation wird gespeichert
      */

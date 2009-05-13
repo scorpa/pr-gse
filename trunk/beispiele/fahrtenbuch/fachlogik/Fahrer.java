@@ -38,6 +38,11 @@ public class Fahrer implements Serializable
     {
         return name;
     }
+
+	public String getName()
+	{
+		return name;
+	}
 	
 	
 
