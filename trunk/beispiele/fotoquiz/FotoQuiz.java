@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
@@ -31,16 +32,24 @@ public class FotoQuiz extends JFrame
 	private JButton[][] buttons;
 	Iterator<Image> nextImage;
 	
-	public FotoQuiz(int rows, int columns)
+	public FotoQuiz()
 	{
-		this.rows = rows;
-		this.columns = columns;
 		InputStream confStream = getClass().getResourceAsStream("/fotoquiz/images.conf");
 		try
 		{
 			if (confStream != null)
 			{
 				BufferedReader conf = new BufferedReader(new InputStreamReader(confStream));
+				String dimStr = conf.readLine();
+				try
+				{
+					StringTokenizer tokenz = new StringTokenizer(dimStr);
+					rows = Integer.parseInt(tokenz.nextToken());
+					columns = Integer.parseInt(tokenz.nextToken());
+				} catch(Exception e)
+				{
+					throw new IOException("invalid format of config file");
+				}
 				String name = conf.readLine().trim();
 				while (name != null && name.length() > 0)
 				{
@@ -85,7 +94,7 @@ public class FotoQuiz extends JFrame
 		for (int r = 0; r < rows; r++)
 			for (int c = 0; c < columns; c++)
 			{
-				JButton jbn = new JButton("" + (r*columns+c));
+				JButton jbn = new JButton("" + (r*columns+c+1));
 				jbn.setFont(jbn.getFont().deriveFont(20f));
 				buttons[r][c] = jbn ;
 				panel.add(jbn);
@@ -149,7 +158,7 @@ public class FotoQuiz extends JFrame
 	{
 		try
 		{
-			FotoQuiz quiz = new FotoQuiz(10,10);
+			FotoQuiz quiz = new FotoQuiz();
 			quiz.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			quiz.setSize(800, 600);
 			quiz.setVisible(true);
