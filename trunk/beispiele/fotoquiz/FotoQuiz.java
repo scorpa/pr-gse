@@ -50,15 +50,15 @@ public class FotoQuiz extends JFrame
 				{
 					throw new IOException("invalid format of config file");
 				}
-				String name = conf.readLine().trim();
-				while (name != null && name.length() > 0)
+				String name = conf.readLine();
+				while (name != null && name.trim().length() > 0)
 				{
 					URL url = getClass().getResource(name);
 					if (url == null)
 						throw new IOException("cannot find image: " + name);
 					Image img = ImageIO.read(url);
 					images.add(img);
-					name = conf.readLine().trim();
+					name = conf.readLine();
 				}
 				conf.close();
 				nextImage = images.iterator();
@@ -69,6 +69,7 @@ public class FotoQuiz extends JFrame
 			initFrame();				
 		} catch(Exception e)
 		{
+            e.printStackTrace();
 			JOptionPane.showMessageDialog(this, e.getMessage(), "Error loading images", JOptionPane.ERROR_MESSAGE);
 		}
 		finally
