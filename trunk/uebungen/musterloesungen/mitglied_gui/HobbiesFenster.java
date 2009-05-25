@@ -24,7 +24,6 @@ public class HobbiesFenster extends JDialog
         this.hobbies = hobbies;
         setTitle("Hobbies bearbeiten");
         initDialog();
-        updateDaten();
         pack();
         setModal(true);
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
