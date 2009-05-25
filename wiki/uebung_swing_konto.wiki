@@ -1,0 +1,5 @@
+#summary Konto-Dialog
+
+= Konto-Dialog =
+
+Erstellen Sie einen Anzeige- und Eingabe-Dialog für die Klasse [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/konto/Konto.java Konto].
