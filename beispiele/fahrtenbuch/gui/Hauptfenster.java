@@ -430,10 +430,19 @@ public class Hauptfenster extends JFrame
             fahrt.setFahrer((Fahrer) cbFahrer.getSelectedItem());
             FahrtFenster dialog = new FahrtFenster(this, fahrt);
             dialog.setVisible(true);
-            if (dialog.isOk())
+            while (dialog.isOk())
             {
-                lmFahrten.addElement(fahrt);
-                fahrtenbuch.add(fahrt);
+            	try
+            	{
+            		fahrtenbuch.add(fahrt);
+                    lmFahrten.addElement(fahrt);
+            		break;   // gespeichert
+            	} catch(FahrtenbuchException fe)
+            	{
+            		JOptionPane.showMessageDialog(this, fe.getMessage());
+            		dialog = new FahrtFenster(this, fahrt);
+            		dialog.setVisible(true);
+            	}
             }
         } catch(Exception e)
         {
