@@ -78,4 +78,4 @@ Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_inne
 
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_swing_memory Memory] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/memory memory]  ||  ||
-|| [uebung_swing_konto Konto-Anzeige ||  ||  ||
+|| [uebung_swing_konto Konto-Anzeige] ||  ||  ||
