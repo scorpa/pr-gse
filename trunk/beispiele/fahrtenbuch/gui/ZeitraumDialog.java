@@ -25,6 +25,7 @@ public class ZeitraumDialog extends JDialog
         von = new SpinnerDateModel(new Date(), null, null, Calendar.DAY_OF_MONTH);
         bis = new SpinnerDateModel(new Date(), null, null, Calendar.DAY_OF_MONTH);
 		initDialog();
+		pack();
 	}
 	
 	public boolean anzeigen()
