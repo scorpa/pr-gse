@@ -127,7 +127,7 @@ public class Fahrtenbuch implements Serializable
 
     	for (Kostenpunkt k : kosten)
     	{
-    		if (k.getDatum().compareTo(von) > 0 && k.getDatum().compareTo(bis) > 0)
+    		if (k.getDatum().compareTo(von) > 0 && k.getDatum().compareTo(bis) < 0)
     			abrechnungen.get(k.getFahrer()).addKostenpunkt(k);
     	}
     	

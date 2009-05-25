@@ -54,9 +54,14 @@ public class Abrechnung implements Comparable<Abrechnung>
 	 */
 	public float berechneGuthaben()
 	{
-		float kostenProKm = gesamtAusgaben / gesamtKM;
-		return bezahlt - (kostenProKm * km);
-		
+		if (gesamtKM > 0)
+		{
+			float kostenProKm = gesamtAusgaben / gesamtKM;
+			return bezahlt - (kostenProKm * km);
+		}
+		else
+			return bezahlt;
+			
 	}
 	
 	public static void clear()

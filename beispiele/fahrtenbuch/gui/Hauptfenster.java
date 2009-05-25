@@ -257,7 +257,7 @@ public class Hauptfenster extends JFrame
         einzelAbrechnungen.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e)
 			{
-				new AbrechnungsFenster(fahrtenbuch).setVisible(true);
+				new AbrechnungsFenster(fahrtenbuch);
 			}});
     }
 
