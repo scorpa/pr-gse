@@ -69,9 +69,35 @@ public class Fahrtenbuch implements Serializable
     /**
      * fügt eine Fahrt in die Liste
      * @param fahrt einzufügende Fahrt
+     * @throws FahrtenbuchException 
      */
-    public void add(Fahrt fahrt)
+    public void add(Fahrt fahrt) throws FahrtenbuchException
     {
+    	for (Fahrt f : fahrten)
+    	{
+    		if ((fahrt.getAbfahrt().compareTo(f.getAnkunft()) < 0 
+    				&& fahrt.getAnkunft().compareTo(f.getAbfahrt()) > 0)
+    			|| (f.getAbfahrt().compareTo(fahrt.getAnkunft()) < 0 
+        				&& f.getAnkunft().compareTo(fahrt.getAbfahrt()) > 0))
+    		{
+    			throw new FahrtenbuchException("Fahrt überschneidet sich in der Zeit mit " + f.toString());
+    		}
+    		if ((fahrt.getKmAbfahrt() < f.getKmAnkunft() 
+    				&& fahrt.getKmAnkunft() > f.getKmAbfahrt())
+    			|| (f.getKmAbfahrt() < fahrt.getKmAnkunft() 
+        				&& f.getKmAnkunft() > fahrt.getKmAbfahrt()))
+    		{
+    			throw new FahrtenbuchException("Fahrt überschneidet sich bei den Kilometern mit " + f.toString());
+    		}
+    		if ((fahrt.getKmAbfahrt() < f.getKmAbfahrt() 
+    				&& fahrt.getAbfahrt().compareTo(f.getAbfahrt()) > 0)
+    			|| (f.getKmAbfahrt() < fahrt.getKmAbfahrt() 
+        				&& f.getAbfahrt().compareTo(fahrt.getAbfahrt()) > 0))
+    		{
+    			throw new FahrtenbuchException("Zeit und Kilometer sind nicht konsistent mit " + f.toString());
+    		}
+    				
+    	}
         fahrten.add(fahrt);
     }
     
