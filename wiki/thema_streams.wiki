@@ -10,4 +10,4 @@
 === Übungen ===
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [uebung_streams_telefonstatistik] || || ||
+|| [uebung_streams_anrufstatistik Anrufstatistik] || || ||
