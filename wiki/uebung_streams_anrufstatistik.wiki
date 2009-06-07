@@ -52,6 +52,8 @@ Der Konstruktor instanziiert die Liste.
 
 Mit der Methode `add(...)` kann eine `Anruf`-Instanz hinzugefügt werden.
 
+Die Methode `clear()` entfernt alle `Anruf`-Instanzen.
+
 Die Methode `einlesen(...)` liest eine CSV-Datei wie oben beschrieben ein und fügt für jede eingelesene Zeile eine `Anruf`-Instanz in die Liste ein.
 
 Die Methode `berechneGesamtKosten()` berechnet die Summe der Kosten aller Anrufe und liefert diese als Rückgabewert.
@@ -71,3 +73,5 @@ In einem `JLabel` werden die Gesamtkosten aller Anrufe ausgewiesen.
 In einer `JTextArea` wird für die jeweils in der `JList` ausgewählte Nummer eine Statistik angezeigt: Es werden alle Anrufe zu dieser Nummer mit Datum/Uhrzeit und Dauer aufgelistet. Danach werden noch die Gesamtkosten aller Anrufe zu dieser Nummer ausgewiesen. Die `JTextArea` soll nicht editierbar sein.
 
 Mit dem Menü "Datei - einlesen" wird ein `JFileChooser` angezeigt, mit welchem eine CSV-Datei wie oben beschrieben ausgewählt werden kann. Diese Datei wird dann eingelesen, und die Anrufstatistik wird aktualisiert.
+
+Beim Beenden des Programms wird die Anrufstatistik serialisiert in eine Datei gespeichert. Beim nächsten Programmstart wird diese Datei deserialisiert und der Zustand wie beim Beenden des Programms wieder hergestellt.
