@@ -12,4 +12,4 @@ Die Zeilen sind folgendermaßen aufgebaut:
   * Datum/Uhrzeit des Anrufes mit folgendem Format: TT.MM.JJJJ/hh:mm:ss
   * Dauer des Anrufes in Sekunden
 
-Beispieldaten befinden sich [http://pr-gse.googlecode.com/svn/trunk/wiki/uebungen/data/anrufe.csv hier].
+Beispieldaten befinden sich [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/anrufe.csv hier].
