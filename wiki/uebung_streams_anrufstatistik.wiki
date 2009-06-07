@@ -58,6 +58,14 @@ Die Methode `berechneGesamtKosten()` berechnet die Summe der Kosten aller Anrufe
 
 Die Methode `berechneKosten(...)` berechnet die Gesamtkosten für alle Anrufe zu einer bestimmten Nummer (Parameter) und liefert diese als Rückgabewert.
 
-Die Methode `nummernListe()` liefert in einer Liste alle angerufenen Nummern, wobei jede Nummer nur einmal aufgelistet wird, egal wie oft sie angerufen wurde.
+Die Methode `nummernListe()` liefert in einer Liste alle angerufenen Nummern, wobei jede Nummer nur einmal aufgelistet wird, unabhängig davon, wie oft sie angerufen wurde.
 
 Die Methode `statistik()` liefert in einer Liste alle Anrufe zu der im Parameter übergebenen Nummer.
+
+=== GUI ===
+
+Die grafische Oberfläche des Programms besitzt ein Hauptfenster, in welchem eine `JList` alle angerufenen Nummern auflistet (jede Nummer nur einmal, unabhängig davon wie oft sie angerufen wurde).
+
+In einem `JLabel` werden die Gesamtkosten aller Anrufe ausgewiesen.
+
+In einer `JTextArea` wird für die jeweils in der `JList` ausgewählte Nummer eine Statistik angezeigt: Es werden alle Anrufe zu dieser Nummer mit Datum/Uhrzeit und Dauer aufgelistet. Danach werden noch die Gesamtkosten aller Anrufe zu dieser Nummer ausgewiesen. Die `JTextArea` soll nicht editierbar sein.
