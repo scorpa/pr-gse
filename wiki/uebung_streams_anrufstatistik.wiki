@@ -1,0 +1,15 @@
+#summary Übung: Anrufstatistik
+
+= Anrufstatistik =
+
+Von einer Telefongesellschaft wird die Liste aller Anrufe für einen Anschluss in einer CSV-Datei (comma separated values) mit folgendem Aufbau ausgeliefert:
+
+In jeder Zeile stehen die Daten für einen Anruf. Eine Zeile besteht aus mehreren Feldern, welche jeweils mit einem Strichpunkt (;) getrennt sind.
+
+Die Zeilen sind folgendermaßen aufgebaut:
+
+  * gerufene Telefonnummer (String)
+  * Datum/Uhrzeit des Anrufes mit folgendem Format: TT.MM.JJJJ/hh:mm:ss
+  * Dauer des Anrufes in Sekunden
+
+Beispieldaten befinden sich [http://pr-gse.googlecode.com/svn/trunk/wiki/uebungen/data/anrufe.csv hier].
