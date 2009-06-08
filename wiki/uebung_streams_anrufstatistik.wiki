@@ -62,7 +62,7 @@ Die Methode `berechneKosten(...)` berechnet die Gesamtkosten für alle Anrufe zu
 
 Die Methode `nummernListe()` liefert in einer Liste alle angerufenen Nummern, wobei jede Nummer nur einmal aufgelistet wird, unabhängig davon, wie oft sie angerufen wurde.
 
-Die Methode `statistik()` liefert in einer Liste alle Anrufe zu der im Parameter übergebenen Nummer.
+Die Methode `statistik(...)` liefert in einer Liste alle Anrufe zu der im Parameter übergebenen Nummer.
 
 === GUI ===
 
