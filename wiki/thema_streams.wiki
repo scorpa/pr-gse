@@ -11,3 +11,4 @@
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_streams_anrufstatistik Anrufstatistik] || || ||
+|| [uebung_streams_videothek Videothek] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/videothek videothek] || Prüfungsaufgabe ||
