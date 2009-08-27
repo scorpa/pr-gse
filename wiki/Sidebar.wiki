@@ -1,4 +1,4 @@
-  * [themen_basis Basis Objektorientierung]
+  * Basis Objektorientierung
     * [thema_objekte_und_klassen Objekte und Klassen]
     * [thema_objekte_und_klassen Objekte und Klassen]
     * [thema_assoziation Assoziation mehrerer Klassen]
