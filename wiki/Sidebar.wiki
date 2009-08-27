@@ -1,4 +1,4 @@
-  * Basis Objektorientierung
+  * Objektorientierung 1
     * [thema_objekte_und_klassen Objekte und Klassen]
     * [thema_objekte_und_klassen Objekte und Klassen]
     * [thema_assoziation Assoziation mehrerer Klassen]
@@ -9,15 +9,14 @@
     * [thema_klassendesign Klassendesign]
     * [thema_vererbung Vererbung]
     * [thema_abstraktion Abstraktion]
-  * Objektorientierung fortgeschritten
+  * Objektorientierung 2
     * [thema_collections Collections]
     * [thema_exceptions Exceptions]
     * [thema_innere_klassen Innere Klassen]
     * [thema_streams Dateianbindung und Streams]
-  * Grafische Benutzeroberfläche
+  * GUI
     * [thema_swing GUI]
     * [thema_programm1 1. umfangreicheres Programm]
   * Sonstige Themen
     * [thema_eclipse Eclipse]
-    * [thema_subversion Versionskontrolle (mit Subversion)] -
-praktische Anleitung
+    * [thema_subversion Versionskontrolle (mit Subversion)]
