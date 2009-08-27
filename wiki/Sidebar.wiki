@@ -6,15 +6,16 @@
     * [thema_arraylist ArrayList]  
     * [thema_arrays Arrays]
     * [thema_benutzerinteraktion Benutzerinteraktion (Eingabe)]
-    * [thema_eclipse Eclipse]
     * [thema_klassendesign Klassendesign]
     * [thema_vererbung Vererbung]
     * [thema_abstraktion Abstraktion]
-  * [themen_objektorientierung Objektorientierung fortgeschritten]
+  * Objektorientierung fortgeschritten
     * [thema_collections Collections]
     * [thema_exceptions Exceptions]
     * [thema_innere_klassen Innere Klassen]
     * [thema_streams Dateianbindung und Streams]
-  * [themen_2_tageskolleg Grafische Benutzeroberfläche]
+  * Grafische Benutzeroberfläche
     * [thema_swing GUI]
     * [thema_programm1 1. umfangreicheres Programm]
+  * Sonstige Themen
+    * [thema_eclipse Eclipse]
