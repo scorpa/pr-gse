@@ -1,4 +1,4 @@
-#summary Innere Klassen
+#summary Themenübersicht
   * Objektorientierung 1
     * [thema_objekte_und_klassen Objekte und Klassen]
     * [thema_objekte_und_klassen Objekte und Klassen]
