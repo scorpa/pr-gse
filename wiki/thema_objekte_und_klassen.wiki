@@ -12,6 +12,8 @@
 
 === Übungen ===
 
+Für die ersten Übungen werden diese [http://www.bluej.org/objects-first/resources/projects.zip Beispielprojekte] aus dem Buch [http://www.bluej.org/objects-first/evaluation.html Objects First With Java] benötigt. Bitte herunterladen und entpacken.
+
 Als erste Übung sei dieses [http://www.u-helmich.de/inf/BlueJ/kurs11/seite01/AB101.pdf Arbeitsblatt] von U.Helmich empfohlen.
 
 
