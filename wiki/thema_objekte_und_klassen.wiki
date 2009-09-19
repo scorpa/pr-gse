@@ -16,6 +16,8 @@ Für die ersten Übungen werden diese [http://www.bluej.org/objects-first/resour
 
 Als erste Übung sei dieses [http://www.u-helmich.de/inf/BlueJ/kurs11/seite01/AB101.pdf Arbeitsblatt] von U.Helmich empfohlen.
 
+Weiters sind die Übungen aus dem [http://www.bluej.org/objects-first/chapters/objects-first-ch1.pdf 1. Kapitel] des oben genannten Buches empfehlenswert.
+
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_objekte_und_klassen_person Person] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
