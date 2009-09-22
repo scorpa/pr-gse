@@ -202,8 +202,8 @@ Alle Aufgaben zum Thema [thema_arraylist ArrayList] können auch mit einem Array
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow; noch keine Musterlösung ||
 ||  Bibliothek ||  || noch keine Musterlösung||
 ||  Uni ||  ||  noch keine Musterlösung ||
-||  [uebung_arrays_randomtest RandomTest] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit nur Code aus dem Unterricht. ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue04_Sensor.doc Sensor] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
+||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit nur Code aus dem Unterricht. ||
+||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue04_Sensor.doc Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
 ||  [uebung_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
 
 
@@ -213,6 +213,6 @@ Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
 || 08_Array_Medium || Uebung_002.pdf <br/> Uebung_003.pdf ||
 || 09_Array_Hard|| Uebung_002.pdf <br/> Uebung_003.pdf ||
 
-[http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/lotto Musterlösung für 08_Array_Medium Uebung_001.pdf (Lotto)]
+[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/lotto Musterlösung für 08_Array_Medium Uebung_001.pdf (Lotto)]
 
 Eine ganz amüsante Übung befindet sich in 10_Gefangen.
