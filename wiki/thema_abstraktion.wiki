@@ -9,4 +9,4 @@ Das Beispiel aus dem Unterricht vom 4.3.2009 befindet sich hier: [http://code.go
 || [uebung_vererbung_transport_v3 Transport_V3] || || ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Fuhrpark.doc Fuhrpark] || || ||
 || [uebung_abstraktion_logik Logik] || || ||
-|| [uebung_abstraktion_rechenquiz Rechenquiz] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/rechenquiz rechenquiz] || Prüfungsbeispiel ||
+|| [uebung_abstraktion_rechenquiz Rechenquiz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/rechenquiz rechenquiz] || Prüfungsbeispiel ||
