@@ -89,4 +89,4 @@ Soll die Suche von hinten begonnen werden, dann verwendet man die Methode {{{las
 
 = Übungen = 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe08_String.doc Mitglied] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/mitglied mitglied] ||  ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe08_String.doc Mitglied] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/mitglied mitglied] ||  ||
