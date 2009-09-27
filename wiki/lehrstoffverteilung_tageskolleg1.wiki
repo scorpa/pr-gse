@@ -3,7 +3,8 @@
 = Lehrstoffverteilung 1. Semester Tageskolleg =
 
 || *Wochen* || *Thema* || *Bemerkungen* ||
-|| 1-5 || [thema_objekte_und_klassen Objekte und Klassen] || ||
+|| 1-4 || [thema_objekte_und_klassen Objekte und Klassen] || ||
+|| 5 || [thema_verzweigung Verzweigung] || ||
 || 6-8 || [thema_assoziation Assoziation mehrerer Klassen] || ||
 || 9 || [thema_string_operationen_javadoc String-Operationen und Java-Doc] || ||
 || 10-11 || [thema_schleifen Schleifen] || ||
