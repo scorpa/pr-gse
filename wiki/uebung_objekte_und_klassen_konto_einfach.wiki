@@ -16,5 +16,5 @@ Methoden:
   * `getBesitzer()`: get-Methode für das Attribut `besitzer`
   * `getSaldo()`: get-Methode für das Attribut `saldo`
   * `einzahlen(double betrag)`: es wird der übergebene Betrag auf das Konto eingezahlt (`saldo` wird um diesen Betrag erhöht).
-  * `abheben(double betrag)`: es wird der übergebene Betrag auf vom Konto abgehoben (`saldo` wird um diesen Betrag reduziert).
-(Es gibt keine set-Methode für das Attribut `saldo` - der Kontostand kann nur durch einzahlen oder abheben verändert werden.)
+  * `abheben(double betrag)`: es wird der übergebene Betrag vom Konto abgehoben (`saldo` wird um diesen Betrag reduziert).
+_(Es gibt keine set-Methode für das Attribut `saldo` - der Kontostand kann nur durch einzahlen oder abheben verändert werden.)_
