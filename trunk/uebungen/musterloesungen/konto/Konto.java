@@ -1,6 +1,6 @@
 package konto;
 /**
- * Musterlösung für Konto-Klasse (prakt. Prüfung vom 1.10.2008)
+ * Musterlösung für Aufgabe http://code.google.com/p/pr-gse/wiki/uebung_objekte_und_klassen_konto
  * 
  * @author (Rudolf Radlbauer)
  */
