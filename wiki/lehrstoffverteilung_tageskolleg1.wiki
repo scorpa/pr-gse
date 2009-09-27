@@ -1,0 +1,18 @@
+#summary Lehrstoffverteilung 1. Semester Tageskolleg
+
+= Lehrstoffverteilung 1. Semester Tageskolleg =
+
+|| *Wochen* || *Thema* || *Bemerkungen* ||
+|| 1-5 || [thema_objekte_und_klassen Objekte und Klassen] || ||
+|| 6-8 || [thema_assoziation Assoziation mehrerer Klassen] || ||
+|| 9 || [thema_string_operationen_javadoc String-Operationen und Java-Doc] || ||
+|| 10-11 || [thema_schleifen Schleifen] || ||
+|| 12-14 || [thema_arrays Arrays] || ||
+|| 15-16 || [thema_arraylist ArrayList] || ||
+|| 17-18 || [thema_benutzerinteraktion Benutzerinteraktion (Eingabe)] || ||
+
+
+=== Beurteilung ===
+  * 3 praktische Leistungsfeststellungen (jeweils 50 Punkte), davon 1 Streichresultat
+  * Übungen: jeweils 2 Punkte, wenn eine Übung hergezeigt wird
+
