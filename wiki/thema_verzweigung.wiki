@@ -9,7 +9,7 @@
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [uebung_objekte_und_klassen_person Person] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
+|| [uebung_verzweigung_person Person] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/person_v1 person_v1] || Einfache Personenklasse ||
 || [uebung_verzweigung_datum Datum] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/datum datum] || Datums-Klasse, die es schon etwas in sich hat ||
-|| [uebung_objekte_und_klassen_zaehler Zähler] || (im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit])   || Zähler wie im Amt ||
-|| [uebung_objekte_und_klassen_konto Konto] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/konto konto]   || Prüfungsaufgabe ||
+|| [uebung_verzweigung_zaehler Zähler] || (im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit])   || Zähler wie im Amt ||
+|| [uebung_verzweigung_konto Konto] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/konto konto]   || Prüfungsaufgabe ||
