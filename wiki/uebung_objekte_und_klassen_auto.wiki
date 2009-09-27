@@ -18,6 +18,7 @@ Methoden:
   * `getGang()`: get-Methode für das Attribut `kennzeichen`
   * `berechneGeschwindigkeit()`: berechnet die Geschwindigkeit nach der folgenden Formel und gibt das Ergebnis zurück: 
 	Geschwindigkeit = Gang x Drehzahl / 100.
+
   * `beschleunigen()`: multipliziert die Drehzahl mit 1.5
   * `bremsen()`: dividiert die Drehzahl durch 1.5
   * `hinaufschalten()`: erhöht den Gang um 1
