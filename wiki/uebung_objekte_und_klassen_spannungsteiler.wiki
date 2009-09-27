@@ -4,7 +4,7 @@
 
 Bei einem Spannungsteiler werden zwei Widerstände `R1` und `R2` in Serie geschaltet:
 
-<p align="center">
+<p>
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/Spannungsteiler.png
 </p>
 
