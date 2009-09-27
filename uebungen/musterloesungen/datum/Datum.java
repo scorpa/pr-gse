@@ -6,6 +6,8 @@
 package datum;
 
 /**
+ * Musterlösung für Aufgabe http://code.google.com/p/pr-gse/wiki/uebung_objekte_und_klassen_datum
+ * 
  * @author Rudolf Radlbauer
  * 
  * In den Attributen wird der Tag, das Monat und das Jahr eines Datums gespeichert.
