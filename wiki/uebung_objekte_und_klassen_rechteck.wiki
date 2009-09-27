@@ -2,7 +2,7 @@
 
 = Rechteck =
 
-Erstellen Sie die folgende Klasse Rechteck:
+Erstellen Sie die folgende Klasse `Rechteck`:
 
 Attribute: 
   * `laenge`: Dezimalzahl - Länge des Rechtecks
