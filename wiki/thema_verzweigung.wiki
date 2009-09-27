@@ -1,0 +1,7 @@
+#summary Verzweigung
+
+= Verzweigung =
+
+=== Literatur ===
+
+[http://openbook.galileocomputing.de/javainsel8/javainsel_02_006.htm#mj6dafe7386302ac8bd0c1718093caff8c Java ist auch eine Insel - Kapitel 2.6]
