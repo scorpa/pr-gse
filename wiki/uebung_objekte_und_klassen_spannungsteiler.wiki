@@ -2,7 +2,7 @@
 
 = Spannungsteiler =
 
-Bei einem Spannungsteiler werden zwei Widerstände R1 und R2 in Serie geschaltet:
+Bei einem Spannungsteiler werden zwei Widerstände !R1 und !R2 in Serie geschaltet:
 
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/Spannungsteiler.png
