@@ -1,6 +1,6 @@
 package person_v1;
 /**
- Musterlösung für Aufgabe 02
+ Musterlösung für Aufgabe http://code.google.com/p/pr-gse/wiki/uebung_objekte_und_klassen_person
  @author Rudolf Radlbauer
  @version  1. Version
  */
