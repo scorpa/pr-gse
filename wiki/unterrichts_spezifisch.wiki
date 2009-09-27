@@ -6,6 +6,6 @@
 
 [lehrstoffverteilung_tageskolleg2 Lehrstoffverteilung 2. Semester Tageskolleg]
 
-[lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 3. Semester Tageskolleg]
+[lehrstoffverteilung_tageskolleg3 Lehrstoffverteilung 3. Semester Tageskolleg]
 
-[lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 4. Semester Tageskolleg]
+[lehrstoffverteilung_tageskolleg4 Lehrstoffverteilung 4. Semester Tageskolleg]
