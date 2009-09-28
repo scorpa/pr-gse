@@ -15,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -24,6 +25,8 @@ import javax.swing.JOptionPane;
  */
 public class GUI extends javax.swing.JFrame implements ActionListener
 {
+    private final static ImageIcon ROT = new ImageIcon("tictactoe/rss-red-32.png");
+    private final static ImageIcon GRUEN = new ImageIcon("tictactoe/rss-green-32.png");
 
     private JButton[][] buttons;
     private Spielfeld spielfeld;
@@ -45,6 +48,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener
                 buttons[z][s].addActionListener(this);
             }
         }
+        update();
     }
 
     /** This method is called from within the constructor to
@@ -137,6 +141,55 @@ public class GUI extends javax.swing.JFrame implements ActionListener
                     }
                 }
             }
+        }
+        update();
+    }
+
+    private void update()
+    {
+        for (int z = 0; z < buttons.length; z++)
+        {
+            for (int s = 0; s < buttons[0].length; s++)
+            {
+                switch(spielfeld.get(z, s))
+                {
+                    case GRUEN:
+                        buttons[z][s].setIcon(GRUEN);
+                        break;
+
+                    case ROT:
+                        buttons[z][s].setIcon(ROT);
+                        break;
+
+                    case LEER:
+                        buttons[z][s].setIcon(null);
+                        break;
+                }
+
+            }
+        }
+        switch(spielfeld.getSieger())
+        {
+            case GRUEN:
+                status.setText("Grün hat gewonnen");
+                break;
+
+            case ROT:
+                status.setText("Rot hat gewonnen");
+                break;
+
+            case LEER:
+                switch(spielfeld.getNext())
+                {
+                    case GRUEN:
+                        status.setText("Grün kommt dran");
+                        break;
+
+                    case ROT:
+                        status.setText("Rot kommt dran");
+                        break;
+                }
+                break;
         }
     }
 }
