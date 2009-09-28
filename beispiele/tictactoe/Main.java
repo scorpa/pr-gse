@@ -16,7 +16,7 @@ public class Main
      */
     public static void main(String[] args)
     {
-        Spielfeld spiel = new TictactoeTestImpl();
+        Spielfeld spiel = new Logik(4, 3, 3);
         GUI gui = new GUI(spiel);
         gui.setVisible(true);
     }
