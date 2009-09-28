@@ -61,3 +61,11 @@ Update-Site:
     
     Name: Subclipse 1.0.x (Eclipse 3.0/3.1)
     URL:  http://subclipse.tigris.org/update_1.0.x
+
+== Arbeiten mit [http://www.netbeans.org Netbeans] ==
+
+Für Netbeans muss man zuvor noch einen Subversion Client installieren. Es wird der Client von [http://www.open.collab.net/downloads/netbeans/ CollabNet] empfohlen.
+
+In Netbeans muss man dann noch einige Einstellungen tätigen. Diese sind [http://www.netbeans.org/kb/docs/ide/subversion.html#specifying hier] beschrieben.
+
+Wie man dann mit Subersion in Netbeans arbeitet ist [http://www.netbeans.org/kb/docs/ide/subversion.html#synchronizing hier] beschrieben.
