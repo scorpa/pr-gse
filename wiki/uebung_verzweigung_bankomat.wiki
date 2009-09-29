@@ -1,0 +1,9 @@
+#summary Übung: Bankomat
+
+= Bankomat =
+
+Erstellen Sie die folgende Klasse `Bankomat`:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/bankomat.jpg
+</p>
