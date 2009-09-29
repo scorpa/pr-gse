@@ -15,7 +15,7 @@ In den Attributen (`scheine500`, `scheine200`, ...) ist jeweils die Anzahl der 5
 Ein neuer Bankomat ist leer, d.h. alle `scheineXXX`-Atribute haben den Wert `0`.
 
 Daher muss der Bankomat befüllt werden. Die Methode `befuellen(...)` hat 2 Parameter:
-  `schein`: gibt an, welche scheine nachgelegt werden (z.B. `50` - es werden 50er-Scheine nachgelegt).
+  `schein`: gibt an, welche scheine nachgelegt werden (z.B. 50 - es werden 50er-Scheine nachgelegt).
 
   `anzahl`: gibt an, wieviele Scheine nachgelegt werden.
 
