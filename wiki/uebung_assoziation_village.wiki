@@ -42,3 +42,12 @@ Der zweite Konstruktor bekommt im Parameter die Anzahl der Häuser übergeben, d
 
 Mit der Methode `add(...)` kann ein Haus in das Dorf eingefügt werden. Die Attribute `house1`, `house2`, `house3` werden in dieser Reihenfolge besetzt.
 
+Die Methoden `makeVisible()`, `makeInvisible()`, `moveHorizontal(...)` und `moveVertical(...)` funktionieren analog wie in der Klasse `House`.
+
+Die Methode `night()` macht das Dorf dunkel, d.h. alle Häuser des Dorfes werden dunkel.
+
+
+=== Town ===
+
+Wenn mehrere Dörfer zusammenwachsen, entsteht daraus eine Stadt:
+
