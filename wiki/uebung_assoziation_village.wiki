@@ -30,3 +30,15 @@ Die Methode `makeVisible()` macht das Haus sichtbar, die Methode `makeInvisible(
 
 Die Methode `night()` macht das Haus dunkel; d.h. die Mauer und das Dach werden schwarz und das Fenster wird gelb (drinnen brennt ein Licht).
 
+
+
+=== Village ===
+
+Ein `Village` besteht aus bis zu 3 Häusern (`house1`, `house2`, `house3`). Es gibt 2 Möglichkeiten, ein Dorf zu erstellen:
+
+Der Standardkonstruktor erstellt ein Dorf ohne Häuser. Diese müssen dann erst mit der Methode `add()` eingefügt werden.
+
+Der zweite Konstruktor bekommt im Parameter die Anzahl der Häuser übergeben, die er gleich instanziieren soll (kann 0, 1, 2 oder 3 sein). Überlegen Sie sich selbst eine sinnvolle Anordnung und Farbkombination für diese Häuser.
+
+Mit der Methode `add(...)` kann ein Haus in das Dorf eingefügt werden. Die Attribute `house1`, `house2`, `house3` werden in dieser Reihenfolge besetzt.
+
