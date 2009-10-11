@@ -1,0 +1,32 @@
+#summary Übung: Village (ein Dorf aus mehreren Häusern)
+
+= Village (ein Dorf aus mehreren Häusern) =
+
+Diese Übung baut wieder auf das Projekt _shapes_, das bereits aus dem Thema [thema_objekte_und_klassen Objekte und Klassen] bekannt ist, auf.
+
+
+_(Die Beispielprojekte können [http://www.bluej.org/objects-first/resources/projects.zip hier] heruntergeladen werden.)_
+
+Es sollen stufenweise aus den _shapes_ kompliziertere Gebilde aufgebaut werden, bis ein Dorf entsteht (oder auch mehrere Dörfer). Dazu sind die Klassen aus dem folgenden UML-Klassendiagramm zu erstellen:
+
+<p align="center">
+
+</p>
+
+=== House ===
+Eine Instanz der Klasse `House` verwendet (wie schon im Beispielprojekt _picture_ ein `Square` namens `wall`, ein `Square` namens `window` und ein `Triangle` namens `roof`, um das Haus zusammenzusetzen.
+
+Der Standardkonstruktor baut das Haus mit gelber Wand, rotem Dach und schwarzem Fenster auf.
+
+Ein zweiter Konstruktor übernimmt eine Farbe (als String) als Parameter und baut das Haus mit rotem Dach, schwarzem Fenster und der Wand entsprechend der übergebenen Farbe auf.
+
+Dem dritten Konstruktor kann man zusätzlich zur Farbe noch eine x-Position und eine y-Position übergeben. Hier muss man sich ein Koordinatensystem vorstellen, an dessen Ursprung die Häuser stehen, welche mit dem Standardkonstruktor erzeugt wurden. x- und y-Position sind dann die Abstände in x- bzw. y-Richtung von diesen Standardhäusern (Einheit: Bildpunkte).
+
+Die Methoden `moveHorizontal(...)` und `moveVertical(...)` verschieben ein Haus in die entsprechende Richtung um die übergebene Anzahl von Punkten.
+
+_(Erzeugt man also ein Haus mit dem Standardkonstruktor und bewegt es dann z.B. um 100 Punkte nach unten und um 300 Punkte nach rechts - `moveVertical(100)` und `moveHorizontal(300)` - , dann ist das Ergebnis das gleiche wie wenn man dem Haus im Konstruktor die x-Position 300 und die y-Position 100 übergibt)_
+
+Die Methode `makeVisible()` macht das Haus sichtbar, die Methode `makeInvisible()` macht es unsichtbar.
+
+Die Methode `night()` macht das Haus dunkel; d.h. die Mauer und das Dach werden schwarz und das Fenster wird gelb (drinnen brennt ein Licht).
+
