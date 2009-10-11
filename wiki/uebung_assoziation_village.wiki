@@ -45,4 +45,3 @@ Mit der Methode `add(...)` kann ein Haus in das Dorf eingefügt werden. Die Attr
 Die Methoden `makeVisible()`, `makeInvisible()`, `moveHorizontal(...)` und `moveVertical(...)` funktionieren analog wie in der Klasse `House`.
 
 Die Methode `night()` macht das Dorf dunkel, d.h. alle Häuser des Dorfes werden dunkel.
-
