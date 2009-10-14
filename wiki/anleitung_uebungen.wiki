@@ -1,14 +1,14 @@
-#summary Allgemeines zu den Übungen
+#summary Allgemeines zu den Ãœbungen
 
-= Allgemeines zu den Übungen =
+= Allgemeines zu den Ãœbungen =
 
-Die Übungen sind normalerweise in Tabellen aufgelistet. 
+Die Ãœbungen sind normalerweise in Tabellen aufgelistet. 
 Links ist ein Link auf die Aufgabenstellung, 
-in der Mitte ein Link auf die Musterlösung, 
+in der Mitte ein Link auf die MusterlÃ¶sung, 
 falls eine solche existiert.
-Rechts ist gegebenenfalls ein Kommentar zur Übung.
+Rechts ist gegebenenfalls ein Kommentar zur Ãœbung.
 
-Falls eine Musterlösung existiert, 
+Falls eine MusterlÃ¶sung existiert, 
 kann normalerweise das Projekt vom Repository-Pfad 
 /svn/trunk/uebungen/musterloesungen 
 unter dem angegebenen Projektnamen direkt mit 
