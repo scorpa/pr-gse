@@ -36,7 +36,7 @@ http://pr-gse.googlecode.com/svn/wiki/images/jdbc_hsqldb/testdaten.png
 
 Nun kann man ein bisschen mit diesen Testdaten herumspielen: Im oberen Teil des Hauptfensters kann man SQL-Befehle eingeben. Bei Klick auf die Schaltfläche `Execute SQL` werden diese ausgeführt, und die Ergebenisse werden im unteren Teil des Hauptfensters angezeigt.
 
-Wichtig ist es dann, ein SHUTDOWN durchzuführen - bitte das Kommando "SHUTDOWN" ins SQL-Fenster eingeben und mit `Execute SQL` ausführen. Dadurch ist die Verbindung zur Datenbankdatei getrennt, und auch alle Daten werden erst durch das SHUTDOWN in die Datei geschrieben.
+Wichtig ist es dann, ein SHUTDOWN durchzuführen - bitte das Kommando "SHUTDOWN" ins SQL-Fenster eingeben und mit `Execute SQL` ausführen. Dadurch ist die Verbindung zur Datenbankdatei getrennt, und auch alle Daten werden erst durch das SHUTDOWN in die Dateien geschrieben.
 
 Man kann dann die Datei mit der Endung ".script" (in unserem Fall "C:\meineHsqlDatenbank.script") mit einem Editor anschauen. HSQLDB speichert alle Daten in Form einer Script-Datei:
 
@@ -62,6 +62,7 @@ INSERT INTO CUSTOMER VALUES(8,'Bob','Heiniger','226 - 20th Ave.','Dallas')
 INSERT INTO CUSTOMER VALUES(9,'Robert','Ott','2 - 20th Ave.','Seattle')
 INSERT INTO CUSTOMER VALUES(10,'Anne','Smith','125 - 20th Ave.','Paris')
 INSERT INTO CUSTOMER VALUES(11,'Susanne','Karsen','53 Seventh Av.','New York')
+.......
 }}}
 
 
