@@ -5,3 +5,4 @@
 === Literatur ===
 [http://openbook.galileocomputing.de/javainsel8/javainsel_23_001.htm#mj63630f244505c8e2db0858d193104898 Java ist auch eine Insel - Kapitel 23]
 
+Hier ist ein [tuturial_jdbc_hsqldb Tutorial] für den schnellen Einstieg mit HSQLDB.
