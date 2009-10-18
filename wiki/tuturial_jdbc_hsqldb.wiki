@@ -22,7 +22,7 @@ Was bedeuten nun die verschiedenen Eingabefelder:
   * URL: die URL, mit der zur Datenbank verbunden wird.
   * USER, Password: Benutzerkennung für die Verbindung zur Datenbank.
 
-Als nächste Schritt ist die URL richtig einzutragen. Anstatt "«database/path?»" ist ein gültiger Dateiname einzutragen. Diese Datei muss noch nicht existieren, wohl aber der Ordner. In der angegebenen Datei wird dann die Datenbank angelegt; z.B. "jdbc:hsqldb:file:C:\meineHsqlDatenbank".
+Als nächste Schritt ist die URL richtig einzutragen. Anstatt "«database/path?»" ist ein gültiger Dateiname einzutragen. Diese Datei muss noch nicht existieren, wohl aber der Ordner. In der angegebenen Datei wird dann die Datenbank angelegt; z.B. "`jdbc:hsqldb:file:C:\meineHsqlDatenbank`".
 (Bitte keine Dateiendung angeben. Diese wird von HSQLDB angelegt.)
 
 In allen anderen Feldern (auch USER und Password) kann man die Standardwerte belassen.
