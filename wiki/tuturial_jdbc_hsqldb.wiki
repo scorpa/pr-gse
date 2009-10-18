@@ -63,3 +63,54 @@ INSERT INTO CUSTOMER VALUES(9,'Robert','Ott','2 - 20th Ave.','Seattle')
 INSERT INTO CUSTOMER VALUES(10,'Anne','Smith','125 - 20th Ave.','Paris')
 INSERT INTO CUSTOMER VALUES(11,'Susanne','Karsen','53 Seventh Av.','New York')
 }}}
+
+
+=== Verbindung aus einem Java-Programm herstellen ===
+
+Zuerst einmal müssen die Datenbanktreiber-Klassen im Klassenpfad liegen. Dazu ist die Datei hsqldb.jar in den Klassenpfad aufzunehmen. Sie befindet sich im Verzeichnis ...\hsqldb\lib\ .
+
+In Eclipse ist es am einfachsten, die Datei hsqldb.jar ins Projekt hineinzuziehen, danach mit der rechten Maustaste daraufzuklicken, und im Context-Menu `Build Path` die Aktion `Add to Build Path` auszuwählen.
+
+Dann ist der Datenbanktreiber zu laden:
+{{{
+Class.forName("org.hsqldb.jdbcDriver");
+}}}
+Hier ist die Exception `ClassNotFoundException` abzufangen.
+
+Als Nächstes wird die Verbindung geöffnet:
+{{{
+Connection con = DriverManager.getConnection("jdbc:hsqldb:file:d:\\temp\\testdb", "SA", "");
+}}}
+Hier ist die `SQLException` zu behandeln.
+
+Die Verbindung ist am besten in einem `finally`-Block wieder zu schließen:
+{{{
+con.close();
+}}}
+Auch hier sowie bei allen weiteren Schritten kann eine `SQLException` auftreten und muss somit behandelt werden.
+
+Um jetzt wirklich ein Query zur Datenbank zu schicken, verwendet man am besten ein `PreparedStatement`:
+{{{
+PreparedStatement pstmt = con.prepareStatement("SELECT id, firstname, lastname FROM customer");
+}}}
+
+Das Query ist also vorbereitet und wird dann mit `executeQuery()` wirklich durchgeführt. Diese Methode liefert als Ergebnis ein `ResultSet`:
+{{{
+ResultSet rs = pstmt.executeQuery();
+}}}
+
+Das `ResultSet` ist so etwas wie ein Datenbank-Cursor und kann nun Datensatz für Datensatz abgearbeitet werden:
+{{{
+while (rs.next())
+{
+    System.out.print(rs.getInt("id") + "\t");
+    System.out.print(rs.getString("firstname") + "\t");
+    System.out.println(rs.getString("lastname"));
+}
+}}}
+
+Danach sollte man nicht vergessen, das `ResultSet` und das `PreparedStatement` wieder freizugeben:
+{{{
+rs.close();
+pstmt.close();
+}}}
