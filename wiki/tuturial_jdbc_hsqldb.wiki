@@ -14,7 +14,7 @@ Im Verzeichnis ...\hsqldb\demo\ befindet sich die Batch-Datei runManagerSwing.ba
 http://pr-gse.googlecode.com/svn/wiki/images/jdbc_hsqldb/anmeldefenster.png
 </p>
 
-Wählt man beim Auswahlfeld "Type" anstatt "HSQL Database Engine In-Memory" den Typ "HSQL Database Engine Standalone" aus, dann ändert sich das Feld URL auf den Wert "jdbc:hsqldb:file:«database/path?»"
+Wählt man beim Auswahlfeld "Type" anstatt "HSQL Database Engine In-Memory" den Typ "HSQL Database Engine Standalone" aus, dann ändert sich das Feld URL auf den Wert "`jdbc:hsqldb:file:«database/path?»`"
 
 Was bedeuten nun die verschiedenen Eingabefelder:
   * Type: HSQLDB kann auf verschiedene Arten betrieben werden.
