@@ -56,6 +56,7 @@ INSERT INTO CUSTOMER VALUES(2,'Robert','Sommer','22 - 20th Ave.','Oslo')
 INSERT INTO CUSTOMER VALUES(3,'Michael','Smith','455 Upland Pl.','Lyon')
 INSERT INTO CUSTOMER VALUES(4,'Bill','Fuller','363 Seventh Av.','Oslo')
 INSERT INTO CUSTOMER VALUES(5,'Laura','White','127 - 20th Ave.','Dallas')
+
 INSERT INTO CUSTOMER VALUES(6,'Robert','King','550 Seventh Av.','Palo Alto')
 INSERT INTO CUSTOMER VALUES(7,'Susanne','Clancy','138 Seventh Av.','Paris')
 INSERT INTO CUSTOMER VALUES(8,'Bob','Heiniger','226 - 20th Ave.','Dallas')
@@ -69,6 +70,13 @@ INSERT INTO CUSTOMER VALUES(11,'Susanne','Karsen','53 Seventh Av.','New York')
 === Verbindung aus einem Java-Programm herstellen ===
 
 Zuerst einmal müssen die Datenbanktreiber-Klassen im Klassenpfad liegen. Dazu ist die Datei hsqldb.jar in den Klassenpfad aufzunehmen. Sie befindet sich im Verzeichnis ...\hsqldb\lib\ .
+
+*Netbeans:*
+
+Mit rechter Maustaste auf das Projekt klicken und `Properties` anwählen. Dann kann man `Libraries` auswählen. Es gibt nun verschiedene Karteikarten für .jar-Dateien, welche beim Compilieren beim Ausführen der Programme oder aber beim Testen im CLASSPATH enthalten sein sollen.
+
+
+*Eclipse:*
 
 In Eclipse ist es am einfachsten, die Datei hsqldb.jar ins Projekt hineinzuziehen, danach mit der rechten Maustaste daraufzuklicken, und im Context-Menu `Build Path` die Aktion `Add to Build Path` auszuwählen.
 
