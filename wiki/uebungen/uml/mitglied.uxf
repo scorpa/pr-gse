@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram><help_text>// Uncomment the following line to change the fontsize:
+// fontsize=14
+
+// Welcome to UMLet!
+//
+// Double-click on UML elements to add them to the diagram.
+// Edit element properties by modifying the text in this panel.
+// Edit the files in the 'palettes' directory to create your own element palettes.
+// Hold down Ctrl to select multiple elements.
+// Press Del to delete elements.
+// Press Ctrl-c to copy an element, and to store the whole UML diagram to the system clipboard.
+// Select "Custom elements &gt; New..." to create new element types.
+//
+// This text will be stored with each diagram;  use it for notes.</help_text><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>300</w><h>200</h></coordinates><panel_attributes>Mitglied
+--
+name : String
+eintritt : String
+--
+&lt;&lt;constr&gt;&gt; Mitglied(name : String)
+setEintritt(datum : String)
+getVorname() : String
+getNachname() : String
+vornameBeginntMit(str : String) : boolean
+nachnameBeginntMit(str : String) : boolean
+getDauerMitgliedschaft(aktJahr : int)
+</panel_attributes><additional_attributes/></element></umlet_diagram>
