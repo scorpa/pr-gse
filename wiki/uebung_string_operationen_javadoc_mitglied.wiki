@@ -19,6 +19,9 @@ Wie kann man einen String in eine Zahl umwandeln?
 
 2) Erstellen Sie die folgende Klasse Mitglied:
 
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/mitglied.jpg
+</p>
 
  
 Das Attribut `name` ist ein String mit dem Format "`<vorname> <nachname>`".
