@@ -10,10 +10,10 @@ Hier ist ein [tuturial_jdbc_hsqldb Tutorial] für den schnellen Einstieg mit HSQ
 
 === Treibertypen ===
 
-  *JDBC-ODBC-Bridge: stellt die Verbindung über den Microsoft-Standard ODBC her. Ist im SE SDK für Windows enthalten. Ist nicht besonders performant
+  * JDBC-ODBC-Bridge: stellt die Verbindung über den Microsoft-Standard ODBC her. Ist im SE SDK für Windows enthalten. Ist nicht besonders performant
 
-  *Nativer plattformeigener JDBC-Treiber: Dieser Treiber übersetzt die JDBC-Aufrufe direkt in Aufrufe der Datenbank-API. Dazu enthält der Treiber Programmcode, der native Methoden aufruft.
+  * Nativer plattformeigener JDBC-Treiber: Dieser Treiber übersetzt die JDBC-Aufrufe direkt in Aufrufe der Datenbank-API. Dazu enthält der Treiber Programmcode, der native Methoden aufruft.
 
-  *Universeller JDBC-Treiber: Ist in Java geschrieben, verwendet also keine nativen Methoden. Kommuniziert über eine _Middleware_ mit der Datenbank.
+  * Universeller JDBC-Treiber: Ist in Java geschrieben, verwendet also keine nativen Methoden. Kommuniziert über eine _Middleware_ mit der Datenbank.
 
-  *Direkter Netzwerktreiber: Ist vollständig in Java programmiert und kommuniziert direkt mit dem Datenbank-Server
+  * Direkter Netzwerktreiber: Ist vollständig in Java programmiert und kommuniziert direkt mit dem Datenbank-Server
