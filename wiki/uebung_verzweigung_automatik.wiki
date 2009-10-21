@@ -21,6 +21,7 @@ Die Geschwindigkeit berechnet sich folgendermaßen(`berechneGeschwindigkeit()`):
 Für `gang` und `drehzahl` gibt es nur get-Methoden. Die Werte dieser Attribute verändern sich beim `beschleunigen()` und `bremsen()`:
 
 Ein Aufruf der Methode `beschleunigen()` bewirkt eine Erhöhung der Drehzahl um 1000. Liegt danach die Drehzahl bei 6000 oder darüber, dann schaltet das Getriebe automatisch auf den nächsthöheren Gang. Beim Hinaufschalten bleibt allerdings die Geschwindigkeit konstant; d.h. die Drehzahl wird wieder entsprechend reduziert.
+Ist der Gang noch auf 0, so bewirkt ein Aufruf von `beschleunigen()`, dass der Gang auf 1 geschaltet wird. 
 
 Das Automatikgetriebe hat 5 Gänge. Danach kann noch beschleunigt werden, bis die Drehzahl 8000 erreicht ist, dann ist die Maximalgeschwindigkeit erreicht. Ein weiteres Beschleunigen bleibt dann wirkungslos.
 
