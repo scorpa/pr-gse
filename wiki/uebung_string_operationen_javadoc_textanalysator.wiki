@@ -1,0 +1,5 @@
+#summary Übung: Textanalysator
+
+= Textanalysator=
+
+_Diese Übung ist in Arbeit_
