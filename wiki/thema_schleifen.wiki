@@ -5,3 +5,7 @@
 === Literatur === 
 
 [http://openbook.galileocomputing.de/javainsel8/javainsel_02_007.htm#mj50b6af77607500c5bb627942187e9205 Java ist auch eine Insel - Kapitel 2.7]
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| uebung_schleifen_textanalyzer2 Textanalyzer2] || || _in Arbeit_ ||
