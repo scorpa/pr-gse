@@ -1,6 +1,6 @@
-#summary Übung: Textanalysator
+#summary Übung: Text-analyzer
 
-= Textanalysator=
+= Text-analyzer =
 
 _Diese Übung ist in Arbeit_
 
