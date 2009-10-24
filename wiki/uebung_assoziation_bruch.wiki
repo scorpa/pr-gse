@@ -3,3 +3,9 @@
 = Bruchrechnen =
 
 _Diese Übung ist in Arbeit_
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/bruch.jpg
+</p>
+
+
