@@ -1,0 +1,9 @@
+#summary Übung: Textanalyzer2
+
+= Textanalyzer =
+
+_Diese Übung ist in Arbeit_
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/textanalyzer2.jpg
+</p>
