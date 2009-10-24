@@ -9,3 +9,4 @@
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_schleifen_textanalyzer2 Textanalyzer2] || || _in Arbeit_ ||
+|| [uebung_schleifen_numberanalyzer Numberanalyzer] || || _in Arbeit_ ||
