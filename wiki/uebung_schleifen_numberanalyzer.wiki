@@ -1,6 +1,6 @@
-#summary Übung: Numberanalyzer
+#summary Übung: Number-analyzer
 
-= Numberanalyzer =
+= Number-analyzer =
 
 _Übung in Arbeit_
 
