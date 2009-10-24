@@ -3,3 +3,7 @@
 = Textanalysator=
 
 _Diese Übung ist in Arbeit_
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/textanalyzer.jpg
+</p>
