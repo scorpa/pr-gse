@@ -1,0 +1,9 @@
+#summary Übung: Numberanalyzer
+
+= Numberanalyzer =
+
+_Übung in Arbeit_
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/numberanalyzer.jpg
+</p>
