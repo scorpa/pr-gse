@@ -19,7 +19,7 @@ number : int
 setNumber(number : int)
 getNumber() : int
 isPrime() : boolean
-isFactorial() : booelan
+findFactorial() : int
 printFactors()
 leastCommonMultiple(number2 : int)
 greatestCommonFactor(number2 : int)</panel_attributes><additional_attributes/></element></umlet_diagram>
