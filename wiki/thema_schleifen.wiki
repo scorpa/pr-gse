@@ -8,5 +8,5 @@
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_schleifen_textanalyzer2 Text-analyzer 2] || || _in Arbeit_ ||
+|| [uebung_schleifen_textanalyzer2 Text-analyzer 2] || || ||
 || [uebung_schleifen_numberanalyzer Number-analyzer] || || _in Arbeit_ ||
