@@ -90,4 +90,4 @@ Soll die Suche von hinten begonnen werden, dann verwendet man die Methode {{{las
 = Übungen = 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_string_operationen_javadoc_mitglied Mitglied] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/mitglied mitglied] ||  ||
-|| [uebung_string_operationen_javadoc_textanalyzer Text-analyzer] || || _in Arbeit_ ||
+|| [uebung_string_operationen_javadoc_textanalyzer Text-analyzer] || || ||
