@@ -14,7 +14,7 @@ Die Methode `isNumber()` analysiert den Text, ob es sich um eine Zahl (Ganz- ode
 
 Die Methode `isEmail()` analysiert, ob es sich beim Text um eine E-Mail-Adresse handelt: enthält der Text das Zeichen '@' und davor und dahinter Zeichen, welche nicht leer sind (kein Blank, kein Tabulator, kein Zeilenumbruch)?
 
-Die Methode `isUrl()` analysiert, ob es sich beim Text um eine URL handelt: beginnt mit "http://" und mindestens einen Punkt '.', jedoch eine Leerzeichen, Tabulatoren oder Zeilenumbrüche.
+Die Methode `isUrl()` analysiert, ob es sich beim Text um eine URL handelt: beginnt mit "`http://`" und mindestens einen Punkt '.', jedoch eine Leerzeichen, Tabulatoren oder Zeilenumbrüche.
 
 Die Methode `containsWord(...)` analysiert, ob der Text das übergebene Wort enhält und davor und dahinter ein Leerzeichen ist (außer der Text beginnt oder endet mit dem Wort).
 
