@@ -12,9 +12,9 @@ Eine Instanz der Klasse `Bruch` repräsentiert eine Bruchzahl. Der Zähler ist i
 
 *Methoden*
 
-Der Standardkonstruktor erzeugt den Bruch 1/1 (`zaehler` und `nenner haben beide den Wert 1). Der zweite Konstruktor übernimmt in den Parametern Zähler und Nenner.
+Der Standardkonstruktor erzeugt den Bruch 1/1 (`zaehler` und `nenner` haben beide den Wert 1). Der zweite Konstruktor übernimmt in den Parametern Zähler und Nenner.
 
-Für Zähler und Nenner gibt es jeweils eine `get`-Methode.
+Für die Attribute `zaehler` und `nenner` gibt es jeweils eine `get`-Methode.
 
 `addieren(...)` erhält als Parameter eine andere Instanz von `Bruch` (eine zweite Bruchzahl). Diese wird zur aktuellen Bruchzahl addiert, und das Ergebnis wird als Rückgabewert geliefert.
 
