@@ -21,4 +21,4 @@ Hier ist ein [tuturial_jdbc_hsqldb Tutorial] für den schnellen Einstieg mit HSQ
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_jdbc_dbtable Tabelle auf JTable || || ||
+|| [uebung_jdbc_dbtable Tabelle auf JTable] || || ||
