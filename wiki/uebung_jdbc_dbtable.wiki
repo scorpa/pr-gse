@@ -1,0 +1,14 @@
+#summary Übung: DB-Tabelle auf JTable
+
+= DB-Tabelle auf JTable =
+
+Erstellen Sie die folgende Klasse `DBTable`:
+
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/dbtable.jpg
+</p>
+
+`DBTable` ist eine Unterklasse der Swing-Komponente `JTable`. Eine `JTable` repräsentiert eine Tabelle, wie sie beispielsweise in MS Excel verwendet werden.
+
+Der Konstruktor bekommt als Parameter eine Referenz auf eine Datenbankverbindung (`java.sql.Connection`) und den Namen einer Datenbanktabelle übergeben. Er liest die Datensätze der Tabelle aus und stellt sie in der `JTable` dar.
