@@ -15,3 +15,4 @@
 || [uebung_assoziation_complex Complex] || || für das Rechnen mit Komplexen Zahlen ||
 || [uebung_assoziation_village Village] || || bauen wir ein Dorf ||
 || [uebung_assoziation_town Town] || || mehrere Dörfer wachsen zu einer Stadt zusammen ||
+|| [uebung_assoziation_fertigteilhaus Fertigteilhaus] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/fertigteilhaus fertigteilhaus] || Prüfungsaufgabe ||
