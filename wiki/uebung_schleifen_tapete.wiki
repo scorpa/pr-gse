@@ -1,0 +1,9 @@
+#summary Übung: Tapete
+
+= Tapete =
+
+Erstellen Sie die folgende Klasse `Tapete`, welche dazu verwendet werden kann, einfache Muster auszugeben:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/tapete.jpg
+</p>
