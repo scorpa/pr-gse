@@ -10,3 +10,4 @@
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_schleifen_textanalyzer2 Text-analyzer 2] || || ||
 || [uebung_schleifen_numberanalyzer Number-analyzer] || || ||
+|| [uebung_schleifen_tapete Tapete] || || ||
