@@ -7,3 +7,22 @@ Erstellen Sie die folgende Klasse `Tapete`, welche dazu verwendet werden kann, e
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/tapete.jpg
 </p>
+
+Die Attribute `breite` und `hoehe` geben an, wie viele Spalten breit und wie viele Zeilen hoch das Muster sein soll.
+
+Es gibt einen Standardkonstruktor, welcher `breite` und `hoehe` jeweils auf den Wert 5 setzt.
+
+Dem zweiten Konstruktor übergibt man Breite und Höhe als Parameter.
+
+Es gibt jeweils eine `get-` und `set-`Methode für `breite` und `hoehe`.
+
+Die Methode `printMuster(...)` gibt das gewünschte Muster auf die Konsole aus. Mit dem Parameter wird angegeben, welches Muster gewünscht ist (die Muster werden hier jeweils für Höhe 5 und Breite 8 ausgegeben:
+
+1) 
+{{{
+********
+********
+********
+********
+********
+}}}
