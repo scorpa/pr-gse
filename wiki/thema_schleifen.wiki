@@ -10,4 +10,4 @@
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_schleifen_textanalyzer2 Text-analyzer 2] || || ||
 || [uebung_schleifen_numberanalyzer Number-analyzer] || || ||
-|| [uebung_schleifen_tapete Tapete] || || ||
+|| [uebung_schleifen_tapete Tapete] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/tapete tapete] || Musterlösung nur für einen Teil der Aufgabenstellung ||
