@@ -2,4 +2,8 @@
 
 = Mitarbeiter =
 
-Das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter mitarbeiter] arbeitet mit Dateianbindung.
+Das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter mitarbeiter] arbeitet mit Dateianbindung. Das heißt, als Implementierung des Interfaces `MitarbeiterDao` wird die Klasse `FileMitarbeiterDao` verwendet. _(DAO steht für "data access object".)_
+
+Erstellen Sie eine weitere Implementierung des Interfaces `MitarbeiterDao`, welches eine Datenbankandindung implementiert. 
+
+Zum Erstellen der Datenbank können Sie das Script [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter/mitarbeiter.sql mitarbeiter.sql] verwenden (funktioniert mit HSQLDB).
