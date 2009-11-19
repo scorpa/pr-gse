@@ -6,4 +6,4 @@ Das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mi
 
 Erstellen Sie eine weitere Implementierung des Interfaces `MitarbeiterDao`, welche eine Datenbankandindung realisiert. 
 
-Zum Erstellen der Datenbank können Sie das Script [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter/mitarbeiter.sql mitarbeiter.sql] verwenden (funktioniert mit HSQLDB).
+Zum Erstellen der Datenbank können Sie das Script  mitarbeiter.sql verwenden (funktioniert mit HSQLDB).
