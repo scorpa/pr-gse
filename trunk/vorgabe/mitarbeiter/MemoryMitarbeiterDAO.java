@@ -8,12 +8,23 @@ import java.util.Map;
 
 public class MemoryMitarbeiterDAO implements MitarbeiterDAO
 {
-	private Map<Integer, Mitarbeiter> repository = new HashMap<Integer, Mitarbeiter>();
-	private int maxNr = 0;
+	protected Map<Integer, Mitarbeiter> repository = new HashMap<Integer, Mitarbeiter>();
+	protected int maxNr = 0;
 
 	public Mitarbeiter finden(int nr) throws PersistenzException
 	{
 		return repository.get(nr);
+	}
+
+	
+	public List<Mitarbeiter> findeAlle() throws PersistenzException
+	{
+		List<Mitarbeiter> liste = new ArrayList<Mitarbeiter>();
+		for (Mitarbeiter ma : repository.values())
+		{
+			liste.add(ma);
+		}
+		return liste;
 	}
 
 
@@ -67,5 +78,15 @@ public class MemoryMitarbeiterDAO implements MitarbeiterDAO
 				throw new PersistenzException("Repository inkonsistent");
 		}		
 	}
+
+
+
+	public void close() throws PersistenzException
+	{
+		// nichts zu tun
+		
+	}
+
+
 
 }

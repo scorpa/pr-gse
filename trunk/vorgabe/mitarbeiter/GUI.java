@@ -5,7 +5,11 @@ import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.DefaultListModel;
@@ -40,8 +44,27 @@ public class GUI extends JFrame
 	{
 		this.dao = dao;
 		initFrame();
+		addWindowListener(new WindowAdapter(){
+			public void windowClosing(WindowEvent arg0)
+			{
+				close();
+			}});
 	}
 
+	
+	private void close()
+	{
+		try
+		{
+			if (current != null)
+				dao.speichern(current);
+			dao.close();
+		} catch (PersistenzException e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+	}
 
 	private void initFrame()
 	{
@@ -103,16 +126,22 @@ public class GUI extends JFrame
 	{
 		try
 		{
+			List<Mitarbeiter> liste = new ArrayList<Mitarbeiter>();
 			if (tfNachname.getText().length() > 0)
 			{
-				List<Mitarbeiter> liste = dao.finden(tfNachname.getText());
-				if (liste.size() > 0)
-				{
-					lmMitarbeiter.clear();
-					for (Mitarbeiter m : liste)
-						lmMitarbeiter.addElement(m);
-				}
+				liste = dao.finden(tfNachname.getText());
 			}
+			else
+			{
+				liste = dao.findeAlle();
+			}
+			if (liste.size() > 0)
+			{
+				lmMitarbeiter.clear();
+				for (Mitarbeiter m : liste)
+					lmMitarbeiter.addElement(m);
+			}
+
 		} catch(Exception e)
 		{
 			e.printStackTrace();
@@ -257,5 +286,25 @@ public class GUI extends JFrame
 			return this;
 		}
 		
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		MitarbeiterDAO dao = null;
+		try
+		{
+			dao = new FileMitarbeiterDao(new File("mitarbeiter.dat"));
+			GUI gui = new GUI(dao);
+			gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			gui.setSize(800, 300);
+			gui.setVisible(true);
+		} catch (PersistenzException e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			System.exit(-1);
+		}
+
 	}
 }

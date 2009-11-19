@@ -1,5 +1,6 @@
 package mitarbeiter;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -8,9 +9,12 @@ import java.util.Date;
  * @author Rudolf Radlbauer
  *
  */
-public class Mitarbeiter
+public class Mitarbeiter implements Serializable
 {
+
+	private static final long serialVersionUID = -1564930052667554546L;
 	public final static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd.MM.yyyy");
+	
 	private int nr;
 	private String vorname;
 	private String nachname;
