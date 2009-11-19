@@ -2,4 +2,4 @@
 
 = Mitarbeiter =
 
-Das Projekt [http://pr-gse.googlecode.com/source/browse/#svn/trunk/vorgabe/mitarbeiter mitarbeiter] arbeitet mit Dateianbindung.
+Das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter mitarbeiter] arbeitet mit Dateianbindung.
