@@ -1,6 +1,6 @@
-#summary Mitarbeiter
+#summary Mitarbeiterdatenbank
 
-= Mitarbeiter =
+= Mitarbeiterdatenbank =
 
 Das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/mitarbeiter mitarbeiter] arbeitet mit Dateianbindung. Das heißt, als Implementierung des Interfaces `MitarbeiterDao` wird die Klasse `FileMitarbeiterDao` verwendet. _(DAO steht für "data access object".)_
 
