@@ -17,6 +17,13 @@ public interface MitarbeiterDAO
 	public void speichern(Mitarbeiter ma) throws PersistenzException;
 	
 	/**
+	 * findet alle Mitarbeiter
+	 * @return Liste mit allen Mitarbeitern
+	 * @throws PersistenzException
+	 */
+	public List<Mitarbeiter> findeAlle() throws PersistenzException;
+	
+	/**
 	 * findet einen Mitarbeiter anhand der Mitarbeiternummer
 	 * @param nr Mitarbeiternummer
 	 * @return Referenz auf gefundene Mitarbeiter-Instanz oder null, wenn nicht gefunden
@@ -50,5 +57,11 @@ public interface MitarbeiterDAO
 	 */
 	public void loeschen(Mitarbeiter ma) throws PersistenzException;
 	
+	
+	/**
+	 * für Aufräumarbeiten
+	 * @throws PersistenzException
+	 */
+	public void close() throws PersistenzException;
 
 }
