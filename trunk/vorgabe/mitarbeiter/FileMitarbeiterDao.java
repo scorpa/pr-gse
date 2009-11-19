@@ -14,11 +14,10 @@ import javax.imageio.stream.FileImageInputStream;
 
 public class FileMitarbeiterDao extends MemoryMitarbeiterDAO
 {
-	private File file;
+	private File file = new File("mitarbeiter.dat");
 
-	public FileMitarbeiterDao(File file) throws PersistenzException
+	public FileMitarbeiterDao() throws PersistenzException
 	{
-		this.file = file;
 		if (file.exists())
 		{
 			try

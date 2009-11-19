@@ -294,7 +294,7 @@ public class GUI extends JFrame
 		MitarbeiterDAO dao = null;
 		try
 		{
-			dao = new FileMitarbeiterDao(new File("mitarbeiter.dat"));
+			dao = new FileMitarbeiterDao();
 			GUI gui = new GUI(dao);
 			gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			gui.setSize(800, 300);
