@@ -1,6 +1,6 @@
 package referenzen;
 /**
- Musterlösung für Aufgabe 02
+ Übung zum Verständnis von Referenzen
  @author Rudolf Radlbauer
  @version  1. Version
  */
