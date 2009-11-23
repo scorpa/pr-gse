@@ -1,10 +1,10 @@
 package referenzen;
 
 /**
- * Write a description of class Test here.
+ * Übung zum Verständnis von Referenzen
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Rudolf Radlbauer) 
+ * @version (23.11.2009)
  */
 public class Test
 {
