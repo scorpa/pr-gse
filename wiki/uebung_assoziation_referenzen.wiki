@@ -8,7 +8,7 @@ Im Menu `"Options" – "Preferences"` können Sie die Option `"Display line numb
 
 Überlegen Sie Zeile für Zeile, was in der Methode `run()` passiert.
 
-Setzen Sie dann einen Haltepunkt in der Zeile 16, erzeugen Sie eine Instanz der Klasse `Test` und  gehen Sie die Methode mit dem Debugger Schritt für Schritt durch.
+Setzen Sie dann einen Haltepunkt in der Zeile 17, erzeugen Sie eine Instanz der Klasse `Test` und  gehen Sie die Methode mit dem Debugger Schritt für Schritt durch.
 
 Notieren Sie in der folgenden Tabelle nach jeder Zeile die Werte der Variablen bzw. Attribute (ein Doppelklick auf eine `<object reference>` öffnet das Objekt, auf welches die Referenz zeigt mit dem Objekt-Inspektor).
 
