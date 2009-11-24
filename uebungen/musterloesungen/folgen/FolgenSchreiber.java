@@ -169,12 +169,23 @@ public class FolgenSchreiber
 	 */
 	public void alleFolgen()
 	{
+		System.out.print("Zahlen von 1 bis " + anzahl + ": ");
 		einfach();
+		System.out.print("Zahlen von " + anzahl + " bis 1: ");
 		umgekehrt();
+		System.out.print("Summen von 1 bis " + anzahl + ": ");
 		summe();
+		System.out.print("Produkte von 1 bis " + anzahl + ": ");
 		faktorielle();
+		System.out.print("Die ersten " + anzahl + " Fibonacci-Zahlen: ");
 		fibonacci();
+		System.out.print("Die ersten " + anzahl + " Primzahlen: ");
 		primzahlen();
+	}
+	
+	public static void main(String[] args)
+	{
+		new FolgenSchreiber().alleFolgen();
 	}
 
 }
