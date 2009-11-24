@@ -66,7 +66,7 @@ public class HauptFenster extends JFrame
 
     /**
      * Konstruktor macht aus der KontoVerwaltung ein KontoListModel baut die
-     * Oberfläche zusammen instanziiert die Attribute
+     * Oberflï¿½che zusammen instanziiert die Attribute
      */
     public HauptFenster(KontoVerwaltung verwaltung)
     {
@@ -90,7 +90,7 @@ public class HauptFenster extends JFrame
     }
 
     /**
-     * baut die Oberfläche zusammen
+     * baut die Oberflï¿½che zusammen
      * 
      */
     private void initFrame()
@@ -164,7 +164,7 @@ public class HauptFenster extends JFrame
                 bearbeiteKonto();
             }
         });
-        JMenuItem kontoLoeschen = new JMenuItem("löschen");
+        JMenuItem kontoLoeschen = new JMenuItem("lÃ¶schen");
         mKonto.add(kontoLoeschen);
         kontoLoeschen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
@@ -173,9 +173,9 @@ public class HauptFenster extends JFrame
             }
         });
 
-        JMenu mUeberweisung = new JMenu("Überweisung");
+        JMenu mUeberweisung = new JMenu("Ãœberweisung");
         mbar.add(mUeberweisung);
-        JMenuItem ueberweisen = new JMenuItem("durchführen");
+        JMenuItem ueberweisen = new JMenuItem("durchfÃ¼hren");
         mUeberweisung.add(ueberweisen);
         ueberweisen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
@@ -193,7 +193,7 @@ public class HauptFenster extends JFrame
             {
                 alleAuswaehlen();
             }});
-        JMenuItem auswaehlen = new JMenuItem("Konten auswählen ...");
+        JMenuItem auswaehlen = new JMenuItem("Konten auswÃ¤hlen ...");
         mAuswahl.add(auswaehlen);
         auswaehlen.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
@@ -226,12 +226,12 @@ public class HauptFenster extends JFrame
         try
         {
             model.befuellen("");
-            statusZeile.setText("alle Konten ausgewählt");
+            statusZeile.setText("alle Konten ausgewÃ¤hlt");
         } catch (KontoVerwaltungException e)
         {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage(),
-                    "Fehler beim Auswählen der Kontos",
+                    "Fehler beim Auswï¿½hlen der Kontos",
                     JOptionPane.ERROR_MESSAGE);
         }
 
@@ -245,14 +245,14 @@ public class HauptFenster extends JFrame
         {
             model.befuellen(auswahl.getFilter());
             if ("".equals(auswahl.getFilter()))
-            	statusZeile.setText("alle Konten ausgewählt");
+            	statusZeile.setText("alle Konten ausgewÃ¤hlt");
             else
-            	statusZeile.setText("Konten beginnend mit \"" + auswahl.getFilter() + "\" ausgewählt");
+            	statusZeile.setText("Konten beginnend mit \"" + auswahl.getFilter() + "\" ausgewÃ¤hlt");
         } catch (KontoVerwaltungException e)
         {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage(),
-                    "Fehler beim Auswählen der Konten",
+                    "Fehler beim AuswÃ¤hlen der Konten",
                     JOptionPane.ERROR_MESSAGE);
         }
     	
@@ -266,7 +266,7 @@ public class HauptFenster extends JFrame
     {
         try
         {
-            // instanziiere neues KontoFenster und übergebe es dem Controller
+            // instanziiere neues KontoFenster und ï¿½bergebe es dem Controller
             fensterController.oeffneFenster(new KontoFenster(model));
         } catch (Exception e)
         {
@@ -293,37 +293,37 @@ public class HauptFenster extends JFrame
                 fensterController.oeffneFenster(new KontoFenster(konto, model));
             } else
             {
-                // ist bereits ein Fenster für dieses Konto offen, so ist nichts
+                // ist bereits ein Fenster fï¿½r dieses Konto offen, so ist nichts
                 // zu tun
             }
         } else
             JOptionPane.showMessageDialog(this,
-                    "Bitte Konto aus Liste auswählen!", "Konto bearbeiten",
+                    "Bitte Konto aus Liste auswÃ¤hlen!", "Konto bearbeiten",
                     JOptionPane.INFORMATION_MESSAGE);
 
     }
 
     /**
-     * wird aufgerufen, wenn ein Konto gelöscht werden soll
+     * wird aufgerufen, wenn ein Konto gelï¿½scht werden soll
      * 
      */
     private void loescheKonto()
     {
-        // zuerst herausfinden, welches Konto ausgewählt ist
+        // zuerst herausfinden, welches Konto ausgewï¿½hlt ist
         Konto konto = (Konto) kontoListe.getSelectedValue();
         if (konto != null)
         {
             // Sicherheitsabfrage
             int option = JOptionPane.showConfirmDialog(this, "Konto Nr. "
-                    + konto.getNummer() + " wirklich löschen?",
-                    "Konto Löschen", JOptionPane.YES_NO_OPTION);
+                    + konto.getNummer() + " wirklich lÃ¶schen?",
+                    "Konto LÃ¶schen", JOptionPane.YES_NO_OPTION);
             if (option == JOptionPane.YES_OPTION)
             {
                 try
                 {
                     // entferne Konto aus der Verwaltung
                     model.entfernen(konto);
-                    // falls ein Fenster für dieses Konto offen ist, muss es
+                    // falls ein Fenster fï¿½r dieses Konto offen ist, muss es
                     // geschlossen werden
                     KontoFenster kf = fensterController.getFenster(konto);
                     if (kf != null)
@@ -331,7 +331,7 @@ public class HauptFenster extends JFrame
                 } catch (Exception e)
                 {
                     JOptionPane.showMessageDialog(this, e.getMessage(),
-                            "Konto " + konto.getNummer() + " löschen",
+                            "Konto " + konto.getNummer() + " lÃ¶schen",
                             JOptionPane.ERROR_MESSAGE);
                     e.printStackTrace();
                 }
@@ -339,7 +339,7 @@ public class HauptFenster extends JFrame
 
         } else
             JOptionPane.showMessageDialog(this,
-                    "Bitte Konto aus Liste auswählen!", "Konto löschen",
+                    "Bitte Konto aus Liste auswÃ¤hlen!", "Konto lÃ¶schen",
                     JOptionPane.INFORMATION_MESSAGE);
 
     }
@@ -365,7 +365,7 @@ public class HauptFenster extends JFrame
             dispose();
         } else
             JOptionPane.showMessageDialog(this,
-                    "Bitte zuerst alle Fenster schließen", "Programm beenden",
+                    "Bitte zuerst alle Fenster schlieÃŸen", "Programm beenden",
                     JOptionPane.ERROR_MESSAGE);
 
     }
@@ -421,7 +421,7 @@ public class HauptFenster extends JFrame
     /**
      * Innere Klasse FensterController zum Verwalten der Inneren Fenster. Ist
      * gleichzeitig ein ListSelectionListener um auf Selektion in der Kontoliste
-     * zu reagieren. Ist gleichzeitig ein Observer um auf Veränderungen in
+     * zu reagieren. Ist gleichzeitig ein Observer um auf Verï¿½nderungen in
      * Konto-Daten zu reagieren (Update in Liste)
      * 
      * @author Rudolf Radlbauer
@@ -433,7 +433,7 @@ public class HauptFenster extends JFrame
         private Map<Konto, KontoFenster> kontoFensterListe; // Map zum Verwalten der Fenster
 
         /**
-         * Konstruktor instanziiert die Map, fügt sich selbst als Listener bei
+         * Konstruktor instanziiert die Map, fï¿½gt sich selbst als Listener bei
          * der Liste ein, um auf Selektion zu reagieren
          * 
          */
@@ -457,7 +457,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * sorgt dafür, dass das entsprechende Konto in der Liste ausgewählt
+         * sorgt dafï¿½r, dass das entsprechende Konto in der Liste ausgewï¿½hlt
          * wird, wenn ein offenes Konto-Fenster selektiert wird
          */
         public void internalFrameActivated(InternalFrameEvent e)
@@ -467,13 +467,13 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * fügt das übergebene KontoFenster in die DesktopPane ein und
+         * fï¿½gt das ï¿½bergebene KontoFenster in die DesktopPane ein und
          * regirstriert sich selbst als FrameListener bei diesem Fenster und als
-         * Observer beim entsprechenden Konto. Nimmt außerdem das Fenster in die
+         * Observer beim entsprechenden Konto. Nimmt auï¿½erdem das Fenster in die
          * Fensterverwaltung auf.
          * 
          * @param fenster
-         *            KontoFenster, welches geöffnet werden soll
+         *            KontoFenster, welches geï¿½ffnet werden soll
          */
         public void oeffneFenster(KontoFenster fenster)
         {
@@ -494,9 +494,9 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * sorgt dafür, dass das zugehörige KontoFenster (falls existent) in den
+         * sorgt dafï¿½r, dass das zugehï¿½rige KontoFenster (falls existent) in den
          * Vordergrund gebracht wird, wenn in der Kontoliste ein Konto
-         * ausgewählt wurde
+         * ausgewï¿½hlt wurde
          */
         public void valueChanged(ListSelectionEvent e)
         {
@@ -520,12 +520,12 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * liefert zum übergebenen Konto das zugehörige Fenster, falls eines
+         * liefert zum ï¿½bergebenen Konto das zugehï¿½rige Fenster, falls eines
          * offen ist
          * 
          * @param k
          *            Konto, zu dem das Fenster gesucht wird
-         * @return zugehöriges KontoFenster oder null, falls keines offen ist
+         * @return zugehï¿½riges KontoFenster oder null, falls keines offen ist
          */
         public KontoFenster getFenster(Konto konto)
         {
@@ -543,7 +543,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * reagiert auf Änderungen in einem Konto -> Update der Liste
+         * reagiert auf ï¿½nderungen in einem Konto -> Update der Liste
          */
         public void update(Observable o, Object arg)
         {
@@ -554,7 +554,7 @@ public class HauptFenster extends JFrame
     }
 
     /**
-     * Innere Klasse für Darstellung der Konten in der Liste
+     * Innere Klasse fï¿½r Darstellung der Konten in der Liste
      * 
      * @author Rudolf Radlbauer
      * 
@@ -577,7 +577,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * fügt die Daten ein und setzt Farben
+         * fï¿½gt die Daten ein und setzt Farben
          */
         public Component getListCellRendererComponent(JList list, Object value,
                 int index, boolean isSelected, boolean cellHasFocus)
@@ -597,7 +597,7 @@ public class HauptFenster extends JFrame
                 besitzer.setForeground(list.getForeground());
             }
 
-            // für jede Zelle in der JList wir this geliefert (macht nichts,
+            // fï¿½r jede Zelle in der JList wir this geliefert (macht nichts,
             // weil dann von der Liste geklont)
             return this;
         }
