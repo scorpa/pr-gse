@@ -182,10 +182,5 @@ public class FolgenSchreiber
 		System.out.print("Die ersten " + anzahl + " Primzahlen: ");
 		primzahlen();
 	}
-	
-	public static void main(String[] args)
-	{
-		new FolgenSchreiber().alleFolgen();
-	}
 
 }
