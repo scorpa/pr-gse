@@ -16,7 +16,7 @@ import bank.fachlogik.KontoVerwaltungException;
 
 /**
  * Decorator-Klasse ist gleichzeitig ein ListModel und eine KontoVerwaltung
- * (Stattet eine KontoVerwaltung mit den zusätzlichen Eigenschaften eines
+ * (Stattet eine KontoVerwaltung mit den zusÃ¤tzlichen Eigenschaften eines
  * ListModels aus.)
  * 
  * @author Rudolf Radlbauer
@@ -25,13 +25,13 @@ public class KontoListModel implements ListModel, KontoVerwaltung
 {
     private DefaultListModel model; // Referenz auf verwendetes ListModel
     private KontoVerwaltung verwaltung; // Referenz auf darunterliegende KontoVerwaltung
-    private String filter;  // filter für Auswahl der Konten (Beginn des Besitzer-Namens)
+    private String filter;  // filter fÃ¼r Auswahl der Konten (Beginn des Besitzer-Namens)
     						// null -> kein Konto, "" -> alle Konten
 
     // KontoVerwaltung
 
     /**
-     * Konstruktor befüllt das DefaultListModel mit den Daten aus der
+     * Konstruktor befÃ¼llt das DefaultListModel mit den Daten aus der
      * KontoVerwaltung
      * 
      * @param verwaltung
@@ -46,7 +46,7 @@ public class KontoListModel implements ListModel, KontoVerwaltung
     {
         if (verwaltung == null)
             throw new IllegalArgumentException(
-                    "Kontoverwaltung nicht gültig: null");
+                    "Kontoverwaltung nicht gÃ¼ltig: null");
         this.verwaltung = verwaltung;
         model = new DefaultListModel();
         filter = null;
@@ -55,10 +55,10 @@ public class KontoListModel implements ListModel, KontoVerwaltung
     
     
     /**
-     * Befüllt das Model mit Konten
-     * @param filter Dient zur Auswahl der Konten (führt zum Aufruf der entsprechenden get-Methode<br/>
-     * 					in der Verwaltung: filter steht für den Beginn des Namens des Besitzers.<br/>
-     * 					null -> kein Konto ausgewählt, "" -> alle Konten ausgewählt
+     * BefÃ¼llt das Model mit Konten
+     * @param filter Dient zur Auswahl der Konten (fÃ¼hrt zum Aufruf der entsprechenden get-Methode<br/>
+     * 					in der Verwaltung: filter steht fÃ¼r den Beginn des Namens des Besitzers.<br/>
+     * 					null -> kein Konto ausgewÃ¤hlt, "" -> alle Konten ausgewÃ¤hlt
      * @throws KontoVerwaltungException
      */
     public void befuellen(String filter) throws KontoVerwaltungException

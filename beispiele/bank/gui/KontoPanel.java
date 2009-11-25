@@ -14,13 +14,13 @@ import javax.swing.JTextField;
 
 /**
  * Ein KontoPanel ist eine Komponente, um Kontodaten darzustellen und soweit
- * zulässig zu editieren
+ * zulÃ¤ssig zu editieren
  * 
  * @uml.dependency supplier="fachlogik.Konto"
  */
 public class KontoPanel extends JPanel implements Observer
 {
-    private Konto konto; // Datenmodel für die Komponente (dargestelltes
+    private Konto konto; // Datenmodel fÃ¼r die Komponente (dargestelltes
 
     // Konto)
 
@@ -34,18 +34,18 @@ public class KontoPanel extends JPanel implements Observer
     private JTextField tfLimit = new JTextField();
 
     /**
-     * Konstruktor: baut die Oberfläche zusammen und befüllt die Textfelder mit
+     * Konstruktor: baut die OberflÃ¤che zusammen und befÃ¼llt die Textfelder mit
      * den Werten aus dem Konto
      * 
      * @param konto
-     *            Datenmodell für diese Instanz der Komponente
+     *            Datenmodell fÃ¼r diese Instanz der Komponente
      * @throws IllegalArgumentException
-     *             wenn null übergeben wird
+     *             wenn null Ã¼bergeben wird
      */
     public KontoPanel(Konto konto) throws IllegalArgumentException
     {
         if (konto == null)
-            throw new IllegalArgumentException("ungültige Konto-Instanz: null");
+            throw new IllegalArgumentException("ungÃ¼ltige Konto-Instanz: null");
         this.konto = konto;
         konto.addObserver(this);
         init();
@@ -53,7 +53,7 @@ public class KontoPanel extends JPanel implements Observer
     }
 
     /**
-     * baut die Oberfläche auf
+     * baut die OberflÃ¤che auf
      * 
      */
     private void init()
@@ -67,13 +67,13 @@ public class KontoPanel extends JPanel implements Observer
         tfSaldo.setEnabled(false);
         add(new JLabel("Besitzer"));
         add(tfBesitzer);
-        add(new JLabel("Überziehungsrahmen"));
+        add(new JLabel("Ãœberziehungsrahmen"));
         add(tfLimit);
 
     }
 
     /**
-     * befüllt die Textfelder mit den Werten aus dem Datenmodell (Konto-Instanz)
+     * befÃ¼llt die Textfelder mit den Werten aus dem Datenmodell (Konto-Instanz)
      * 
      */
     public void updateView()
@@ -90,7 +90,7 @@ public class KontoPanel extends JPanel implements Observer
      * set-Methoden im Datenmodell (Konto-Instanz) auf
      * 
      * @throws IllegalStateException
-     *             falls ungültige Werte in Textfeldern stehen
+     *             falls ungÃ¼ltige Werte in Textfeldern stehen
      */
     public void updateModel() throws IllegalStateException
     {
@@ -103,7 +103,7 @@ public class KontoPanel extends JPanel implements Observer
             konto.setLimit(Double.parseDouble(tfLimit.getText()));
         } catch (NumberFormatException nfe)
         {
-            throw new IllegalStateException("ungültiges Limit: "
+            throw new IllegalStateException("ungÃ¼ltiges Limit: "
                     + tfLimit.getText());
         }
         finally
