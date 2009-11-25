@@ -20,8 +20,8 @@ import javax.swing.event.InternalFrameAdapter;
 import javax.swing.event.InternalFrameEvent;
 
 /**
- * Inneres Fenster für das Erstellen oder Bearbeiten eines Kontos. Bei Erstellen
- * eines neuen Kontos wird dieses durch Betätigen der Schaltfläche "SPEICHERN"
+ * Inneres Fenster fÃ¼r das Erstellen oder Bearbeiten eines Kontos. Bei Erstellen
+ * eines neuen Kontos wird dieses durch BetÃ¤tigen der SchaltflÃ¤che "SPEICHERN"
  * in die Kontoverwaltung aufgenommen
  * 
  * @author Rudolf Radlbauer
@@ -38,8 +38,8 @@ public class KontoFenster extends JInternalFrame
     									// KontoVerwaltung
 
     /**
-     * Konstruktor für Bearbeitung eines bereits bestehenden Kontos. Baut die
-     * Oberfläche auf und befüllt die Textfelder
+     * Konstruktor fÃ¼r Bearbeitung eines bereits bestehenden Kontos. Baut die
+     * OberflÃ¤che auf und befÃ¼llt die Textfelder
      * 
      * @param konto
      *            zu bearbeitendes Konto
@@ -54,8 +54,8 @@ public class KontoFenster extends JInternalFrame
     }
 
     /**
-     * Konstruktor für Erstellen eines neuen Kontos. Baut die Oberfläche auf und
-     * befüllt Textfelder mit Standardwerten
+     * Konstruktor fÃ¼r Erstellen eines neuen Kontos. Baut die OberflÃ¤che auf und
+     * befÃ¼llt Textfelder mit Standardwerten
      * 
      * @param verwaltung
      *            verwendete KontoVerwaltung
@@ -73,7 +73,7 @@ public class KontoFenster extends JInternalFrame
     }
 
     /**
-     * baut die Oberfläche zusammen
+     * baut die OberflÃ¤che zusammen
      * 
      */
     private void initFrame()
@@ -84,7 +84,7 @@ public class KontoFenster extends JInternalFrame
         setClosable(true);
         setIconifiable(true);
 
-        JPanel buttons = new JPanel(); // Button-Panel im Südbereich
+        JPanel buttons = new JPanel(); // Button-Panel im SÃ¼dbereich
         JButton speichern = new JButton("SPEICHERN");
         speichern.addActionListener(new ActionListener() { // anonyme innere
                     // Klasse
@@ -124,7 +124,7 @@ public class KontoFenster extends JInternalFrame
     }
 
     /**
-     * wird bei aktivieren der Schaltfläche "SPEICHERN" aufgerufen
+     * wird bei aktivieren der SchaltflÃ¤che "SPEICHERN" aufgerufen
      * 
      */
     public void speichern()
@@ -150,7 +150,7 @@ public class KontoFenster extends JInternalFrame
     public void schliessen()
     {
         int option = JOptionPane.showConfirmDialog(this,
-                "Änderungen speichern?");
+                "Ã„nderungen speichern?");
         switch (option)
         {
         case JOptionPane.OK_OPTION:
@@ -158,7 +158,7 @@ public class KontoFenster extends JInternalFrame
             break;
 
         case JOptionPane.CANCEL_OPTION:
-            break; // Benutzer hat sichs anders überlegt -> nichts tun
+            break; // Benutzer hat sichs anders Ã¼berlegt -> nichts tun
 
         case JOptionPane.NO_OPTION:
             dispose();

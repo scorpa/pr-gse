@@ -31,7 +31,7 @@ public class UeberweisungsFenster extends JInternalFrame
 
     public UeberweisungsFenster(KontoVerwaltung verwaltung)
     {
-        super("Überweisung");
+        super("Ãœberweisung");
         initFrame();
         pack();
         setClosable(true);
@@ -50,7 +50,7 @@ public class UeberweisungsFenster extends JInternalFrame
         cp.add(aufKonto);
         cp.add(new JLabel("Betrag"));
         cp.add(betrag);
-        JButton durchfuehren = new JButton("Durchführen");
+        JButton durchfuehren = new JButton("DurchfÃ¼hren");
         JButton abbrechen = new JButton("Abbrechen");
         cp.add(durchfuehren);
         cp.add(abbrechen);
@@ -103,13 +103,13 @@ public class UeberweisungsFenster extends JInternalFrame
             ueberweisung.setBetrag(betr);
 
             int ok = JOptionPane.showConfirmDialog(this, betr + " von Konto "
-                    + kto1 + " auf Konto " + kto2, "Überweisung durchführen?",
+                    + kto1 + " auf Konto " + kto2, "Ãœberweisung durchfÃ¼hren?",
                     JOptionPane.YES_NO_OPTION);
             if (ok == JOptionPane.OK_OPTION)
             {
                 ueberweisung.durchfuehren();
-                JOptionPane.showMessageDialog(this, "erfolgreich durchgeführt",
-                        "Überweisung", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "erfolgreich durchgefÃ¼hrt",
+                        "Ãœberweisung", JOptionPane.INFORMATION_MESSAGE);
                 dispose();
             }
         } catch (NumberFormatException e)
@@ -118,7 +118,7 @@ public class UeberweisungsFenster extends JInternalFrame
         } catch (Exception e)
         {
             JOptionPane.showMessageDialog(this, e.getMessage(),
-                    "Fehler bei Überweisung", JOptionPane.ERROR_MESSAGE);
+                    "Fehler bei Ãœberweisung", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -126,7 +126,7 @@ public class UeberweisungsFenster extends JInternalFrame
     private void abbrechen()
     {
         int ok = JOptionPane.showConfirmDialog(this, "Eingaben verwerfen?",
-                "Überweisung abbrechen", JOptionPane.YES_NO_OPTION);
+                "Ãœberweisung abbrechen", JOptionPane.YES_NO_OPTION);
         if (ok == JOptionPane.OK_OPTION)
             dispose();
     }

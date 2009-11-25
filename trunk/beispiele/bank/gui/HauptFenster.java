@@ -66,7 +66,7 @@ public class HauptFenster extends JFrame
 
     /**
      * Konstruktor macht aus der KontoVerwaltung ein KontoListModel baut die
-     * Oberfl�che zusammen instanziiert die Attribute
+     * Oberfläche zusammen instanziiert die Attribute
      */
     public HauptFenster(KontoVerwaltung verwaltung)
     {
@@ -90,7 +90,7 @@ public class HauptFenster extends JFrame
     }
 
     /**
-     * baut die Oberfl�che zusammen
+     * baut die Oberflche zusammen
      * 
      */
     private void initFrame()
@@ -231,7 +231,7 @@ public class HauptFenster extends JFrame
         {
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage(),
-                    "Fehler beim Ausw�hlen der Kontos",
+                    "Fehler beim Auswählen der Kontos",
                     JOptionPane.ERROR_MESSAGE);
         }
 
@@ -266,7 +266,7 @@ public class HauptFenster extends JFrame
     {
         try
         {
-            // instanziiere neues KontoFenster und �bergebe es dem Controller
+            // instanziiere neues KontoFenster und übergebe es dem Controller
             fensterController.oeffneFenster(new KontoFenster(model));
         } catch (Exception e)
         {
@@ -293,7 +293,7 @@ public class HauptFenster extends JFrame
                 fensterController.oeffneFenster(new KontoFenster(konto, model));
             } else
             {
-                // ist bereits ein Fenster f�r dieses Konto offen, so ist nichts
+                // ist bereits ein Fenster für dieses Konto offen, so ist nichts
                 // zu tun
             }
         } else
@@ -304,12 +304,12 @@ public class HauptFenster extends JFrame
     }
 
     /**
-     * wird aufgerufen, wenn ein Konto gel�scht werden soll
+     * wird aufgerufen, wenn ein Konto gelöscht werden soll
      * 
      */
     private void loescheKonto()
     {
-        // zuerst herausfinden, welches Konto ausgew�hlt ist
+        // zuerst herausfinden, welches Konto ausgewählt ist
         Konto konto = (Konto) kontoListe.getSelectedValue();
         if (konto != null)
         {
@@ -323,7 +323,7 @@ public class HauptFenster extends JFrame
                 {
                     // entferne Konto aus der Verwaltung
                     model.entfernen(konto);
-                    // falls ein Fenster f�r dieses Konto offen ist, muss es
+                    // falls ein Fenster für dieses Konto offen ist, muss es
                     // geschlossen werden
                     KontoFenster kf = fensterController.getFenster(konto);
                     if (kf != null)
@@ -421,7 +421,7 @@ public class HauptFenster extends JFrame
     /**
      * Innere Klasse FensterController zum Verwalten der Inneren Fenster. Ist
      * gleichzeitig ein ListSelectionListener um auf Selektion in der Kontoliste
-     * zu reagieren. Ist gleichzeitig ein Observer um auf Ver�nderungen in
+     * zu reagieren. Ist gleichzeitig ein Observer um auf Veränderungen in
      * Konto-Daten zu reagieren (Update in Liste)
      * 
      * @author Rudolf Radlbauer
@@ -433,7 +433,7 @@ public class HauptFenster extends JFrame
         private Map<Konto, KontoFenster> kontoFensterListe; // Map zum Verwalten der Fenster
 
         /**
-         * Konstruktor instanziiert die Map, f�gt sich selbst als Listener bei
+         * Konstruktor instanziiert die Map, fügt sich selbst als Listener bei
          * der Liste ein, um auf Selektion zu reagieren
          * 
          */
@@ -457,7 +457,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * sorgt daf�r, dass das entsprechende Konto in der Liste ausgew�hlt
+         * sorgt dafür, dass das entsprechende Konto in der Liste ausgewählt
          * wird, wenn ein offenes Konto-Fenster selektiert wird
          */
         public void internalFrameActivated(InternalFrameEvent e)
@@ -467,13 +467,13 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * f�gt das �bergebene KontoFenster in die DesktopPane ein und
+         * fügt das übergebene KontoFenster in die DesktopPane ein und
          * regirstriert sich selbst als FrameListener bei diesem Fenster und als
-         * Observer beim entsprechenden Konto. Nimmt au�erdem das Fenster in die
+         * Observer beim entsprechenden Konto. Nimmt außerdem das Fenster in die
          * Fensterverwaltung auf.
          * 
          * @param fenster
-         *            KontoFenster, welches ge�ffnet werden soll
+         *            KontoFenster, welches geöffnet werden soll
          */
         public void oeffneFenster(KontoFenster fenster)
         {
@@ -494,9 +494,9 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * sorgt daf�r, dass das zugeh�rige KontoFenster (falls existent) in den
+         * sorgt dafür, dass das zugehörige KontoFenster (falls existent) in den
          * Vordergrund gebracht wird, wenn in der Kontoliste ein Konto
-         * ausgew�hlt wurde
+         * ausgewählt wurde
          */
         public void valueChanged(ListSelectionEvent e)
         {
@@ -520,12 +520,12 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * liefert zum �bergebenen Konto das zugeh�rige Fenster, falls eines
+         * liefert zum übergebenen Konto das zugehörige Fenster, falls eines
          * offen ist
          * 
          * @param k
          *            Konto, zu dem das Fenster gesucht wird
-         * @return zugeh�riges KontoFenster oder null, falls keines offen ist
+         * @return zugehöriges KontoFenster oder null, falls keines offen ist
          */
         public KontoFenster getFenster(Konto konto)
         {
@@ -543,7 +543,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * reagiert auf �nderungen in einem Konto -> Update der Liste
+         * reagiert auf Änderungen in einem Konto -> Update der Liste
          */
         public void update(Observable o, Object arg)
         {
@@ -554,7 +554,7 @@ public class HauptFenster extends JFrame
     }
 
     /**
-     * Innere Klasse f�r Darstellung der Konten in der Liste
+     * Innere Klasse für Darstellung der Konten in der Liste
      * 
      * @author Rudolf Radlbauer
      * 
@@ -577,7 +577,7 @@ public class HauptFenster extends JFrame
         }
 
         /**
-         * f�gt die Daten ein und setzt Farben
+         * fügt die Daten ein und setzt Farben
          */
         public Component getListCellRendererComponent(JList list, Object value,
                 int index, boolean isSelected, boolean cellHasFocus)
@@ -597,7 +597,7 @@ public class HauptFenster extends JFrame
                 besitzer.setForeground(list.getForeground());
             }
 
-            // f�r jede Zelle in der JList wir this geliefert (macht nichts,
+            // für jede Zelle in der JList wir this geliefert (macht nichts,
             // weil dann von der Liste geklont)
             return this;
         }

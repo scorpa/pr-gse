@@ -27,7 +27,7 @@ public class KontoAuswahlFenster extends JDialog
 	public KontoAuswahlFenster(Frame parent) throws HeadlessException
 	{
 		super(parent, true);
-		setTitle("Bitte Konten ausw‰hlen");
+		setTitle("Bitte Konten ausw√§hlen");
 		initDialog();
 		pack();
 	}
@@ -47,7 +47,7 @@ public class KontoAuswahlFenster extends JDialog
 		setLayout(new GridLayout(4,2));
 		add(new JLabel("alle Konten"));
 		add(alle);
-		add(new JLabel("ausgew‰hhlte Konten"));
+		add(new JLabel("ausgew√§hhlte Konten"));
 		add(selektiert);
 		add(new JLabel("Anfang des Namens"));
 		add(filter);
