@@ -197,8 +197,8 @@ http://pr-gse.googlecode.com/svn/wiki/images/Arrays/loeschen.png
 Alle Aufgaben zum Thema [thema_arraylist ArrayList] können auch mit einem Array gelöst werden.
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aurgabe12_Windkraft_V2.doc Windkraft_V2] ||   || noch keine Musterlösung ||
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_V2.doc Transport_V2] ||  ||  noch keine Musterlösung ||
+||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2] ||   || noch keine Musterlösung ||
+|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] ||  ||  noch keine Musterlösung ||
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow; noch keine Musterlösung ||
 ||  Bibliothek ||  || noch keine Musterlösung||
 ||  Uni ||  ||  noch keine Musterlösung ||
