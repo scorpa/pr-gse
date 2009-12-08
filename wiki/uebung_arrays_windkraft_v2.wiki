@@ -16,7 +16,7 @@ Die Methode `berechneLeistung()` muss von der zugeordneten `WindkraftAnlage` die
 
 === WindkraftAnlage ===
 
-Die Klasse `WindkraftAnlage` verwaltet Instanzen der Klasse `Windrad` in einem Array (Attribut `windraeder`). Im Attribut `anzahl` ist die Anzahl der aktuell verwalteten `Windrad`-Instanzen gespeichert. Mit der Methode `aufnehmen(…)` wird ein `Windrad` zur Verwaltung übernommen. Es muss beim `Windrad` die Anlage eingetragen werden (`setAnlage(...)`). Mit der Methode `entfernen(…)` wird ein `Windrad` wieder aus der Verwaltung entfernt.
+Die Klasse `WindkraftAnlage` verwaltet Instanzen der Klasse `Windrad` in einem Array (Attribut `windraeder`). Die maximale Anzahl der `Windrad`-Instanzen wird im Konstruktor als Parameter übergeben. Im Attribut `anzahl` ist die Anzahl der aktuell verwalteten `Windrad`-Instanzen gespeichert. Mit der Methode `aufnehmen(…)` wird ein `Windrad` zur Verwaltung übernommen. Es muss beim `Windrad` die Anlage eingetragen werden (`setAnlage(...)`). Mit der Methode `entfernen(…)` wird ein `Windrad` wieder aus der Verwaltung entfernt.
 
 Für das Attribut `windStaerke` (aktuelle Windstärke in km/h bei der Windkraftanlage) gibt es eine `set`- und eine `get`-Methode. Die Windstärke darf nicht negativ sein.
 
