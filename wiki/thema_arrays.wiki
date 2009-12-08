@@ -203,7 +203,6 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 <wiki:comment>
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow ||
 </wiki:comment>
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek] ||  || ||
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] ||  ||  Prüfungsaufgabe ||
 ||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit unvollständig ||
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue04_Sensor.doc Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
