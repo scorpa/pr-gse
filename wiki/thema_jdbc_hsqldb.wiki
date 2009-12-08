@@ -30,18 +30,17 @@ javaw.exe -cp <Pfad zu hsqldb.jar> org.hsqldb.util.DatabaseManagerSwing
 
 In Combobox auswählen:	HSQL Database Engine Server
 
-Driver: 			org.hsqldb.jdbcDriver
+Driver: 			`org.hsqldb.jdbcDriver`
 
-URL:				jdbc:hsqldb:hsql://localhost/<dbname>
+URL:				`jdbc:hsqldb:hsql://localhost/<dbname>`
 
-User:				sa
+User:				`sa`
 
 Password:			(leer)
 
 
 === Zugriff aus JAVA-Programm ===
 
-Treiber-Klasse: org.hsqldb.jdbcDriver”
+Treiber-Klasse: `org.hsqldb.jdbcDriver`
 
-URL: jdbc:hsqldb:hsql://localhost/<dbname>
-
+URL: `jdbc:hsqldb:hsql://localhost/<dbname>`
