@@ -19,6 +19,20 @@ Hier ist ein [tuturial_jdbc_hsqldb Tutorial] für den schnellen Einstieg mit HSQ
   * Direkter Netzwerktreiber: Ist vollständig in Java programmiert und kommuniziert direkt mit dem Datenbank-Server
 
 
+=== Verbindungsinformationen für verschiedene Datenbanken ===
+
+siehe dazu http://www.torsten-horn.de/techdocs/java-sql.htm
+
+|| *Datenbank* || * Bibliothek* || *Treiber-Klasse* || *URL* ||
+|| Oracle || http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html || oracle.jdbc.driver.OracleDriver || jdbc:oracle:thin:@MyDbComputerNameOrIP:1521:ORCL ||
+|| MySQL || http://dev.mysql.com/downloads/connector/j/5.1.html || com.mysql.jdbc.Driver || jdbc:mysql://MyDbComputerNameOrIP:3306/myDatabaseName ||
+|| PostgreSQL || http://jdbc.postgresql.org/download.html || org.postgresql.Driver || jdbc:postgresql://MyDbComputerNameOrIP/myDatabaseName|| 
+|| SQL Server || http://www.microsoft.com/sqlserver/2005/en/us/java-database-connectivity.aspx#download || com.microsoft.jdbc.sqlserver.SQLServerDriver || jdbc:microsoft:sqlserver://MyDbComputerNameOrIP:1433 ||
+
+
+
+
+
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_jdbc_dbtable Tabelle auf JTable] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/dbtable dbtable] || ||
