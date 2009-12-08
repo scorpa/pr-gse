@@ -194,10 +194,10 @@ http://pr-gse.googlecode.com/svn/wiki/images/Arrays/loeschen.png
 ----
 = Übungen = 
 
-Alle Aufgaben zum Thema [thema_arraylist ArrayList] können auch mit einem Array gelöst werden.
+Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe12_Windkraft_V2.doc Windkraft_V2] ||   ||  ||
+||  [uebung_arrays_windkraft_v2 Windkraft_V2] ||   ||  ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] ||  ||   ||
 <wiki:comment>
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow ||
