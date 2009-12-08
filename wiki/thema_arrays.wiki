@@ -197,6 +197,7 @@ http://pr-gse.googlecode.com/svn/wiki/images/Arrays/loeschen.png
 Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+||  [uebung_arrays_sensor Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
 ||  [uebung_arrays_bibliothek Bibliothek] ||  || ||
 ||  [uebung_arrays_windkraft_v2 Windkraft_V2] ||   ||  ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] ||  ||   ||
@@ -205,7 +206,6 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 </wiki:comment>
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] ||  ||  Prüfungsaufgabe ||
 ||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit unvollständig ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue04_Sensor.doc Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
 ||  [uebung_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
 
 
