@@ -1,6 +1,6 @@
 #summary Arbeiten mit HSQLDB
 
-=  Arbeiten mit HSQLDB =
+=  Arbeiten mit [http://www.hsqldb.org HSQLDB] =
 
 ===Server starten ===
 
