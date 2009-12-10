@@ -93,7 +93,7 @@ public class Mitarbeiter implements Serializable
 
 	public void setGeburtsDatum(Date geburtsDatum) throws IllegalArgumentException
 	{
-		if (geburtsDatum != null && geburtsDatum.compareTo(new Date()) < 0)
+		if (geburtsDatum != null && geburtsDatum.compareTo(new Date()) <= 0)
 			this.geburtsDatum = geburtsDatum;
 		else
 			throw new IllegalArgumentException("Geburtsdatum in der Zukunft");
