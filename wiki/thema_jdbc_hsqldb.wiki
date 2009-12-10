@@ -16,7 +16,7 @@ java.exe -cp <Pfad zu hsqldb.jar> org.hsqldb.Server
 || -database.x || Dateiname für die Datenbank ||
 || -dbname.x || Name, unter dem die Datenbank angesprochen wird (siehe unten) || 
 
-_(x kann die Werte 0 bis 9 annehmen.)_
+_(x kann die Werte 0 bis 9 annehmen, d.h. der Server kann gleichzeitig bis zu 9 Datenbank-Instanzen betreiben)_
 
 
 === Database-Manager starten ===
