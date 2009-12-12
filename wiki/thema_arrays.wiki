@@ -198,6 +198,7 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 ||  [uebung_arrays_sensor Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
+|| [uebung_arrays_bankomat Bankomat] || || ||
 ||  [uebung_arrays_bibliothek Bibliothek] ||  || siehe oben beschriebenes Projekt 
 [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arraysbibliothek/ bibliothek] ||
 ||  [uebung_arrays_windkraft_v2 Windkraft_V2] ||   ||  ||
