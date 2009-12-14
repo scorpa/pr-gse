@@ -3,13 +3,14 @@ package mitarbeiter;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Observable;
 
 /**
  * einfache Datenhaltungsklasse für einen Mitarbeiter
  * @author Rudolf Radlbauer
  *
  */
-public class Mitarbeiter implements Serializable
+public class Mitarbeiter extends Observable implements Serializable
 {
 
 	private static final long serialVersionUID = -1564930052667554546L;
@@ -47,7 +48,11 @@ public class Mitarbeiter implements Serializable
 	public void setNr(int nr) throws IllegalArgumentException
 	{
 		if (nr > 0)
+		{
 			this.nr = nr;
+			setChanged();
+			notifyObservers();
+		}
 		else
 			throw new IllegalArgumentException("ungültige Mitarbeiternummer: " + nr);
 	}
@@ -63,7 +68,11 @@ public class Mitarbeiter implements Serializable
 	{
 		vorname = vorname.trim();  // führende und abschließende Leerzeichen entfernen
 		if (vorname != null && vorname.length() > 0)
+		{
 			this.vorname = vorname;
+			setChanged();
+			notifyObservers();
+		}
 		else
 			throw new IllegalArgumentException("ungültiger Vorname: " + vorname);
 	}
@@ -79,7 +88,11 @@ public class Mitarbeiter implements Serializable
 	{
 		nachname = nachname.trim();
 		if (nachname != null && nachname.length() > 0)
+		{
 			this.nachname = nachname;
+			setChanged();
+			notifyObservers();
+		}
 		else
 			throw new IllegalArgumentException("ungültiger Nachname: " + nachname);
 	}
@@ -94,7 +107,11 @@ public class Mitarbeiter implements Serializable
 	public void setGeburtsDatum(Date geburtsDatum) throws IllegalArgumentException
 	{
 		if (geburtsDatum != null && geburtsDatum.compareTo(new Date()) <= 0)
+		{
 			this.geburtsDatum = geburtsDatum;
+			setChanged();
+			notifyObservers();
+		}
 		else
 			throw new IllegalArgumentException("Geburtsdatum in der Zukunft");
 	}
@@ -109,7 +126,11 @@ public class Mitarbeiter implements Serializable
 	public void setGeschlecht(char geschlecht)
 	{
 		if (geschlecht == 'm' || geschlecht == 'w')
+		{
 			this.geschlecht = geschlecht;
+			setChanged();
+			notifyObservers();
+		}
 		else
 			throw new IllegalArgumentException("Geschlecht darf nur m oder w sein");
 	}
