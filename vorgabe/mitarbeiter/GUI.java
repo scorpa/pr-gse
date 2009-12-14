@@ -14,9 +14,13 @@ import java.util.List;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -32,18 +36,14 @@ public class GUI extends JFrame
 	private MitarbeiterDAO dao;
 	private JList jlMitarbeiter = new JList();
 	private DefaultListModel lmMitarbeiter = new DefaultListModel();
-	private JLabel lbNr = new JLabel();
-	private JTextField tfVorname = new JTextField();
-	private JTextField tfNachname = new JTextField();
-	private JTextField tfGeburtsdatum = new JTextField();
-	private JTextField tfGeschlecht = new JTextField();
-	
-	private Mitarbeiter current = null;
+	private JDesktopPane desktop = new JDesktopPane();
 	
 	public GUI(MitarbeiterDAO dao) throws HeadlessException
 	{
 		this.dao = dao;
 		initFrame();
+		initMenu();
+		load();
 		addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent arg0)
 			{
@@ -56,8 +56,6 @@ public class GUI extends JFrame
 	{
 		try
 		{
-			if (current != null)
-				dao.speichern(current);
 			dao.close();
 		} catch (PersistenzException e)
 		{
@@ -66,6 +64,94 @@ public class GUI extends JFrame
 		}
 	}
 
+	private void initMenu()
+	{
+		JMenuBar mbar = new JMenuBar();
+		setJMenuBar(mbar);
+		JMenu file = new JMenu("Mitarbeiter");
+		mbar.add(file);
+		JMenuItem neu = new JMenuItem("neu");
+		file.add(neu);
+		neu.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				neu();
+			}});
+		JMenuItem speichern = new JMenuItem("speichern");
+		file.add(speichern);
+		speichern.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				speichern();
+			}});
+		JMenuItem anzeigen = new JMenuItem("anzeigen");
+		file.add(anzeigen);
+		anzeigen.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				anzeigen();
+			}});
+	}
+	
+	private void anzeigen()
+	{
+		Mitarbeiter m = (Mitarbeiter) jlMitarbeiter.getSelectedValue();
+		if (m != null)
+		{
+			MitarbeiterFenster fenster = new MitarbeiterFenster(m);
+			desktop.add(fenster);
+			fenster.setVisible(true);
+		}
+	}
+	
+	private void load()
+	{
+		lmMitarbeiter.clear();
+		try
+		{
+			for (Mitarbeiter m : dao.findeAlle())
+				lmMitarbeiter.addElement(m);
+		} catch (PersistenzException e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+	}
+	
+	private void speichern()
+	{
+		try
+		{
+			MitarbeiterFenster fenster = (MitarbeiterFenster) desktop.getSelectedFrame();
+			if (fenster != null)
+			{
+				Mitarbeiter m = fenster.getMitarbeiter();
+				dao.speichern(m);
+				fenster.updateFenster();
+				if (!lmMitarbeiter.contains(m))
+					lmMitarbeiter.addElement(m);
+			}
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+	}
+	
+	private void neu()
+	{
+		try
+		{
+			MitarbeiterFenster fenster = new MitarbeiterFenster();
+			desktop.add(fenster);
+			fenster.setVisible(true);
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+	}
+	
 	private void initFrame()
 	{
 		JSplitPane split = new JSplitPane();
@@ -73,180 +159,9 @@ public class GUI extends JFrame
 		split.add(new JScrollPane(jlMitarbeiter), JSplitPane.LEFT);
 		jlMitarbeiter.setModel(lmMitarbeiter);
 		jlMitarbeiter.setCellRenderer(new Renderer());
-		JPanel rechts = new JPanel(new GridLayout(7,2));
-		split.add(rechts, JSplitPane.RIGHT);
-		rechts.add(new JLabel("Mitarbeiternummer"));
-		rechts.add(lbNr);
-		rechts.add(new JLabel("Vorname"));
-		rechts.add(tfVorname);
-		rechts.add(new JLabel("Nachname"));
-		rechts.add(tfNachname);
-		rechts.add(new JLabel("Geburtsdatum"));
-		rechts.add(tfGeburtsdatum);
-		rechts.add(new JLabel("Geschlecht"));
-		rechts.add(tfGeschlecht);
-		JButton neu = new JButton("NEU");
-		JButton loeschen = new JButton("LÖSCHEN");
-		JButton suchen = new JButton("SUCHEN");
-		JButton clear = new JButton("Felder Löschen");
-		rechts.add(neu);
-		rechts.add(loeschen);
-		rechts.add(suchen);
-		rechts.add(clear);
-		neu.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
-				neu();
-			}});
-		loeschen.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
-				loeschen();
-			}});
-		suchen.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
-				suchen();
-			}});
-		clear.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent e)
-			{
-				clearFields();
-			}});
-		
-		jlMitarbeiter.addListSelectionListener(new ListSelectionListener(){
-			public void valueChanged(ListSelectionEvent e)
-			{
-				select();
-			}});
+		split.add(desktop, JSplitPane.RIGHT);
 	}
 
-
-	protected void suchen()
-	{
-		try
-		{
-			List<Mitarbeiter> liste = new ArrayList<Mitarbeiter>();
-			if (tfNachname.getText().length() > 0)
-			{
-				liste = dao.finden(tfNachname.getText());
-			}
-			else
-			{
-				liste = dao.findeAlle();
-			}
-			if (liste.size() > 0)
-			{
-				lmMitarbeiter.clear();
-				for (Mitarbeiter m : liste)
-					lmMitarbeiter.addElement(m);
-			}
-
-		} catch(Exception e)
-		{
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, e.getMessage());
-		}
-	}
-
-	protected void updateFields()
-	{
-		if (current != null)
-		{
-			lbNr.setText(String.valueOf(current.getNr()));
-			tfVorname.setText(current.getVorname());
-			tfNachname.setText(current.getNachname());
-			tfGeburtsdatum.setText(Mitarbeiter.DATE_FORMATTER.format(current.getGeburtsDatum()));
-			tfGeschlecht.setText(String.valueOf(current.getGeschlecht()));
-		}
-	}
-	
-	protected void clearFields()
-	{
-		lbNr.setText("");
-		tfVorname.setText("");
-		tfNachname.setText("");
-		tfGeburtsdatum.setText("");
-		tfGeschlecht.setText("");
-		
-	}
-	
-	protected void updateCurrent()
-	{
-		if (current != null)
-		{
-			current.setVorname(tfVorname.getText());
-			current.setNachname(tfNachname.getText());
-			try
-			{
-				current.setGeburtsDatum(Mitarbeiter.DATE_FORMATTER.parse(tfGeburtsdatum.getText()));
-			} catch (ParseException e)
-			{
-				throw new IllegalStateException("Format für Geburtsdatum: TT.MM.JJJJ");
-			}
-			if (tfGeschlecht.getText().length() == 1)
-				current.setGeschlecht(tfGeschlecht.getText().charAt(0));
-			else
-				throw new IllegalStateException("Geschlecht muss m oder w sein");
-		}
-	}
-
-	protected void select()
-	{
-		try
-		{
-			Mitarbeiter selected = (Mitarbeiter) jlMitarbeiter.getSelectedValue();
-			if (selected != null)
-			{
-				if (current != null && current != selected)
-				{
-					updateCurrent();
-					dao.speichern(current);
-				}
-				current = selected;
-				updateFields();
-			}
-		} catch(Exception e)
-		{
-			if (current != null)
-				jlMitarbeiter.setSelectedValue(current, true);
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, e.getMessage());
-		}
-	}
-
-
-	protected void loeschen()
-	{
-		try
-		{
-			if (current != null)
-			{
-				lmMitarbeiter.removeElement(current);
-				if (current.getNr() != 0)
-					dao.loeschen(current);
-				current = null;
-				clearFields();
-			}
-			
-		} catch(Exception e)
-		{
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, e.getMessage());
-		}
-		
-	}
-
-
-	protected void neu()
-	{
-		Mitarbeiter neu = new Mitarbeiter();
-		lmMitarbeiter.addElement(neu);
-		jlMitarbeiter.setSelectedValue(neu, true);
-		select();
-		clearFields();
-	}
-	
 	
 	
 	private static class Renderer extends JPanel implements ListCellRenderer
