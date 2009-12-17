@@ -5,6 +5,8 @@ import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
@@ -16,6 +18,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JMenu;
@@ -43,7 +46,7 @@ public class GUI extends JFrame
 		this.dao = dao;
 		initFrame();
 		initMenu();
-		load();
+		auswaehlen();
 		addWindowListener(new WindowAdapter(){
 			public void windowClosing(WindowEvent arg0)
 			{
@@ -91,6 +94,68 @@ public class GUI extends JFrame
 			{
 				anzeigen();
 			}});
+		JMenuItem loeschen = new JMenuItem("löschen");
+		file.add(loeschen);
+		loeschen.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				loeschen();
+			}});
+		JMenu auswahl = new JMenu("Auswahl");
+		mbar.add(auswahl);
+		JMenuItem auswaehlen = new JMenuItem("Mitarbeiter auswählen");
+		auswahl.add(auswaehlen);
+		auswaehlen.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e)
+			{
+				auswaehlen();
+			}});
+		
+	}
+	
+	private void auswaehlen()
+	{
+		try
+		{
+			MitarbeiterAuswahl auswahl = new MitarbeiterAuswahl(dao);
+			List<Mitarbeiter> liste = auswahl.anzeigen();
+			if (liste != null)
+			{
+				lmMitarbeiter.clear();
+				for(Mitarbeiter m : liste)
+					lmMitarbeiter.addElement(m);
+			}
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
+	}
+	
+	private void loeschen()
+	{
+		try
+		{
+			Mitarbeiter m = (Mitarbeiter)jlMitarbeiter.getSelectedValue();
+			if (m != null)
+			{
+				dao.loeschen(m);
+				lmMitarbeiter.removeElement(m);
+				for (JInternalFrame f : desktop.getAllFrames())
+				{
+					MitarbeiterFenster mf = (MitarbeiterFenster) f;
+					if (mf.getMitarbeiter() == m)
+					{
+						mf.dispose();
+						desktop.remove(mf);
+					}
+				}
+			}
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+			JOptionPane.showMessageDialog(this, e.getMessage());
+		}
 	}
 	
 	private void anzeigen()
@@ -104,19 +169,6 @@ public class GUI extends JFrame
 		}
 	}
 	
-	private void load()
-	{
-		lmMitarbeiter.clear();
-		try
-		{
-			for (Mitarbeiter m : dao.findeAlle())
-				lmMitarbeiter.addElement(m);
-		} catch (PersistenzException e)
-		{
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(this, e.getMessage());
-		}
-	}
 	
 	private void speichern()
 	{
@@ -160,6 +212,12 @@ public class GUI extends JFrame
 		jlMitarbeiter.setModel(lmMitarbeiter);
 		jlMitarbeiter.setCellRenderer(new Renderer());
 		split.add(desktop, JSplitPane.RIGHT);
+		jlMitarbeiter.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e)
+            {
+                if (e.getClickCount() == 2)
+                    anzeigen();
+            }});
 	}
 
 	
