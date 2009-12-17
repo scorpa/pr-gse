@@ -14,7 +14,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerDateModel;
 
-public class MitarbeiterFenster extends JInternalFrame
+public class MitarbeiterFenster extends JInternalFrame implements Observer
 {
 	private JTextField tfNr = new JTextField();
 	private JTextField tfVorname = new JTextField();
@@ -28,6 +28,7 @@ public class MitarbeiterFenster extends JInternalFrame
 	public MitarbeiterFenster()
 	{
 		this.mitarbeiter = new Mitarbeiter();
+		this.mitarbeiter.addObserver(this);
 		initFrame();
 		pack();
 	}
@@ -35,6 +36,7 @@ public class MitarbeiterFenster extends JInternalFrame
 	public MitarbeiterFenster(Mitarbeiter mitarbeiter)
 	{
 		this.mitarbeiter = mitarbeiter;
+		this.mitarbeiter.addObserver(this);
 		initFrame();
 		updateFenster();
 		pack();
@@ -42,7 +44,7 @@ public class MitarbeiterFenster extends JInternalFrame
 	
 	private void initFrame()
 	{
-		setLayout(new GridLayout(6,2));
+		setLayout(new GridLayout(5,2));
 		add(new JLabel("Mitarbeiternummer"));
 		add(tfNr);
 		tfNr.setEditable(false);
@@ -68,11 +70,13 @@ public class MitarbeiterFenster extends JInternalFrame
 	
 	private void updateDaten()
 	{
+		mitarbeiter.deleteObserver(this);
 		mitarbeiter.setGeburtsDatum(smGeburtsdatum.getDate());
 		mitarbeiter.setVorname(tfVorname.getText());
 		mitarbeiter.setNachname(tfNachname.getText());
 		if (rbWeiblich.isSelected()) mitarbeiter.setGeschlecht('w');
 		if (rbMaennlich.isSelected()) mitarbeiter.setGeschlecht('m');
+		mitarbeiter.addObserver(this);
 	}
 	
 	public void updateFenster()
@@ -92,6 +96,13 @@ public class MitarbeiterFenster extends JInternalFrame
 	{
 		updateDaten();
 		return mitarbeiter;
+	}
+
+	@Override
+	public void update(Observable o, Object arg)
+	{
+		updateFenster();
+		
 	}
 
 	
