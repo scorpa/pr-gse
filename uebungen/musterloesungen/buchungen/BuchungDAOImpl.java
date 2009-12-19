@@ -81,6 +81,7 @@ public class BuchungDAOImpl implements BuchungDAO
 				if (pstmt.executeUpdate() == 1)
 					aktualisiert.add(b);
 			}
+			pstmt.close();
 		} catch (SQLException e)
 		{
 			e.printStackTrace();
