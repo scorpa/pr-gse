@@ -1,0 +1,12 @@
+#summary Übung: Tabelle mit Buchungen
+
+= Tabelle mit Buchungen =
+
+Im Folgenden ist ein System zum Abspeichern von Buchungen in einer Datenbank dargestellt.
+
+Objekte der Klasse `Buchung` repräsentieren Datensätze in der Datenbanktabelle BUCHUNGEN. (Diese Datenbanktabelle wird mit dem Script [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/buchungen.sql buchungen.sql] angelegt.)
+Das Interface [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/BuchungDAO.java BuchungDAO] definiert einige Zugriffsmethoden auf die Datenbanktabelle BUCHUNGEN. Diese sollen in der Klasse `BuchungDAOImpl` implementiert werden:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/transport_v2.jpg
+</p>
