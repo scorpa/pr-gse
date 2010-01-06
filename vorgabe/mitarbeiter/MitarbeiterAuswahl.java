@@ -52,8 +52,12 @@ public class MitarbeiterAuswahl extends JDialog
 		add(rbDatum);
 		JPanel datePanel = new JPanel(new GridLayout(1,2));
 		add(datePanel);
-		datePanel.add(new JSpinner(sdmVon));
-		datePanel.add(new JSpinner(sdmBis));
+		JSpinner vonSpinner = new JSpinner(sdmVon);
+		JSpinner bisSpinner = new JSpinner(sdmBis);
+		vonSpinner.setEditor(new JSpinner.DateEditor(vonSpinner, "dd.MM.yyyy"));
+		bisSpinner.setEditor(new JSpinner.DateEditor(bisSpinner, "dd.MM.yyyy"));
+		datePanel.add(vonSpinner);
+		datePanel.add(bisSpinner);
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(rbAlle);
 		bg.add(rbNr);
