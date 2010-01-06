@@ -53,7 +53,9 @@ public class MitarbeiterFenster extends JInternalFrame implements Observer
 		add(new JLabel("Nachname"));
 		add(tfNachname);
 		add(new JLabel("Geburtsdatum"));
-		add(new JSpinner(smGeburtsdatum));
+		JSpinner spinner = new JSpinner(smGeburtsdatum);
+		spinner.setEditor(new JSpinner.DateEditor(spinner, "dd.MM.yyyy"));
+		add(spinner);
 		add(new JLabel("Geschlecht"));
 		JPanel jp = new JPanel(new FlowLayout());
 		add(jp);
