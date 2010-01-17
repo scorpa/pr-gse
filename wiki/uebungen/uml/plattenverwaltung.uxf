@@ -31,7 +31,7 @@ nummer : int
 laenge : double
 breite : double
 --
-&lt;&lt;constr&gt;&gt; Platt(nummer : int)
+&lt;&lt;constr&gt;&gt; Platte(nummer : int)
 / /* get-,set-Methoden */ /
 berechneUmfang() : double
 berechneFlaeche() : double
