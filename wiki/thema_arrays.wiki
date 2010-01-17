@@ -209,6 +209,7 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 </wiki:comment>
 ||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit unvollständig ||
 ||  [uebung_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
+||  [uebung_arrays_cdverwaltung CD-Verwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/cdverwaltung] cdverwaltung || Prüfungsaufgabe ||
 
 
 Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
