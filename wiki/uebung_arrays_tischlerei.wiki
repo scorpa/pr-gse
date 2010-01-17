@@ -14,7 +14,7 @@ Die Nummer wird im Konstruktor übergeben. Für alle Attribute gibt es eine `get
 
 Die Methode `berechneUmfang()` liefert den Umfang einer `Platte` als Rückgabewert, die Methode `berechneFlaeche()` liefert die Fläche.
 
-
+<br/>
 
 Objekte der Klasse `PlattenVerwaltung` verwalten mehrere Platten in einem Array. Die maximale Anzahl der Platten wird dem Konstruktor als Parameter übergeben.
 
