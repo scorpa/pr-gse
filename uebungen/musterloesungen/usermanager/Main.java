@@ -5,7 +5,7 @@ package usermanager;
  *
  * @author Rudolf Radlbauer
  */
-public class Test
+public class Main
 {
 
     /**
