@@ -8,7 +8,13 @@ Ein Tischlereibetrieb benötigt eine Software für die Verwaltung der Holzplatte
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/plattenverwaltung.jpg
 </p>
  
-Objekte der Klasse `Platte` speichern die Daten für eine einzelne Platte: die Nummer (die Platten werden nummeriert), die Länge und die Breite. Die Nummer wird im Konstruktor übergeben. Für alle Attribute gibt es eine `get`- und eine `set`-Methode.
+Objekte der Klasse `Platte` speichern die Daten für eine einzelne Platte: die Nummer (die Platten werden nummeriert), die Länge und die Breite. 
+
+Die Nummer wird im Konstruktor übergeben. Für alle Attribute gibt es eine `get`- und eine `set`-Methode.
+
+Die Methode `berechneUmfang()` liefert den Umfang einer `Platte` als Rückgabewert, die Methode `berechneFlaeche()` liefert die Fläche.
+
+
 
 Objekte der Klasse `PlattenVerwaltung` verwalten mehrere Platten in einem Array. Die maximale Anzahl der Platten wird dem Konstruktor als Parameter übergeben.
 
