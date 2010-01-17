@@ -133,7 +133,11 @@ public class LoginDialog extends javax.swing.JDialog {
             user.setUserName(tfUserName.getText());
             user.setPassword(new String(pfPassword.getPassword()));
             if (userManager.login(user))
+            {
+                JOptionPane.showMessageDialog(this, "Benutzer " + user.getName()
+                        + " erfolgreich angemeldet ");
                 dispose();
+            }
             else
                 throw new Exception("ungültige Kennung oder Passowort");
         } catch(Exception e)
