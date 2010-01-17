@@ -1,0 +1,35 @@
+#summary Übung: User-Manager
+
+= User-Manager =
+
+Für eine Benutzerverwaltung steht die Datenbanktabelle USER zur Verfügung (user.sql).
+Diese ist folgendermaßen aufgebaut:
+
+|| U_NR	 || Ganzzahl, Primärschlüssel || 
+|| U_NAME || Name des Benutzers (VARCHAR(64)) ||
+|| U_USERNAME || Kennung des Benutzers (VARCHAR(64)) ||
+|| U_PASSWORD || Passwort des Benutzers (VARCHAR(64)) ||
+
+Zu dieser Tabelle gibt es die Klasse `User` und das Interface `UserManager` entsprechend dem folgenden UML-Klassendiagramm:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/usermanager.jpg
+</p>
+ 
+
+=== Aufgabe 1 ===
+
+Die im Interface `UserManager` vorgeschriebenen Methoden sind im Source-Code genau beschrieben. Implementieren Sie das Interface mit einer Klasse, welche die entsprechenden Datenbankzugriffe durchführt.
+
+
+=== Aufgabe 2 ===
+
+Erstellen Sie einen Login-Dialog, der ungefähr so aussieht:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/login-dialog.jpg
+</p> 
+
+Bei Betätigen der Schaltfläche ANMELDEN werden Kennung und Passwort ausgelesen und in eine `User`-Instanz eingetragen. 
+
+Diese wird dann an die `login()`-Methode der `UserManager`-Implementierung übergeben. Ist das Login erfolgreich, so werden die User-Daten (Name und ID) ausgegeben, ansonsten eine entsprechende Fehlermeldung.
