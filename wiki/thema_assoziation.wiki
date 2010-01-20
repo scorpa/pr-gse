@@ -8,6 +8,7 @@
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_assoziation_uhrzeit Uhrzeit] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit] || Digitale Zeitanzeige (einzelne Klasse oder mit Zähler-Klasse) ||
 || [uebung_assoziation_referenzen Referenzen] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/referenzen referenzen] || Arbeiten mit Referenzen / Debugger (Projekt ist in diesem Fall Teil der Angabe) ||
+|| [uebung_assoziation_referenzen_2 Referenzen (2)] ||    || kleines Quiz ||
 || [uebung_assoziation_sitznachbarn Sitznachbarn] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sitznachbarn sitznachbarn] || ziemlich knifflige Aufgabe mit Rekursion ||
 || [uebung_assoziation_rechteck_A Rechteck (A)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/zeichnen1 zeichnen1] || Prüfungsaufgabe ||
 || [uebung_assoziation_rechteck_B Rechteck (B)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/zeichnen2 zeichnen2] || Prüfungsaufgabe ||
