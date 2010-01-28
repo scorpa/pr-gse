@@ -34,7 +34,7 @@ public class DBDataAccess implements DataAccess{
         try
         {
             ArrayList<Flug> liste = new ArrayList<Flug>();
-            String query = "SELECT flugnummer, von, nach, start, ankunft, sitzplaetze " + "FROM fluege";
+            String query = "SELECT flugnummer, von, nach, abflug, ankunft, sitzplaetze " + "FROM fluege";
             PreparedStatement pstmt = con.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next())
@@ -43,7 +43,7 @@ public class DBDataAccess implements DataAccess{
                 f.setNummer(rs.getInt("flugnummer"));
                 f.setVon(rs.getString("von"));
                 f.setNach(rs.getString("nach"));
-                f.setStart(rs.getDate("start"));
+                f.setStart(rs.getDate("abflug"));
                 f.setAnkunft(rs.getDate("ankunft"));
                 f.setSitzPlaetze(rs.getInt("sitzplaetze"));
                 liste.add(f);
