@@ -16,3 +16,28 @@ CREATE TABLE reservierungen (
   passagier_name varchar(128) NOT NULL,
   PRIMARY KEY  (reservierungsnummer)
 );
+
+
+INSERT INTO `flugreservierung`.`fluege` (
+`flugnummer` ,
+`von` ,
+`nach` ,
+`abflug` ,
+`ankunft` ,
+`sitzplaetze`
+)
+VALUES (
+'123', 'Wien', 'London', '2010-01-29 12:55:40', '2010-01-29 14:55:48', '2'
+);
+
+INSERT INTO `flugreservierung`.`fluege` (
+`flugnummer` ,
+`von` ,
+`nach` ,
+`abflug` ,
+`ankunft` ,
+`sitzplaetze`
+)
+VALUES (
+'456', 'Wien', 'Amsterdam', '2010-01-28 12:56:55', '2010-01-28 13:56:55', '150'
+);
