@@ -6,6 +6,10 @@ Hier einige Tutorials für das Arbeiten mit [http://www.netbeans.org Netbeans]:
 
 http://netbeans.org/kb/docs/java/quickstart.html
 
+http://netbeans.org/kb/docs/java/editor-codereference.html
+
+http://netbeans.org/kb/docs/java/javase-intro.html
+
 http://java.sun.com/developer/onlineTraining/tools/netbeans_part1/
 
 http://netbeans.org/kb/docs/java/java-editor68-screencast.html
