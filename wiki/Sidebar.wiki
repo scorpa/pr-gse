@@ -42,4 +42,5 @@
     * [thema_threads Multithreading]
     * [thema_rmi Remote Method Invocation (RMI)]
     * [thema_eclipse Eclipse]
+    * [thema_netbeans Netbeans]
     * [thema_subversion Versionskontrolle (mit Subversion)]
