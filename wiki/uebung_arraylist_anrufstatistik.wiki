@@ -16,7 +16,7 @@ Für jeden Anruf werden folgende Daten gespeichert (Klasse `Anruf`):
 || *Attribut* || *Inhalt* || *Wertebereich* || *Standardwert* ||
 || nr || angerufene Telefonnummer || nicht leer || "000" ||
 || dauer || Anrufdauer (Sekunden) || > 0 || 1 ||
-|| tarif || || g: Geschäftszeit, f: Freizeit || f ||
+|| tarif || Tarif für diesen Anruf || g: Geschäftszeit, f: Freizeit || f ||
 
 Es gibt einen Standardkonstruktor und einen Konstruktor, der die Telefonnummer als Parameter übernimmt.
 
