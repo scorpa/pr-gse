@@ -13,6 +13,12 @@ public interface EinkaufsListe
     {
         BEZEICHNUNG, PREIS, HERKUNFT, BIO
     }
+
+    /**
+     * nimmt ein Produkt in die Einkaufsliste auf
+     * @param p Referenz auf das Produkt
+     * @param anzahl in dieser Anzahl wird das Produkt übernommen
+     */
     public void aufnehmen(Produkt p, int anzahl);
     public void entfernen(Produkt p);
     public ArrayList<Produkt> liste();
