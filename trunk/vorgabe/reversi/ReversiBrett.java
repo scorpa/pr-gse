@@ -28,6 +28,7 @@ public class ReversiBrett extends JFrame
         neu();
         setSize(500, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
     
     private void initFrame()
@@ -59,11 +60,5 @@ public class ReversiBrett extends JFrame
         panel.update(null, null);
     }
     
-    public static void main(String[] args)
-    {
-        Reversi r = new ReversiTestImpl();
-        ReversiBrett brett = new ReversiBrett(r);
-        brett.setVisible(true);
-    }
 
 }
