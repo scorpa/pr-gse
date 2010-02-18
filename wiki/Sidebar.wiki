@@ -9,6 +9,7 @@
     * [thema_arraylist ArrayList]  
     * [thema_benutzerinteraktion Benutzerinteraktion (Eingabe)]
     * [thema_klassendesign Klassendesign]
+    * [thema_interface Interface]
     * [thema_vererbung Vererbung]
     * [thema_abstraktion Abstraktion]
   * Objektorientierung 2
