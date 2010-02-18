@@ -1,0 +1,11 @@
+#summary Übung: Reversi
+
+= Reversi =
+
+Kopieren Sie sich aus dem Ordner [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe vorgabe] das gesamte Package `reversi`.
+
+Dieses Package beinhaltet die Oberfläche für ein [http://de.wikipedia.org/wiki/Reversi Reversi-Spiel] (auch Othello genannt). Das Spiel selbst ist jedoch noch nicht implementiert. Es existiert lediglich eine Test-Implementierung, bei welcher einfach nacheinander 10 Spielsteine auf beliebige Felder gesetzt werden können. Probieren Sie diese Test-Implementierung aus, indem Sie das Programm mit der Klasse `Start` starten.
+
+Erstellen Sie dann eine Klasse, welche das Interface `Reversi` implementiert und nur gültige Züge zulässt sowie die Spielsteine richtig umdreht. Die Spielregeln können Sie [http://de.wikipedia.org/wiki/Reversi hier] nachlesen.
+
+Ersetzen Sie sodann in der Klasse `Start` die Klasse `ReversiTestImpl` durch Ihre Implementierung.
