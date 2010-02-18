@@ -3,5 +3,5 @@
 = Interface =
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [uebung_interface_termine Terminplaner] || || || 
 || [uebung_interface_reversi Reversi] || || ||
-|| [uebung_interface_bibliothek_sortieren Sortierte Bücherliste] || || ||
