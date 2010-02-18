@@ -1,0 +1,6 @@
+#summary Interface
+
+= Interface =
+
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [uebung_interface_reversi Reversi] || || ||
