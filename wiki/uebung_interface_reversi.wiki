@@ -9,3 +9,10 @@ Dieses Package beinhaltet die Oberfläche für ein [http://de.wikipedia.org/wiki
 Erstellen Sie dann eine Klasse, welche das Interface `Reversi` implementiert und nur gültige Züge zulässt sowie die Spielsteine richtig umdreht. Die Spielregeln können Sie [http://de.wikipedia.org/wiki/Reversi hier] nachlesen.
 
 Ersetzen Sie sodann in der Klasse `Start` die Klasse `ReversiTestImpl` durch Ihre Implementierung.
+
+
+_Bemerkungen:_
+
+_Wenn Sie das Spiel nicht kennen, können Sie es z.B. [http://www.mah-jongg.ch/reversi/ hier] einmal ausprobieren._ 
+
+_Sie sollen jedoch kein Spiel programmieren, welches selbst den nächsten Zug berechnet, sondern Ihr Programm soll lediglich als Spielbrett für 2 Spieler dienen, die abwechselnd ihre Spielsteine setzen. Es sollen aber nur gültige Züge zugelassen werden._
