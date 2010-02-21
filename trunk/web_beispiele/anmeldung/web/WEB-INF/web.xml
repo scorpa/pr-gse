@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>Anmeldung</servlet-name>
+        <servlet-class>anmeldung.web.Anmeldung</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Anmeldung</servlet-name>
+        <url-pattern>/anmelden</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-        </welcome-file-list>
-    </web-app>
+        <welcome-file>html/hello.html</welcome-file>
+    </welcome-file-list>
+    <jsp-config>
+        <taglib>
+            <taglib-location>
+                /WEB-INF/tld/anmeldung.tld
+            </taglib-location>
+            <taglib-uri>
+                /anmeldung
+            </taglib-uri>
+        </taglib>
+    </jsp-config>
+</web-app>
