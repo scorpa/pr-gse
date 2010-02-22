@@ -93,5 +93,8 @@ Beispiel:
 http://www.beispiel.net:8080/webapp1/seite1.jsp
 }}}
 
-Das Protokoll ist zumeist HTTP(manchmal auch FTP). Der Host kann auch mit der IP-Adresse angegeben werden (z.B. 127.0.0.1). Wenn keine Port-Nummer angegeben ist, wird für HTTP der Standard-Port 80 verwendet. Der Context-Pfad wird in einer zentralen Server-Konfigurationsdatei (server.xml) definiert.
+Das Protokoll ist zumeist HTTP(manchmal auch FTP). Der Host kann auch mit der IP-Adresse angegeben werden (z.B. 127.0.0.1). Wenn keine Port-Nummer angegeben ist, wird für HTTP der Standard-Port 80 verwendet. 
 
+Der Context-Pfad wird in einer zentralen Server-Konfigurationsdatei (`server.xml`) definiert, oder aber in einem speziellen Verzeichnis am Server (Tomcat: `conf/Catalina/localhost/`) in einer eigenen Datei für jede WEB-Applikation (Context).
+
+Anstatt der Seite kann am Ende auch z.B. ein URL-Mapping auf ein Servlet stehen.
