@@ -36,4 +36,26 @@ Dieses Servlet würde man also etwa folgendermaßen aufrufen:
 
 `http://localhost:8080/anmeldung/`*anmelden*
 
+== Request-Parameter auswerten ==
 
+Das Servlet Anmeldung in unserem Beispiel wird von der HTML-Seite [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/html/hello.html hello.html] aufgerufen, welche etwa so aussieht:
+
+http://pr-gse.googlecode.com/svn/wiki/images/servlet/hello.jpg
+
+Die HTML-Seite enthält im Wesentlichen ein Formular, welches mit der Action das Servlet Anmeldung aufruft: 
+{{{
+<form action="anmelden">
+...
+</form>
+}}}
+
+Darin befindet sich das Textfeld für die Eingabe der E-Mail-Adresse:
+{{{
+Deine E-Mail-Adresse: <input type="text" name="email" value="" size="100" />
+}}}
+Der Name des Textfeldes ist `email`. Mit Hilfe dieses Namens wird der vom Benutzer eingegebene Inhalt des Textfeldes abgefragt: Methode `processRequest(...)` in [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/Anmeldung.java Anmeldung.java] (diese Methode wird sowohl von `doGet(...)` als auch von `doPost(...)` aufgerufen.
+
+Der Inhalt des Textfeldes kann vom `HttpServletRequest`-Objekt abgefragt werden:
+{{{
+String email = request.getParameter("email");
+}}}
