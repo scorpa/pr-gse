@@ -59,3 +59,14 @@ Der Inhalt des Textfeldes kann vom `HttpServletRequest`-Objekt abgefragt werden:
 {{{
 String email = request.getParameter("email");
 }}}
+
+Ähnlich funktioniert die Abfrage der Auswahl des Benutzers bei den Radio-Buttons. Hier ist allerdings zu beachten, dass alle zusammengehörigen Radio-Buttons den gleichen namen haben. Der Inhalt ist dann der `value` des ausgewählten Radio-Buttons:
+{{{
+<input type="radio" name="zusage" value="ja" checked="checked" />
+<input type="radio" name="zusage" value="nein" />
+}}}
+abgefragt in in `processRequest(...)`: 
+{{{
+boolean kommt = "ja".equals(request.getParameter("zusage"));
+}}}
+In der Variable `kommt` wird also dann `true` stehen, wenn der Benutzer den Radio-Button mit `value="ja"` ausgewählt hat.
