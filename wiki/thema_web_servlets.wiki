@@ -1,0 +1,9 @@
+#summary Servlets
+
+= Servlets =
+
+Ein Servlet ist eine Java-Klasse, welche das Interface `javax.servlet.Servlet` implementiert. (Dieses sowie auch alle anderen Klassen und Interfaces der Servlet und JSP API ist nicht Bestandteil der Java Standard-Edition sondern gehört zur Java Enterprise Edition.) Im Normalfall wird ein Servlet als Sub-Klasse der Klasse `javax.servlet.http.HttpServlet` definiert.
+
+Ein Servlet wird normalerweise beim ersten Aufruf von der Servlet-Engine instanziiert und kann dann Requests vom Browser empfangen und eine Antwort senden oder aber auf eine andere Seite weiterleiten.
+
+Je nach der Methode, mit welcher der Request gesendet wurde (GET, POST, ...) wird eine entsprechende Methode des Servlets aufgerufen
