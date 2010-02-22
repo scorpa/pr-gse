@@ -29,7 +29,7 @@
   * WEB-Applikationen
     * [thema_web_begriffe Begriffe]
     * [thema_web_server WEB-Server]
-    * [thema_web_verzeichnisstruktur Aufbau einer Webapplikation]
+    * [thema_web_verzeichnisstruktur Aufbau einer Java Webapplikation]
     * [thema_web_servlets Servlets]
     * [thema_web_jsp Java Server Pages (JSP)]
     * [thema_web_taglib JSP tag libraries]
