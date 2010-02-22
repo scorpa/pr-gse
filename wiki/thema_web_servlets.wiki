@@ -10,8 +10,30 @@ Je nach der Methode, mit welcher der Request gesendet wurde (GET, POST, ...) ruf
 
 Als Parameter bekommen diese Methoden jeweils eine Referenz auf ein `HttpServletRequest`- und auf ein `HttpServletResponse`-Objekt. Ersteres lässt sich eine Reihe von Informationen über den Request entlocken, zweiteres kann verwendet werden, um die Antwort an den Client zu erstellen.
 
-Für die weiteren Erläuterungen soll das Beispiel [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] (Deployment Deskriptor: [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/web.xml web.xml] herangezogen werden. Dabei handelt es sich um eine einfache WEB-Applikation, mit der sich Personen für eine WEB-Party anmelden oder auch eine Absage übermitteln können.
+Für die weiteren Erläuterungen soll das Beispiel [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] (Deployment Deskriptor: [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/web.xml web.xml]) herangezogen werden. Dabei handelt es sich um eine einfache WEB-Applikation, mit der sich Personen für eine WEB-Party anmelden oder auch eine Absage übermitteln können.
 
 == Konfiguration des Servlets ==
 
-Die Konfiguration des Servlets erfolgt 
+Die Konfiguration des Servlets erfolgt zweistufig: 
+
+Einerseits durch den `servlet`-Eintrag, in welchem für das Servlet ein Name oder Alias vergeben wird. Weiters wird hier die Servlet-Klasse definiert, und es könnten auch noch Initialisierungsparameter definiert werden.
+{{{
+    <servlet>
+        <servlet-name>Anmeldung</servlet-name>
+        <servlet-class>anmeldung.web.Anmeldung</servlet-class>
+    </servlet>
+}}}
+Andererseits durch das `servlet-mapping` mit welchem dem Servlet-Namen ein URL-Pattern zugeordnet wird:
+{{{
+    <servlet-mapping>
+        <servlet-name>Anmeldung</servlet-name>
+        <url-pattern>/anmelden</url-pattern>
+    </servlet-mapping>
+}}}
+(Einem Servlet könnten auch mehrere URL-Patterns zugeordnet werden.)
+
+Dieses Servlet würde man also etwa folgendermaßen aufrufen:
+
+`http://localhost:8080/anmeldung/`*anmelden*
+
+
