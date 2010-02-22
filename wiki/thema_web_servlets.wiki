@@ -70,3 +70,25 @@ abgefragt in in `processRequest(...)`:
 boolean kommt = "ja".equals(request.getParameter("zusage"));
 }}}
 In der Variable `kommt` wird also dann `true` stehen, wenn der Benutzer den Radio-Button mit `value="ja"` ausgewählt hat.
+
+== Weiterleitung auf andere Seite ==
+
+Es werden also im Servlet die Benutzereingaben ausgewertet und in der Oberflächenlogik verarbeitet. Die Oberflächenlogik interagiert dann mit der Fachlogik (was sich in diesem Fall auf die Zeile
+{{{
+Anmeldungen.getInstance().eintragen(email, kommt);
+}}}
+beschränkt.
+
+Nun könnte das Servlet selbst die Antwortseite generieren, was jedoch in der Praxis recht umständlich ist. Besser ist es sicher, auf eine andere Seite weiterzuleiten, welche dann die Antwortseite darstellt. Diese Seite kann eine (statische) HTML-Seite sein:
+{{{
+request.getRequestDispatcher("html/freumich.html").forward(request, response);
+}}} 
+Es kann aber auch eine (dynamisch aufgebaute) JSP sein:
+{{{
+request.getRequestDispatcher("jsp/schade.jsp").forward(request, response);
+}}}
+
+_Bei der hier praktizierten Umleitung handelt es sich um eine Server-interne Umleitung. Eine andere Möglichkeit wäre das senden einer Redirect-Aufforderung an den Client:_
+{{{
+response.sendRedirect("jsp/schade.jsp");
+}}}
