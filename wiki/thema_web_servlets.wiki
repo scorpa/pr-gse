@@ -6,4 +6,12 @@ Ein Servlet ist eine Java-Klasse, welche das Interface `javax.servlet.Servlet` i
 
 Ein Servlet wird normalerweise beim ersten Aufruf von der Servlet-Engine instanziiert und kann dann Requests vom Browser empfangen und eine Antwort senden oder aber auf eine andere Seite weiterleiten.
 
-Je nach der Methode, mit welcher der Request gesendet wurde (GET, POST, ...) wird eine entsprechende Methode des Servlets aufgerufen
+Je nach der Methode, mit welcher der Request gesendet wurde (GET, POST, ...) ruft die Servlet-Engine eine entsprechende Methode des Servlets auf: `doGet(...)`, `doPost(...)`, ... .
+
+Als Parameter bekommen diese Methoden jeweils eine Referenz auf ein `HttpServletRequest`- und auf ein `HttpServletResponse`-Objekt. Ersteres lässt sich eine Reihe von Informationen über den Request entlocken, zweiteres kann verwendet werden, um die Antwort an den Client zu erstellen.
+
+Für die weiteren Erläuterungen soll das Beispiel [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] (Deployment Deskriptor: [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/web.xml web.xml] herangezogen werden. Dabei handelt es sich um eine einfache WEB-Applikation, mit der sich Personen für eine WEB-Party anmelden oder auch eine Absage übermitteln können.
+
+== Konfiguration des Servlets ==
+
+Die Konfiguration des Servlets erfolgt 
