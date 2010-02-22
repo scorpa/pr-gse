@@ -2,6 +2,8 @@
 
 = Aufbau einer Java WEB-Applikation =
 
+Hier sind die wichtigsten Punkte des Aufbaus einer Java WEB-Applikation beschrieben. Die Entwicklungsumgebungen Netbeans und Eclipse erstellen die Verzeichnisstruktur und unterstützen die Konfiguration weitgehend mit Hilfe von speziellen Editoren - aber leider nicht alles (z.B. gibt es derzeit keine gute Unterstützung bei der Erstellung eigener Tag-Bibliotheken). Außerdem ist es oft vorteilhaft, ein bisschen über die Dateistrukturen dahinter Bescheid zu wissen, spätestens dann, wenn irgend etwas nicht so funktioniert wie es soll.
+
 == Verzeichnisstruktur ==
 
 Die Verzeichnisstruktur einer Java WEB-Applikation sieht folgendermaßen aus:
@@ -92,6 +94,4 @@ http://www.beispiel.net:8080/webapp1/seite1.jsp
 }}}
 
 Das Protokoll ist zumeist HTTP(manchmal auch FTP). Der Host kann auch mit der IP-Adresse angegeben werden (z.B. 127.0.0.1). Wenn keine Port-Nummer angegeben ist, wird für HTTP der Standard-Port 80 verwendet. Der Context-Pfad wird in einer zentralen Server-Konfigurationsdatei (server.xml) definiert.
-
-
 
