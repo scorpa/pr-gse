@@ -115,7 +115,9 @@ Dann kommen die eigentlichen Tag-Definitionen. Die wesentlichsten Elemente einer
 Findet sich nun in der JSP ein hier definierter Tag, dann werden an dieser Stelle die entsprechenden Methoden des zugehörigen Tag-Handlers aufgerufen.
 
 == Tag-Handler-Klasse ==
-Zum Tag `liste` gehört die Tag-Handler-Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/ListeTag.java ListeTag]. Meist ist ein Tag-Handler eine Subklasse von `TagSupport`.
+Zum Tag `liste` gehört die Tag-Handler-Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/ListeTag.java ListeTag]. 
+
+Ein Tag-Handler muss das Interface `Tag` implementieren. Meist wird von der Klasse `TagSupport` abgeleitet.
 
 An dieser Stelle sind noch ein paar Begriffe im Zusammenhang mit HTML- bzw. XML-Tags zu erklären. Der Tag `anmeldung:liste` besteht aus 3 Teilen:
   * `<anmeldung:liste>` ist der Start des Tags
@@ -126,6 +128,6 @@ So sind auch die Methoden der Klasse `TagSupport` zu verstehen:
   * an der Stelle, wo der Tag startet, wird die Methode `doStartTag()` ausgeführt.
   * Vor dem Ende des Tags wird die Methode `doAfterBody()` ausgeführt.
   * An der Stelle des Tag-Endes wird die Methode `doEndTag()` ausgeführt.
-Man kann nun diese Methoden bei Bedarf überschreiben.
+Man kann nun diese Methoden je nach Bedarf überschreiben.
 
- 
+Über den Rückgabewert der jeweiligen Methode wird gesteuert, was danach passiert. Beispielsweise kann `doStartTag()` die Konstante `SKIP_BODY` zurückliefern, wenn der Körper des Tags ignoriert werden soll. `EVAL_BODY_INCLUDE` bedeutet, dass der Körper des Tags eingefügt werden soll. Mit dem Rückgabewert `EVAL_BODY_AGAIN` von der Methode `doAfterBody()` kann man eine Schleife steuern.
