@@ -34,7 +34,7 @@ Neben dem fixen Text (Überschrift, ...) wird hier eine dynamisch generierte Tab
         </table>
 }}}
 
-Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage=table hier] dokumentiert findet:
+Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.org/html/tabellen/index.htm hier] dokumentiert findet:
   * `table` - für die Definition der Tabelle
   * `thead` - für die Definition der Überschriftenzeile
   * `th` - die Zellen der Überschriftenzeile
@@ -42,4 +42,35 @@ Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.
   * `tr` - die Zeilen der Tabelle
   * `td` - die einzelnen Datenfelder der Tabelle
 
+Dazwischen befinden sich aber noch die selbst definierten Tags `anmeldung:liste` und `anmeldung:eintrag`. Diese Tags werden folgendermaßen definiert:
+
+Die JSP-Seite beginnt mit dem JSP-Prolog:
+{{{
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+}}}
+
+Danach befindet sich ein Verweis auf eine Tag-Bibliothek:
+{{{
+<%@taglib prefix="anmeldung" uri="/anmeldung"%>
+}}}
+
+Der Prefix `anmeldung` definiert, dass innerhalb der JSP vor allen Tags aus dieser Tag-Bibliothek eben dieser Prefix steht, eben `anmeldung:liste` und `anmeldung:eintrag`.
+
+Der universal resource identifier (uri) `/anmeldung` ist auch im Deployment-Deskriptor [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/web.xml web.xml] zu finden:
+{{{
+    <jsp-config>
+        <taglib>
+            <taglib-location>
+                /WEB-INF/tld/anmeldung.tld
+            </taglib-location>
+            <taglib-uri>
+                /anmeldung
+            </taglib-uri>
+        </taglib>
+    </jsp-config>
+}}}
+
+Der entsprechende `taglib`-Eintrag verweist auf den Tag-Library-Descriptor [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/tld/anmeldung.tld anmeldung.tld] im Verzeichnis `WEB-INF/tld`.
  
