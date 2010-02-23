@@ -2,6 +2,8 @@
 
 = Java Server Pages (JSP) =
 
+== Aufbau einer JSP ==
+
 JSPs enthalten im Wesentlichen HTML-Code und zusätzliche JSP-Tags und Scripting-Elemente. Die Servlet-Engine übersetzt eine JSP normalerweise beim ersten Aufruf in ein Java-Servlet. Im Apache Tomcat Server trägt dieser JSP -> Java - Compiler den Namen "Jasper".
 
 Auf die Scripting-Möglichkeiten in JSPs wird hier nicht näher eingegangen, da bei intensiver Verwendung von JSP-Scripting ein ziemlich unlesbares Durcheinander von Java und HTML herauskommt.
@@ -33,6 +35,8 @@ Neben dem fixen Text (Überschrift, ...) wird hier eine dynamisch generierte Tab
             </tbody>
         </table>
 }}}
+
+== Selbst definierte Tags ==
 
 Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.org/html/tabellen/index.htm hier] dokumentiert findet:
   * `table` - für die Definition der Tabelle
@@ -73,4 +77,42 @@ Der universal resource identifier (uri) `/anmeldung` ist auch im Deployment-Desk
 }}}
 
 Der entsprechende `taglib`-Eintrag verweist auf den Tag-Library-Descriptor [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/tld/anmeldung.tld anmeldung.tld] im Verzeichnis `WEB-INF/tld`.
+
+== Tag-Library-Deskriptor (TLD) ==
+
+Auch ein Tag-Library-Deskriptor (TLD) ist eine Datei im XML-Format und definiert einzelne Tags. Am Beginn der Datei steht wie immer der XML-Prolog und das Basiselement `taglib` mit dem Verweis auf das XML-Schema:
+{{{
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+}}}
+
+Danach kommen Taglib-Version und URI:
+{{{
+        <tlib-version>1.0</tlib-version>
+        <uri>/anmeldung</uri>
+}}}
+
+Dann kommen die eigentlichen Tag-Definitionen. Die wesentlichsten Elemente einer Tag-Definition sind der Name des Tags und die dazugehörige Tag-Handler-Klasse. Weiters wird hier für den Tag `eintrag` auch noch ein Attribut mit dem Namen `feld` definiert.
+{{{
+        <tag>
+            <tag-class>anmeldung.web.ListeTag</tag-class>
+            <name>liste</name>
+        </tag>
+
+        <tag>
+            <tag-class>anmeldung.web.EintragTag</tag-class>
+            <name>eintrag</name>
+            <attribute>
+                <name>feld</name>
+                <required>true</required>
+            </attribute>
+        </tag>
+}}}
+
+Findet sich nun in der JSP ein hier definierter Tag, dann werden an dieser Stelle die entsprechenden Methoden des zugehörigen Tag-Handlers aufgerufen.
+
+== Tag-Handler ==
  
