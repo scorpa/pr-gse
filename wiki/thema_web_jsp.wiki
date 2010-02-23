@@ -6,4 +6,4 @@ JSPs enthalten im Wesentlichen HTML-Code und zusätzliche JSP-Tags und Scripting
 
 Auf die Scripting-Möglichkeiten in JSPs wird hier nicht näher eingegangen, da bei intensiver Verwendung von JSP-Scripting ein ziemlich unlesbares Durcheinander von Java und HTML herauskommt.
 
-Als Beispiel wird hier die Applikation [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] verwendet, welche bereits im Thema [ thema_web_servlets Servlets] beschrieben wurde.
+Als Beispiel wird hier die Applikation [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] verwendet, welche bereits im Thema [thema_web_servlets Servlets] beschrieben wurde.
