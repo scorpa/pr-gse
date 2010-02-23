@@ -34,7 +34,7 @@ Neben dem fixen Text (Überschrift, ...) wird hier eine dynamisch generierte Tab
         </table>
 }}}
 
-Hier findet man folgende bekannte HTML-Tags:
+Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage=table hier] dokumentiert findet:
   * `table` - für die Definition der Tabelle
   * `thead` - für die Definition der Überschriftenzeile
   * `th` - die Zellen der Überschriftenzeile
