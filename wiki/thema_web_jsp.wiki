@@ -114,5 +114,18 @@ Dann kommen die eigentlichen Tag-Definitionen. Die wesentlichsten Elemente einer
 
 Findet sich nun in der JSP ein hier definierter Tag, dann werden an dieser Stelle die entsprechenden Methoden des zugehörigen Tag-Handlers aufgerufen.
 
-== Tag-Handler ==
+== Tag-Handler-Klasse ==
+Zum Tag `liste` gehört die Tag-Handler-Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/ListeTag.java ListeTag]. Meist ist ein Tag-Handler eine Subklasse von `TagSupport`.
+
+An dieser Stelle sind noch ein paar Begriffe im Zusammenhang mit HTML- bzw. XML-Tags zu erklären. Der Tag `anmeldung:liste` besteht aus 3 Teilen:
+  * `<anmeldung:liste>` ist der Start des Tags
+  * `</anmeldung:liste>` ist das Ende des Tags
+  * alles dazwischen ist der Körper (body) des Tags
+
+So sind auch die Methoden der Klasse `TagSupport` zu verstehen:
+  * an der Stelle, wo der Tag startet, wird die Methode `doStartTag()` ausgeführt.
+  * Vor dem Ende des Tags wird die Methode `doAfterBody()` ausgeführt.
+  * An der Stelle des Tag-Endes wird die Methode `doEndTag()` ausgeführt.
+Man kann nun diese Methoden bei Bedarf überschreiben.
+
  
