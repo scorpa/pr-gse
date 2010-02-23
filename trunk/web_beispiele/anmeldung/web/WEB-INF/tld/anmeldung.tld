@@ -8,10 +8,6 @@
         <tag>
             <tag-class>anmeldung.web.ListeTag</tag-class>
             <name>liste</name>
-            <attribute>
-                <name>zusage</name>
-                <required>false</required>
-            </attribute>
         </tag>
 
         <tag>
