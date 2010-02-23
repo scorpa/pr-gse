@@ -15,7 +15,7 @@
     </head>
     <body>
         <h1>Schade, dass du nicht kommen kannst!</h1>
-        Bisher angemeldet:
+        Hier siehst du, wer sich bisher angemeldet hat:
         <table border="1">
             <thead>
                 <tr>
