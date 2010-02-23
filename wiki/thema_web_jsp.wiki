@@ -7,3 +7,39 @@ JSPs enthalten im Wesentlichen HTML-Code und zusätzliche JSP-Tags und Scripting
 Auf die Scripting-Möglichkeiten in JSPs wird hier nicht näher eingegangen, da bei intensiver Verwendung von JSP-Scripting ein ziemlich unlesbares Durcheinander von Java und HTML herauskommt.
 
 Als Beispiel wird hier die Applikation [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/anmeldung anmeldung] verwendet, welche bereits im Thema [thema_web_servlets Servlets] beschrieben wurde.
+
+Die Seite [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/jsp/schade.jsp schade.jsp] sieht etwa folgendermaßen aus:
+
+http://pr-gse.googlecode.com/svn/wiki/images/servlet/schade.jpg
+
+Neben dem fixen Text (Überschrift, ...) wird hier eine dynamisch generierte Tabelle angezeigt. Das passiert mit folgendem Code:
+{{{
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>eingetragen am/um </th>
+                    <th>zugesagt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <anmeldung:liste>
+                    <tr>
+                        <td><anmeldung:eintrag feld="email"/></td>
+                        <td><anmeldung:eintrag feld="zeitpunkt"/></td>
+                        <td><anmeldung:eintrag feld="zusage"/></td>
+                    </tr>
+                </anmeldung:liste>
+            </tbody>
+        </table>
+}}}
+
+Hier findet man folgende bekannte HTML-Tags:
+  * `table` - für die Definition der Tabelle
+  * `thead` - für die Definition der Überschriftenzeile
+  * `th` - die Zellen der Überschriftenzeile
+  * `tbody` - die Daten der Tabelle
+  * `tr` - die Zeilen der Tabelle
+  * `td` - die einzelnen Datenfelder der Tabelle
+
+ 
