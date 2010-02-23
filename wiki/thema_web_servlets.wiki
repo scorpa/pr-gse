@@ -92,3 +92,4 @@ _Bei der hier praktizierten Umleitung handelt es sich um eine Server-interne Uml
 {{{
 response.sendRedirect("jsp/schade.jsp");
 }}}
+_Diese Art der Umleitung verursacht jedoch zusätzlichen Traffik. Außerdem gehen die Request-Daten verloren. Daher emfiehlt sich diese Vorgangsweise eigentlich nur dann, wenn man z.B auf einen anderen Server umleiten will._
