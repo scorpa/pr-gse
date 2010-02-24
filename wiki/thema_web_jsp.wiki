@@ -131,3 +131,34 @@ So sind auch die Methoden der Klasse `TagSupport` zu verstehen:
 Man kann nun diese Methoden je nach Bedarf überschreiben.
 
 Über den Rückgabewert der jeweiligen Methode wird gesteuert, was danach passiert. Beispielsweise kann `doStartTag()` die Konstante `SKIP_BODY` zurückliefern, wenn der Körper des Tags ignoriert werden soll. `EVAL_BODY_INCLUDE` bedeutet, dass der Körper des Tags eingefügt werden soll. Mit dem Rückgabewert `EVAL_BODY_AGAIN` von der Methode `doAfterBody()` kann man eine Schleife steuern.
+
+----
+
+In der Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/ListeTag.java ListeTag] sind die Methoden `doStartTag()` und `doArterBody()` implementiert.
+
+In der Methode `doStartTag()` wird zuerst von der Fachlogik die Liste aller Einträge angefordert:
+{{{
+        List<Eintrag> liste = Anmeldungen.getInstance().eintraege();
+}}}
+
+Falls Einträge vorhanden sind, wird ein Itertor angefordert und als Attribut mit dem Namen "iterator" an den `pageContext` gehängt. (Der Page-Context ist ein Context-Objekt, welches innerhalb einer JSP gültig ist):
+{{{
+            Iterator<Eintrag> iterator = liste.iterator();
+            pageContext.setAttribute("iterator", iterator);
+}}}
+
+Weiters wird auch gleich der erste `Eintrag` vom Iterator angefordert und als Attribut mit dem Namen "eintrag" an den `pageContext` gehängt:
+{{{
+            pageContext.setAttribute("eintrag", iterator.next());
+}}}
+
+Mit dem Rückgabewert `EVAL_BODY_INCLUDE` wird gesteuert, dass nun der Körper des Tags ausgewertet wird. Der Tag-Körpers besteht aus einer Tabellenzeile mit 3 Datenfeldern:
+{{{
+                    <tr>
+                        <td><anmeldung:eintrag feld="email"/></td>
+                        <td><anmeldung:eintrag feld="zeitpunkt"/></td>
+                        <td><anmeldung:eintrag feld="zusage"/></td>
+                    </tr>
+}}}
+
+Die Datenfelder werden mit dem selbstdefinierten Tag `anmeldung` (mit verschiedenen Attributen) befüllt.
