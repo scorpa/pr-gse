@@ -169,6 +169,28 @@ Erst wenn kein weiterer `Eintrag` mehr vorhanden ist, wird mit `SKIP_BODY` geste
 
 ----
 
-Nun kommen wir zur Betrachtung des Tags `eintrag` mit dem zugehörigen Tag-Handler [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/EintragTag.java EintragTag]. Hier ist nur die Methode `doStartTag()` implementiert. Darin wird die aktuelle `Eintrag`-Instanz vom `pageContext` abgeholt, und je nach Wert des Attributs `feld` wird eine Information aus der `Eintrag`-Instanz an den JspWriter (angefordert mit `pageContext.getOut()`) ausgegeben.
+Nun kommen wir zur Betrachtung des Tags `eintrag` mit dem zugehörigen Tag-Handler [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/EintragTag.java EintragTag]. Hier ist nur die Methode `doStartTag()` implementiert. Darin wird die aktuelle `Eintrag`-Instanz vom `pageContext` abgeholt, und je nach Wert des Attributs `feld` wird eine Information aus der `Eintrag`-Instanz über den `JspWriter` (angefordert mit `pageContext.getOut()`) ausgegeben.
 {{{
+            Eintrag eintrag = (Eintrag) pageContext.getAttribute("eintrag");
+            if ("email".equals(feld))
+                pageContext.getOut().print(eintrag.getEmail());
+            else if ("zeitpunkt".equals(feld))
+                pageContext.getOut().print(DATEFORMAT.format(eintrag.getZeitpunkt()));
+            else if ("zusage".equals(feld))
+                pageContext.getOut().print((eintrag.isZusage()) ? "ja" : "nein");
+}}}
+Das Attribut `feld` wurde im Tag-Library-Descriptor [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/tld/anmeldung.tld anmeldung.tld] für den Tag `eintrag` als Attribut definiert:
+{{{
+        <tag>
+            <tag-class>anmeldung.web.EintragTag</tag-class>
+            <name>eintrag</name>
+            <attribute>
+                <name>feld</name>
+                <required>true</required>
+            </attribute>
+        </tag>
+}}}
+Wenn für den Tag ein solches Attribut definiert ist, muss man nur in der Tag-Handler-Klasse ein Attribut mit exakt dem gleichen Namen und `get()`- und `set()`-Methode entsprechend den Java Coding-Konventionen schreiben. Dann kann das Attribut in der JSP gesetzt werden:
+{{{
+<anmeldung:eintrag feld="email"/>
 }}}
