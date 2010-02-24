@@ -38,7 +38,7 @@ Neben dem fixen Text (Überschrift, ...) wird hier eine dynamisch generierte Tab
 
 == Selbst definierte Tags ==
 
-Hier findet man folgende bekannte HTML-Tags wie man sie z.B [http://de.selfhtml.org/html/tabellen/index.htm hier] dokumentiert findet:
+Hier findet man folgende bekannte HTML-Tags wie man sie z.B bei [http://de.selfhtml.org/html/tabellen/index.htm SELFHTML] dokumentiert findet:
   * `table` - für die Definition der Tabelle
   * `thead` - für die Definition der Überschriftenzeile
   * `th` - die Zellen der Überschriftenzeile
@@ -60,7 +60,7 @@ Danach befindet sich ein Verweis auf eine Tag-Bibliothek:
 <%@taglib prefix="anmeldung" uri="/anmeldung"%>
 }}}
 
-Der Prefix `anmeldung` definiert, dass innerhalb der JSP vor allen Tags aus dieser Tag-Bibliothek eben dieser Prefix steht, eben `anmeldung:liste` und `anmeldung:eintrag`.
+Der Prefix `anmeldung` definiert, dass innerhalb der JSP vor allen Tags aus dieser Tag-Bibliothek eben dieser Prefix steht: `anmeldung:liste` und `anmeldung:eintrag`.
 
 Der universal resource identifier (uri) `/anmeldung` ist auch im Deployment-Deskriptor [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/web/WEB-INF/web.xml web.xml] zu finden:
 {{{
@@ -80,7 +80,7 @@ Der entsprechende `taglib`-Eintrag verweist auf den Tag-Library-Descriptor [http
 
 == Tag-Library-Deskriptor (TLD) ==
 
-Auch ein Tag-Library-Deskriptor (TLD) ist eine Datei im XML-Format und definiert einzelne Tags. Am Beginn der Datei steht wie immer der XML-Prolog und das Basiselement `taglib` mit dem Verweis auf das XML-Schema:
+Auch ein Tag-Library-Deskriptor (TLD) ist eine Datei im XML-Format. Er definiert einzelne Tags. Am Beginn der Datei steht wie immer der XML-Prolog und das Basiselement `taglib` mit dem Verweis auf das XML-Schema:
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <taglib xmlns="http://java.sun.com/xml/ns/j2ee"
@@ -125,7 +125,7 @@ An dieser Stelle sind noch ein paar Begriffe im Zusammenhang mit HTML- bzw. XML-
   * alles dazwischen ist der Körper (body) des Tags
 
 So sind auch die Methoden der Klasse `TagSupport` zu verstehen:
-  * an der Stelle, wo der Tag startet, wird die Methode `doStartTag()` ausgeführt.
+  * An der Stelle, wo der Tag startet, wird die Methode `doStartTag()` ausgeführt.
   * Vor dem Ende des Tags wird die Methode `doAfterBody()` ausgeführt.
   * An der Stelle des Tag-Endes wird die Methode `doEndTag()` ausgeführt.
 Man kann nun diese Methoden je nach Bedarf überschreiben.
@@ -163,13 +163,26 @@ Mit dem Rückgabewert `EVAL_BODY_INCLUDE` wird gesteuert, dass nun der Körper d
 
 Die Datenfelder werden mit dem selbstdefinierten Tag `anmeldung` (mit verschiedenen Attributen) befüllt. 
 
-Vorher betrachten wir aber noch die `doAfterBody()`-Methode von `ListeTag`. Hier wird der Iterator wieder aus dem `pageContext` herausgeholt, und falls es einen weiteren `Eintrag` gibt, wird dieser als Attribut mit dem Namen "eintrag" an den `pageContext` angehängt. Der Rückgabewert `EVAL_BODY_AGAIN` bewirkt, dass nun sozusagen in einer Schleife der Tag-Körper erneut ausgewertet wird, also die nächste Zeile der Tabelle mit der nächsten `Eintrag`-Instanz.
+Vorher betrachten wir aber noch die `doAfterBody()`-Methode von `ListeTag`. Hier wird der Iterator wieder aus dem `pageContext` herausgeholt, und falls es einen weiteren `Eintrag` gibt, wird dieser als Attribut mit dem Namen "eintrag" an den `pageContext` angehängt. Der Rückgabewert `EVAL_BODY_AGAIN` bewirkt, dass nun sozusagen in einer Schleife der Tag-Körper erneut ausgewertet wird, also die nächste Zeile der Tabelle mit der nächsten `Eintrag`-Instanz:
+{{{
+    public int doAfterBody() throws JspException
+    {
+        Iterator<Eintrag> iterator = (Iterator<Eintrag>) pageContext.getAttribute("iterator");
+        if (iterator.hasNext())
+        {
+            pageContext.setAttribute("eintrag", iterator.next());
+            return EVAL_BODY_AGAIN;
+        }
+        else
+            return SKIP_BODY;
+    }
+}}}
 
 Erst wenn kein weiterer `Eintrag` mehr vorhanden ist, wird mit `SKIP_BODY` gesteuert, dass jetzt das Tag-Ende drankommt.
 
 ----
 
-Nun kommen wir zur Betrachtung des Tags `eintrag` mit dem zugehörigen Tag-Handler [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/EintragTag.java EintragTag]. Hier ist nur die Methode `doStartTag()` implementiert. Darin wird die aktuelle `Eintrag`-Instanz vom `pageContext` abgeholt, und je nach Wert des Attributs `feld` wird eine Information aus der `Eintrag`-Instanz über den `JspWriter` (angefordert mit `pageContext.getOut()`) ausgegeben.
+Nun kommen wir zur Betrachtung des Tags `eintrag` mit dem zugehörigen Tag-Handler [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/EintragTag.java EintragTag]. Hier ist nur die Methode `doStartTag()` implementiert. Darin wird die aktuelle `Eintrag`-Instanz vom `pageContext` abgeholt. (Wir erinnern uns, dass diese vom oben beschriebenen Tag-Handler `ListeTag` angehängt wurde. Je nach Wert des Attributs `feld` wird eine Information aus der `Eintrag`-Instanz über den `JspWriter` (angefordert mit `pageContext.getOut()`) ausgegeben.
 {{{
             Eintrag eintrag = (Eintrag) pageContext.getAttribute("eintrag");
             if ("email".equals(feld))
