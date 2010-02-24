@@ -18,28 +18,6 @@ import javax.servlet.jsp.tagext.TagSupport;
 public class ListeTag extends TagSupport
 {
 
-    private String zusage;
-
-    /**
-     * Get the value of zusage
-     *
-     * @return the value of zusage
-     */
-    public String getZusage()
-    {
-        return zusage;
-    }
-
-    /**
-     * Set the value of zusage
-     *
-     * @param zusage new value of zusage
-     */
-    public void setZusage(String zusage)
-    {
-        this.zusage = zusage;
-    }
-
 
     @Override
     public int doStartTag() throws JspException
