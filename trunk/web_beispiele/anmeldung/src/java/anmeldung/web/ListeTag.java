@@ -22,7 +22,6 @@ public class ListeTag extends TagSupport
     @Override
     public int doStartTag() throws JspException
     {
-        System.out.println("doStartTag");
         List<Eintrag> liste = Anmeldungen.getInstance().eintraege();
         if (liste.size() > 0)
         {
