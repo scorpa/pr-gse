@@ -168,3 +168,7 @@ Vorher betrachten wir aber noch die `doAfterBody()`-Methode von `ListeTag`. Hier
 Erst wenn kein weiterer `Eintrag` mehr vorhanden ist, wird mit `SKIP_BODY` gesteuert, dass jetzt das Tag-Ende drankommt.
 
 ----
+
+Nun kommen wir zur Betrachtung des Tags `eintrag` mit dem zugehörigen Tag-Handler [http://code.google.com/p/pr-gse/source/browse/trunk/web_beispiele/anmeldung/src/java/anmeldung/web/EintragTag.java EintragTag]. Hier ist nur die Methode `doStartTag()` implementiert. Darin wird die aktuelle `Eintrag`-Instanz vom `pageContext` abgeholt, und je nach Wert des Attributs `feld` wird eine Information aus der `Eintrag`-Instanz an den JspWriter (angefordert mit `pageContext.getOut()`) ausgegeben.
+{{{
+}}}
