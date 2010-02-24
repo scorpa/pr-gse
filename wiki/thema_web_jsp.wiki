@@ -152,7 +152,7 @@ Weiters wird auch gleich der erste `Eintrag` vom Iterator angefordert und als At
             pageContext.setAttribute("eintrag", iterator.next());
 }}}
 
-Mit dem Rückgabewert `EVAL_BODY_INCLUDE` wird gesteuert, dass nun der Körper des Tags ausgewertet wird. Der Tag-Körpers besteht aus einer Tabellenzeile mit 3 Datenfeldern:
+Mit dem Rückgabewert `EVAL_BODY_INCLUDE` wird gesteuert, dass nun der Körper des Tags ausgewertet wird. Dieser besteht aus einer Tabellenzeile mit 3 Datenfeldern:
 {{{
                     <tr>
                         <td><anmeldung:eintrag feld="email"/></td>
@@ -161,4 +161,10 @@ Mit dem Rückgabewert `EVAL_BODY_INCLUDE` wird gesteuert, dass nun der Körper d
                     </tr>
 }}}
 
-Die Datenfelder werden mit dem selbstdefinierten Tag `anmeldung` (mit verschiedenen Attributen) befüllt.
+Die Datenfelder werden mit dem selbstdefinierten Tag `anmeldung` (mit verschiedenen Attributen) befüllt. 
+
+Vorher betrachten wir aber noch die `doAfterBody()`-Methode von `ListeTag`. Hier wird der Iterator wieder aus dem `pageContext` herausgeholt, und falls es einen weiteren `Eintrag` gibt, wird dieser als Attribut mit dem Namen "eintrag" an den `pageContext` angehängt. Der Rückgabewert `EVAL_BODY_AGAIN` bewirkt, dass nun sozusagen in einer Schleife der Tag-Körper erneut ausgewertet wird, also die nächste Zeile der Tabelle mit der nächsten `Eintrag`-Instanz.
+
+Erst wenn kein weiterer `Eintrag` mehr vorhanden ist, wird mit `SKIP_BODY` gesteuert, dass jetzt das Tag-Ende drankommt.
+
+----
