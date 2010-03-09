@@ -11,7 +11,6 @@
     * [thema_klassendesign Klassendesign]
     * [thema_interface Interface]
     * [thema_vererbung Vererbung]
-    * [thema_abstraktion Abstraktion]
   * Objektorientierung 2
     * [thema_collections Collections]
     * [thema_exceptions Exceptions]
