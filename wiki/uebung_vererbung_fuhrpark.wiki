@@ -34,18 +34,4 @@ In diesem UML-Klassendiagramm sind die `get`- und `set`-Methoden nicht angeführ
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/fuhrpark.jpg
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Fahrzeug ist eine abstrakte Basisklasse (evtl. ein Interface), welche im Wesentlichen die Methode berechneSteuer definiert, welche von den anderen Klassen entsprechend implementiert wird.
+`Fahrzeug` ist eine (abstrakte) Basisklasse, welche neben dem Attribut `kennzeichen` im Wesentlichen die Methode `berechneSteuer()`  definiert, die dann von den anderen Klassen entsprechend implementiert wird.
