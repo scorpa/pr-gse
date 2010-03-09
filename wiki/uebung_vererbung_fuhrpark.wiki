@@ -12,7 +12,7 @@ Die Fahrzeugsteuern in Spengerland berechnen sich folgendermaßen:
 
 Erstellen Sie die folgenden Klassen: 
 
-=== Klasse `Fuhrpark` ===
+=== Klasse Fuhrpark ===
  
 dient zur Verwaltung von Fahrzeugen. Diese soll im Wesentlichen eine Methode zum Hinzufügen eines Fahrzeuges zur Verwaltung und eine Methode zur Berechnung der Steuersumme über alle Fahrzeuge. Außerdem soll eine Methode zur Ausgabe einer Liste aller Fahrzeuge mit Kennzeichen und der jeweils zu bezahlenden Steuer zur Verfügung stehen.
 
