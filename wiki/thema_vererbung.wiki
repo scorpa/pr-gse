@@ -57,6 +57,6 @@ Die Implementierung dieser Lösung befindet sich in den Übungen.
 || [uebung_vererbung_schulverwaltung Schulverwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/schulverwaltung schulverwaltung] || Dieses Beispiel ist oben besprochen ||
 || [uebung_vererbung_lohnverrechnung Lohnverrechnung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/lohnverrechnung lohnverrechnung]|| ||
 || [uebung_vererbung_transport_v3 Transport_V3] || || ||
-|| [http://pr-gse.googlecode.com/svn/wiki/uebungen/Fuhrpark.doc Fuhrpark] || || ||
+|| [uebung_vererbung_fuhrpark Fuhrpark] || || ||
 || [uebung_abstraktion_logik Logik] || || ||
 || [uebung_abstraktion_rechenquiz Rechenquiz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/rechenquiz rechenquiz] || Prüfungsbeispiel ||
