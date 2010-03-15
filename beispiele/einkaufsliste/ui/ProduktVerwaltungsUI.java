@@ -7,6 +7,7 @@ import einkaufsliste.fachlogik.LAND;
 import einkaufsliste.fachlogik.Produkt;
 import einkaufsliste.fachlogik.ProduktVerwaltung;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -23,11 +24,14 @@ public class ProduktVerwaltungsUI
 
     public boolean menu()
     {
+        System.out.println();
+        System.out.println("==========================");
         System.out.println("Bitte auswählen:");
         System.out.println("1) Produkt anlegen");
         System.out.println("2) Produkte auflisten");
         System.out.println("3) Produkt löschen");
         System.out.println("4) Programm beenden");
+        System.out.println("==========================");
         int auswahl = Input.readInt("Ihre Auswahl: ");
 
         switch(auswahl)
@@ -77,7 +81,7 @@ public class ProduktVerwaltungsUI
             System.out.println("\t" + l);
         String l = Input.readText("Auswahl: ");
         LAND land = LAND.valueOf(l);
-        char b = Input.readChar("Bioprodukt (b) oder nicht (k)");
+        char b = Input.readChar("Bioprodukt (b) oder nicht (k): ");
         boolean bio = false;
         if (b == 'b')
             bio = true;
@@ -94,14 +98,17 @@ public class ProduktVerwaltungsUI
 
     private void auflisten()
     {
-        ArrayList<Produkt> liste = verwaltung.liste();
+        System.out.println("------ Produktliste ------");
+        List<Produkt> liste = verwaltung.liste();
         for (Produkt p : liste)
             System.out.println(p.getBezeichnung());
+        System.out.println("--------------------------");
+        System.out.println();
     }
 
     private void loeschen()
     {
-        String bezeichnung = Input.readText("Bezeichnung des Produkts");
+        String bezeichnung = Input.readText("Bezeichnung des Produkts: ");
         verwaltung.entfernen(bezeichnung);
     }
 }
