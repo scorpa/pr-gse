@@ -2,10 +2,11 @@
 package einkaufsliste.fachlogik;
 
 /**
- *
- * @author Rudi
+ * Datentyp für Auswahl des Geschäftes,
+ * wo es das Produkt gibt
+ * @author Rudolf Radlbauer
  */
 public enum GESCHAEFT
 {
-    BILLA, MERKUR, BIPA
+    SONSTIGES, BILLA, MERKUR, BIPA
 }

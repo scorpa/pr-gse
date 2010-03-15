@@ -25,18 +25,25 @@ public class ProduktVerwaltungImpl implements ProduktVerwaltung
         produkte.add(p);
     }
 
+    public void entfernen(Produkt p)
+    {
+        produkte.remove(p);
+    }
+
+
+
+    public ArrayList<Produkt> liste()
+    {
+        return produkte;
+    }
+
     public void entfernen(String bezeichnung)
     {
         for (Produkt p : produkte)
         {
             if (p.getBezeichnung().equals(bezeichnung))
-                produkte.remove(p);
+                entfernen(p);
         }
-    }
-
-    public ArrayList<Produkt> liste()
-    {
-        return produkte;
     }
 
 }

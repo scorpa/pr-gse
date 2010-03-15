@@ -2,10 +2,10 @@
 package einkaufsliste.fachlogik;
 
 /**
- *
- * @author Rudi
+ * Datentyp für Auswahl des Herkunftslandes eines Produktes
+ * @author Rudolf Radlbauer
  */
 public enum LAND
 {
-    OESTERREICH, DEUTSCHLAND, ITALIEN, SUEDAFRIKA
+    SONSTIGE, OESTERREICH, DEUTSCHLAND, ITALIEN, SUEDAFRIKA
 }
