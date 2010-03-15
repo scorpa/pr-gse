@@ -1,8 +1,8 @@
 package einkaufsliste.fachlogik;
 
 /**
- *
- * @author Rudi
+ * Datenhaltungsklasse für Produkte
+ * @author Rudolf Radlbauer
  */
 public class Produkt
 {
