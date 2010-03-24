@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>flugreservierung</short-name>
+  <uri>/WEB-INF/tld/flugreservierung</uri>
+
+     <listener>
+         <listener-class>web.Startup</listener-class>
+     </listener>
+
+     <tag>
+         <name>flug-iterator</name>
+         <tag-class>web.FlugIteratorTag</tag-class>
+         <description>
+             Iteriert über die Flüge in der Tabelle Flüge.
+             Im Body kann der Tag flug-ausgabe verwendet werden.
+         </description>
+     </tag>
+
+     <tag>
+         <name>flug-ausgabe</name>
+         <tag-class>web.FlugAusgabeTag</tag-class>
+         <attribute>
+             <name>feld</name>
+             <required>true</required>
+         </attribute>
+         <description>
+             gibt einzelne Attribute des aktuell vom Tag flug-iterator
+             selektierten Fluges aus. Mögliche Werte für Attribut feld:
+                nummer
+                von
+                nach
+                abflug
+                ankunft
+                sitzplaetze
+         </description>
+     </tag>
+
+</taglib>
