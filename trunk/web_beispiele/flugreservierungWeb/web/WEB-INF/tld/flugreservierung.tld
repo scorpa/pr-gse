@@ -4,10 +4,6 @@
   <short-name>flugreservierung</short-name>
   <uri>/WEB-INF/tld/flugreservierung</uri>
 
-     <listener>
-         <listener-class>web.Startup</listener-class>
-     </listener>
-
      <tag>
          <name>flug-iterator</name>
          <tag-class>web.FlugIteratorTag</tag-class>
