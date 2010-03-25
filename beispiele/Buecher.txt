@@ -1,3 +1,0 @@
-2
-1-2-3-4-5	Grimm	Schneewittchen	25	Märchenverlag	Huber
-5-4-3-2-1	Marx	Das Kapital	250	Genossenschaftsverlag	
