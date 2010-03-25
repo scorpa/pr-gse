@@ -36,4 +36,13 @@
          </description>
      </tag>
 
+     <tag>
+         <name>attribut</name>
+         <tag-class>web.AttributTag</tag-class>
+         <attribute>
+             <name>name</name>
+             <required>true</required>
+         </attribute>
+     </tag>
+
 </taglib>

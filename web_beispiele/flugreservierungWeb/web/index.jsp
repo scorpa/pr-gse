@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Flugreservierung</title>
     </head>
     <body>
         <form action="reservieren">
@@ -25,7 +25,6 @@
                         <th>nach</th>
                         <th>Abflug</th>
                         <th>Ankunft</th>
-                        <th>Sitzplätze</th>
                         <th>Auswahl</th>
                     </tr>
                 </thead>
@@ -38,7 +37,6 @@
                             <td><flugreservierung:flug-ausgabe feld="nach"/></td>
                             <td><flugreservierung:flug-ausgabe feld="abflug"/></td>
                             <td><flugreservierung:flug-ausgabe feld="ankunft"/></td>
-                            <td><flugreservierung:flug-ausgabe feld="sitzplaetze"/></td>
                             <td>
                                 <input type="radio" name="auswahl"
                                        value="<flugreservierung:flug-ausgabe feld="nummer"/>" />

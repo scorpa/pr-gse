@@ -18,7 +18,7 @@ public class DBDataAccess implements DataAccess{
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/flugreservierung", "root", "asterix");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/flugreservierung", "test", "test");
         } catch (ClassNotFoundException ex)
         {
             ex.printStackTrace();
@@ -58,9 +58,48 @@ public class DBDataAccess implements DataAccess{
         }
     }
 
-    public void speichern(Reservierung r) throws FlugReservierungsException
+    public void speichern(Reservierung reservierung) throws FlugReservierungsException
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try
+        {
+            Flug flug = reservierung.getFlug();
+            int reserviert = 0;
+            String sql = "SELECT COUNT(*) AS reserviert "
+                    + "FROM reservierungen "
+                    + "WHERE flugnummer = ?";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, flug.getNummer());
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next())
+                reserviert = rs.getInt("reserviert");
+            else
+                throw new FlugReservierungsException("kann Reservierungen nicht selektieren");
+            rs.close();
+            pstmt.close();
+            if (reserviert >= flug.getSitzPlaetze())
+                throw new FlugReservierungsException("keine Sitzplätze verfügbar");
+            sql = "INSERT INTO reservierungen " +
+                    "(flugnummer, passagier_name) " +
+                    "VALUES (?, ?)";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, flug.getNummer());
+            pstmt.setString(2, reservierung.getName());
+            if (pstmt.executeUpdate() != 1)
+                throw new FlugReservierungsException("Fehler beim Einfügen eines Datensatzes");
+            rs = pstmt.getGeneratedKeys();
+            if (rs.next())
+                reservierung.setNummer(rs.getInt(1));
+            else
+                throw new FlugReservierungsException("kann Reservierungsnummer nicht feststellen");
+            rs.close();
+            pstmt.close();
+
+
+        } catch (SQLException ex)
+        {
+            throw new FlugReservierungsException("Fehler beim Speichern einer Reservierung: " + ex.getMessage());
+        }
+
     }
 
     public void close() throws FlugReservierungsException
@@ -75,5 +114,39 @@ public class DBDataAccess implements DataAccess{
             throw new FlugReservierungsException("Fehler beim Schließen der Datenbank");
         }
     }
+
+    public Flug finde(int flugNummer) throws FlugReservierungsException
+    {
+        Flug flug = null;
+        try
+        {
+            String sql = "SELECT flugnummer, von, nach, abflug, ankunft, sitzplaetze " 
+                    + "FROM fluege "
+                    + "WHERE flugnummer = ?";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, flugNummer);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next())
+            {
+                flug = new Flug();
+                flug.setNummer(flugNummer);
+                flug.setVon(rs.getString("von"));
+                flug.setNach(rs.getString("nach"));
+                flug.setStart(rs.getDate("abflug"));
+                flug.setAnkunft(rs.getDate("ankunft"));
+                flug.setSitzPlaetze(rs.getInt("sitzplaetze"));
+            }
+            rs.close();
+            pstmt.close();
+        } catch (SQLException ex)
+        {
+            throw new FlugReservierungsException("Fehler beim finden eines Fluges: " + ex.getMessage());
+        }
+
+        return flug;
+    }
+
+
+
 
 }

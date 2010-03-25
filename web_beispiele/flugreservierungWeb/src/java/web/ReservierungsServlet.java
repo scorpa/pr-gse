@@ -1,5 +1,9 @@
 package web;
 
+import flugreservierung.DataAccess;
+import flugreservierung.Flug;
+import flugreservierung.FlugReservierungsException;
+import flugreservierung.Reservierung;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ReservierungsServlet extends HttpServlet
 {
-   
+   private DataAccess data;
+
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
@@ -24,16 +29,34 @@ public class ReservierungsServlet extends HttpServlet
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException 
     {
-        String name = request.getParameter("name");
-        String flNr = request.getParameter("auswahl");
-        if (flNr != null && name != null & name.trim().length() > 0)
+        try
         {
-            int flugnummer = Integer.parseInt(flNr);
-            System.out.println("reserviert: " + flugnummer + " - " + name);
-            request.getRequestDispatcher("reserviert.jsp").forward(request, response);
-        } else
+            if (data == null)
+            {
+                data = (DataAccess) request.getSession().getServletContext().getAttribute("data.access");
+            }
+            String name = request.getParameter("name");
+            String flNr = request.getParameter("auswahl");
+            if (flNr != null && name != null & name.trim().length() > 0)
+            {
+                int flugnummer = Integer.parseInt(flNr);
+                Flug flug = data.finde(flugnummer);
+                Reservierung reservierung = new Reservierung();
+                reservierung.setFlug(flug);
+                reservierung.setName(name);
+                data.speichern(reservierung);
+                request.setAttribute("reservierungsnummer", reservierung.getNummer());
+                request.setAttribute("passagiername", reservierung.getName());
+                request.setAttribute("flugnummer", flugnummer);
+                request.getRequestDispatcher("reserviert.jsp").forward(request, response);
+            } else
+            {
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+        } catch(FlugReservierungsException ex)
         {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.setAttribute("fehler", ex);
+            request.getRequestDispatcher("fehler.jsp").forward(request, response);
         }
     } 
 
