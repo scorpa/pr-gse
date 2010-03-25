@@ -18,7 +18,7 @@ public class DBDataAccess implements DataAccess{
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/flugreservierung", "test", "test");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/flugreservierung", "pr", "pr");
         } catch (ClassNotFoundException ex)
         {
             ex.printStackTrace();
