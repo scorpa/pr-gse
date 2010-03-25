@@ -45,6 +45,7 @@
                     </flugreservierung:flug-iterator>
                 </tbody>
             </table>
+            Name: 
             <input type="text" name="name" value="" size="50" />
             <input type="submit" value="OK" />
         </form>
