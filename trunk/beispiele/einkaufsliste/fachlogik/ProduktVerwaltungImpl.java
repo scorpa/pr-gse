@@ -1,6 +1,7 @@
 package einkaufsliste.fachlogik;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -8,41 +9,43 @@ import java.util.ArrayList;
  */
 public class ProduktVerwaltungImpl implements ProduktVerwaltung
 {
-    ArrayList<Produkt> produkte;
+    private List<Produkt> produkte;
 
     public ProduktVerwaltungImpl()
     {
         produkte = new ArrayList<Produkt>();
     }
 
-    public void anlegen(Produkt p)
+    public void anlegen(Produkt p) throws EinkaufsListeException
     {
         for (Produkt p1 : produkte)
         {
             if (p1.getBezeichnung().equals(p.getBezeichnung()))
-                return;
+                throw new EinkaufsListeException("Produkt bereits vorhanden");
         }
         produkte.add(p);
     }
 
-    public void entfernen(Produkt p)
+    public void entfernen(Produkt p) throws EinkaufsListeException
     {
-        produkte.remove(p);
+        if (!produkte.remove(p))
+            throw new EinkaufsListeException("dieses Produkt existiert nicht");
     }
 
 
 
-    public ArrayList<Produkt> liste()
+    public List<Produkt> liste()
     {
         return produkte;
     }
 
-    public void entfernen(String bezeichnung)
+    public void entfernen(String bezeichnung) throws EinkaufsListeException
     {
         for (Produkt p : produkte)
         {
             if (p.getBezeichnung().equals(bezeichnung))
                 entfernen(p);
+            break;
         }
     }
 

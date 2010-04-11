@@ -2,16 +2,19 @@
 
 package einkaufsliste.ui;
 
+import einkaufsliste.fachlogik.EinkaufsListeException;
 import einkaufsliste.fachlogik.GESCHAEFT;
 import einkaufsliste.fachlogik.LAND;
 import einkaufsliste.fachlogik.Produkt;
 import einkaufsliste.fachlogik.ProduktVerwaltung;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author Rudi
+ * @author Rudolf Radlbauer
  */
 public class ProduktVerwaltungsUI
 {
@@ -69,46 +72,70 @@ public class ProduktVerwaltungsUI
 
     private void neuesProdukt()
     {
-        String bezeichnung = Input.readText("Produktbezeichnung: ");
-        System.out.println("Bitte Geschäft auswählen");
-        for (GESCHAEFT g : GESCHAEFT.values())
-            System.out.println("\t" + g);
-        String g = Input.readText("Auswahl: ");
-        GESCHAEFT geschaeft = GESCHAEFT.valueOf(g);
-        float preis = Input.readFloat("Produktpreis: ");
-        System.out.println("Bitte Herkunftsland auswählen");
-        for (LAND l : LAND.values())
-            System.out.println("\t" + l);
-        String l = Input.readText("Auswahl: ");
-        LAND land = LAND.valueOf(l);
-        char b = Input.readChar("Bioprodukt (b) oder nicht (k): ");
-        boolean bio = false;
-        if (b == 'b')
-            bio = true;
-
-        Produkt produkt = new Produkt();
-        produkt.setBezeichnung(bezeichnung);
-        produkt.setGeschaeft(geschaeft);
-        produkt.setHerkunft(land);
-        produkt.setPreis(preis);
-        produkt.setBio(bio);
-
-        verwaltung.anlegen(produkt);
+        try
+        {
+            String bezeichnung = Input.readText("Produktbezeichnung: ");
+            System.out.println("Bitte Geschäft auswählen");
+            for (GESCHAEFT g : GESCHAEFT.values())
+            {
+                System.out.println("\t" + g);
+            }
+            String g = Input.readText("Auswahl: ");
+            GESCHAEFT geschaeft = GESCHAEFT.valueOf(g);
+            float preis = Input.readFloat("Produktpreis: ");
+            System.out.println("Bitte Herkunftsland auswählen");
+            for (LAND l : LAND.values())
+            {
+                System.out.println("\t" + l);
+            }
+            String l = Input.readText("Auswahl: ");
+            LAND land = LAND.valueOf(l);
+            char b = Input.readChar("Bioprodukt (b) oder nicht (k): ");
+            boolean bio = false;
+            if (b == 'b')
+            {
+                bio = true;
+            }
+            Produkt produkt = new Produkt();
+            produkt.setBezeichnung(bezeichnung);
+            produkt.setGeschaeft(geschaeft);
+            produkt.setHerkunft(land);
+            produkt.setPreis(preis);
+            produkt.setBio(bio);
+            verwaltung.anlegen(produkt);
+        } catch (EinkaufsListeException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
     }
 
     private void auflisten()
     {
-        System.out.println("------ Produktliste ------");
-        List<Produkt> liste = verwaltung.liste();
-        for (Produkt p : liste)
-            System.out.println(p.getBezeichnung());
-        System.out.println("--------------------------");
-        System.out.println();
+        try
+        {
+            System.out.println("------ Produktliste ------");
+            List<Produkt> liste = verwaltung.liste();
+            for (Produkt p : liste)
+            {
+                System.out.println(p.getBezeichnung());
+            }
+            System.out.println("--------------------------");
+            System.out.println();
+        } catch (EinkaufsListeException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
     }
 
     private void loeschen()
     {
-        String bezeichnung = Input.readText("Bezeichnung des Produkts: ");
-        verwaltung.entfernen(bezeichnung);
+        try
+        {
+            String bezeichnung = Input.readText("Bezeichnung des Produkts: ");
+            verwaltung.entfernen(bezeichnung);
+        } catch (EinkaufsListeException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
     }
 }
