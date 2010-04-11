@@ -17,9 +17,12 @@ public class Produkt
         return bezeichnung;
     }
 
-    public void setBezeichnung(String bezeichnung)
+    public void setBezeichnung(String bezeichnung) throws EinkaufsListeException
     {
-        this.bezeichnung = bezeichnung;
+        if (bezeichnung != null && bezeichnung.trim().length() > 0)
+            this.bezeichnung = bezeichnung;
+        else
+            throw new EinkaufsListeException("leere Produktbezeichnung");
     }
 
     public boolean isBio()
@@ -57,9 +60,12 @@ public class Produkt
         return preis;
     }
 
-    public void setPreis(float preis)
+    public void setPreis(float preis) throws EinkaufsListeException
     {
-        this.preis = preis;
+        if (preis > 0)
+            this.preis = preis;
+        else
+            throw new EinkaufsListeException("nur positiver Preis erlaubt");
     }
 
     

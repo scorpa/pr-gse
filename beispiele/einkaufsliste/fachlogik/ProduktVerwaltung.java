@@ -1,6 +1,7 @@
 package einkaufsliste.fachlogik;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Verwaltung der Produkte, die ich für meine
@@ -16,27 +17,27 @@ public interface ProduktVerwaltung
      * vorhanden ist.
      * @param p Referenz auf das neue Produkt
      */
-    public void anlegen(Produkt p);
+    public void anlegen(Produkt p) throws EinkaufsListeException;
 
     /**
      * entfernt alle Produkte mit der
      * übergebenen Bezeichnung
      * @param bezeichnung Bezeichnung des zu entfernenden Produkts
      */
-    public void entfernen(String bezeichnung);
+    public void entfernen(String bezeichnung) throws EinkaufsListeException;
 
     /**
      * Produkt wird aus der Verwaltung entfernt, falls es
      * vorhanden ist.
      * @param p Referenz auf das zu entfernende Produkt
      */
-    public void entfernen(Produkt p);
+    public void entfernen(Produkt p) throws EinkaufsListeException;
 
     /**
      * liefert eine Referenz auf die Liste aller Produkte
      * in der Verwaltung
      * @return Referenz auf die Produkteliste
      */
-    public ArrayList<Produkt> liste();
+    public List<Produkt> liste() throws EinkaufsListeException;
 
 }

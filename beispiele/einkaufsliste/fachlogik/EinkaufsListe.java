@@ -11,7 +11,7 @@ public interface EinkaufsListe
 {
     public enum KRITERIUM   // Sortierkriterien
     {
-        BEZEICHNUNG, PREIS, HERKUNFT, BIO
+        BEZEICHNUNG, PREIS, HERKUNFT, BIO, ANZAHL
     }
 
     /**
@@ -19,20 +19,20 @@ public interface EinkaufsListe
      * @param p Referenz auf das Produkt
      * @param anzahl in dieser Anzahl wird das Produkt übernommen
      */
-    public void aufnehmen(Produkt p, int anzahl);
+    public void aufnehmen(Produkt p, int anzahl) throws EinkaufsListeException;
 
     /**
      * entfernt ein Produkt aus der Einkaufsliste
      * @param p Referenz auf das zu entfernende Produkt
      */
-    public void entfernen(Produkt p);
+    public void entfernen(Produkt p) throws EinkaufsListeException;
 
     /**
      * gibt eine Referenz auf die Liste aller Produkte
      * in der Einkaufsliste zurück
      * @return Referenz auf Produktliste
      */
-    public List<Produkt> liste();
+    public List<Produkt> liste() throws EinkaufsListeException;
 
     /**
      * gibt an, in welcher Anzahl dieses Produkt in der
@@ -40,38 +40,38 @@ public interface EinkaufsListe
      * @param p Referenz auf das Produkt
      * @return Anzahl
      */
-    public int getAnzahl(Produkt p);
+    public int getAnzahl(Produkt p) throws EinkaufsListeException;
 
     /**
      * sortiert die Liste
      * @param k Kriterium, nach welchem sortiert wird
      */
-    public void sortieren(KRITERIUM k);
+    public void sortieren(KRITERIUM k) throws EinkaufsListeException;
 
     /**
      * berechnet den Gesamtpreis aller Artikel in
      * der Einkaufsliste
      * @return Gesamtpreis
      */
-    public float gesamtPreis();
+    public float gesamtPreis() throws EinkaufsListeException;
 
     /**
      * berechnet die CO2-Belastung
      * @return CO2-Belastung in Gramm
      */
-    public float co2();
+    public float co2() throws EinkaufsListeException;
 
     /**
      * berechnet die Anzahl der Bioprodukte
      * in der Einkaufsliste
      * @return Anzahl der Bioprodukte
      */
-    public int anzahlBio();
+    public int anzahlBio() throws EinkaufsListeException;
 
     /**
      * berechnet die Gesamtzahl der Produkte
      * in der Einkausliste
      * @return Gesamtzahl der Produkte
      */
-    public int anzahlProdukte();
+    public int anzahlProdukte() throws EinkaufsListeException;
 }

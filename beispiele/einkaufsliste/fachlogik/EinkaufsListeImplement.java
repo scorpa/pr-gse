@@ -2,63 +2,183 @@
 package einkaufsliste.fachlogik;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  *
- * @author Rudi
+ * @author Rudolf Radlbauer
  */
 public class EinkaufsListeImplement implements EinkaufsListe
 {
-    private ArrayList<Produkt> produkte;
+    private List<Position> positionen;
 
     public EinkaufsListeImplement()
     {
-        produkte = new ArrayList<Produkt>();
+        positionen = new ArrayList<Position>();
     }
 
-    public void aufnehmen(Produkt p, int anzahl)
+    public void aufnehmen(Produkt p, int anzahl) throws EinkaufsListeException
     {
-        produkte.add(p);
+        Position position = null;
+        for (Position pos : positionen)
+            if (pos.getProdukt() == p)
+                position = pos;
+        if (position == null)
+        {
+            position = new Position(p, anzahl);
+            positionen.add(position);
+        }
+        position.setAnzahl(position.getAnzahl() + anzahl);
+
     }
 
-    public void entfernen(Produkt p)
+    public void entfernen(Produkt p) throws EinkaufsListeException
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        boolean vorhanden = false;
+        for (Position pos : positionen)
+        {
+            if (pos.getProdukt() == p)
+            {
+                positionen.remove(pos);
+                vorhanden = true;
+            }
+        }
+        if (!vorhanden)
+            throw new EinkaufsListeException("dieses Produkt ist nicht vorhanden");
     }
 
-    public ArrayList<Produkt> liste()
+    public List<Produkt> liste()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        List<Produkt> liste = new ArrayList<Produkt>();
+        for (Position pos : positionen)
+            liste.add(pos.getProdukt());
+        return liste;
     }
 
     public int getAnzahl(Produkt p)
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for (Position pos : positionen)
+            if (pos.getProdukt() == p)
+                return pos.getAnzahl();
+        return 0;
     }
 
     public void sortieren(KRITERIUM k)
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Collections.sort(positionen, new PositionsComparator(k));
     }
 
     public float gesamtPreis()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        float summe = 0;
+        for (Position pos : positionen)
+            summe += pos.berechnePreis();
+        return summe;
     }
 
     public float co2()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Berechnung der CO2-Belastung noch nicht definiert");
     }
 
     public int anzahlBio()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int summe = 0;
+        for (Position pos : positionen)
+            if (pos.getProdukt().isBio())
+                summe += pos.getAnzahl();
+        return summe;
     }
 
     public int anzahlProdukte()
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int summe = 0;
+        for (Position pos : positionen)
+            summe += pos.getAnzahl();
+        return summe;
+    }
+
+    /**
+     * innere Klasse, mit der jeweils 1 Produkt mit der Anzahl zu einer Position
+     * zusammengefasst wird
+     */
+    private class Position
+    {
+        private Produkt produkt;
+        private int anzahl;
+
+        public Position(Produkt produkt, int anzahl) throws EinkaufsListeException
+        {
+            this.produkt = produkt;
+            setAnzahl(anzahl);
+        }
+
+        public float berechnePreis()
+        {
+            return anzahl * produkt.getPreis();
+        }
+
+        public int getAnzahl()
+        {
+            return anzahl;
+        }
+
+        public void setAnzahl(int anzahl) throws EinkaufsListeException
+        {
+            if (anzahl > 0)
+                this.anzahl = anzahl;
+            else
+                throw new EinkaufsListeException("nur positive Anzahl erlaubt");
+        }
+
+        public Produkt getProdukt()
+        {
+            return produkt;
+        }
+    }
+
+    /**
+     * innere Klasse, um Positionen zu sortieren
+     */
+    private class PositionsComparator implements Comparator<Position>
+    {
+        private KRITERIUM kriterium;
+
+        public PositionsComparator(KRITERIUM kriterium)
+        {
+            this.kriterium = kriterium;
+        }
+
+
+
+        public int compare(Position p1, Position p2)
+        {
+            switch(kriterium)
+            {
+                case BEZEICHNUNG:
+                    return p1.getProdukt().getBezeichnung().compareToIgnoreCase(p2.getProdukt().getBezeichnung());
+
+                case HERKUNFT:
+                    return p1.getProdukt().getHerkunft().toString().compareToIgnoreCase(p2.getProdukt().getHerkunft().toString());
+
+                case PREIS:
+                    return (int)((p1.getProdukt().getPreis() - p2.getProdukt().getPreis())*100);
+
+                case BIO:
+                    if (p1.getProdukt().isBio() == p2.getProdukt().isBio())
+                        return 0;
+                    if (p1.getProdukt().isBio())
+                        return 1;
+                    return -1;
+
+                case ANZAHL:
+                    return p1.getAnzahl() - p2.getAnzahl();
+            }
+            return 0;
+        }
+
     }
 
 }
