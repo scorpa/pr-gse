@@ -12,6 +12,15 @@ public class Produkt
     private LAND herkunft;
     private boolean bio;
 
+    public Produkt()
+    {
+        bezeichnung = "unbekannt";
+        preis = 0;
+        bio = true;
+        herkunft = LAND.SONSTIGE;
+        geschaeft = GESCHAEFT.SONSTIGES;
+    }
+
     public String getBezeichnung()
     {
         return bezeichnung;
@@ -66,6 +75,12 @@ public class Produkt
             this.preis = preis;
         else
             throw new EinkaufsListeException("nur positiver Preis erlaubt");
+    }
+
+    @Override
+    public String toString()
+    {
+        return bezeichnung;
     }
 
     
