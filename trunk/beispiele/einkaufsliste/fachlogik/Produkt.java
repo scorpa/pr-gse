@@ -14,7 +14,7 @@ public class Produkt
 
     public Produkt()
     {
-        bezeichnung = "unbekannt";
+        bezeichnung = "";
         preis = 0;
         bio = true;
         herkunft = LAND.SONSTIGE;
