@@ -12,8 +12,6 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -61,7 +59,8 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
         {
             for (Produkt p : verwaltung.liste())
                 lmProdukte.addElement(p);
-            updatePanel(null);
+            inBearbeitung = new Produkt();
+            updatePanel();
         } catch (Exception ex)
         {
             ex.printStackTrace();
@@ -129,9 +128,15 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
             {
                 if (jlProdukte.getSelectedValue() != null)
                 {
-                    lmProdukte.removeElement(jlProdukte.getSelectedValue());
-                    jlProdukte.clearSelection();
+                    if (JOptionPane.showConfirmDialog(this, "Sind Sie sicher",
+                            "Produkt löschen", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+                    {
+                        lmProdukte.removeElement(jlProdukte.getSelectedValue());
+                        jlProdukte.clearSelection();
+                    }
                 }
+                else
+                    JOptionPane.showMessageDialog(this, "bitte zuerst ein Produkt auswählen");
             }
             
         } catch(Exception ex)
@@ -143,11 +148,13 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
 
     public void valueChanged(ListSelectionEvent e)
     {
-        try
+        if (e.getValueIsAdjusting())
+            return;
+        if (e.getSource() == jlProdukte && jlProdukte.getSelectedValue() != null)
         {
-            if (e.getSource() == jlProdukte)
+            try
             {
-                if (checkForChanges(inBearbeitung))
+                if (checkForChanges())
                 {
                     switch (JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
                     {
@@ -163,22 +170,23 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
                             break;
                     }
                 }
-                inBearbeitung = (Produkt) jlProdukte.getSelectedValue();
-                if (inBearbeitung != null)
-                    updatePanel(inBearbeitung);
+                Produkt p = (Produkt) jlProdukte.getSelectedValue();
+                if (p != null)
+                    inBearbeitung = p;
+                updatePanel();
+            } catch (Exception ex)
+            {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+                jlProdukte.clearSelection();
             }
-        } catch (Exception ex)
-        {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, ex.getMessage());
-            jlProdukte.clearSelection();
+
         }
     }
     
     private void neu() throws EinkaufsListeException
     {
-        Produkt produkt = (Produkt) jlProdukte.getSelectedValue();
-        if (checkForChanges(produkt))
+        if (checkForChanges())
         {
             switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
             {
@@ -193,17 +201,15 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
                     break;
             }
         }
-        inBearbeitung = null;
-        updatePanel(inBearbeitung);
+        inBearbeitung = new Produkt();
+        updatePanel();
         jlProdukte.clearSelection();
     }
 
 
     private void speichern() throws EinkaufsListeException
     {
-        if (inBearbeitung == null)
-            inBearbeitung = new Produkt();
-        updateProdukt(inBearbeitung);
+        updateProdukt();
         if (!lmProdukte.contains(inBearbeitung))
         {
             lmProdukte.addElement(inBearbeitung);
@@ -224,73 +230,46 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
 
     }
 
-    private void updateProdukt(Produkt produkt) throws EinkaufsListeException
+    private void updateProdukt() throws EinkaufsListeException
     {
-        if (produkt != null)
+        inBearbeitung.setBezeichnung(tfBezeichnung.getText());
+        try
         {
-            produkt.setBezeichnung(tfBezeichnung.getText());
-            try
-            {
-                produkt.setPreis(Float.parseFloat(tfPreis.getText()));
-            } catch(NumberFormatException nfe)
-            {
-                throw new EinkaufsListeException("bitte eine Zahl bei Preis eingeben");
-            }
-            produkt.setBio(rbBio.isSelected());
-            produkt.setGeschaeft((GESCHAEFT) cbGeschaeft.getSelectedItem());
-            produkt.setHerkunft((LAND) cbHerkunft.getSelectedItem());
+            inBearbeitung.setPreis(Float.parseFloat(tfPreis.getText()));
+        } catch(NumberFormatException nfe)
+        {
+            throw new EinkaufsListeException("bitte eine Zahl bei Preis eingeben");
         }
+        inBearbeitung.setBio(rbBio.isSelected());
+        inBearbeitung.setGeschaeft((GESCHAEFT) cbGeschaeft.getSelectedItem());
+        inBearbeitung.setHerkunft((LAND) cbHerkunft.getSelectedItem());
     }
     
-    private void updatePanel(Produkt produkt)
+    private void updatePanel()
     {
-        if (produkt != null)
-        {
-            tfBezeichnung.setText(produkt.getBezeichnung());
-            tfPreis.setText(String.valueOf(produkt.getPreis()));
-            if (produkt.isBio())
-                rbBio.setSelected(true);
-            else
-                rbNoBio.setSelected(true);
-            cbGeschaeft.setSelectedItem(produkt.getGeschaeft());
-            cbHerkunft.setSelectedItem(produkt.getHerkunft());
-        }
-        else
-        {
-            tfBezeichnung.setText("");
-            tfPreis.setText("0.0");
+        tfBezeichnung.setText(inBearbeitung.getBezeichnung());
+        tfPreis.setText(String.valueOf(inBearbeitung.getPreis()));
+        if (inBearbeitung.isBio())
             rbBio.setSelected(true);
-            cbGeschaeft.setSelectedItem(GESCHAEFT.SONSTIGES);
-            cbHerkunft.setSelectedItem(LAND.SONSTIGE);
-        }
+        else
+            rbNoBio.setSelected(true);
+        cbGeschaeft.setSelectedItem(inBearbeitung.getGeschaeft());
+        cbHerkunft.setSelectedItem(inBearbeitung.getHerkunft());
     }
 
-    private boolean checkForChanges(Produkt produkt)
+    private boolean checkForChanges()
     {
         boolean changes = false;
-        if (produkt != null)
-        {
-            float preis = Float.parseFloat(tfPreis.getText());
-            if (
-                    (!tfBezeichnung.getText().equals(produkt.getBezeichnung())) ||
-                    (preis != produkt.getPreis()) ||
-                    (rbBio.isSelected() != produkt.isBio()) ||
-                    (cbGeschaeft.getSelectedItem() != produkt.getGeschaeft()) ||
-                    (cbHerkunft.getSelectedItem() != produkt.getHerkunft())
-                )
-                changes = true;
-        }
-        else
-        {
-            if (
-                    (tfBezeichnung.getText().length() > 0) ||
-                    (!tfPreis.getText().equals("0.0")) ||
-                    (!rbBio.isSelected()) ||
-                    (cbGeschaeft.getSelectedItem() != GESCHAEFT.SONSTIGES) ||
-                    (cbHerkunft.getSelectedItem() != LAND.SONSTIGE)
-                )
-                changes = true;
-        }
+
+        float preis = Float.parseFloat(tfPreis.getText());
+        if (
+                (!tfBezeichnung.getText().equals(inBearbeitung.getBezeichnung())) ||
+                (preis != inBearbeitung.getPreis()) ||
+                (rbBio.isSelected() != inBearbeitung.isBio()) ||
+                (cbGeschaeft.getSelectedItem() != inBearbeitung.getGeschaeft()) ||
+                (cbHerkunft.getSelectedItem() != inBearbeitung.getHerkunft())
+            )
+            changes = true;
         return changes;
     }
 
@@ -310,7 +289,7 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
             verwaltung.anlegen(p);
             ProduktFenster fenster = new ProduktFenster(verwaltung);
             fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            fenster.pack();
+            fenster.setSize(500, 300);
             fenster.setVisible(true);
         } catch (Exception ex)
         {
