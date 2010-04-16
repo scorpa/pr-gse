@@ -32,7 +32,7 @@
     * [thema_web_servlets Servlets]
     * [thema_web_jsp Java Server Pages (JSP)]
     * [thema_web_taglib JSP tag libraries]
-    * [thema_komplexe_aufgabenstellungen]
+    * [thema_komplexe_aufgabenstellungen Komplexe Aufgabenstellungen]
   * XML-Processing
     * [thema_xml Extensible Markup Language (XML)]
     * [thema_xml_sax Simple API for XML processing (SAX)]
