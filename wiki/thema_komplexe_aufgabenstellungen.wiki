@@ -1,0 +1,9 @@
+#summary Komplexe Aufgabenstellungen
+
+= Komplexe Aufgabenstellungen =
+
+Hier entsteht eine Zusammenstellung von umfangreicheren Übungen.
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_komplex_fachhochschule Anmeldesystem für Fachhochschule] || || ||
