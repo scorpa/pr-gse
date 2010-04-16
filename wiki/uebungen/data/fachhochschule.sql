@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS studenten (
   S_NAME varchar(128) collate latin1_general_ci default NULL,
   S_ADRESSE varchar(256) collate latin1_general_ci default NULL,
   S_TELEFON varchar(32) collate latin1_general_ci default NULL,
+  S_KENNWORT varchar(32) collate latin1_general_ci default NULL,
   PRIMARY KEY  (S_ID)
 ) AUTO_INCREMENT=1 ;
 
