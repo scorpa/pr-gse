@@ -1,10 +1,12 @@
 package einkaufsliste.fachlogik;
 
+import java.io.Serializable;
+
 /**
  * Datenhaltungsklasse für Produkte
  * @author Rudolf Radlbauer
  */
-public class Produkt
+public class Produkt implements Serializable
 {
     private String bezeichnung;
     private GESCHAEFT geschaeft;

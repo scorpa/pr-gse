@@ -1,13 +1,14 @@
 
 package einkaufsliste.fachlogik;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Definiert die Funktionalität der Einkaufsliste
  * @author Rudolf Radlbauer
  */
-public interface EinkaufsListe
+public interface EinkaufsListe extends Serializable
 {
     public enum KRITERIUM   // Sortierkriterien
     {
@@ -41,6 +42,15 @@ public interface EinkaufsListe
      * @return Anzahl
      */
     public int getAnzahl(Produkt p) throws EinkaufsListeException;
+
+
+    /**
+     * Setzt die Anzahl des Produkts
+     * @param p Referenz auf das Produkt
+     * @param anzahl neue Anzahl
+     * @throws EinkaufsListeException
+     */
+    public void setAnzahl(Produkt p, int anzahl) throws EinkaufsListeException;
 
     /**
      * sortiert die Liste

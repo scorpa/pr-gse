@@ -30,22 +30,25 @@ public class EinkaufsListeImplement implements EinkaufsListe
             position = new Position(p, anzahl);
             positionen.add(position);
         }
-        position.setAnzahl(position.getAnzahl() + anzahl);
+        else
+        	position.setAnzahl(position.getAnzahl() + anzahl);
 
     }
 
     public void entfernen(Produkt p) throws EinkaufsListeException
     {
-        boolean vorhanden = false;
+        Position position = null;
         for (Position pos : positionen)
         {
             if (pos.getProdukt() == p)
             {
-                positionen.remove(pos);
-                vorhanden = true;
+                position = pos;
+                break;
             }
         }
-        if (!vorhanden)
+        if (position != null)
+            positionen.remove(position);
+        else
             throw new EinkaufsListeException("dieses Produkt ist nicht vorhanden");
     }
 
@@ -98,6 +101,13 @@ public class EinkaufsListeImplement implements EinkaufsListe
         for (Position pos : positionen)
             summe += pos.getAnzahl();
         return summe;
+    }
+
+    public void setAnzahl(Produkt p, int anzahl) throws EinkaufsListeException
+    {
+        for (Position pos : positionen)
+            if (pos.getProdukt() == p)
+                pos.setAnzahl(anzahl);
     }
 
     /**
