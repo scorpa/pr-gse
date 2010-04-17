@@ -16,6 +16,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -32,7 +33,7 @@ import javax.swing.event.ListSelectionListener;
  * Fenster zum Verwalten der Produkte in der ProduktVerwaltung
  * @author Rudolf Radlbauer
  */
-public class ProduktFenster extends JFrame implements ActionListener, ListSelectionListener
+public class ProduktFenster extends JDialog implements ActionListener, ListSelectionListener
 {
     // Instanz meiner Produktverwaltung
     private ProduktVerwaltung verwaltung;
@@ -60,6 +61,7 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
      */
     public ProduktFenster(ProduktVerwaltung verwaltung)
     {
+        setModal(true);
         this.verwaltung = verwaltung;
         initFrame();  // Fenster aufbauen
         try
@@ -75,7 +77,7 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
-
+    
     /**
      * baut das Fenster zusammen
      */
@@ -162,7 +164,9 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
                             "Produkt löschen", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
                     {
                         // entferne Produkt sowohl von der Verwaltung als auch von der Liste
-                        lmProdukte.removeElement(jlProdukte.getSelectedValue());
+                        Produkt p = (Produkt) jlProdukte.getSelectedValue();
+                        verwaltung.entfernen(p);
+                        lmProdukte.removeElement(p);
                         jlProdukte.clearSelection();
                     }
                 }
@@ -273,8 +277,8 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
         // wird es jetzt übernommen
         if (!lmProdukte.contains(inBearbeitung))
         {
-            lmProdukte.addElement(inBearbeitung);
             verwaltung.anlegen(inBearbeitung);
+            lmProdukte.addElement(inBearbeitung);
         }
 
         // neues/gespeichertes Produkt ausgewählt
@@ -342,29 +346,6 @@ public class ProduktFenster extends JFrame implements ActionListener, ListSelect
         return changes;
     }
 
-
-
-    // nur zum Testen
-    public static void main(String[] args)
-    {
-        try
-        {
-            ProduktVerwaltung verwaltung = new ProduktVerwaltungImpl();
-            Produkt p = new Produkt();
-            p.setBezeichnung("test");
-            p.setPreis(100);
-            p.setHerkunft(LAND.ITALIEN);
-            p.setGeschaeft(GESCHAEFT.BILLA);
-            verwaltung.anlegen(p);
-            ProduktFenster fenster = new ProduktFenster(verwaltung);
-            fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            fenster.setSize(500, 300);
-            fenster.setVisible(true);
-        } catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-    }
 
 
 }

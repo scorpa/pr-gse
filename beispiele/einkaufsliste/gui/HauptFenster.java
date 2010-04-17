@@ -1,12 +1,24 @@
 package einkaufsliste.gui;
 
 import einkaufsliste.fachlogik.EinkaufsListe;
+import einkaufsliste.fachlogik.EinkaufsListeException;
+import einkaufsliste.fachlogik.DateiAnbindung;
+import einkaufsliste.fachlogik.EinkaufsListeImplement;
+import einkaufsliste.fachlogik.Produkt;
 import einkaufsliste.fachlogik.ProduktVerwaltung;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,12 +27,17 @@ import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  *
@@ -28,25 +45,69 @@ import javax.swing.SpinnerNumberModel;
  */
 public class HauptFenster extends JFrame
 {
+    private DateiAnbindung dateiAnbindung;
     private ProduktVerwaltung produkte;
-    private EinkaufsListe liste;
+    private EinkaufsListe liste = new EinkaufsListeImplement();
     
     private DefaultListModel lmProdukte = new DefaultListModel();
     private JList jlProdukte = new JList(lmProdukte);
     private DefaultListModel lmEinkauf = new DefaultListModel();
     private JList jlEinkauf = new JList(lmEinkauf);
     private JButton bnAdd = new JButton("-->");
-    private JButton bnDelete = new JButton("X");
+    private JButton bnDelete = new JButton("<--");
     private SpinnerNumberModel snmAnzahl = new SpinnerNumberModel(1, 1, 100, 1);
     private JSpinner spAnzahl = new JSpinner(snmAnzahl);
     private JTextArea taAusgabe = new JTextArea();
 
-    public HauptFenster(ProduktVerwaltung produkte, EinkaufsListe liste)
+    public HauptFenster(DateiAnbindung dateiAnbindung)
     {
-        this.produkte = produkte;
-        this.liste = liste;
-        initFrame();
-        initMenu();
+        try
+        {
+            this.dateiAnbindung = dateiAnbindung;
+            initFrame();
+            initMenu();
+            produkte = dateiAnbindung.ladeProdukte(new File("produkte.dat"));
+            ladeProduktListe();
+            addWindowListener(new WindowAdapter()
+            {
+                @Override
+                public void windowClosing(WindowEvent e)
+                {
+                    exit();
+                }
+
+            });
+        } catch (EinkaufsListeException ex)
+        {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+
+    private void exit()
+    {
+        try
+        {
+            dateiAnbindung.speichern(produkte, new File("produkte.dat"));
+            System.exit(0);
+        } catch (EinkaufsListeException ex)
+        {
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+
+
+    private void ladeProduktListe()
+    {
+        try
+        {
+            lmProdukte.clear();
+            for (Produkt p : produkte.liste())
+                lmProdukte.addElement(p);
+        } catch (EinkaufsListeException ex)
+        {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
     }
 
     private void initFrame()
@@ -77,6 +138,39 @@ public class HauptFenster extends JFrame
 
         taAusgabe.setRows(3);
         add(new JScrollPane(taAusgabe), BorderLayout.SOUTH);
+
+        bnAdd.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e)
+            {
+                produktDazu();
+            }
+        });
+
+        bnDelete.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e)
+            {
+                produktWeg();
+            }
+        });
+
+
+        spAnzahl.addChangeListener(new ChangeListener() {
+
+            public void stateChanged(ChangeEvent e)
+            {
+                anzahlNeu();
+            }
+        });
+
+        jlEinkauf.addListSelectionListener(new ListSelectionListener() {
+
+            public void valueChanged(ListSelectionEvent e)
+            {
+                auswahl();
+            }
+        });
 
     }
     
@@ -130,21 +224,89 @@ public class HauptFenster extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
-                throw new UnsupportedOperationException("Not supported yet.");
+                produkteBearbeiten();
             }
         });
 
 
     }
 
-
-    // nur zum Testen
-    public static void main(String[] args)
+    private void produktDazu()
     {
-        HauptFenster fenster = new HauptFenster(null, null);
-        fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fenster.pack();
-        fenster.setVisible(true);
+        Produkt p = (Produkt) jlProdukte.getSelectedValue();
+        if (p != null)
+        {
+            try
+            {
+                lmProdukte.removeElement(p);
+                lmEinkauf.addElement(p);
+                jlEinkauf.setSelectedValue(p, true);
+                liste.aufnehmen(p, 1);
+                snmAnzahl.setValue(1);
+            } catch (EinkaufsListeException ex)
+            {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
+        }
+    }
+
+    private void produktWeg()
+    {
+        Produkt p = (Produkt) jlEinkauf.getSelectedValue();
+        if (p != null)
+        {
+            try
+            {
+                lmEinkauf.removeElement(p);
+                liste.entfernen(p);
+                lmProdukte.addElement(p);
+            } catch (EinkaufsListeException ex)
+            {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
+        }
+    }
+
+    private void auswahl()
+    {
+        Produkt p = (Produkt) jlEinkauf.getSelectedValue();
+        if (p != null)
+        {
+            try
+            {
+                snmAnzahl.setValue(liste.getAnzahl(p));
+            } catch (EinkaufsListeException ex)
+            {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
+        }
+    }
+
+    private void anzahlNeu()
+    {
+        Produkt p = (Produkt) jlEinkauf.getSelectedValue();
+        if (p != null)
+        {
+            try
+            {
+                liste.setAnzahl(p, snmAnzahl.getNumber().intValue());
+            } catch (EinkaufsListeException ex)
+            {
+                JOptionPane.showMessageDialog(this, ex.getMessage());
+            }
+        }
+
+    }
+
+    private void produkteBearbeiten()
+    {
+        ProduktFenster pf = new ProduktFenster(produkte);
+        pf.pack();
+        pf.setVisible(true);
+        ladeProduktListe();
+        
     }
 
 }

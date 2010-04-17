@@ -1,5 +1,6 @@
 package einkaufsliste.fachlogik;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * 
  * @author Rudolf Radlbauer
  */
-public interface ProduktVerwaltung
+public interface ProduktVerwaltung extends Serializable
 {
     /**
      * Ein neues Produkt wird in die Verwaltung aufgenommen,
