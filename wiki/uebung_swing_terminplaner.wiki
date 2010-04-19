@@ -1,0 +1,11 @@
+#summary GUI für Terminplaner
+
+=  GUI für Terminplaner =
+
+Erstellen Sie eine grafische Benutzeroberfläche für den Terminplaner aus [http://code.google.com/p/pr-gse/wiki/uebung_interface_termine dieser Übung].
+
+Die Oberfläche soll es ermöglichen
+
+    * Termine zu erfassen
+    * Termine sortiert nach Datum aufzulisten
+    * Termine zu löschen
