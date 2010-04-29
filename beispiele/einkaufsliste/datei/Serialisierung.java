@@ -39,7 +39,16 @@ public class Serialisierung implements DateiAnbindung
 
     public void speichern(EinkaufsListe liste, File datei) throws EinkaufsListeException
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try
+		{
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(datei));
+			out.writeObject(liste);
+			out.close();
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+			throw new EinkaufsListeException("Fehler beim Speichern der Einkaufsliste");
+		}
     }
 
     public ProduktVerwaltung ladeProdukte(File datei) throws EinkaufsListeException
@@ -59,6 +68,7 @@ public class Serialisierung implements DateiAnbindung
             throw new EinkaufsListeException("Fehler beim Laden der Produkteliste");
         } catch(ClassNotFoundException ex)
         {
+        	ex.printStackTrace();
             throw new EinkaufsListeException("Fehler beim Deserialisieren der Produkteliste");
         }
 
@@ -67,7 +77,23 @@ public class Serialisierung implements DateiAnbindung
 
     public EinkaufsListe ladeEinkaufsliste(File datei) throws EinkaufsListeException
     {
-        throw new UnsupportedOperationException("Not supported yet.");
+        EinkaufsListe liste = null;
+        try
+        {
+            ObjectInputStream in = new ObjectInputStream(new FileInputStream(datei));
+            liste = (EinkaufsListe) in.readObject();
+            in.close();
+        } catch(IOException ex)
+        {
+            ex.printStackTrace();
+            throw new EinkaufsListeException("Fehler beim Laden der Einkaufsliste");
+        } catch(ClassNotFoundException ex)
+        {
+        	ex.printStackTrace();
+            throw new EinkaufsListeException("Fehler beim Deserialisieren der Einkaufsliste");
+        }
+
+        return liste;    
     }
 
 }

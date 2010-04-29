@@ -1,6 +1,7 @@
 
 package einkaufsliste.fachlogik;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -12,7 +13,9 @@ import java.util.List;
  */
 public class EinkaufsListeImplement implements EinkaufsListe
 {
-    private List<Position> positionen;
+	private static final long serialVersionUID = -5921393829695028197L;
+	
+	private List<Position> positionen;
 
     public EinkaufsListeImplement()
     {
@@ -114,7 +117,7 @@ public class EinkaufsListeImplement implements EinkaufsListe
      * innere Klasse, mit der jeweils 1 Produkt mit der Anzahl zu einer Position
      * zusammengefasst wird
      */
-    private class Position
+    private class Position implements Serializable
     {
         private Produkt produkt;
         private int anzahl;

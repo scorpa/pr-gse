@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -69,7 +70,8 @@ public class HauptFenster extends JFrame
             initFrame();
             initMenu();
             produkte = dateiAnbindung.ladeProdukte(new File("produkte.dat"));
-            aktualisiereProduktListe();
+            aktualisieren();
+            setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter()
             {
                 @Override
@@ -90,7 +92,22 @@ public class HauptFenster extends JFrame
         try
         {
             dateiAnbindung.speichern(produkte, new File("produkte.dat"));
-            System.exit(0);
+            if (bearbeitet)
+            {
+            	switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
+            	{
+            	case JOptionPane.NO_OPTION:
+            		System.exit(0);
+            		
+            	case JOptionPane.YES_OPTION:
+            		speichern();
+            		if (!bearbeitet)
+            			System.exit(0);
+            		
+            	case JOptionPane.CANCEL_OPTION:
+            		break;
+            	}
+            }
         } catch (EinkaufsListeException ex)
         {
             JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -98,22 +115,46 @@ public class HauptFenster extends JFrame
     }
 
 
-    private void aktualisiereProduktListe()
+    private void aktualisieren()
     {
         try
         {
+        	lmEinkauf.clear();
+        	for (Produkt p : liste.liste())
+        		lmEinkauf.addElement(p);
+        	
             lmProdukte.clear();
             for (Produkt p : produkte.liste())
             {
             	if (!lmEinkauf.contains(p))
             		lmProdukte.addElement(p);
             }
+            
+            aktualisiereAusgabe();
+                        
+            bearbeitet = false;
+            
         } catch (EinkaufsListeException ex)
         {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
+    
+    private void aktualisiereAusgabe() throws EinkaufsListeException
+    {
+        int anzahlProdukte = liste.anzahlProdukte();
+        int anzahlBio = liste.anzahlBio();
+        String gesamtPreis = String.format("%.2f", liste.gesamtPreis());
+        
+        StringBuilder txt = new StringBuilder("Gesamtpreis: ").append(gesamtPreis);
+        txt.append("\nAnzahl Produkte: ").append(liste.anzahlProdukte());
+        txt.append("\ndavon Bio-Produkte: ").append(anzahlBio);
+        if (anzahlProdukte > 0)
+        	txt.append(" (").append(anzahlBio * 100 / anzahlProdukte).append("%)");
+        taAusgabe.setText(txt.toString());
+    }
+    
 
     private void initFrame()
     {
@@ -142,6 +183,7 @@ public class HauptFenster extends JFrame
         center.add(new JScrollPane(jlEinkauf));
 
         taAusgabe.setRows(3);
+        taAusgabe.setEditable(false);
         add(new JScrollPane(taAusgabe), BorderLayout.SOUTH);
 
         bnAdd.addActionListener(new ActionListener() {
@@ -191,15 +233,28 @@ public class HauptFenster extends JFrame
         neu.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                neueListe();
-            }
+                try
+				{
+					neueListe();
+				} catch (EinkaufsListeException ex)
+				{
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(HauptFenster.this, ex);				}
+            	}
         });
         JMenuItem oeffnen = new JMenuItem("oeffnen");
         mListe.add(oeffnen);
         oeffnen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                listeOeffnen();
+                try
+				{
+					listeOeffnen();
+				} catch (EinkaufsListeException ex)
+				{
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(HauptFenster.this, ex);
+				}
             }
         });
         JMenuItem speichern = new JMenuItem("speichern");
@@ -208,7 +263,14 @@ public class HauptFenster extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
-                speichern();
+                try
+				{
+					speichern();
+				} catch (EinkaufsListeException ex)
+				{
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(HauptFenster.this, ex);
+				}
             }
         });
         JMenuItem speichernUnter = new JMenuItem("speichern unter ...");
@@ -217,7 +279,14 @@ public class HauptFenster extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
-                speichernUnter();
+                try
+				{
+					speichernUnter();
+				} catch (EinkaufsListeException ex)
+				{
+					ex.printStackTrace();
+					JOptionPane.showMessageDialog(HauptFenster.this, ex);
+				}
             }
         });
 
@@ -236,7 +305,7 @@ public class HauptFenster extends JFrame
 
     }
 
-    protected void neueListe()
+    private void neueListe() throws EinkaufsListeException
 	{
 		if (bearbeitet)
 		{
@@ -255,29 +324,61 @@ public class HauptFenster extends JFrame
 		}
 		liste = new EinkaufsListeImplement();
 		lmEinkauf.clear();
-		bearbeitet = false;
-		aktualisiereProduktListe();
+		datei = null;
+		aktualisieren();
 	}
 
-	protected void listeOeffnen()
+	private void listeOeffnen() throws EinkaufsListeException
 	{
-		// TODO Auto-generated method stub
+		if (bearbeitet)
+		{
+			switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
+			{
+			case JOptionPane.YES_OPTION:
+				speichern();
+				break;
+				
+			case JOptionPane.NO_OPTION:
+				break;
+				
+			case JOptionPane.CANCEL_OPTION:
+				return;
+			}
+		}
+			
+			
+		JFileChooser chooser = new JFileChooser();
+		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+		if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+		{
+			datei = chooser.getSelectedFile();
+			liste = dateiAnbindung.ladeEinkaufsliste(datei);
+			aktualisieren();
+		}
 		
 	}
 
-	protected void speichern() throws EinkaufsListeException
+	private void speichern() throws EinkaufsListeException
 	{
 		if (datei == null)
 			speichernUnter();
 		else
+		{
 			dateiAnbindung.speichern(liste, datei);
+			bearbeitet = false;
+		}
 		
 	}
 
-	protected void speichernUnter()
+	private void speichernUnter() throws EinkaufsListeException
 	{
-		// TODO Auto-generated method stub
-		
+		JFileChooser chooser = new JFileChooser();
+		if (chooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
+		{
+			datei = chooser.getSelectedFile();
+			dateiAnbindung.speichern(liste, datei);
+			bearbeitet = false;
+		}		
 	}
 
 	private void produktDazu()
@@ -293,6 +394,7 @@ public class HauptFenster extends JFrame
                 liste.aufnehmen(p, 1);
                 snmAnzahl.setValue(1);
                 bearbeitet = true;
+                aktualisiereAusgabe();
             } catch (EinkaufsListeException ex)
             {
                 ex.printStackTrace();
@@ -312,6 +414,7 @@ public class HauptFenster extends JFrame
                 liste.entfernen(p);
                 lmProdukte.addElement(p);
                 bearbeitet = true;
+                aktualisiereAusgabe();
             } catch (EinkaufsListeException ex)
             {
                 ex.printStackTrace();
@@ -344,6 +447,7 @@ public class HauptFenster extends JFrame
             {
                 liste.setAnzahl(p, snmAnzahl.getNumber().intValue());
                 bearbeitet = true;
+                aktualisiereAusgabe();
             } catch (EinkaufsListeException ex)
             {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -356,7 +460,7 @@ public class HauptFenster extends JFrame
     {
         ProduktFenster pf = new ProduktFenster(produkte);
         pf.setVisible(true);
-        aktualisiereProduktListe();
+        aktualisieren();
         
     }
 
