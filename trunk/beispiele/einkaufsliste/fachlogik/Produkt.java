@@ -8,7 +8,10 @@ import java.io.Serializable;
  */
 public class Produkt implements Serializable
 {
-    private String bezeichnung;
+	private static final long serialVersionUID = -7610637044759262553L;
+	
+	
+	private String bezeichnung;
     private GESCHAEFT geschaeft;
     private float preis;
     private LAND herkunft;
@@ -84,6 +87,35 @@ public class Produkt implements Serializable
     {
         return bezeichnung;
     }
+
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((bezeichnung == null) ? 0 : bezeichnung.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Produkt other = (Produkt) obj;
+		if (bezeichnung == null)
+		{
+			if (other.bezeichnung != null)
+				return false;
+		} else if (!bezeichnung.equals(other.bezeichnung))
+			return false;
+		return true;
+	}
 
     
 

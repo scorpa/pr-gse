@@ -9,7 +9,9 @@ import java.util.List;
  */
 public class ProduktVerwaltungImpl implements ProduktVerwaltung
 {
-    private List<Produkt> produkte;
+	private static final long serialVersionUID = 6088690704356815377L;
+
+	private List<Produkt> produkte;
 
     public ProduktVerwaltungImpl()
     {
