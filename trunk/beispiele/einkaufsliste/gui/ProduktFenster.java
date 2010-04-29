@@ -64,6 +64,7 @@ public class ProduktFenster extends JDialog implements ActionListener, ListSelec
         setModal(true);
         this.verwaltung = verwaltung;
         initFrame();  // Fenster aufbauen
+        setSize(800, 300);
         try
         {   // Produktliste befüllen
             for (Produkt p : verwaltung.liste())

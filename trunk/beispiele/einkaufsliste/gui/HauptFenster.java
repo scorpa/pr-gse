@@ -48,6 +48,8 @@ public class HauptFenster extends JFrame
     private DateiAnbindung dateiAnbindung;
     private ProduktVerwaltung produkte;
     private EinkaufsListe liste = new EinkaufsListeImplement();
+    private boolean bearbeitet = false;
+    private File datei;
     
     private DefaultListModel lmProdukte = new DefaultListModel();
     private JList jlProdukte = new JList(lmProdukte);
@@ -67,7 +69,7 @@ public class HauptFenster extends JFrame
             initFrame();
             initMenu();
             produkte = dateiAnbindung.ladeProdukte(new File("produkte.dat"));
-            ladeProduktListe();
+            aktualisiereProduktListe();
             addWindowListener(new WindowAdapter()
             {
                 @Override
@@ -96,13 +98,16 @@ public class HauptFenster extends JFrame
     }
 
 
-    private void ladeProduktListe()
+    private void aktualisiereProduktListe()
     {
         try
         {
             lmProdukte.clear();
             for (Produkt p : produkte.liste())
-                lmProdukte.addElement(p);
+            {
+            	if (!lmEinkauf.contains(p))
+            		lmProdukte.addElement(p);
+            }
         } catch (EinkaufsListeException ex)
         {
             ex.printStackTrace();
@@ -186,7 +191,7 @@ public class HauptFenster extends JFrame
         neu.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                throw new UnsupportedOperationException("Not supported yet.");
+                neueListe();
             }
         });
         JMenuItem oeffnen = new JMenuItem("oeffnen");
@@ -194,7 +199,7 @@ public class HauptFenster extends JFrame
         oeffnen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)
             {
-                throw new UnsupportedOperationException("Not supported yet.");
+                listeOeffnen();
             }
         });
         JMenuItem speichern = new JMenuItem("speichern");
@@ -203,7 +208,7 @@ public class HauptFenster extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
-                throw new UnsupportedOperationException("Not supported yet.");
+                speichern();
             }
         });
         JMenuItem speichernUnter = new JMenuItem("speichern unter ...");
@@ -212,7 +217,7 @@ public class HauptFenster extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
-                throw new UnsupportedOperationException("Not supported yet.");
+                speichernUnter();
             }
         });
 
@@ -231,7 +236,51 @@ public class HauptFenster extends JFrame
 
     }
 
-    private void produktDazu()
+    protected void neueListe()
+	{
+		if (bearbeitet)
+		{
+			switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
+			{
+				case JOptionPane.YES_OPTION:
+					speichern();
+					break;
+					
+				case JOptionPane.NO_OPTION:
+					break;
+					
+				case JOptionPane.CANCEL_OPTION:
+					return;
+			}
+		}
+		liste = new EinkaufsListeImplement();
+		lmEinkauf.clear();
+		bearbeitet = false;
+		aktualisiereProduktListe();
+	}
+
+	protected void listeOeffnen()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void speichern() throws EinkaufsListeException
+	{
+		if (datei == null)
+			speichernUnter();
+		else
+			dateiAnbindung.speichern(liste, datei);
+		
+	}
+
+	protected void speichernUnter()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void produktDazu()
     {
         Produkt p = (Produkt) jlProdukte.getSelectedValue();
         if (p != null)
@@ -243,6 +292,7 @@ public class HauptFenster extends JFrame
                 jlEinkauf.setSelectedValue(p, true);
                 liste.aufnehmen(p, 1);
                 snmAnzahl.setValue(1);
+                bearbeitet = true;
             } catch (EinkaufsListeException ex)
             {
                 ex.printStackTrace();
@@ -261,6 +311,7 @@ public class HauptFenster extends JFrame
                 lmEinkauf.removeElement(p);
                 liste.entfernen(p);
                 lmProdukte.addElement(p);
+                bearbeitet = true;
             } catch (EinkaufsListeException ex)
             {
                 ex.printStackTrace();
@@ -292,6 +343,7 @@ public class HauptFenster extends JFrame
             try
             {
                 liste.setAnzahl(p, snmAnzahl.getNumber().intValue());
+                bearbeitet = true;
             } catch (EinkaufsListeException ex)
             {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
@@ -303,9 +355,8 @@ public class HauptFenster extends JFrame
     private void produkteBearbeiten()
     {
         ProduktFenster pf = new ProduktFenster(produkte);
-        pf.pack();
         pf.setVisible(true);
-        ladeProduktListe();
+        aktualisiereProduktListe();
         
     }
 
