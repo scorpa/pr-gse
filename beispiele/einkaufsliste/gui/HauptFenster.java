@@ -41,20 +41,20 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 /**
- *
+ * Hauptfenster der Einkaufsliste-Applikation
  * @author Rudolf Radlbauer
  */
 public class HauptFenster extends JFrame
 {
-    private DateiAnbindung dateiAnbindung;
-    private ProduktVerwaltung produkte;
-    private EinkaufsListe liste = new EinkaufsListeImplement();
-    private boolean bearbeitet = false;
-    private File datei;
+    private DateiAnbindung dateiAnbindung;  // für das Speichern und Laden
+    private ProduktVerwaltung produkte;		// Referenz auf die verwendete ProduktVerwaltung
+    private EinkaufsListe liste = new EinkaufsListeImplement();   // verwendete Einkaufsliste
+    private boolean bearbeitet = false;  // müssen wir etwas speichern?
+    private File datei;  // aktuell bearbeitete Datei
     
-    private DefaultListModel lmProdukte = new DefaultListModel();
+    private DefaultListModel lmProdukte = new DefaultListModel();   // Datenmodell für Produkteliste
     private JList jlProdukte = new JList(lmProdukte);
-    private DefaultListModel lmEinkauf = new DefaultListModel();
+    private DefaultListModel lmEinkauf = new DefaultListModel();    // Datenmodell für Einkaufsliste
     private JList jlEinkauf = new JList(lmEinkauf);
     private JButton bnAdd = new JButton("-->");
     private JButton bnDelete = new JButton("<--");
@@ -62,15 +62,21 @@ public class HauptFenster extends JFrame
     private JSpinner spAnzahl = new JSpinner(snmAnzahl);
     private JTextArea taAusgabe = new JTextArea();
 
+    /**
+     * Aufbau des Hauptfensters
+     * @param dateiAnbindung Referenz auf die Implementierung der Dateianbindung
+     */
     public HauptFenster(DateiAnbindung dateiAnbindung)
     {
         try
         {
             this.dateiAnbindung = dateiAnbindung;
-            initFrame();
-            initMenu();
+            initFrame();  // Fenster zusammenbauen
+            initMenu();   // Menu zusammenbauen
+            // Die Produktliste wird immer in der Datei "produkte.dat" abgelegt
             produkte = dateiAnbindung.ladeProdukte(new File("produkte.dat"));
-            aktualisieren();
+            aktualisieren();  // Listen und Eingabefelder aktualisieren
+            // Wir wollen das Schließen des Fensters kontrollieren
             setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
             addWindowListener(new WindowAdapter()
             {
@@ -87,44 +93,56 @@ public class HauptFenster extends JFrame
         }
     }
 
+    /**
+     * wird aufgerufen, wenn das Hauptfenster geschlossen wird.
+     * Zuerst werden eventuelle Änderungen gespeichert, dann wird das Programm beendet
+     */
     private void exit()
     {
         try
         {
+        	// Produktliste wird in jedem Fall gespeichert
             dateiAnbindung.speichern(produkte, new File("produkte.dat"));
-            if (bearbeitet)
+            if (bearbeitet)  // gibt es Änderungen
             {
             	switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
             	{
-            	case JOptionPane.NO_OPTION:
+            	case JOptionPane.NO_OPTION:  // Benutzer will Änderungen verwerfen
             		System.exit(0);
             		
-            	case JOptionPane.YES_OPTION:
+            	case JOptionPane.YES_OPTION: // Benutzer will Änderungen speichern
             		speichern();
             		if (!bearbeitet)
             			System.exit(0);
             		
-            	case JOptionPane.CANCEL_OPTION:
+            	case JOptionPane.CANCEL_OPTION:  // Benutzer will doch noch weitermachen
             		break;
             	}
             }
             else
-            	System.exit(0);
+            	System.exit(0);  // nichts zu speichern
         } catch (EinkaufsListeException ex)
         {
+        	ex.printStackTrace();
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
 
 
+    /**
+     * aktualisiert die Listen und Eingabefelder
+     */
     private void aktualisieren()
     {
         try
         {
+        	// aktualisiere Einkaufsliste
         	lmEinkauf.clear();
         	for (Produkt p : liste.liste())
         		lmEinkauf.addElement(p);
         	
+        	// aktualisiere Produktliste
+        	// (Die Produkte, welche in der Einkaufsliste sind, gehören nicht hinein)
             lmProdukte.clear();
             for (Produkt p : produkte.liste())
             {
@@ -132,8 +150,10 @@ public class HauptFenster extends JFrame
             		lmProdukte.addElement(p);
             }
             
+            // aktualisiere das Ausgabefeld
             aktualisiereAusgabe();
-                        
+             
+            // Daten wurden geladen, daher keine Änderungen
             bearbeitet = false;
             
         } catch (EinkaufsListeException ex)
@@ -143,6 +163,10 @@ public class HauptFenster extends JFrame
         }
     }
     
+    /**
+     * aktualisiert das Ausgabefeld
+     * @throws EinkaufsListeException
+     */
     private void aktualisiereAusgabe() throws EinkaufsListeException
     {
         int anzahlProdukte = liste.anzahlProdukte();
@@ -152,12 +176,16 @@ public class HauptFenster extends JFrame
         StringBuilder txt = new StringBuilder("Gesamtpreis: ").append(gesamtPreis);
         txt.append("\nAnzahl Produkte: ").append(liste.anzahlProdukte());
         txt.append("\ndavon Bio-Produkte: ").append(anzahlBio);
+        // Prozent kann man nur berechnen, falls überhaupt ein Produkt vorhanden ist
         if (anzahlProdukte > 0)
         	txt.append(" (").append(anzahlBio * 100 / anzahlProdukte).append("%)");
         taAusgabe.setText(txt.toString());
     }
     
 
+    /**
+     * Aufbau des Fensters
+     */
     private void initFrame()
     {
         setLayout(new BorderLayout());
@@ -223,6 +251,9 @@ public class HauptFenster extends JFrame
 
     }
     
+    /**
+     * Aufbau des Menus
+     */
     private void initMenu()
     {
         JMenuBar menubar = new JMenuBar();
@@ -307,51 +338,61 @@ public class HauptFenster extends JFrame
 
     }
 
+    /**
+     * Eine neue Einkaufsliste wird angelegt.
+     * Davor müssen eventuell Änderungen in der alten Liste gespeichert werden.
+     * @throws EinkaufsListeException
+     */
     private void neueListe() throws EinkaufsListeException
 	{
-		if (bearbeitet)
+		if (bearbeitet)  // muss etwas gespeichert werden?
 		{
 			switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
 			{
-				case JOptionPane.YES_OPTION:
+				case JOptionPane.YES_OPTION:  // Benutzer will speichern
 					speichern();
 					break;
 					
-				case JOptionPane.NO_OPTION:
+				case JOptionPane.NO_OPTION: // Benutzer will Änderungen verwerfen
 					break;
 					
-				case JOptionPane.CANCEL_OPTION:
+				case JOptionPane.CANCEL_OPTION: // Benutzer will alte Liste weiter bearbeiten
 					return;
 			}
 		}
-		liste = new EinkaufsListeImplement();
-		lmEinkauf.clear();
+		liste = new EinkaufsListeImplement();  // neue Einkaufsliste
+		lmEinkauf.clear();  
 		datei = null;
 		aktualisieren();
 	}
 
+    /**
+     * Bestehende Einkaufsliste wird geöffnet
+     * Davor müssen eventuelle Änderungen gespeichert werden
+     * @throws EinkaufsListeException
+     */
 	private void listeOeffnen() throws EinkaufsListeException
 	{
-		if (bearbeitet)
+		if (bearbeitet)  // ist etwas zu speichern?
 		{
 			switch(JOptionPane.showConfirmDialog(this, "Änderungen speichern?"))
 			{
-			case JOptionPane.YES_OPTION:
+			case JOptionPane.YES_OPTION:  // Benutzer will speichern
 				speichern();
 				break;
 				
-			case JOptionPane.NO_OPTION:
+			case JOptionPane.NO_OPTION:   // Benutzer will Änderungen verwerfen
 				break;
 				
-			case JOptionPane.CANCEL_OPTION:
+			case JOptionPane.CANCEL_OPTION:  // Benutzer will doch noch alte Liste bearbeiten
 				return;
 			}
 		}
 			
-			
+		// Auswahl der bestehenden Liste	
 		JFileChooser chooser = new JFileChooser();
 		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+		if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)  // hat Benutzer tatsächlich ausgewählt?
 		{
 			datei = chooser.getSelectedFile();
 			liste = dateiAnbindung.ladeEinkaufsliste(datei);
@@ -360,20 +401,30 @@ public class HauptFenster extends JFrame
 		
 	}
 
+	/**
+	 * Speichern der aktuell bearbeiteten Einkaufsliste
+	 * @throws EinkaufsListeException
+	 */
 	private void speichern() throws EinkaufsListeException
 	{
+		// Falls die Liste neu angelegt wurde, muss eine neue Datei ausgewählt werden
 		if (datei == null)
 			speichernUnter();
 		else
-		{
+		{  // andernfalls wird die geöffnete Datei aktualisiert
 			dateiAnbindung.speichern(liste, datei);
 			bearbeitet = false;
 		}
 		
 	}
 
+	/**
+	 * Einkaufsliste wird in einer neuen Datei gespeichert
+	 * @throws EinkaufsListeException
+	 */
 	private void speichernUnter() throws EinkaufsListeException
 	{
+		// Auswahl der Datei
 		JFileChooser chooser = new JFileChooser();
 		if (chooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
 		{
@@ -383,6 +434,9 @@ public class HauptFenster extends JFrame
 		}		
 	}
 
+	/**
+	 * ein Produkt wird in die Einkaufsliste eingefügt
+	 */
 	private void produktDazu()
     {
         Produkt p = (Produkt) jlProdukte.getSelectedValue();
@@ -405,6 +459,9 @@ public class HauptFenster extends JFrame
         }
     }
 
+	/**
+	 * ein Produkt wird aus der Einkaufsliste entfernt
+	 */
     private void produktWeg()
     {
         Produkt p = (Produkt) jlEinkauf.getSelectedValue();
@@ -425,6 +482,10 @@ public class HauptFenster extends JFrame
         }
     }
 
+    /**
+     * Ein Produkt der Einkaufsliste wird selektiert
+     * Dabei muss der Spinner für die Anzahl angepasst werden
+     */
     private void auswahl()
     {
         Produkt p = (Produkt) jlEinkauf.getSelectedValue();
@@ -440,6 +501,9 @@ public class HauptFenster extends JFrame
         }
     }
 
+    /**
+     * Die Anzahl für ein Produkt wurde verändert
+     */
     private void anzahlNeu()
     {
         Produkt p = (Produkt) jlEinkauf.getSelectedValue();
@@ -458,6 +522,10 @@ public class HauptFenster extends JFrame
 
     }
 
+    /**
+     * öffnet den Dialog zum bearbeiten der Produkte.
+     * Danach müssen die Listen aktualisiert werden.
+     */
     private void produkteBearbeiten()
     {
         ProduktFenster pf = new ProduktFenster(produkte);
