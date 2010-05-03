@@ -108,6 +108,8 @@ public class HauptFenster extends JFrame
             		break;
             	}
             }
+            else
+            	System.exit(0);
         } catch (EinkaufsListeException ex)
         {
             JOptionPane.showMessageDialog(this, ex.getMessage());
