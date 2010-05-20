@@ -42,6 +42,8 @@ Die Methode `lesen(…)` liefert als Rückgabewert eine Liste mit `Anruf`-Instan
 
 Erstellen Sie die Fenster-Klasse `AnrufAnzeige`, welche im Konstruktor eine Liste von `Anruf`-Instanzen (`List<Anruf>`) übergeben bekommt und diese Anrufe dann folgendermaßen anzeigt:
 
- 
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/anrufanzeige.jpg
+</p>
 
 Bei Betätigen der Schaltfläche „-->“ werden die Daten des nächsten Anrufs aus der Liste angezeigt, bei Betätigen der Schaltfläche „<--“ werden die Daten des vorherigen Anrufs angezeigt.
