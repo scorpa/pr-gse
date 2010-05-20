@@ -25,7 +25,7 @@ Die Klasse `Anruf` enthält die Daten für einen Anruf und bietet `get`- und `se
 
 Im Interface `DateiAnbindung` sind die Methoden zum Lesen und Schreiben der Anrufe aus der / in die CSV-Datei definiert.
 
-_(Diese Klassen sowie eine CSV-Datei nehmen Sie als Vorgabe aus der Musterlösung.)_
+_(Diese Klassen sowie eine CSV-Datei nehmen Sie als Vorgabe aus der [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/anrufe Musterlösung].)_
 
  
 == Aufgabenstellung ==
