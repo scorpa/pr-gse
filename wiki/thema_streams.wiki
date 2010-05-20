@@ -14,3 +14,4 @@ In diesem [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/st
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_streams_anrufstatistik Anrufstatistik] || || ||
 || [uebung_streams_videothek Videothek] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/videothek videothek] || Prüfungsaufgabe ||
+|| [uebung_streams_anrufstatistik_simple Anrufstatistik (einfach)] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/anrufe anrufe] || Prüfungsaufgabe ||
