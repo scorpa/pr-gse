@@ -2,7 +2,7 @@
 
 = User-Manager =
 
-_(Für diese Übung gehören die Dateien `User.java`, `UserManager.java`, `UserManagerException.java` und `user.sql` aus der [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/usermanager Muserlösung] zur Angabe)._
+_(Für diese Übung gehören die Dateien `User.java`, `UserManager.java`, `UserManagerException.java` und `user.sql` aus der [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/usermanager Muserlösung] zur Angabe)._
 
 Für eine Benutzerverwaltung steht die Datenbanktabelle USER zur Verfügung (user.sql).
 Diese ist folgendermaßen aufgebaut:
