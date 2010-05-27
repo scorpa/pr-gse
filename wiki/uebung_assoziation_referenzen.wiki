@@ -2,7 +2,7 @@
 
 = Referenzen =
 
-Importieren Sie das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/referenzen referenzen] und öffnen Sie in diesem Projekt die Klasse `Test`.
+Importieren Sie das Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/referenzen referenzen] und öffnen Sie in diesem Projekt die Klasse `Test`.
 	
 Im Menu `"Options" – "Preferences"` können Sie die Option `"Display line numbers"` auswählen.
 
