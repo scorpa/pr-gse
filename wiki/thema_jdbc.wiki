@@ -35,7 +35,7 @@ siehe dazu http://www.torsten-horn.de/techdocs/java-sql.htm
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_jdbc_dbtable Tabelle auf JTable] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/dbtable dbtable] || ||
+|| [uebung_jdbc_dbtable Tabelle auf JTable] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/dbtable dbtable] || ||
 || [uebung_jdbc_mitarbeiter Mitarbeiterdatenbank] || || ||
-|| [uebung_jdbc_buchungen Buchungen] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/buchungen buchungen] || Prüfungsbeispiel ||
-|| [uebung_jdbc_usermanager User-Manager] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/usermanager usermanager] || Prüfungsbeispiel ||
+|| [uebung_jdbc_buchungen Buchungen] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/buchungen buchungen] || Prüfungsbeispiel ||
+|| [uebung_jdbc_usermanager User-Manager] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/usermanager usermanager] || Prüfungsbeispiel ||
