@@ -10,4 +10,4 @@ Ein Beispiel befindet sich [http://code.google.com/p/pr-gse/source/browse/#svn/t
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 ||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
-||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||
+||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue05_Einkaufsliste.doc Einkaufsliste] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/einkaufsliste einkaufsliste] || Prüfungsaufgabe  ||
