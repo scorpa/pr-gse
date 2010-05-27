@@ -54,9 +54,9 @@ Die Implementierung dieser Lösung befindet sich in den Übungen.
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
-|| [uebung_vererbung_schulverwaltung Schulverwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/schulverwaltung schulverwaltung] || Dieses Beispiel ist oben besprochen ||
-|| [uebung_vererbung_lohnverrechnung Lohnverrechnung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/lohnverrechnung lohnverrechnung]|| ||
+|| [uebung_vererbung_schulverwaltung Schulverwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/schulverwaltung schulverwaltung] || Dieses Beispiel ist oben besprochen ||
+|| [uebung_vererbung_lohnverrechnung Lohnverrechnung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/lohnverrechnung lohnverrechnung]|| ||
 || [uebung_vererbung_transport_v3 Transport_V3] || || ||
 || [uebung_vererbung_fuhrpark Fuhrpark] || || ||
 || [uebung_abstraktion_logik Logik] || || ||
-|| [uebung_abstraktion_rechenquiz Rechenquiz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/rechenquiz rechenquiz] || Prüfungsbeispiel ||
+|| [uebung_abstraktion_rechenquiz Rechenquiz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/rechenquiz rechenquiz] || Prüfungsbeispiel ||
