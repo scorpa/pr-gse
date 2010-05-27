@@ -2,7 +2,7 @@
 
 = Konto-Dialog =
 
-Erstellen Sie einen Anzeige- und Eingabe-Dialog für die Klasse [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/konto/Konto.java Konto].
+Erstellen Sie einen Anzeige- und Eingabe-Dialog für die Klasse [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/konto/Konto.java Konto].
 
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/KontoDialog.JPG
 
