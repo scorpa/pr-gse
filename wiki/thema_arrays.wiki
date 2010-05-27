@@ -197,7 +197,7 @@ http://pr-gse.googlecode.com/svn/wiki/images/Arrays/loeschen.png
 Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-||  [uebung_arrays_sensor Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sensor sensor] ||  Prüfungsaufgabe ||
+||  [uebung_arrays_sensor Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/sensor sensor] ||  Prüfungsaufgabe ||
 || [uebung_arrays_bankomat Bankomat] || || ||
 ||  [uebung_arrays_bibliothek Bibliothek] ||  || siehe oben beschriebenes Projekt 
 [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arraysbibliothek/ bibliothek] ||
@@ -207,10 +207,10 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 || Millionenshow ||  || vereinfachte Simulation der Millionenshow ||
 ||  [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] ||  ||  Prüfungsaufgabe ||
 </wiki:comment>
-||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/randomtest randomtest] ||  Musterlösung ist derzeit unvollständig ||
+||  [uebung_arrays_randomtest RandomTest] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/randomtest randomtest] ||  Musterlösung ist derzeit unvollständig ||
 ||  [uebung_arrays_binaerzahl BinaerZahl] ||  ||  noch keine Musterlösung ||
-||  [uebung_arrays_tischlerei Tischlerei] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/plattenverwaltung plattenverwaltung] || Prüfungsaufgabe ||
-||  [uebung_arrays_cdverwaltung CD-Verwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/cdverwaltung cdverwaltung] || Prüfungsaufgabe ||
+||  [uebung_arrays_tischlerei Tischlerei] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/plattenverwaltung plattenverwaltung] || Prüfungsaufgabe ||
+||  [uebung_arrays_cdverwaltung CD-Verwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/cdverwaltung cdverwaltung] || Prüfungsaufgabe ||
 
 
 Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
@@ -219,6 +219,6 @@ Es gibt auch einige Übungen auf dem Server http://willnix.spengergasse.at - gse
 || 08_Array_Medium || Uebung_002.pdf <br/> Uebung_003.pdf ||
 || 09_Array_Hard|| Uebung_002.pdf <br/> Uebung_003.pdf ||
 
-[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/lotto Musterlösung für 08_Array_Medium Uebung_001.pdf (Lotto)]
+[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/lotto Musterlösung für 08_Array_Medium Uebung_001.pdf (Lotto)]
 
 Eine ganz amüsante Übung befindet sich in 10_Gefangen.
