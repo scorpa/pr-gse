@@ -6,14 +6,14 @@
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [uebung_assoziation_uhrzeit Uhrzeit] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/uhrzeit uhrzeit] || Digitale Zeitanzeige (einzelne Klasse oder mit Zähler-Klasse) ||
-|| [uebung_assoziation_referenzen Referenzen] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/referenzen referenzen] || Arbeiten mit Referenzen / Debugger (Projekt ist in diesem Fall Teil der Angabe) ||
+|| [uebung_assoziation_uhrzeit Uhrzeit] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/uhrzeit uhrzeit] || Digitale Zeitanzeige (einzelne Klasse oder mit Zähler-Klasse) ||
+|| [uebung_assoziation_referenzen Referenzen] ||   [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/referenzen referenzen] || Arbeiten mit Referenzen / Debugger (Projekt ist in diesem Fall Teil der Angabe) ||
 || [uebung_assoziation_referenzen_2 Referenzen (2)] ||    || kleines Quiz ||
-|| [uebung_assoziation_sitznachbarn Sitznachbarn] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/sitznachbarn sitznachbarn] || ziemlich knifflige Aufgabe mit Rekursion ||
-|| [uebung_assoziation_rechteck_A Rechteck (A)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/zeichnen1 zeichnen1] || Prüfungsaufgabe ||
-|| [uebung_assoziation_rechteck_B Rechteck (B)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/zeichnen2 zeichnen2] || Prüfungsaufgabe ||
+|| [uebung_assoziation_sitznachbarn Sitznachbarn] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/sitznachbarn sitznachbarn] || ziemlich knifflige Aufgabe mit Rekursion ||
+|| [uebung_assoziation_rechteck_A Rechteck (A)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/zeichnen1 zeichnen1] || Prüfungsaufgabe ||
+|| [uebung_assoziation_rechteck_B Rechteck (B)] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/zeichnen2 zeichnen2] || Prüfungsaufgabe ||
 || [uebung_assoziation_bruch Bruchrechnen] || || ||
 || [uebung_assoziation_complex Complex] || || für das Rechnen mit Komplexen Zahlen ||
 || [uebung_assoziation_village Village] || || bauen wir ein Dorf ||
 || [uebung_assoziation_town Town] || || mehrere Dörfer wachsen zu einer Stadt zusammen ||
-|| [uebung_assoziation_fertigteilhaus Fertigteilhaus] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/fertigteilhaus fertigteilhaus] || Prüfungsaufgabe ||
+|| [uebung_assoziation_fertigteilhaus Fertigteilhaus] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/fertigteilhaus fertigteilhaus] || Prüfungsaufgabe ||
