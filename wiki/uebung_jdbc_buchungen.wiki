@@ -4,9 +4,9 @@
 
 Im Folgenden ist ein System zum Abspeichern von Buchungen in einer Datenbank dargestellt.
 
-Objekte der Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/Buchung.java Buchung] repräsentieren Datensätze in der Datenbanktabelle BUCHUNGEN. (Diese Datenbanktabelle wird mit dem Script [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/buchungen.sql buchungen.sql] angelegt.)
+Objekte der Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/buchungen/Buchung.java Buchung] repräsentieren Datensätze in der Datenbanktabelle BUCHUNGEN. (Diese Datenbanktabelle wird mit dem Script [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/buchungen/buchungen.sql buchungen.sql] angelegt.)
 
-Das Interface [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/BuchungDAO.java `BuchungDAO`] definiert einige Zugriffsmethoden auf die Datenbanktabelle BUCHUNGEN. Diese sollen in der Klasse `BuchungDAOImpl` implementiert werden. Erstellen Sie diese Klasse!
+Das Interface [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/buchungen/BuchungDAO.java `BuchungDAO`] definiert einige Zugriffsmethoden auf die Datenbanktabelle BUCHUNGEN. Diese sollen in der Klasse `BuchungDAOImpl` implementiert werden. Erstellen Sie diese Klasse!
 
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/buchungen.jpg
@@ -20,11 +20,11 @@ Die Methode `update(…)` bekommt als Parameter eine Liste von `Buchung`-Instanz
 
 Als Rückgabewert wird eine Liste aller jener `Buchung`-Instanzen geliefert, für welche das UPDATE erfolgreich (der entsprechende Datensatz in der Tabelle vorhanden) war.
 
-Jede Methode löst eine [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/DBException.java DBException] aus, wenn bei einem Datenbankzugriff ein Fehler auftritt.
+Jede Methode löst eine [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/buchungen/DBException.java DBException] aus, wenn bei einem Datenbankzugriff ein Fehler auftritt.
 
 ----
 
-Die Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/buchungen/Test.java Test] enthält eine main(…)-Methode, welche bei richtig implementierter Klasse BuchungDAOImpl etwa folgende Ausgabe produziert:
+Die Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/buchungen/Test.java Test] enthält eine main(…)-Methode, welche bei richtig implementierter Klasse BuchungDAOImpl etwa folgende Ausgabe produziert:
 
 {{{
 Verbindung zur Datenbank hergestellt
