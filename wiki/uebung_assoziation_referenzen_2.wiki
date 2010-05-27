@@ -3,7 +3,7 @@
 = Referenzen (2) =
 
 Was wird bei einem Aufruf der Methode `test()` der folgenden Klasse `Test` auf die Konsole ausgegeben? 
-(Es wird dabei die Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/zeichnen2/Punkt.java Punkt] von Aufgabe [http://code.google.com/p/pr-gse/wiki/uebung_assoziation_rechteck_B Rechteck (B)] als gegeben angenommen.)
+(Es wird dabei die Klasse [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/zeichnen2/Punkt.java Punkt] von Aufgabe [http://code.google.com/p/pr-gse/wiki/uebung_assoziation_rechteck_B Rechteck (B)] als gegeben angenommen.)
 
 {{{
 
