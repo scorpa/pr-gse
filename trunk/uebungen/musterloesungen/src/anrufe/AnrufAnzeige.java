@@ -117,7 +117,7 @@ public class AnrufAnzeige extends JFrame
 		try
 		{
 			DateiAnbindung io = new DateiImplementierung();
-			AnrufAnzeige anzeige = new AnrufAnzeige(io.lesen("anrufe/anrufe.csv"));
+			AnrufAnzeige anzeige = new AnrufAnzeige(io.lesen("anrufe.csv"));
 			anzeige.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			anzeige.pack();
 			anzeige.setVisible(true);
