@@ -89,5 +89,5 @@ Soll die Suche von hinten begonnen werden, dann verwendet man die Methode {{{las
 
 = Übungen = 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [uebung_string_operationen_javadoc_mitglied Mitglied] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/mitglied mitglied] ||  ||
-|| [uebung_string_operationen_javadoc_textanalyzer Text-analyzer] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/textanalyzer1 textanalyzer1] || Musterlösung nur für einen Teil der Aufgabenstellung ||
+|| [uebung_string_operationen_javadoc_mitglied Mitglied] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/mitglied mitglied] ||  ||
+|| [uebung_string_operationen_javadoc_textanalyzer Text-analyzer] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/textanalyzer1 textanalyzer1] || Musterlösung nur für einen Teil der Aufgabenstellung ||
