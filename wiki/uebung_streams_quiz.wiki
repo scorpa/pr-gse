@@ -2,7 +2,7 @@
 
 = Quiz =
 
-In der Datei [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/quiz/fragen.csv fragen.csv] befinden sich die Fragen für ein Quiz.
+In der Datei [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/quiz/fragen.csv fragen.csv] befinden sich die Fragen für ein Quiz.
 
 Jede Zeile enthält die Frage und die möglichen Antworten im folgenden Format:
 Die einzelnen Felder sind durch das Zeichen „|“ getrennt.
