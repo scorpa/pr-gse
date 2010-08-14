@@ -2,7 +2,7 @@
 
 = Dateianbindung und Streams =
 
-In diesem [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/streams Beispiel] werden sowohl Serialisierung als auch textbasierte und binäre Dateianbindung demonstriert.
+In diesem [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/src/streams Beispiel] werden sowohl Serialisierung als auch textbasierte und binäre Dateianbindung demonstriert.
 
 === Literatur ===
 [http://openbook.galileocomputing.de/javainsel8/javainsel_14_001.htm#mjdb40230f3b27c05e1faa3f8cf6ab830a Java ist auch eine Insel - Kapitel 14]
