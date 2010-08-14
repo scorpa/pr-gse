@@ -14,7 +14,7 @@ Hier sei auf das Beispiel im Abschnitt [thema_programm1 "1. umfangreicheres Prog
 
 === Ereignisbehandlung ===
 
-Ein Beispiel befindet sich hier: [http://pr-gse.googlecode.com/svn/trunk/beispiele/swing/ Bucheingabe].
+Ein Beispiel befindet sich hier: [http://pr-gse.googlecode.com/svn/trunk/beispiele/src/swing/ Bucheingabe].
 
 Es gibt in einer grafischen Oberfläche viele Arten von Ereignissen: Mausklick, Eingaben über Tastatur, Maus bewegen, Fenster nach vorne, Fenster schließen, ....
 
