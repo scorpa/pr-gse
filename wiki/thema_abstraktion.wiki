@@ -2,7 +2,7 @@
 
 = Abstraktion =
 
-Das Beispiel aus dem Unterricht vom 4.3.2009 befindet sich hier: [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/vererbung/zeichnen Zeichenprogramm].
+Das Beispiel aus dem Unterricht vom 4.3.2009 befindet sich hier: [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/src/vererbung/zeichnen Zeichenprogramm].
 
 === Übungen ===
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
