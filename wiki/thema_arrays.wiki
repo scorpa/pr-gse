@@ -114,11 +114,11 @@ In diesem Beispiel wird für jedes Element abgefragt, ob es auch wirklich auf ei
 
 === Eigene Implementierung von !!ArrayList ===
 
-[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arrays/liste Code vom Unterricht]
+[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispielesrce/arrays/liste Code vom Unterricht]
 
 === Buchverwaltung ===
 
-_der komplette Quellcode befindet sich im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arrays/bibliothek bibliothek]_
+_der komplette Quellcode befindet sich im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispielesrce/arrays/bibliothek bibliothek]_
 
 Ein typisches Beispiel für die Verwendung eines Arrays ist eine Verwaltung irgendwelcher Objekte (in diesem Beispiel {{{Buch}}}-Instanzen).
 In der Praxis würde man allerdings so eine Verwaltungsklasse eher mit einer {{{Collection}}} (z.B. {{{ArrayList}}}) realisieren. Aber es ist auch durchaus möglich, ein Array dafür zu verwenden.
@@ -200,7 +200,7 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 ||  [uebung_arrays_sensor Sensor] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/sensor sensor] ||  Prüfungsaufgabe ||
 || [uebung_arrays_bankomat Bankomat] || || ||
 ||  [uebung_arrays_bibliothek Bibliothek] ||  || siehe oben beschriebenes Projekt 
-[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/arraysbibliothek/ bibliothek] ||
+[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispielesrce/arraysbibliothek/ bibliothek] ||
 ||  [uebung_arrays_windkraft_v2 Windkraft_V2] ||   ||  ||
 <wiki:comment>
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/Aufgabe13_Transport_v2.doc Transport_V2] ||  ||   ||
