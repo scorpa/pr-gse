@@ -2,7 +2,7 @@
 
 = Exceptions =
 
-Beispiel aus dem Unterricht: [http://pr-gse.googlecode.com/svn/trunk/beispiele/exceptions/person Person]
+Beispiel aus dem Unterricht: [http://pr-gse.googlecode.com/svn/trunk/beispiele/src/exceptions/person Person]
 
 === Literatur ===
 [http://openbook.galileocomputing.de/javainsel8/javainsel_08_001.htm#mj0abf9e20a417f31d72c30d02f3fbffd2 Java ist auch eine Insel - Kapitel 8]
