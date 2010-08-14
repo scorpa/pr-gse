@@ -6,7 +6,7 @@
 == Übungen  ==
 Für diese Übungen wird die folgende Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/eingabe/Input.java Input] benötigt. 
 
-Ein Beispiel befindet sich [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/ui/transport hier]
+Ein Beispiel befindet sich [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/beispiele/src/ui/transport hier]
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 ||  [uebung_ui_buchverwaltung Buchverwaltung mit UI] ||  ||  noch keine Musterlösung vorhanden ||
