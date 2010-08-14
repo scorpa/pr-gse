@@ -2,4 +2,4 @@
 
 = Innere Klassen=
 
-Hier sei auf folgendes [http://pr-gse.googlecode.com/svn/trunk/beispiele/innere_klassen Beispiel] verwiesen.
+Hier sei auf folgendes [http://pr-gse.googlecode.com/svn/trunk/beispiele/src/innere_klassen Beispiel] verwiesen.
