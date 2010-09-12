@@ -2,7 +2,7 @@
 
 = Terminplaner =
 
-Kopieren Sie sich das Java-Package [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/termine termine] für die folgenden beiden Aufgaben:
+Kopieren Sie sich das Java-Package [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/vorgabe/src/termine termine] für die folgenden beiden Aufgaben:
 
 
 1) Erstellen Sie eine Klasse, welche das Interface `TerminPlaner` entsprechend der darin enthaltenen Dokumentation implementiert.
