@@ -16,4 +16,4 @@
 
 === Beurteilung ===
   * 3 praktische Leistungsfeststellungen (jeweils 50 Punkte), davon 1 Streichresultat
-  * Übungen: jeweils 2 Punkte, wenn eine Übung hergezeigt wird
+  * Übungen: jeweils 1 Punkt, wenn eine Übung hergezeigt wird
