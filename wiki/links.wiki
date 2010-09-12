@@ -1,8 +1,5 @@
 #summary relevante WEB-Links.
 
-== Inhalt ==
-
-<wiki:toc max_depth="3" />
 
 == Resourcen, Software, ... ==
  * [http://java.sun.com Die Java-Seite von SUN]
