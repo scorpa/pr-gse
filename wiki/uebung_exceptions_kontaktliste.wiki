@@ -30,7 +30,7 @@ Die Methode `sortieren(...)` sortiert nach dem übergebenen Kriterium. Als Krite
 
 === Zusatzaufgabe ===
 
-Kopieren Sie die Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/eingabe/Input.java `Input`] und fügen Sie eine Klassenmethode 
+Kopieren Sie die Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/src/eingabe/Input.java `Input`] und fügen Sie eine Klassenmethode 
 {{{
 public static Kontakt readKontakt()
 }}}
