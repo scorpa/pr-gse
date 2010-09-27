@@ -20,7 +20,7 @@ Weiters sind die Übungen aus dem [http://www.bluej.org/objects-first/chapters/o
 
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
-|| [uebung_objekte_und_klassen_rechteck Recheck] || || Einfache Rechteck-Klasse ||
+|| [uebung_objekte_und_klassen_rechteck Rechteck] || || Einfache Rechteck-Klasse ||
 || [uebung_objekte_und_klassen_konto_einfach Konto (einfach)] || || Einfache Konto-Klasse ||
 || [uebung_objekte_und_klassen_auto Auto] || || dieses Auto fährt auch ;-) ||
 || [uebung_objekte_und_klassen_spannungsteiler Spannungsteiler] || || ein bisschen Elektronik ||
