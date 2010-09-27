@@ -25,6 +25,6 @@ Ist der Gang noch auf 0, so bewirkt ein Aufruf von `beschleunigen()`, dass der G
 
 Das Automatikgetriebe hat 5 Gänge. Danach kann noch beschleunigt werden, bis die Drehzahl 8000 erreicht ist, dann ist die Maximalgeschwindigkeit erreicht. Ein weiteres Beschleunigen bleibt dann wirkungslos.
 
-Ein Aufruf der Methode `bremsen()` bewirkt eine Reduzierung der Drehzahl auf die Hälfte. Wird die Drehzahl 1000 erreicht oder unterschritten, dann schaltet das Getriebe automatisch auf den nächstniedrigeren Gang. Beim Hinunterschalten bleibt die Geschwindigkeit konstant; d.h. die Drehzahl wird wieder entsprechend erhöht.
+Ein Aufruf der Methode `bremsen()` bewirkt eine Reduzierung der Drehzahl auf die Hälfte. Wird die Drehzahl 1000 erreicht oder unterschritten, dann schaltet das Getriebe automatisch auf den nächstniedrigeren Gang. Beim Hinunterschalten bleibt die Geschwindigkeit konstant (außer wenn der Gang 0 erreicht wurde); d.h. die Drehzahl wird wieder entsprechend erhöht.
 
 Sobald der Gang 0 erreicht ist steht das Auto. Ein weiteres Bremsen bleibt dann wirkungslos.
