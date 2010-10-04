@@ -13,5 +13,6 @@
 || [uebung_verzweigung_datum Datum] ||   [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/datum datum] || Datums-Klasse, die es schon etwas in sich hat ||
 || [uebung_verzweigung_zaehler Zähler] || (im Projekt [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/uhrzeit uhrzeit])   || Zähler wie im Amt ||
 || [uebung_verzweigung_konto Konto] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/konto konto]   || Prüfungsaufgabe ||
+|| [uebung_verzweigung_projektverwaltung Projektverwaltung] || || Verwaltung der Projektkosten ||
 || [uebung_verzweigung_automatik Automatikgetriebe] || || Auto mit Automatikgetriebe ||
 || [uebung_verzweigung_bankomat Bankomat] || || vereinfachter Bankomat - hier kann man auch ohne Karte abheben ||
