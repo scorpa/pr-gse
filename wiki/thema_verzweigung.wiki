@@ -16,4 +16,4 @@
 || [uebung_verzweigung_projektverwaltung Projektverwaltung] || || Verwaltung der Projektkosten ||
 || [uebung_verzweigung_automatik Automatikgetriebe] || || Auto mit Automatikgetriebe ||
 || [uebung_verzweigung_bankomat Bankomat] || || vereinfachter Bankomat - hier kann man auch ohne Karte abheben ||
-|| [uebung_verzweigung_mitarbeiter Mitarbeiter] || || Lohnverrechnung ||
+|| [uebung_verzweigung_mitarbeiter Mitarbeiter] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/mitarbeiter mitarbeiter] || Lohnverrechnung ||
