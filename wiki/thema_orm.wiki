@@ -1,0 +1,10 @@
+#summary Object Relational Mapping (ORM)
+
+= Object Relational Mapping (ORM) =
+
+Zusammenhang zwischen Datensätzen in einer relationalen Datenbank und Objekten im Objektmodell der Programmiersprache
+
+=== Literatur ===
+  * [http://en.wikipedia.org/wiki/Object-relational_mapping ORM in Wikipedia]
+  * [http://www.agiledata.org/essays/mappingObjects.html Mapping Objects to Relational Databases: O/R Mapping In Detail]
+  * [http://java.sun.com/blueprints/corej2eepatterns/Patterns/DataAccessObject.html Core J2EE Patterns - Data Access Object]
