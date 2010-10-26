@@ -22,7 +22,6 @@
     * [thema_jdbc JDBC]
     * [thema_jdbc_hsqldb HSQLDB]
     * [thema_orm Object Relational Mapping (ORM)]
-    * [http://pr-gse.googlecode.com/svn/wiki/ppt/ORM.ppt Object Relational Mapping (ORM)]
   * WEB-Applikationen
     * [thema_web_begriffe Begriffe]
     * [thema_web_server WEB-Server]
