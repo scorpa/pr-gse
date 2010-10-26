@@ -32,3 +32,12 @@
     * [uebung_arrays_binaerzahl BinaerZahl]
   * ArrayList
     * [uebung_arraylist_anrufstatistik Anrufstatistik]
+  * Benutzer-Interaktion (Eingabe)
+    * [uebung_ui_buchverwaltung Buchverwaltung mit UI]
+  * Interface
+    * [uebung_interface_termine Terminplaner]
+    * [uebung_interface_reversi Reversi]
+  * Vererbung
+    * [uebung_vererbung_transport_v3 Transport_V3]
+    * [uebung_vererbung_fuhrpark Fuhrpark]
+    * [uebung_abstraktion_logik Logik]
