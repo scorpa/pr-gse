@@ -30,3 +30,10 @@ Um sinnvoll mit MySQL arbeiten zu können empfiehlt es sich, die aktuelle Versio
     isbn als primary key definieren
 
     http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/primary_key.png
+
+    Nun die Schaltfläche `SPEICHERN` betätigen.
+
+  * Beispieldaten einfügen
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/beispieldaten.png
+
+    
