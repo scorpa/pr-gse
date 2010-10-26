@@ -7,7 +7,7 @@
 
 Hier ist ein [tuturial_jdbc_hsqldb Tutorial] für den schnellen Einstieg mit [http://www.hsqldb.org HSQLDB] (siehe auch [thema_jdbc_hsqldb Thema HSQLDB]).
 
-Hier ist ein [tuturial_jdbc_mysql Tutorial] für den schnellen Einstieg mit [http://www.mysql.de MySQL].
+Hier ist ein [tutorial_jdbc_mysql Tutorial] für den schnellen Einstieg mit [http://www.mysql.de MySQL].
 
 === Treibertypen ===
 
