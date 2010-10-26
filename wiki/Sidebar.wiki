@@ -22,10 +22,6 @@
     * [thema_jdbc JDBC]
     * [thema_jdbc_hsqldb HSQLDB]
     * [http://pr-gse.googlecode.com/svn/wiki/ppt/ORM.ppt Object Relational Mapping (ORM)]
-    * [thema_jdbc_performance_sicherheit Performance und Sicherheit]
-    * [thema_jdbc_datenkonsistenz Datenkonsistenz]
-    * [thema_jdbc_concurrency Gleichzeitige Zugriffe]
-    * [thema_jdbc_orm ORM-Frameworks]
   * WEB-Applikationen
     * [thema_web_begriffe Begriffe]
     * [thema_web_server WEB-Server]
