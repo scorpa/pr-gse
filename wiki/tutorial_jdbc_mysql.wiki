@@ -1,0 +1,12 @@
+#summary JDBC mit MySQL
+
+= JDBC mit MySQL =
+
+=== XAMPP downloaden und installieren ===
+
+Um sinnvoll mit MySQL arbeiten zu können empfiehlt es sich, die aktuelle Version von XAMPP  von [http://www.apachefriends.org/de/xampp.html hier] herunterzuladen und zu installieren.
+
+=== Beispieldatenbank einrichten ===
+
+  * Im XAMPP Control Panel MySQL und Apache starten.
+  * PhpMyAdmin aufrufen
