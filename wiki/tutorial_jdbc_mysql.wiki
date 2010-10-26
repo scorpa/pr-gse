@@ -69,5 +69,6 @@ http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/netbeans_add_library.png
 Für den ersten Versuch eine Datenbankverbindung aufzubauen und ein Select-Statement abzusetzen reicht es, eine Klasse mit einer main-Methode anzulegen und alles dort hinein zu schreiben.
 
 Im ersten Schritt ist die Treiberklasse zu laden:
-
-`            Class.forName("com.mysql.jdbc.Driver");`
+{{{
+            Class.forName("com.mysql.jdbc.Driver");
+}}}
