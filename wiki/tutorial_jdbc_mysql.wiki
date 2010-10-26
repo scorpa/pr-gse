@@ -72,3 +72,43 @@ Im ersten Schritt ist die Treiberklasse zu laden:
 {{{
             Class.forName("com.mysql.jdbc.Driver");
 }}}
+Hier ist die Exception `ClassNotFoundException` abzufangen.
+
+Als Nächstes wird die Verbindung geöffnet:
+{{{
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost/tutorial, "root");
+}}}
+Hier ist die `SQLException` zu behandeln.
+
+Die Verbindung ist am besten in einem `finally`-Block wieder zu schließen:
+{{{
+con.close();
+}}}
+Auch hier sowie bei allen weiteren Schritten kann eine `SQLException` auftreten und muss somit behandelt werden.
+
+Um jetzt wirklich ein Query zur Datenbank zu schicken, verwendet man am besten ein `PreparedStatement`:
+{{{
+PreparedStatement pstmt = con.prepareStatement("SELECT isbn, autor, titel, seiten FROM buecher");
+}}}
+
+Das Query ist also vorbereitet und wird dann mit `executeQuery()` wirklich durchgeführt. Diese Methode liefert als Ergebnis ein `ResultSet`:
+{{{
+ResultSet rs = pstmt.executeQuery();
+}}}
+
+Das `ResultSet` ist so etwas wie ein Datenbank-Cursor und kann nun Datensatz für Datensatz abgearbeitet werden:
+{{{
+while (rs.next())
+{
+    System.out.print(rs.getInt("isbn") + "\t");
+    System.out.print(rs.getString("autor") + "\t");
+    System.out.print(rs.getString("titel") + "\t");
+    System.out.println(rs.getInt("seiten"));
+}
+}}}
+
+Danach sollte man nicht vergessen, das `ResultSet` und das `PreparedStatement` wieder freizugeben:
+{{{
+rs.close();
+pstmt.close();
+}}}
