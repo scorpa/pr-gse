@@ -13,3 +13,22 @@
     * [uebung_verzweigung_projektverwaltung Projektverwaltung]
     * [uebung_verzweigung_automatik Automatikgetriebe]
     * [uebung_verzweigung_bankomat Bankomat]
+  * Assoziation mehrerer Klassen
+    * [uebung_assoziation_bruch Bruchrechnen]
+    * [uebung_assoziation_complex Complex]
+    * [uebung_assoziation_village Village]
+    * [uebung_assoziation_town Town]
+  * String-Operationen und Java-Doc
+    * [uebung_string_operationen_javadoc_mitglied Mitglied]
+    * [uebung_string_operationen_javadoc_textanalyzer Text-analyzer]
+  * Schleifen
+    * [uebung_schleifen_textanalyzer2 Text-analyzer 2]
+    * [uebung_schleifen_numberanalyzer Number-analyzer]
+    * [uebung_schleifen_tapete Tapete]
+  * Arrays
+    * [uebung_arrays_bankomat Bankomat]
+    * [uebung_arrays_bibliothek Bibliothek]
+    * [uebung_arrays_windkraft_v2 Windkraft_V2]
+    * [uebung_arrays_binaerzahl BinaerZahl]
+  * ArrayList
+    * [uebung_arraylist_anrufstatistik Anrufstatistik]
