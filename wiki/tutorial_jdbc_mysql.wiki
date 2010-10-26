@@ -37,6 +37,9 @@ Um sinnvoll mit MySQL arbeiten zu können empfiehlt es sich, die aktuelle Versio
     http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/beispieldaten.png
 
 === Zugriff auf die Datenbank aus Netbeans ===
+
+Im Folgenden wird gezeigt, wie man auf die Datenbank aus Netbeans zugreifen kann, und so auch ohne PhpMyAdmin die Datenbank ansehen und manipulieren kann.
+
 Schaltet man in Netbeans auf die Registerkarte *`Services`*, dann sieht man unter anderem den Eintrage *`Databases`*. 
 
 http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/netbeans_services.png
@@ -54,3 +57,17 @@ http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/new_sql_file.png
 Wählt man nun die richtige Datenbankverbindung aus und betätigt die Schaltfläche zum Ausführen der SQL-Anweisungen, so werden diese - falls die Syntax stimmt - ausgeführt.
 
 http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/statement_ausfuehren.png
+
+=== Datenbankzugriff aus einem Java-Programm ===
+
+*WICHTIG:* um den MySQL-JDBC-Treiber in einem Projekt verwenden zu können, muss die Treiberbibliotek in den Klassenpfad eingebunden werden. In Netbeans funktioniert das über die Projekteinstellungen: Rechte Maustaste auf das Projekt - Kontextmenü *`Properties`*
+
+Nach Auswahl *`Libraries`* wird mit der Schaltfläche *`Add Library...`* eine neue Bibliothek hinzugefügt. Hier ist der Eintrag *`MySQL JDBC DRIVER`* auszuwählen.
+
+http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/netbeans_add_library.png
+
+Für den ersten Versuch eine Datenbankverbindung aufzubauen und ein Select-Statement abzusetzen reicht es, eine Klasse mit einer main-Methode anzulegen und alles dort hinein zu schreiben.
+
+Im ersten Schritt ist die Treiberklasse zu laden:
+
+`            Class.forName("com.mysql.jdbc.Driver");`
