@@ -41,3 +41,14 @@
     * [uebung_vererbung_transport_v3 Transport_V3]
     * [uebung_vererbung_fuhrpark Fuhrpark]
     * [uebung_abstraktion_logik Logik]
+  * Collections
+    * [uebung_collections_bibliothek Bibliothek mit Sortieren und Iterator]
+    * [uebung_collections_bibliothek_map Bibliothek mit Map]
+  * Exceptions
+    * [uebung_exceptions_buchverwaltung Buchverwaltung]
+    * [uebung_exceptions_kontaktliste Kontaktliste]
+  * GUI
+    * [uebung_swing_konto Konto-Dialog]
+    * [uebung_swing_terminplaner GUI für Terminplaner]
+  * Dateianbindung und Streams
+    * [uebung_streams_anrufstatistik Anrufstatistik]
