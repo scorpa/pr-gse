@@ -8,3 +8,5 @@ Zusammenhang zwischen Datensätzen in einer relationalen Datenbank und Objekten 
   * [http://en.wikipedia.org/wiki/Object-relational_mapping ORM in Wikipedia]
   * [http://www.agiledata.org/essays/mappingObjects.html Mapping Objects to Relational Databases: O/R Mapping In Detail]
   * [http://java.sun.com/blueprints/corej2eepatterns/Patterns/DataAccessObject.html Core J2EE Patterns - Data Access Object]
+
+[http://pr-gse.googlecode.com/svn/wiki/ppt/ORM.ppt Hier] befinden sich die im Unterricht verwendeten Folien.
