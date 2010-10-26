@@ -9,4 +9,24 @@ Um sinnvoll mit MySQL arbeiten zu können empfiehlt es sich, die aktuelle Versio
 === Beispieldatenbank einrichten ===
 
   * Im XAMPP Control Panel MySQL und Apache starten.
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/xampp_control_panel.png
+
   * PhpMyAdmin aufrufen
+    http://localhost/phpmyadmin/
+    (Default-Installation: Benutzer: root, kein Passwort)
+
+  * Datenbank mit dem Namen `tutorial` anlegen
+
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/datenbank_anlegen.png
+
+  * Tabelle mit dem Namen `buecher` mit 4 Feldern anlegen
+
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/tabelle_anlegen.png
+
+    Die Felder wie folgt definieren
+
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/buecher_tabelle.png
+
+    isbn als primary key definieren
+
+    http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/primary_key.png
