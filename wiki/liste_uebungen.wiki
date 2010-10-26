@@ -1,0 +1,15 @@
+#summary Liste der Übungen zum Herzeigen
+
+= Liste der Übungen zum Herzeigen =
+
+=== Für jede der folgenden Übungen gibt es 1 Punkt ===
+
+  * Objekte und Klassen
+    * [uebung_objekte_und_klassen_rechteck Rechteck] 
+    * [uebung_objekte_und_klassen_konto_einfach Konto (einfach)]
+    * [uebung_objekte_und_klassen_auto Auto]
+    * [uebung_objekte_und_klassen_spannungsteiler Spannungsteiler]
+  * Verzweigung
+    * [uebung_verzweigung_projektverwaltung Projektverwaltung]
+    * [uebung_verzweigung_automatik Automatikgetriebe]
+    * [uebung_verzweigung_bankomat Bankomat]
