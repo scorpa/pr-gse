@@ -36,4 +36,21 @@ Um sinnvoll mit MySQL arbeiten zu können empfiehlt es sich, die aktuelle Versio
   * Beispieldaten einfügen
     http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/beispieldaten.png
 
-    
+=== Zugriff auf die Datenbank aus Netbeans ===
+Schaltet man in Netbeans auf die Registerkarte *`Services`*, dann sieht man unter anderem den Eintrage *`Databases`*. 
+
+http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/netbeans_services.png
+
+Nach Rechtsklick auf diesen Eintrag und Auswahl des Kontextmenüs *`New Connection...`* erscheint der Dialog zum Anlegen einer Datenbankverbindung:
+
+http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/new_database_connection.png
+
+Nach Auswahl des MySQL Connectors und Eintrag der Informationen für die Datenbankverbindung erhält man einen neuen Eintrag bei den Datenbankverbindungen. Hier kann man die zuvor angelegte Datenbank und auch die Tabelle sehen. Bei Rechtsklick auf die Tabelle kann man *`View Data...`* auswählen und damit ein `SELECT` auf alle Datensätze ausführen. Die Daten werden dann in Tabellenform angezeigt.
+
+Um andere SQL-Befehle auszuführen benötigt man eine Script-Datei. Zu diesem Zweck legen wir in der Registerkarte *`Projects`* ein neues Projekt an. In diesem Projekt legen wir eine SQL-Datei an
+
+http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/new_sql_file.png
+
+Wählt man nun die richtige Datenbankverbindung aus und betätigt die Schaltfläche zum Ausführen der SQL-Anweisungen, so werden diese - falls die Syntax stimmt - ausgeführt.
+
+http://pr-gse.googlecode.com/svn/wiki/images/jdbc_mysql/statement_ausfuehren.png
