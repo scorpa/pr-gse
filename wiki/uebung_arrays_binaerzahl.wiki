@@ -22,6 +22,6 @@ Die Methode `setHex(...)` bekommt als Parameter einen String, welcher eine Hexad
 
 Die Methode `getHex()` liefert als Rückgabewert einen String, in welchem die Zahl in Hexadezimal-Repräsentation steht.
 
-Die Methode `add(...)` bekommt eine Referenz auf eine andere Instanz von `BinaerZahl` als Parameter übergeben. Diese andere Binärzahl wird addiert (entsprechend den Rechenregeln für binäres Addieren).
+Die Methode `add(...)` bekommt eine Referenz auf eine andere Instanz von `BinaerZahl` als Parameter übergeben. Diese andere Binärzahl wird addiert (entsprechend den Rechenregeln für binäres Addieren). Das Ergebnis wird als neue Binärzahl zurückgeliefert
 
 Die Methode `bitSumme()` liefert als Rückgabewert die Summe der Bits (= Anzahl der  `1`-Bits).
