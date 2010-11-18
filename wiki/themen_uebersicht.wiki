@@ -44,3 +44,6 @@
     * [thema_subversion Versionskontrolle (mit Subversion)]
   * Unterrichtsspezifisches
     * [lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 1. Semester Tageskolleg]
+
+
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://pr-gse.googlecode.com" font="arial"></fb:like>
