@@ -22,6 +22,7 @@
     * [thema_jdbc JDBC]
     * [thema_jdbc_hsqldb HSQLDB]
     * [thema_orm Object Relational Mapping (ORM)]
+    * [thema_persistence_frameworks Persistence Frameworks]
   * WEB-Applikationen
     * [thema_web_begriffe Begriffe]
     * [thema_web_server WEB-Server]
