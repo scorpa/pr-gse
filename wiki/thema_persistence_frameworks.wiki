@@ -1,0 +1,5 @@
+#summary Persistence Frameworks
+
+= Persistence Frameworks =
+
+[http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fps-gse.googlecode.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" Gefällt mir]
