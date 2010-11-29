@@ -4,6 +4,10 @@
 
 Eine Applikation für das Verschlüsseln von Texten soll folgende Klassen verwenden:
  
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/TextCoder.jpg
+</p>
+
 
 === TextShifter ===
 Die Methode `encode(...)` dieser Klasse verändert den Text, indem `count` mal das erste Zeichen vorne weggenommen und hinten angehängt wird. Der so veränderte Text wird als Rückgabewert geliefert. Beispiel:
@@ -41,4 +45,3 @@ Wenn eine Instanz von `TextShifter` vorhanden ist, wird der Text mit dieser vers
 
 Wenn eine Instanz von `CharacterCoder` vorhanden ist, wird jedes einzelne Zeichen mit dieser verschlüsselt (`encode(...)`). 
 Die Methode `decode(...)` implementiert die Umkehroperation von `encode(...)`.
-
