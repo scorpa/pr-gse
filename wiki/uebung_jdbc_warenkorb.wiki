@@ -4,9 +4,17 @@
 
 Eine Applikation für das Zusammenstellen von Warenkörben verwendet die folgende Datenbank-Tabelle:
 
- 
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/warenkorb_modell.png
+</p>
+
 Die Tabelle kann mit dem Script `warenkorb.sql` erzeugt werden (funktioniert mit MySQL).
+ 
 Darauf aufbauend sind die beiden Klassen `Artikel` und `Warenkorb` entsprechend dem folgenden UML-Klassendiagramm zu implementieren:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/warenkorb_uml.jpg
+</p>
 
  
 
@@ -28,4 +36,4 @@ Die Klasse `Warenkorb` dient zum Zusammenstellen einer Liste von Artikeln.
 
   * Die Methode `gesamtPreis()` liefert die Summe der Preise (multipliziert mit der Anzahl) aller in der Liste enthaltenen `Artikel`.
 
-Erstellen Sie zusätzlich zu den beschriebenen Klassen eine weitere Klasse mit `main(…)`-Methode zum Testen aller Methoden der Klasse Warenkorb! 
+Erstellen Sie zusätzlich zu den beschriebenen Klassen eine weitere Klasse mit `main(…)`-Methode zum Testen aller Methoden der Klasse `Warenkorb`! 
