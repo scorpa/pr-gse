@@ -1,3 +1,5 @@
+package mitarbeiter;
+
 
 /**
  * Mitarbeiter-Klasse für Lohnabrechnung
