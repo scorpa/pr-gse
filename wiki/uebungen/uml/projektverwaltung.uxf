@@ -34,7 +34,7 @@ abgeschlossen : boolean
 --
 &lt;&lt;constr&gt;&gt; Projekt(nr int)
 / /* get-/set-Methoden */ /
-start(kw : int, jahr : int)
+beginn(kw : int, jahr : int)
 ende(kw : int, jahr : int)
 projektDauer() : int
 berechneKosten(): double

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram><help_text>// Uncomment the following line to change the fontsize:
+// fontsize=14
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on UML elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use ± or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>230</w><h>140</h></coordinates><panel_attributes>TextCoder
+--
+shifter : TextShifter
+coder : CharacterCoder
+--
+setShifter(shifter : TextShifter)
+setCoder(coder : CharacterCoder)
+encode(text : String) : String
+decode(text : String) : String</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>320</x><y>20</y><w>330</w><h>110</h></coordinates><panel_attributes>TextShifter
+--
+count : int
+--
+&lt;&lt;constr&gt;&gt; TextShifter(count : int)
+encode(text : String) : String
+decode(text : String) : String</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>320</x><y>160</y><w>330</w><h>120</h></coordinates><panel_attributes>CharacterCoder
+--
+src : String
+dest : String
+--
+&lt;&lt;constr&gt;&gt; CharacterCoder(src : String, dest : String)
+encode(zeichen : char) : char
+decode(zeichen : char) : char</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>220</x><y>40</y><w>120</w><h>50</h></coordinates><panel_attributes/><additional_attributes>30;30;100;30</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>220</x><y>70</y><w>120</w><h>170</h></coordinates><panel_attributes/><additional_attributes>30;30;70;30;70;150;100;150</additional_attributes></element></umlet_diagram>
