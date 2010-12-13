@@ -214,7 +214,7 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 ||  [uebung_arrays_temperatur TemperaturStatistik] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/temp_stat temp_stat] || Prüfungsaufgabe ||
 
 
-Es gibt auch einige Übungen auf dem Server http://www.griesmayer.com/?menu=GSE
+Es gibt auch einige Übungen auf [http://www.griesmayer.com/?menu=GSE diesem Server]
 
 || 07_Array_Simple || Uebung_002.pdf ||
 || 08_Array_Medium || Uebung_002.pdf <br/> Uebung_003.pdf ||
