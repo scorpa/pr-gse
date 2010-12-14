@@ -131,7 +131,7 @@ public class TemperaturStatistik
     
     public void uebernehmen(TemperaturStatistik ts)
     {
-        if (anzahl + ts.getAnzahl() < temperatur.length)
+        if (anzahl + ts.getAnzahl() <= temperatur.length)
         {
             for (int i = 0; i < ts.getAnzahl(); i++)
                 aufnehmen(ts.getTemperatur(i));
