@@ -8,7 +8,7 @@ Eine Applikation für das Zusammenstellen von Warenkörben verwendet die folgend
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/warenkorb_modell.png
 </p>
 
-Die Tabelle kann mit dem Script `warenkorb.sql` erzeugt werden (funktioniert mit MySQL).
+Die Tabelle kann mit dem Script [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/warenkorb/warenkorb.sql warenkorb.sql] erzeugt werden (funktioniert mit MySQL).
  
 Darauf aufbauend sind die beiden Klassen `Artikel` und `Warenkorb` entsprechend dem folgenden UML-Klassendiagramm zu implementieren:
 
