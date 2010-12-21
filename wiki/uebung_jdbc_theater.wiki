@@ -2,7 +2,7 @@
 
 = Theater-Reservierung =
 
-Eine Applikation für das Reservieren von Sitzplätzen in einem Theater verwendet die folgende Datenbankstruktur, welche Sie mit dem Script  theater.sql  anlegen können:
+Eine Applikation für das Reservieren von Sitzplätzen in einem Theater verwendet die folgende Datenbankstruktur, welche Sie mit dem Script  [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/theater/theater.sql theater.sql]  anlegen können:
 
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/Theater.png
@@ -18,7 +18,7 @@ Die Reservierungsnummer (r_id) ist ein auto-increment-Wert.
 
 In dem Theater gibt es die Sitzplätze 1 bis 100.
 
-Erstellen Sie ausgehend von den zur Verfügung gestellten Klassen `Vorstellung` und `Reservierung` eine Klasse `ReservierungsToolImpl`, welche das Interface `ReservierungsTool` entsprechend den Kommentaren implementiert:
+Erstellen Sie ausgehend von den zur Verfügung gestellten Klassen [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/theater/Vorstellung.java Vorstellung] und [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/theater/Reservierung.java Reservierung] eine Klasse `ReservierungsToolImpl`, welche das Interface [http://code.google.com/p/pr-gse/source/browse/trunk/uebungen/musterloesungen/src/theater/ReservierungsTool.java ReservierungsTool] entsprechend den Kommentaren implementiert:
 
 ----
 {{{
@@ -99,5 +99,3 @@ Liste der Vorstellungen
 *Throws:*
  
 `ReservierungException` - bei Datenbankzugriffsfehlern 
-
-
