@@ -29,7 +29,7 @@ public class ReservierungsToolImpl implements ReservierungsTool
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/akdvk", "pr", "pr");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/theater", "pr", "pr");
         } catch (SQLException ex)
         {
             Logger.getLogger(ReservierungsToolImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -100,15 +100,27 @@ public class ReservierungsToolImpl implements ReservierungsTool
 
     public boolean speichern(Reservierung r) throws ReservierungException
     {
-        for (Reservierung r1 : reservierungsListe(r.getVorstellung()))
-            if (r1.getSitzplatz() == r.getSitzplatz())
-                return false;
+// einfache Loesung - aber nicht sehr effizient
+//        for (Reservierung r1 : reservierungsListe(r.getVorstellung()))
+//            if (r1.getSitzplatz() == r.getSitzplatz())
+//                return false;
 
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
         try
         {
+            pstmt = con.prepareStatement("SELECT r_id FROM reservierungen " +
+                    "WHERE fk_v_id = ? and r_sitzplatz = ?");
+            pstmt.setInt(1, r.getVorstellung().getId());
+            pstmt.setInt(2, r.getSitzplatz());
+            rs = pstmt.executeQuery();
+            boolean besetzt = rs.next();
+            rs.close();
+            pstmt.close();
+            if (besetzt)
+                return false;
+
             pstmt = con.prepareStatement("INSERT INTO reservierungen (fk_v_id, r_sitzplatz, r_name) " +
                     "VALUES (?, ?, ?)");
             pstmt.setInt(1, r.getVorstellung().getId());
@@ -196,6 +208,7 @@ public class ReservierungsToolImpl implements ReservierungsTool
                 r.setId(rs.getInt("r_id"));
                 r.setName(rs.getString("r_name"));
                 r.setSitzplatz(rs.getInt("r_sitzplatz"));
+                r.setVorstellung(v);
                 liste.add(r);
             }
         } catch (SQLException ex)

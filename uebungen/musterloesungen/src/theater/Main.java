@@ -1,12 +1,5 @@
 package theater;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
- 
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +8,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Rudi
+ * @author Rudolf Radlbauer
  */
 public class Main {
 
@@ -33,7 +26,7 @@ public class Main {
                 System.out.println(v);
 
             Reservierung r = new Reservierung(vorstellungen.get(0));
-            r.setSitzplatz(3);
+            r.setSitzplatz(5);
             r.setName("Meier");
             if(tool.speichern(r))
                 System.out.println("Reservierung gespeichert: " + r);
