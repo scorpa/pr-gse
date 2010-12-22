@@ -43,3 +43,4 @@ siehe dazu http://www.torsten-horn.de/techdocs/java-sql.htm
 || [uebung_jdbc_usermanager User-Manager] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/usermanager usermanager] || Prüfungsbeispiel ||
 || [uebung_jdbc_warenkorb Warenkorb] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/warenkorb warenkorb] || Prüfungsbeispiel ||
 || [uebung_jdbc_theater Theater-Reservierung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/theater theater] || Prüfungsbeispiel ||
+|| [uebung_jdbc_rechnungen Rechnungen] ||  ||  ||
