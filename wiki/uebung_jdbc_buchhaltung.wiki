@@ -1,0 +1,39 @@
+#summary Übung: Buchhaltung
+
+= Buchhaltung =
+
+Erstellen Sie eine Applikation für die Verwaltung Ihrer Rechnungen! Die Oberfläche könnte etwa so aussehen:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/images/Buchhaltung/Rechnungen.PNG
+</p>
+
+Das Programm soll folgende Funktionalität anbieten:
+
+  * Erfassen einer Rechnung:
+    * Kategorie für Steuer (Arbeitsmittel, Fachliteratur, Reisekosten, ...); die möglichen Kategorien stammen aus einer Datenbanktabelle und können gegebenenfalls erweitert werden.
+    * Mehrwertsteuersatz
+    * Bezeichnung
+    * Datum
+    * Preis
+
+  * Auflisten der Rechnungen (wahlweise alle Rechnungen oder nur die Rechnungen einer Kategorie)
+    
+  * Auswählen und Verändern einer Rechnung
+    
+  * Löschen einer Rechnung
+    
+  * Aufstellung der Rechnungen mit Preisen und Mehrwertsteuer und Summe (wahlweise alle Rechnungen oder nur die Rechnungen einer Kategorie)
+
+Das Design der Datenbank und auch der Oberfläche obliegt Ihnen. Sie sollen jedoch auf folgende Punkte achten:
+
+  * Die Applikation ist in einer 3-Schichten-Architektur (Oberfläche / Fachlogik / Persistenzlogik) zu erstellen.
+
+  * Es ist auf Benutzerfreundlichkeit zu achten (z.B. wäre es nicht benutzerfreundlich, wenn die Kategorie einzutippen wäre anstatt aus einer Liste auszuwählen).
+
+  * Konzepte aus dem Unterricht sind anzuwenden
+    * sauberes Verwalten der Datenbank-Verbindung
+    * Parametrierte Statements verwenden
+    * keine unnötigen Datenbankzugriffe
+    * Statements und ResultSets wieder schließen
+    * Vermeiden von Inkonsistenzen
