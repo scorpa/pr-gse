@@ -4,6 +4,8 @@
 
 === Literatur ===
 
+[http://openbook.galileocomputing.de/javainsel8/javainsel_15_001.htm Java ist auch eine Insel]
+
 [http://de.wikipedia.org/wiki/Xml XML in Wikipedia]
 
 [http://de.wikibooks.org/wiki/Websiteentwicklung:_XML Wiki-Book]
