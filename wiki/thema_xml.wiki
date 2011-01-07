@@ -1,0 +1,11 @@
+#summary Extensible Markup Language (XML)
+
+= Extensible Markup Language (XML) =
+
+=== Literatur ===
+
+[http://de.wikipedia.org/wiki/Xml XML in Wikipedia]
+
+[http://de.wikibooks.org/wiki/Websiteentwicklung:_XML Wiki-Book]
+
+[http://de.selfhtml.org/xml/intro.htm eine Einführung auf SelfHTML]
