@@ -1,0 +1,9 @@
+#summary Document Object Model (DOM)
+
+= Document Object Model (DOM)=
+
+In diesem Abschnitt geht es um die XML-Verarbeitung mit [http://www.jdom.org/ JDOM].
+
+=== Literatur ===
+
+[http://openbook.galileocomputing.de/javainsel8/javainsel_15_006.htm Java ist auch eine Insel]
