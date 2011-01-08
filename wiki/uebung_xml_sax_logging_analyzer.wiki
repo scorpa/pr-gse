@@ -6,7 +6,6 @@ In Java wird der standardmäßig Logging-Mechanismus von [http://www.log4j.org/ 
 
 {{{
 <?xml version="1.0" encoding="windows-1252" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
   <date>2011-01-08T21:07:29</date>
