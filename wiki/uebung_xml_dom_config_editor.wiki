@@ -36,3 +36,10 @@ Eine Applikation wird mit einer XML-Datei configuriert, welche folgenden Aufbau 
     </section>
 </config>
 }}}
+
+Zum bequemen Ändern der Parameterwerte soll folgendes Fenster dienen:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/ConfigEditor/ConfigurationEditor.png
+</p>
+
