@@ -37,10 +37,12 @@ Eine Applikation wird mit einer XML-Datei configuriert, welche folgenden Aufbau 
 </config>
 }}}
 
+_(Die Datei ist [http://pr-gse.googlecode.com/svn/wiki/uebungen/images/ConfigEditor/config.xml hier] herunterzuladen.)_
+
 Zum bequemen Ändern der Parameterwerte soll folgender Dialog dienen:
 
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/ConfigEditor/ConfigurationEditor.png
 </p>
 
-Für jede Sektion in der Konfigurationsdatei gibt es 
+Für jede Sektion in der Konfigurationsdatei gibt es eine Karteikarte, auf welcher die Parameter dieser Sektion geändert werden können. Bei Betätigen der Schaltfläche Speichern wird das Fenster geschlossen, und die Änderungen werden in die Konfigurationsdatei zurückgeschrieben.
