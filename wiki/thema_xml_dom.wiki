@@ -2,8 +2,16 @@
 
 = Document Object Model (DOM)=
 
+<wiki:comment>
 In diesem Abschnitt geht es um die XML-Verarbeitung mit [http://www.jdom.org/ JDOM].
+</wiki:comment>
+
 
 === Literatur ===
 
 [http://openbook.galileocomputing.de/javainsel8/javainsel_15_006.htm Java ist auch eine Insel]
+
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_xml_dom_config_editor Configuration Editor] ||  || ||
