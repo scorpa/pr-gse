@@ -13,3 +13,5 @@
 [http://de.selfhtml.org/xml/intro.htm eine Einführung auf SelfHTML]
 
 [http://download.oracle.com/javaee/1.4/tutorial/doc/IntroXML.html XML Einführung im J2EE Tutorial 1.4]
+
+[http://pr-gse.googlecode.com/svn/wiki/ppt/XML.ppt Powerpoint-Folien]
