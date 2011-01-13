@@ -12,3 +12,4 @@
 || [uebung_arraylist_bibliothek Bibliothek] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/bibliothek bibliothek] || Bücherverwaltung ||
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/uni uni] || Prüfungsaufgabe ||
 || [uebung_arraylist_anrufstatistik Anrufstatistik] ||  || ||
+|| [uebungen_arraylist_neujahrsvorsatz Neujahrsvorsatz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/neujahrsvorsatz neujahrsvorsatz] || Prüfungsaufgabe ||
