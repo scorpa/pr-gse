@@ -1,0 +1,14 @@
+#summary Lehrstoffverteilung 2. Semester Tageskolleg
+
+= Lehrstoffverteilung 2. Semester Tageskolleg =
+
+|| *Wochen* || *Thema* || *Bemerkungen* ||
+|| 1-4 || [thema_objekte_und_klassen Objekte und Klassen] || ||
+
+
+----
+
+=== Beurteilung ===
+  * 2 praktische Leistungsfeststellungen (jeweils 50 Punkte), davon 1 Streichresultat
+  * 1 Semesterprogramm (50 Punkte)
+  * Übungen: jeweils 1 Punkt, wenn eine der folgenden [liste_uebungen2 Übungen] hergezeigt wird
