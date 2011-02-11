@@ -45,3 +45,4 @@
     * [thema_subversion Versionskontrolle (mit Subversion)]
   * Unterrichtsspezifisches
     * [lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 1. Semester Tageskolleg]
+    * [lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 2. Semester Tageskolleg]
