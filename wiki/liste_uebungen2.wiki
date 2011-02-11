@@ -1,0 +1,9 @@
+#summary Liste der Übungen zum Herzeigen
+
+= Liste der Übungen zum Herzeigen (2. Semester Tageskolleg) =
+
+=== Für jede der folgenden Übungen gibt es 1 Punkt ===
+
+  * Interface
+    * [uebung_interface_termine Terminplaner]
+    * [uebung_interface_reversi Reversi (5 Punkte)] 
