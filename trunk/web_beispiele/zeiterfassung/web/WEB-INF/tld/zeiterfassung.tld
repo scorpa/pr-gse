@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>zeiterfassung</short-name>
+    <uri>zeiterfassung</uri>
+
+    <tag>
+        <description>gibt ein Attribut des Mitarbeiters aus</description>
+        <name>mitarbeiter</name>
+        <tag-class>web.MitarbeiterAusgabe</tag-class>
+        <attribute>
+            <name>feld</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <description>gibt Fehlermeldung aus</description>
+        <name>error</name>
+        <tag-class>web.ErrorTag</tag-class>
+    </tag>
+
+    <tag>
+        <description>
+            gibt disabled="disabled" aus, wenn Button nicht aktiv sein soll
+            typ ist entweder kommen oder gehen
+        </description>
+        <name>kommen_gehen</name>
+        <tag-class>web.KommenGehen</tag-class>
+        <attribute>
+            <name>typ</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <description>iteriert über alle Zeitstempel eines Mitarbeiters</description>
+        <name>zeit_iterator</name>
+        <tag-class>web.ZeitenIterator</tag-class>
+    </tag>
+
+    <tag>
+        <description>
+            gibt ein Feld eines Zeitstempels aus
+            feld kann folgende Werte haben: kommen, zeit
+        </description>
+        <name>zeitstempel</name>
+        <tag-class>web.ZeitAusgabe</tag-class>
+        <attribute>
+            <name>feld</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>format</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+        <tag>
+        <description>gibt den Zeitsaldo des aktuellen Mitarbeiters aus</description>
+        <name>zeit_saldo</name>
+        <tag-class>web.ZeitSaldo</tag-class>
+    </tag>
+
+
+</taglib>
