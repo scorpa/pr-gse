@@ -1,6 +1,7 @@
 package web;
 
 import fachlogik.ZeitStempel;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
@@ -35,10 +36,8 @@ public class ZeitAusgabe extends TagSupport
 
                 }
             }
-            else
-                throw new Exception("ungültiger Status");
             return SKIP_BODY;
-        } catch(Exception e)
+        } catch(IOException e)
         {
             throw new JspException(e);
         }

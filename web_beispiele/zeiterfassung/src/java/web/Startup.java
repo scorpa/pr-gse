@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import persistenz.DBZeiterfassung;
+
 
 /**
  * Web application lifecycle listener.
@@ -20,10 +20,13 @@ public class Startup implements ServletContextListener {
     {
         try
         {
-            sce.getServletContext().setAttribute("zeiterfassung", new DBZeiterfassung());
-        } catch (ZeiterfassungException ex)
+            Zeiterfassung z = (Zeiterfassung) Class.forName(sce.getServletContext().
+                    getInitParameter("zeiterfassung")).newInstance();
+            sce.getServletContext().setAttribute("zeiterfassung", z);
+        } catch (Exception ex)
         {
             Logger.getLogger(Startup.class.getName()).log(Level.SEVERE, null, ex);
+            throw new IllegalStateException("Fehler beim Initialisieren der Applikation");
         }
     }
 

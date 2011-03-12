@@ -27,10 +27,18 @@ public class DBZeiterfassung implements Zeiterfassung
 
     public DBZeiterfassung() throws ZeiterfassungException
     {
+        openConnection();
+    }
+
+    private void openConnection() throws ZeiterfassungException
+    {
         try
         {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/zeiterfassung", "pr", "pr");
+            if (con == null || con.isClosed())
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/zeiterfassung", "pr", "pr");
+            }
         } catch (SQLException ex)
         {
             Logger.getLogger(DBZeiterfassung.class.getName()).log(Level.SEVERE, null, ex);
@@ -40,10 +48,12 @@ public class DBZeiterfassung implements Zeiterfassung
             Logger.getLogger(DBZeiterfassung.class.getName()).log(Level.SEVERE, null, ex);
             throw new ZeiterfassungException("DB-Treiber nicht gefunden");
         }
+
     }
 
     public boolean login(Mitarbeiter m) throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -83,6 +93,7 @@ public class DBZeiterfassung implements Zeiterfassung
 
     public List<ZeitStempel> aktuelleZeiten(Mitarbeiter m) throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -137,11 +148,12 @@ public class DBZeiterfassung implements Zeiterfassung
             else
                 summe += (z.getTimestamp().getTime() - kommen.getTimestamp().getTime()) / 3600000f;
         }
-        return summe;
+        return summe - m.getStunden();
     }
 
     public ZeitStempel letzterEintrag(Mitarbeiter m) throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -183,6 +195,7 @@ public class DBZeiterfassung implements Zeiterfassung
 
     public void eintrag(ZeitStempel z, Mitarbeiter m) throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -219,6 +232,7 @@ public class DBZeiterfassung implements Zeiterfassung
 
     public void speichern(Mitarbeiter m) throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -254,6 +268,7 @@ public class DBZeiterfassung implements Zeiterfassung
 
     public List<Mitarbeiter> mitarbeiterListe() throws ZeiterfassungException
     {
+        openConnection();
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try
@@ -304,6 +319,8 @@ public class DBZeiterfassung implements Zeiterfassung
             throw new ZeiterfassungException("Fehler beim Schlieﬂen der Datenbankverbindung");
         }
     }
+
+
 
     private static Date ersterTag()
     {
