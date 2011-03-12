@@ -1,47 +1,28 @@
 package web;
 
-import fachlogik.Mitarbeiter;
 import fachlogik.ZeitStempel;
-import fachlogik.Zeiterfassung;
+import fachlogik.ZeiterfassungException;
+import java.io.IOException;
 import java.util.Iterator;
 import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.TagSupport;
 
 /**
  *
  * @author Rudolf Radlbauer
  */
-public class ZeitenIterator extends TagSupport
+public class ZeitenIterator extends BasisTag
 {
     @Override
-    public int doStartTag() throws JspException
+    public int startTag() throws ZeiterfassungException, IOException
     {
-        try
+        Iterator<ZeitStempel> iterator = getZeiterfassung().aktuelleZeiten(getMitarbeiter()).iterator();
+        pageContext.setAttribute("iterator", iterator);
+        if (iterator.hasNext())
         {
-            Zeiterfassung z = (Zeiterfassung) pageContext.getServletContext().getAttribute("zeiterfassung");
-            Mitarbeiter m = (Mitarbeiter) pageContext.getSession().getAttribute("mitarbeiter");
-            if (z != null)
-            {
-                if (m != null)
-                {
-                    Iterator<ZeitStempel> iterator = z.aktuelleZeiten(m).iterator();
-                    pageContext.setAttribute("iterator", iterator);
-                    if (iterator.hasNext())
-                    {
-                        pageContext.setAttribute("zeitstempel", iterator.next());
-                        return EVAL_BODY_INCLUDE;
-                    }
-                }
-                else
-                    throw new Exception("kein Mitarbeiter angemeldet");
-            }
-            else
-                throw new Exception("Datenbankfehler");
-            return SKIP_BODY;
-        } catch(Exception e)
-        {
-            throw new JspException(e);
+            pageContext.setAttribute("zeitstempel", iterator.next());
+            return EVAL_BODY_INCLUDE;
         }
+        return SKIP_BODY;
     }
 
     @Override

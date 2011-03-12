@@ -4,7 +4,6 @@ import fachlogik.Mitarbeiter;
 import fachlogik.ZeitStempel;
 import fachlogik.Zeiterfassung;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -18,7 +18,6 @@
  
     <body>
         <h1>Zeiterfassung für <z:mitarbeiter feld="name" /></h1>
-        Beschäftigungsausmaß: <z:mitarbeiter feld="stunden" /><br/>
 
         <form action="zeiterfassung" method="POST">
             <input type="submit" value="Kommen" name="kommen" <z:kommen_gehen typ="kommen" /> />
@@ -36,7 +35,8 @@
             </z:zeit_iterator>
         </table>
 
-        <h2>Aktueller Zeitsaldo: <z:zeit_saldo /></h2>
+        <h2>Beschäftigungsausmaß: <z:mitarbeiter feld="stunden" /> Stunden<br/>
+        Aktueller Zeitsaldo: <z:zeit_saldo /></h2>
 
 
     </body>

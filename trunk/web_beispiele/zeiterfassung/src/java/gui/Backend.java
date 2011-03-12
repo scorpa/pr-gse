@@ -15,6 +15,7 @@ import fachlogik.Mitarbeiter;
 import fachlogik.ZeitStempel;
 import fachlogik.Zeiterfassung;
 import fachlogik.ZeiterfassungException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -27,6 +28,7 @@ import persistenz.DBZeiterfassung;
  */
 public class Backend extends javax.swing.JFrame {
 
+    private final static SimpleDateFormat SDF = new SimpleDateFormat("dd.MM.yyyy HH:mm");
     private Zeiterfassung zeiterfassung;
     private DefaultListModel mitarbeiterModel = new DefaultListModel();
 
@@ -142,6 +144,7 @@ public class Backend extends javax.swing.JFrame {
 
     private void select(javax.swing.event.ListSelectionEvent evt)//GEN-FIRST:event_select
     {//GEN-HEADEREND:event_select
+        ausgabe.setText("");
         try
         {
             Mitarbeiter m = (Mitarbeiter) mitarbeiterListe.getSelectedValue();
@@ -149,9 +152,26 @@ public class Backend extends javax.swing.JFrame {
             {
                 for (ZeitStempel z : zeiterfassung.aktuelleZeiten(m))
                 {
-                    ausgabe.append(z.toString());
+                    ausgabe.append(z.isKommen() ? "kommen" : "gehen");
+                    ausgabe.append("\t");
+                    ausgabe.append(SDF.format(z.getTimestamp()));
                     ausgabe.append("\n");
                 }
+                ausgabe.append("\nBesch‰ftigungsausmaﬂ: " + m.getStunden() + " Stunden");
+                ausgabe.append("\naktuelles Zeitsaldo: ");
+                float saldo = zeiterfassung.zeitSaldo(m);
+                if (saldo < 0)
+                {
+                    ausgabe.append(" - ");
+                    saldo = -saldo;
+                }
+                else
+                    ausgabe.append(" + ");
+                int std = (int)saldo;
+                int min = (int)((saldo-std)*60);
+                ausgabe.append(std + " Stunden / ");
+                ausgabe.append(min + " Minuten");
+
             }
         } catch (ZeiterfassungException ex)
         {
