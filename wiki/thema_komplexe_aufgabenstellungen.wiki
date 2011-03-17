@@ -8,3 +8,4 @@ Hier entsteht eine Zusammenstellung von umfangreicheren Übungen.
 || *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
 || [uebung_komplex_fachhochschule Anmeldesystem für Fachhochschule] || || ||
 || [uebung_komplex_abstimmung Internet-Abstimmung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/abstimmung abstimmung] || Prüfungsaufgabe ||
+|| [uebung_komplex_zeiterfassung Zeiterfassung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/web_beispiele/zeiterfassung zeiterfassung] || Prüfungsaufgabe ||
