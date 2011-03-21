@@ -2,6 +2,8 @@
     Document   : login
     Created on : 11.03.2011, 22:37:58
     Author     : Rudolf Radlbauer
+
+    Login-Seite
 --%>
 
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
@@ -16,6 +18,7 @@
         <title>Anmeldung</title>
     </head>
     <body>
+        <!-- falls beim letzen Login-Versuch ein Fehler aufgetreten ist -->
         <p><z:error/></p>
       <form action="login" method="POST">
           Mitarbeiternummer

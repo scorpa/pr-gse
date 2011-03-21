@@ -6,7 +6,8 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
 /**
- *
+ * gibt Attribute des Mitarbeiters aus, der gerade an der Session hängt
+ * (angemeldet ist)
  * @author Rudolf Radlbauer
  */
 public class MitarbeiterAusgabe extends TagSupport

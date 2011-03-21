@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ * nimmt die Anmeldung entgegen
  * @author Rudolf Radlbauer
  */
 public class LoginServlet extends HttpServlet
@@ -26,23 +26,30 @@ public class LoginServlet extends HttpServlet
     {
         try
         {
+            // Mitarbeiternummer und Passwort auslesen
             int id = Integer.parseInt(request.getParameter("nr"));
             String pwd = request.getParameter("pwd");
+            // daraus wird eine Mitarbeiter-Instanz erstellt
             Mitarbeiter m = new Mitarbeiter();
             m.setNr(id);
             m.setPwd(pwd);
+            // Zeiterfassung-Instanz aus dem ServletContext holen
             Zeiterfassung z = (Zeiterfassung) request.getSession().getServletContext().
                     getAttribute("zeiterfassung");
             if (z != null)
             {
-                if (z.login(m))
+                if (z.login(m))  // login durchführen
                 {
+                    // Mitarbeiter-Instanz an Session anhängen
                     request.getSession().setAttribute("mitarbeiter", m);
+                    // Weiterleitung an die Hauptseite
                     request.getRequestDispatcher("liste.jsp").forward(request, response);
                 }
                 else
                 {
+                    // Fehlermeldung setzen
                     request.setAttribute("error", "ungültige Daten");
+                    // Weiterleiten an die Login-Seite
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
             }

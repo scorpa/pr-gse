@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ * Erfassung eines neuen Zeitstempels
  * @author Rudolf Radlbauer
  */
 public class ZeiterfassungServlet extends HttpServlet
@@ -23,12 +23,14 @@ public class ZeiterfassungServlet extends HttpServlet
     {
         try
         {
+            // kommen oder gehen
             boolean kommen = false;
             if (request.getParameter("kommen") != null)
                 kommen = true;
             else if (request.getParameter("gehen") == null)
                 throw new Exception("inkonsistenter Status");
 
+            // angemeldeter Mitarbeiter
             Mitarbeiter m = (Mitarbeiter) request.getSession().getAttribute("mitarbeiter");
             if (m == null)
                 throw new Exception("kein Mitarbeiter ist angemeldet");
@@ -37,11 +39,13 @@ public class ZeiterfassungServlet extends HttpServlet
             s.setKommen(kommen);
             s.setTimestamp(new Date());
 
+            // Zeiterfassung-Instanz aus dem ServletContext holen
             Zeiterfassung z = (Zeiterfassung) request.getSession().getServletContext().
                     getAttribute("zeiterfassung");
 
             if (z != null)
             {
+                // neuen Eintrag abspeichern
                 z.eintrag(s, m);
             }
             else
