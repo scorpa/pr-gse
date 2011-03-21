@@ -6,11 +6,26 @@
     version="2.0">
 
     <tlib-version>1.0</tlib-version>
+    <description>
+        Definiert folgende Tags:
+            mitarbeiter: gibt ein Attribut eines Mitarbeiters aus
+            error: gibt eine Fehlermeldung aus
+            kommen_gehen: dient zum Steuern der Aktivierung eines Buttons
+            zeit_iterator: implementiert eine Schleife über alle Zeitstempel eines Mitarbeiters
+            zeitstempel: gibt ein Attribut eines Zeitstempels aus
+
+    </description>
     <short-name>zeiterfassung</short-name>
-    <uri>zeiterfassung</uri>
+    <uri>/WEB-INF/tld/zeiterfassung</uri>
 
     <tag>
-        <description>gibt ein Attribut des Mitarbeiters aus</description>
+        <description>
+            gibt ein Attribut des Mitarbeiters aus;
+            das Attribut feld kann folgende Werte haben:
+                nr: Mitarbeiternummer
+                name: Name des Mitarbeiters
+                stunden: Beschäftigungsausmaß des Mitarbeiters
+        </description>
         <name>mitarbeiter</name>
         <tag-class>web.MitarbeiterAusgabe</tag-class>
         <attribute>
@@ -20,15 +35,18 @@
     </tag>
     
     <tag>
-        <description>gibt Fehlermeldung aus</description>
+        <description>
+            gibt eines Fehlermeldung aus
+            (Attribut mit dem Namen "error" aus dem Request)
+        </description>
         <name>error</name>
         <tag-class>web.ErrorTag</tag-class>
     </tag>
 
     <tag>
         <description>
-            gibt disabled="disabled" aus, wenn Button nicht aktiv sein soll
-            typ ist entweder kommen oder gehen
+            gibt disabled="disabled" aus, wenn Button nicht aktiv sein soll.
+            Das Attribut typ ist entweder kommen oder gehen
         </description>
         <name>kommen_gehen</name>
         <tag-class>web.KommenGehen</tag-class>
@@ -39,14 +57,16 @@
     </tag>
 
     <tag>
-        <description>iteriert über alle Zeitstempel eines Mitarbeiters</description>
+        <description>
+            iteriert über alle Zeitstempel eines Mitarbeiters der aktuellen Woche
+        </description>
         <name>zeit_iterator</name>
         <tag-class>web.ZeitenIterator</tag-class>
     </tag>
 
     <tag>
         <description>
-            gibt ein Feld eines Zeitstempels aus
+            gibt ein Feld eines Zeitstempels aus;
             feld kann folgende Werte haben: kommen, zeit
         </description>
         <name>zeitstempel</name>
@@ -61,7 +81,7 @@
         </attribute>
     </tag>
 
-        <tag>
+    <tag>
         <description>gibt den Zeitsaldo des aktuellen Mitarbeiters aus</description>
         <name>zeit_saldo</name>
         <tag-class>web.ZeitSaldo</tag-class>

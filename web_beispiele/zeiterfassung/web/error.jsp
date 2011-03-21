@@ -2,6 +2,8 @@
     Document   : error
     Created on : 11.03.2011, 23:41:00
     Author     : Rudi
+
+    Fehlerseite. Dient zum Anzeigen einer Fehlermeldung
 --%>
 
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>

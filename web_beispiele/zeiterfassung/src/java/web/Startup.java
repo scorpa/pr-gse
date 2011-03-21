@@ -10,7 +10,9 @@ import javax.servlet.ServletContextListener;
 
 
 /**
- * Web application lifecycle listener.
+ * Instanziiert beim Start der WEB-Applikation eine
+ * Implementierung des Interfaces Zeiterfassung und hängt die Instanz
+ * an den ServletContext
  * @author Rudolf Radlbauer
  */
 
@@ -20,6 +22,7 @@ public class Startup implements ServletContextListener {
     {
         try
         {
+            // Implementierungsklasse muss als init-Parameter im web.xml eingetragen sein
             Zeiterfassung z = (Zeiterfassung) Class.forName(sce.getServletContext().
                     getInitParameter("zeiterfassung")).newInstance();
             sce.getServletContext().setAttribute("zeiterfassung", z);

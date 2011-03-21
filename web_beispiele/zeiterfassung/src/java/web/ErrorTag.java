@@ -6,7 +6,8 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
 /**
- *
+ * Liest ein Attribut mit dem Namen "error" aus dem Request
+ * und gibt diesen (falls vorhanden) aus.
  * @author Rudolf Radlbauer
  */
 public class ErrorTag extends TagSupport
@@ -17,7 +18,7 @@ public class ErrorTag extends TagSupport
     {
         try
         {
-            String error = (String) pageContext.getRequest().getAttribute("error");
+            Object error = pageContext.getRequest().getAttribute("error");
             if (error != null)
             {
                 pageContext.getOut().print(error);

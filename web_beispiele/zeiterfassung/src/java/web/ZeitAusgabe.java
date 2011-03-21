@@ -7,7 +7,8 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
 /**
- *
+ * gibt ein Feld der Zeitausgabe-Instanz aus, welche gerade am
+ * pageContext hängt.
  * @author Rudolf Radlbauer
  */
 public class ZeitAusgabe extends TagSupport

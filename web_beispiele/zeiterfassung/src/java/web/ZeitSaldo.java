@@ -8,7 +8,7 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
 /**
- *
+ * gibt den Zeitsaldo der aktuellen Woche aus
  * @author Rudolf Radlbauer
  */
 public class ZeitSaldo extends BasisTag
