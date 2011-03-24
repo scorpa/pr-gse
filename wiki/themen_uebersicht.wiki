@@ -24,8 +24,7 @@
     * [thema_orm Object Relational Mapping (ORM)]
     * [thema_persistence_frameworks Persistence Frameworks]
   * WEB-Applikationen
-    * [thema_web_begriffe Begriffe]
-    * [thema_web_server WEB-Server]
+    * [thema_web_uebersicht Übersicht]
     * [thema_web_verzeichnisstruktur Aufbau einer Java Webapplikation]
     * [thema_web_servlets Servlets]
     * [thema_web_jsp Java Server Pages (JSP)]
