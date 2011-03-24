@@ -2,4 +2,4 @@
 
 = WEB-Applikationen mit Java - Übersicht =
 
-[wiki/webapp.ppt Folien aus dem Unterricht]
+[http://pr-gse.googlecode.com/svn/wiki/ppt/webapp.ppt Folien aus dem Unterricht]
