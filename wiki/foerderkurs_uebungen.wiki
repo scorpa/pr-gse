@@ -1,0 +1,9 @@
+#summary Übungen für Förderkurs
+
+= Übungen für Förderkurs =
+
+
+  * [uebung_schleifen_tapete Tapete]
+  * [uebung_arrays_binaerzahl BinaerZahl]
+  * [uebung_interface_termine Terminplaner]
+  * [uebung_abstraktion_logik Logik]
