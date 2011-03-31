@@ -8,6 +8,8 @@
 
 [http://www.javabuch.de/ Handbuch der Java-Programmierung] ab Kapitel 27 (hier wird nicht nur SWING sondern auch AWT behandelt.)
 
+[http://download.oracle.com/javase/tutorial/ui/features/compWin.html Übersicht über die SWING-Komponenten]
+
 === Aufbau der Oberfläche ===
 
 Hier sei auf das Beispiel im Abschnitt [thema_programm1 "1. umfangreicheres Programm"] verwiesen.
