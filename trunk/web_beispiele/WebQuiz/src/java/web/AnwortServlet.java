@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package web;
 
 import java.io.IOException;
@@ -16,8 +11,10 @@ import quiz.Frage;
 import quiz.Quiz;
 
 /**
+ * Auswerten der ausgewaehlten Antwort und weiterschalten auf die 
+ * naechste Frage
  *
- * @author Rudi
+ * @author Rudolf Radlbauer
  */
 public class AnwortServlet extends HttpServlet {
    
@@ -32,24 +29,35 @@ public class AnwortServlet extends HttpServlet {
     throws ServletException, IOException 
     {
         HttpSession session = request.getSession();
+        // Quiz-Instanz aus der Session holen
+        // (wird in FrageAusgabe.java gesetzt)
         Quiz quiz = (Quiz) session.getAttribute("quiz");
-        int antwort = Integer.parseInt(request.getParameter("antwort"));
-        Frage frage = (Frage) session.getAttribute("frage");
-        if (frage.getRichtig() == antwort)
+        if (quiz != null)
         {
-            request.setAttribute("status", "Richtig - und weiter gehts");
-            Frage neu = quiz.next();
-            if (neu == null)
-            {
-                request.getRequestDispatcher("fertig.html").forward(request, response);
-                session.removeAttribute("quiz");
-                return;
+            // Was hat der Benutzer ausgewaehlt?
+            int antwort = Integer.parseInt(request.getParameter("antwort"));
+            // aktuelle Frage aus der Session holen
+            // (wird in FrageAusgabe.java zu Beginn gesetzt, fuer das naechste Mal weiter unten)
+            Frage frage = (Frage) session.getAttribute("frage");
+            if (frage.getRichtig() == antwort)
+            {   // Benutzer hat richtig gewaehlt
+                request.setAttribute("status", "Richtig - und weiter gehts");
+                // auf naechste Frage schalten
+                Frage neu = quiz.next();
+                if (neu == null)
+                {   // in diesem Fall sind wir am Ende angelangt
+                    session.removeAttribute("quiz");
+                    request.getRequestDispatcher("fertig.html").forward(request, response);
+                    return;
+                }
+                // naechste Frage an die Session haengen
+                session.setAttribute("frage", neu);
             }
-            session.setAttribute("frage", neu);
-        }
-        else
-        {
-            request.setAttribute("status", "Leider falsch - probiere noch einmal!");
+            else
+            {
+                // wird im TagHandler Status.java ausgegeben
+                request.setAttribute("status", "Leider falsch - probiere noch einmal!");
+            }
         }
 
         request.getRequestDispatcher("index.jsp").forward(request, response);

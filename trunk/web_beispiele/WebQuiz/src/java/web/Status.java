@@ -6,6 +6,11 @@ import java.util.logging.Logger;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
+/**
+ * Ausgabe ob die letzte Antwort richtig war oder nicht
+ *
+ * @author Rudolf Radlbauer
+ */
 public class Status extends TagSupport
 {
 
@@ -14,6 +19,7 @@ public class Status extends TagSupport
     {
         try
         {
+            // status wird in AntwortServlet gesetzt
             String status = (String) pageContext.getRequest().getAttribute("status");
             if (status != null)
             {
