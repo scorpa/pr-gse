@@ -8,6 +8,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
+<%-- tag-library einbinden --%>
 <%@taglib prefix="q" uri="/WEB-INF/quiz.tld"%>
 
 <html>
@@ -16,8 +17,8 @@
         <title>Quiz</title>
     </head>
     <body>
-        <form action="antwort">
-            <q:frage feld="text" /><br/>
+        <form action="antwort"> <%-- AntwortServlet (siehe web.xml) --%>
+            <q:frage feld="text" /><br/>  <%-- FrageAusgabe (siehe WEB_INF/quiz.tld) --%>
             <input type="radio" name="antwort" value="0" checked="checked" />
             <q:frage feld="antwort" index="0"/><br/>
             <input type="radio" name="antwort" value="1" />
@@ -26,6 +27,6 @@
             <q:frage feld="antwort" index="2"/><br/>
             <input type="submit" value="OK" />
         </form>
-            <p><q:status/></p>
+            <p><q:status/></p> <%-- Status (siehe WEB-INF/quiz.tld) --%>
     </body>
 </html>

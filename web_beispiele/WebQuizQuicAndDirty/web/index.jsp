@@ -4,6 +4,8 @@
     Author     : Rudi
 --%>
 
+<%-- die ganz schnelle Loesung besteht aus nur dieser Datei --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,11 +14,12 @@
             quiz.Quiz q = (quiz.Quiz) session.getAttribute("quiz");
             if (q == null)  // erster Aufruf
             {
+                // falls noch keine Quiz-Instanz an der Session haengt, wird sie hier erzeugt.
                 q = new quiz.Quiz();
                 session.setAttribute("quiz", q);
                 session.setAttribute("frage", q.next());
             } else
-            {
+            {  // weiterer Aufruf - Benutzer hat schon einmal geantwortet.
                 quiz.Frage f = (quiz.Frage) session.getAttribute("frage");
                 int antwort = Integer.parseInt(request.getParameter("antwort"));
                 if (antwort == f.getRichtig())
@@ -50,16 +53,17 @@
             <input type="radio" name="antwort" value="2" /> <%=f.getAntwort(2)%> <br/>
             <input type="submit" value="WEITER"/>
             <%
-                boolean richtig = (Boolean) pageContext.getAttribute("richtig");
-                if (richtig)
+                Boolean richtig = (Boolean) pageContext.getAttribute("richtig");
+                if (richtig != null)
                 {
+                    if (richtig){
             %>
             <p>Richtig!!!</p>
             <%                    } else
                 {
             %>
             <p>Leider falsch - probieren Sie noch einmal!</p>
-            <%                }
+            <%                }}
             } else
             {
                 session.removeAttribute("quiz");
