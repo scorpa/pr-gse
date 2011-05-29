@@ -82,3 +82,4 @@ Die gebräuchlichste Art ist es, als Ereignis-Handler eine (anonyme) [thema_inne
 || [uebung_swing_memory Memory] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/memory memory]  ||  ||
 || [uebung_swing_konto Konto-Dialog] ||  ||  ||
 || [uebung_swing_terminplaner GUI für Terminplaner] ||  ||  ||
+|| [uebung_swing_verkaufsstatistik Verkaufsstatistik] || [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/verkaufsstatistik verkaufsstatistik] || Prüfungsaufgabe ||
