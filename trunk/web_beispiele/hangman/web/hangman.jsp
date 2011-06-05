@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 30.05.2011, 23:38:46
-    Author     : Rudi
+    Author     : Rudolf Radlbauer
 --%>
 
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
@@ -15,18 +15,25 @@
         <title>Hangman</title>
     </head>
     <body>
+        <c:set var="alphabet"
+               value="A,B,C,D,E,F,G,H,I,J,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" />
+
         <h1><c:out value="${hangman.anzeige}"/></h1>
-        <form action="input">
-            <c:choose>
-                <c:when test="${!hangman.fertig}">
-                    <input type="text" name="buchstabe" value="" size="1" />
-                </c:when>
-                <c:otherwise>
-                    Erraten!
-                </c:otherwise>
-            </c:choose>
-            <input type="submit" value="WEITER" />
-        </form>
+        <c:choose>
+            <c:when test="${!hangman.fertig}">
+                <c:forEach items="${alphabet}" var="buchstabe">
+                    <a href="input?buchstabe=<c:out value="${buchstabe}"/>">
+                       <c:out value=" ${buchstabe} "/>
+                    </a>
+                    &nbsp;
+                </c:forEach>
+            </c:when>
+            <c:otherwise>
+                Erraten! <br/>
+                <a href="input">neues Spiel</a>
+            </c:otherwise>
+        </c:choose>
+
 
         <p>Fehlversuche: <c:out value="${hangman.fehlVersuche}"/></p>
     </body>
