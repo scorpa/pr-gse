@@ -76,7 +76,7 @@ Hier ist die Exception `ClassNotFoundException` abzufangen.
 
 Als Nächstes wird die Verbindung geöffnet:
 {{{
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost/tutorial, "root");
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost/tutorial", "root", "");
 }}}
 Hier ist die `SQLException` zu behandeln.
 
