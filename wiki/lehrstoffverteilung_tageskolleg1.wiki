@@ -14,5 +14,43 @@
 
 ----
 
-=== Beurteilung ===
- in Arbeit
+== Beurteilung ==
+
+Die Note in POS1 (praktischer Teil) setzt sich folgendermaßen zusammen:
+
+  * Semesterprogramm: 30% 
+  * Konzepte: 30%
+  * praktische Leistungsfestellung: 30%
+  * Übungsbeispiele: 10%
+
+
+Notenschlüssel (hinzu kommt dann die Beurteilung der anderen Lehrer):
+
+|| *Prozent* || *Note* ||
+|| 90 - 100 || 1 ||
+|| 77 - 89 || 2 ||
+|| 64 - 76 || 3 ||
+|| 51 - 63 || 4 ||
+|| 0 - 50 || 5 ||
+
+
+=== Semesterprogramm ===
+
+Ein größeres Programm, welches im Laufe des ganzen Semesters erstellt wird. Falls mehrere Studierende an einem Programm arbeiten, muss dieses klar in verschiedene Module unterteilbar sein, so dass jede/r an einem Modul arbeitet.
+
+Der Status des Programms wird laufend (mindestens 1 x pro Monat) kontrolliert. Die Beurteilung des Semesterprogramms setzt sich aus der laufendenden Mitarbeit und dem Endergebnis zusammen.
+
+=== Konzepte ===
+
+Im Zuge der Kontrolle des Status des Semesterprogramms werden die Studierenden zum Programm befragt. Es geht dabei um die Verwendung der im Unterricht besprochenen Konzepte.
+
+
+=== Praktische Leistungsfeststellung ===
+
+Zum Ende des Semesters wird eine praktische Leistungsfeststellung durchgeführt: Während einer Doppelstunde muss alleine ein Programm zu einer Aufgabenstellung erstellt werden. 
+
+Es gibt einen Wiederholungstermin für jene, die beim ersten Termin fehlen oder sich verbessern wollen.
+
+=== Übungsbeispiele ===
+
+Es gibt eine [Liste von Übungsbeispielen liste_uebungen], von denen mindestens 10 zu programmieren und herzuzeigen sind. Wer mehr Übungsbeispiele abgibt, kann sich Zusatzpunkte verdienen.
