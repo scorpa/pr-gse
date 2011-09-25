@@ -23,3 +23,5 @@ Methoden:
   * `bremsen()`: dividiert die Drehzahl durch 2
   * `hinaufschalten()`: erhöht den Gang um 1
   * `hinunterschalten()`: reduziert den Gang um 1
+
+_Wie ändert sich das Verhalten, wenn man als Drehzahl eine Dezimalzahl nimmt?_
