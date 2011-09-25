@@ -42,7 +42,7 @@ Der Status des Programms wird laufend (mindestens 1 x pro Monat) kontrolliert. D
 
 === Konzepte ===
 
-Im Zuge der Kontrolle des Status des Semesterprogramms werden die Studierenden zum Programm befragt. Es geht dabei um die Verwendung der im Unterricht besprochenen Konzepte.
+Im Zuge der Kontrolle des Status des Semesterprogramms werden die Studierenden in Form einer kleinen Prüfung zum Programm befragt. Es geht dabei um die Verwendung der im Unterricht besprochenen Konzepte.
 
 
 === Praktische Leistungsfeststellung ===
