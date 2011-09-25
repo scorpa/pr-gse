@@ -19,9 +19,9 @@
 Die Note in POS1 (praktischer Teil) setzt sich folgendermaßen zusammen:
 
   * Semesterprogramm: 30% 
-  * Konzepte: 30%
+  * Konzepte: 20%
   * praktische Leistungsfestellung: 30%
-  * Übungsbeispiele: 10%
+  * Übungsbeispiele: 20%
 
 
 Notenschlüssel (hinzu kommt dann die Beurteilung der anderen Lehrer):
@@ -53,4 +53,4 @@ Es gibt einen Wiederholungstermin für jene, die beim ersten Termin fehlen oder 
 
 === Übungsbeispiele ===
 
-Es gibt eine [liste_uebungen Liste von Übungsbeispielen], von denen mindestens 10 zu programmieren und herzuzeigen sind. Wer mehr Übungsbeispiele abgibt, kann sich Zusatzpunkte verdienen.
+Es gibt eine [liste_uebungen Liste von Übungsbeispielen], von denen mindestens 20 zu programmieren und herzuzeigen sind. Wer mehr Übungsbeispiele abgibt, kann sich Zusatzpunkte verdienen.
