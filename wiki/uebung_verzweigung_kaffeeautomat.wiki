@@ -1,5 +1,4 @@
 #summary Übung: Kaffee-Automat
-#labels Featured
 
 = Kaffee-Automat =
 *Übung in Arbeit*
@@ -11,6 +10,28 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/KaffeeAutomat.png
 </p>
 
 === Attribute ===
+
   * Der Kaffeeautomat akzeptiert folgende Münzen: 2€, 1€, 50c, 20c, 10c. Für jede dieser Münz-Arten gibt es ein Attribut, welches die Anzahl der entsprechenden Münzen in der Kasse des Automaten angibt. Ein neuer Automat hat eine leere Kasse.
 
-  * Es gibt folgende Produkte: Kaffee, Kakao, Tee. Für jedes Produkt gibt es ein Attribut, welches den Preis des Produktes angibt. Standardmäßig kosten ein Kaffee und ein Kakao jeweils 1.20€, ein Tee kostet 1€.
+  * Es gibt folgende Produkte: Kaffee, Kakao, Tee. Für jedes Produkt gibt es ein Attribut, welches den Preis des Produktes in Cent angibt. Standardmäßig kosten ein Kaffee und ein Kakao jeweils 1.20€, ein Tee kostet 1€.
+
+  * Das Attribut `guthaben` gibt an, wie viel Geld (in Cent) eben eingeworfen wurden (vor Kauf des Produktes).
+
+=== Methoden ===
+
+  * Im Konstruktor werden die bei den Attributen angegebenen Standardwerte gesetzt.
+
+  * Die Methode `preis(...)` dient zum Ändern des Preises für ein Produkt. Der Datentyp `PRODUKT` ist ein `enum`-Typ mit den möglichen Werten `KAFFEE`, `KAKAO` oder `TEE`.
+
+  * Die Methode `einwurf(...)` dient zum Einwerfen der im Parameter eingegebenen Münze. Die Anzahl der entsprechenden Münze wird um 1 erhöht, und das Guthaben wird entsprechend erhöht. Das aktuelle Guthaben wird als Rückgabewert geliefert.
+
+  * Die Methode `kaufen(...)` schließt nun den Kauf des im Parameter angegebenen Produktes ab. Es gibt nun folgende Möglichkeiten: 
+  - Das Guthaben ist hoch genug, um das Produkt zu kaufen und der Automat hat die richtigen Münzen für das Retourgeld in der Kasse. Dann wird ungefähr folgendes auf die Konsole ausgegeben:
+{{{
+    Vielen Dank für Ihren Kauf!
+    Sie erhalten folgende Münzen als Retourgeld:
+        1 x 50c
+        2 x 20c
+        1 x 10c
+}}}
+Die Methode liefert dann als Rückgabewert das Retourgeld in Cent, 
