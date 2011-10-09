@@ -13,6 +13,7 @@
     * [uebung_verzweigung_projektverwaltung Projektverwaltung]
     * [uebung_verzweigung_automatik Automatikgetriebe]
     * [uebung_verzweigung_bankomat Bankomat]
+    * [uebung_verzweigung_kaffeeautomat Kaffee-Automat]
   * Assoziation mehrerer Klassen
     * [uebung_assoziation_bruch Bruchrechnen]
     * [uebung_assoziation_complex Complex]
