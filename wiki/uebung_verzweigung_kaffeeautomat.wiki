@@ -1,0 +1,16 @@
+#summary Übung: Kaffee-Automat
+#labels Featured
+
+= Kaffee-Automat =
+*Übung in Arbeit*
+
+Erstellen Sie die folgende Klasse `KaffeeAutomat`:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/KaffeeAutomat.png
+</p>
+
+=== Attribute ===
+  * Der Kaffeeautomat akzeptiert folgende Münzen: 2€, 1€, 50c, 20c, 10c. Für jede dieser Münz-Arten gibt es ein Attribut, welches die Anzahl der entsprechenden Münzen in der Kasse des Automaten angibt. Ein neuer Automat hat eine leere Kasse.
+
+  * Es gibt folgende Produkte: Kaffee, Kakao, Tee. Für jedes Produkt gibt es ein Attribut, welches den Preis des Produktes angibt. Standardmäßig kosten ein Kaffee und ein Kakao jeweils 1.20€, ein Tee kostet 1€.
