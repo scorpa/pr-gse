@@ -36,13 +36,43 @@ Für die beiden Koordinaten gibt es jeweis eine `get`-Methode.
 
 Die Methode `abstand(Punkt p)` liefert als Rückgabewert den Abstand des Punktes zu einem anderen Punkt `P`, dessen Referenz als Parameter übergeben wird.
 
-Die Methode `abstand(Gerade g)` liefert als Rückgabewert den Abstand des Punktes zu einer Gerade, deren Referenz als Parameter übergeben wird (Abb. 3).
+Die Methode `abstand(Gerade g)` liefert als Rückgabewert den Abstand des Punktes zu einer Gerade (Abb. 3), deren Referenz als Parameter übergeben wird.
+
+Die Methode `gerade(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade` welche durch beide Punkte geht.
 
 <p>
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_abstand.png
 <br/>_Abb. 3: Abstand (`a`) eines Punktes `P` von einer Geraden `g`_
 </p>
 
+=== Gerade ===
+
+Ein Konstruktor bekommt als Parameter die Werte für den Abstand `a` von der x-Achse und für die Steigung `k` übergeben (Abb. 2).
+
+Ein zweiter Konstruktor bekommt als Parameter die Referenzen auf 2 `Punkt`-Instanzen übergeben, durch welche die `Gerade` laufen soll.
+
+Es gibt `get`-Methoden für die beiden Attribute (Abstand `a` und Steigung `k`).
+
+Die Methode `schnittPunkt(Gerade g)` liefert als Rückgabewert eine Referenz auf den Schnittpunkt mit der als Parameter übergebenen Gerade (Abb. 4).
+
+Die Methode `parallel(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade`, welche parallel zur betrachteten `Gerade` ist und durch den `Punkt` p läuft (Abb. 5).
+
+Die Methode `normal(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade`, welche normal zur betrachteten `Gerade` ist und durch den `Punkt` p läuft (Abb. 6).
+
+Die Methode `abstand(Punkt p)` liefert als Rückgabewert den Abstand der `Gerade` zum übergebenen Punkt `P` (Abb. 3).
 
 
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_schnittpunkt.png
+<br/>_Abb. 4: Schnittpunkt zweier Geraden `g1` und `g2`_
+</p>
 
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_parallel.png
+<br/>_Abb. 5: `g2` ist die `Gerade`, welche parallel zu `g1` ist und durch den Punkt `p` läuft._
+</p>
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_normal.png
+<br/>_Abb. 6: `g2` ist die `Gerade`, welche normal zu `g1` ist und durch den Punkt `p` läuft._
+</p>
