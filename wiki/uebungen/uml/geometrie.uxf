@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.Class</type><coordinates><x>10</x><y>20</y><w>220</w><h>140</h></coordinates><panel_attributes>Punkt
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.Class</type><coordinates><x>10</x><y>30</y><w>220</w><h>160</h></coordinates><panel_attributes>Punkt
 --
 x : double
 y : double
@@ -29,7 +29,8 @@ y : double
 getX() : double
 getY() : double
 abstand(p : Punkt) : double
-gerade(p : Punkt) : Gerade</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>310</x><y>10</y><w>230</w><h>180</h></coordinates><panel_attributes>Gerade
+abstand(g : Gerade) : double
+gerade(p : Punkt) : Gerade</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>310</x><y>20</y><w>230</w><h>180</h></coordinates><panel_attributes>Gerade
 --
 a : double
 k : double
@@ -41,5 +42,5 @@ getK() : double
 schnittPunkt(g : Gerade) : Punkt
 parallel(p : Punkt) : Gerade
 normal(p : Punkt) : Gerade
-abstand(p : Punkt) : double</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>200</x><y>70</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;.&gt;
+abstand(p : Punkt) : double</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>200</x><y>80</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;.&gt;
 </panel_attributes><additional_attributes>30;30;110;30</additional_attributes></element></umlet_diagram>
