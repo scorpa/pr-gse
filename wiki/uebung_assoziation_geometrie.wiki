@@ -1,0 +1,48 @@
+#summary Übung: Geometrie
+
+= Geometrie =
+
+Erstellen Sie die folgenden beiden Klassen `Punkt` und `Gerade`:
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/geometrie.png
+</p>
+
+== Attribute ==
+
+Ein `Punkt` ist durch seine Koordinaten `x` und `y` im Koordinatensystem definiert (Abb. 1). 
+
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_punkt.png
+<br/>_Abb. 1: Koordinaten eines Punktes `P`_
+</p>
+
+
+Eine `Gerade` ist durch die Gleichung `y = a + k*x` definiert (Abb. 2)
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_gerade.png
+<br/>_Abb. 2: Definition einer Geraden duch Steigung (`k`) und Abstand (`a`) von der x-Achse_
+</p>
+
+== Methoden ==
+
+=== Punkt ===
+
+Der Konstruktor der Klasse `Punkt` bekommt als Parameter die Werte der Koordinaten `x` und `y` übergeben.
+
+Für die beiden Koordinaten gibt es jeweis eine `get`-Methode.
+
+Die Methode `abstand(Punkt p)` liefert als Rückgabewert den Abstand des Punktes zu einem anderen Punkt `P`, dessen Referenz als Parameter übergeben wird.
+
+Die Methode `abstand(Gerade g)` liefert als Rückgabewert den Abstand des Punktes zu einer Gerade, deren Referenz als Parameter übergeben wird (Abb. 3).
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_abstand.png
+<br/>_Abb. 3: Abstand (`a`) eines Punktes `P` von einer Geraden `g`_
+</p>
+
+
+
+
