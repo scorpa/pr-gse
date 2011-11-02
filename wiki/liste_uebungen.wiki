@@ -19,6 +19,7 @@
     * [uebung_assoziation_complex Complex]
     * [uebung_assoziation_village Village]
     * [uebung_assoziation_town Town]
+    * [uebung_assoziation_geometrie Geometrie]
   * String-Operationen und Java-Doc
     * [uebung_string_operationen_javadoc_mitglied Mitglied]
     * [uebung_string_operationen_javadoc_textanalyzer Text-analyzer]
