@@ -4,7 +4,7 @@
 == Resourcen, Software, ... ==
  * [http://www.oracle.com/technetwork/java/index.html Die Java-Seite von Oracle]
  * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u11-oth-JPR@CDS-CDS_Developer Java Development Kit V6.11]
- * [https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jdk-6u10-docs-oth-JPR@CDS-CDS_Developer API-Doc V6 zum Download]
+ * [http://www.oracle.com/technetwork/java/javase/downloads/index.html#docs API-Doc V7 zum Download]
  * [http://www.bluej.org/ BlueJ]
  * [http://www.bluej.org/objects-first/resources/projects.zip Objects First Beispielprojekte]
  * [http://www.eclipse.org Eclipse]
