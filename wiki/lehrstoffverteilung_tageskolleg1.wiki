@@ -19,9 +19,8 @@
 Die Note in POS1 (praktischer Teil) setzt sich folgendermaßen zusammen:
 
   * Semesterprogramm: 30% 
-  * Konzepte: 20%
-  * praktische Leistungsfestellung: 30%
-  * Übungsbeispiele: 20%
+  * praktische Leistungsfestellung: 35%
+  * Übungsbeispiele: 35%
 
 
 Notenschlüssel (hinzu kommt dann die Beurteilung der anderen Lehrer):
@@ -39,10 +38,6 @@ Notenschlüssel (hinzu kommt dann die Beurteilung der anderen Lehrer):
 Ein größeres Programm, welches im Laufe des ganzen Semesters erstellt wird. Falls mehrere Studierende an einem Programm arbeiten, muss dieses klar in verschiedene Module unterteilbar sein, so dass jede/r an einem Modul arbeitet.
 
 Der Status des Programms wird laufend (mindestens 1 x pro Monat) kontrolliert. Die Beurteilung des Semesterprogramms setzt sich aus der laufendenden Mitarbeit und dem Endergebnis zusammen.
-
-=== Konzepte ===
-
-Im Zuge der Kontrolle des Status des Semesterprogramms werden die Studierenden in Form einer kleinen Prüfung zum Programm befragt. Es geht dabei um die Verwendung der im Unterricht besprochenen Konzepte.
 
 
 === Praktische Leistungsfeststellung ===
