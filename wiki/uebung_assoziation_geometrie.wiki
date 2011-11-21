@@ -19,7 +19,9 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_punkt.png
 </p>
 
 
-Eine `Gerade` ist durch die Gleichung `y = a + k*x` definiert (Abb. 2)
+Eine `Gerade` ist durch die Gleichung `y = a + k*x` definiert (Abb. 2). 
+
+(*Achtung:* mit dieser Definition ist eine senkrechte Gerade nicht darstellbar. Sollte bei irgend einer Operation das Ergebnis eine senkrechte Gerade sein, ist eine Fehlermeldung auszugeben; siehe unten.)
 
 <p>
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_gerade.png
@@ -38,7 +40,7 @@ Die Methode `abstand(Punkt p)` liefert als Rückgabewert den Abstand des Punktes
 
 Die Methode `abstand(Gerade g)` liefert als Rückgabewert den Abstand des Punktes zu einer Gerade (Abb. 3), deren Referenz als Parameter übergeben wird.
 
-Die Methode `gerade(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade` welche durch beide Punkte geht.
+Die Methode `gerade(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade` welche durch beide Punkte geht. Falls die neue Gerade senkrecht wäre, liefert die Methode den Wert `null` und produziert eine Fehlermeldung.
 
 <p>
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_abstand.png
@@ -47,17 +49,18 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/images/geometrie/def_abstand.png
 
 === Gerade ===
 
+
 Ein Konstruktor bekommt als Parameter die Werte für den Abstand `a` von der x-Achse und für die Steigung `k` übergeben (Abb. 2).
 
-Ein zweiter Konstruktor bekommt als Parameter die Referenzen auf 2 `Punkt`-Instanzen übergeben, durch welche die `Gerade` laufen soll.
+Ein zweiter Konstruktor bekommt als Parameter die Referenzen auf 2 `Punkt`-Instanzen übergeben, durch welche die `Gerade` laufen soll. Wenn die beiden Punkte identisch sind oder so liegen, dass die Gerade senkrecht wäre, wird eine Fehlermeldung ausgegeben und `a` und `k` beide auf den Wert `0` gesetzt.
 
 Es gibt `get`-Methoden für die beiden Attribute (Abstand `a` und Steigung `k`).
 
-Die Methode `schnittPunkt(Gerade g)` liefert als Rückgabewert eine Referenz auf den Schnittpunkt mit der als Parameter übergebenen Gerade (Abb. 4).
+Die Methode `schnittPunkt(Gerade g)` liefert als Rückgabewert eine Referenz auf den Schnittpunkt mit der als Parameter übergebenen `Gerade` (Abb. 4). Wenn die beiden Geraden parallel sind, wird eine Fehlermeldung ausgegeben und als Rückgabewert `null` geliefert.
 
 Die Methode `parallel(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade`, welche parallel zur betrachteten `Gerade` ist und durch den `Punkt` p läuft (Abb. 5).
 
-Die Methode `normal(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade`, welche normal zur betrachteten `Gerade` ist und durch den `Punkt` p läuft (Abb. 6).
+Die Methode `normal(Punkt p)` liefert als Rückgabewert eine Referenz auf eine neue `Gerade`, welche normal zur betrachteten `Gerade` ist und durch den `Punkt` p läuft (Abb. 6). Wenn die neue `Gerade` genau senkrecht wäre, wird eine Fehlermeldung ausgegeben und der Rückgabewert `null` geliefert. 
 
 Die Methode `abstand(Punkt p)` liefert als Rückgabewert den Abstand der `Gerade` zum übergebenen Punkt `P` (Abb. 3).
 
