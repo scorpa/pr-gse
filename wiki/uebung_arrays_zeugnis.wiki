@@ -2,9 +2,13 @@
 
 = Zeugnis =
 
-* in Arbeit! *
-
 Erstellen Sie die folgenden Klassen `Zeugnis` und `Fach`:
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/zeugnis.jpg
+</p>
+
+
 
 ----
 
@@ -24,7 +28,7 @@ Die Methode `ausgeben()` der Klasse `Fach` gibt das `kuerzel` und die `note` auf
 
 ----
 
-Der Konstruktor der Klasse `Zeugnis` übernimmt den Namen als Parameter. Im Array `faecher` werden Fächer mit folgenden Kürzeln angelegt:
+Der Konstruktor der Klasse `Zeugnis` übernimmt den Namen als Parameter. Im Array `faecher` werden die Fächer mit folgenden Kürzeln angelegt:
 {{{
     M, E, D, GWK, BIO, BSP
 }}}
@@ -36,7 +40,13 @@ Mit der Methode `note(...)` kann man die Note für das Fach setzen, welches im P
 
 Die Methode `ausgeben()` gibt das Zeugnis in folgender Form auf die Konsole aus:
 {{{
-
+======== Max Mustermann =========
+M	4
+E	2
+D	4
+GWK	4
+BIO	3
+BSP	3
 }}}
 
 Die Methode `notenSchnitt()` errechnet den Durchschnittswert aller Noten und liefert diesen als Rückgabewert.
