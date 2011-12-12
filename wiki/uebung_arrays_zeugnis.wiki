@@ -13,18 +13,18 @@ http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/zeugnis.jpg
 ----
 
 === Attribute ===
-Jedes `Zeugnis` hat einen `namen` (Schüler, für den das Zeugnis ausgestellt wurde) und ein Array von Fächern (`faecher`).
+Jedes `Zeugnis` hat einen Namen (Schüler, für den das Zeugnis ausgestellt wurde) und ein Array von Fächern.
 
-Jedes Fach hat ein `kuerzel` (z.B. "M" Für "Mathematik") und eine `note`. Der Standardwert der `note` ist 1.
+Jedes Fach hat ein Kürzel (z.B. "M" Für "Mathematik") und eine Note. Der Standardwert der Note ist 1.
 
 ----
 
 === Methoden ===
-Der Konstruktor der Klasse `Fach` übernimmt das `kuerzel` als Parameter. (Der Standardwert der `note` wird auf 1 gesetzt.)
+Der Konstruktor der Klasse Fach übernimmt das Kürzel als Parameter. (Der Standardwert der Note wird auf 1 gesetzt.)
 
-Die Klasse `Fach` hat `get`-Methoden für beide Attribute und eine `set`-Methode für die `note`. Es muss sichergestellt werden, dass die `note` nur Werte von 1 bis 5 annehmen kann.
+Die Klasse Fach hat `get`-Methoden für beide Attribute und eine `set`-Methode für die Note. Es muss sichergestellt werden, dass die Note nur Werte von 1 bis 5 annehmen kann.
 
-Die Methode `ausgeben()` der Klasse `Fach` gibt das `kuerzel` und die `note` auf die Konsole aus.
+Die Methode `ausgeben()` der Klasse `Fach` gibt das Kürzel und die Note auf die Konsole aus.
 
 ----
 
@@ -34,7 +34,7 @@ Der Konstruktor der Klasse `Zeugnis` übernimmt den Namen als Parameter. Im Arra
 }}}
 
 Die Methode `zufall()` dient zum Generieren von Testdaten. Für jedes Fach im Array `faecher` wird eine zufällige Note von 1 bis 5 gesetzt.
-_(Hierfür können Sie die Klasse `Random` aus dem Package `java.util` verwenden.)
+_(Hierfür können Sie die Klasse `Random` aus dem Package `java.util` verwenden.)_
 
 Mit der Methode `note(...)` kann man die Note für das Fach setzen, welches im Parameter `kuerzel` übergeben wird. Falls ein Kürzel übergeben wird, welches in der Fächerliste nicht vorkommt, wird eine Fehlermeldung ausgegeben.
 
@@ -51,6 +51,6 @@ BSP	3
 
 Die Methode `notenSchnitt()` errechnet den Durchschnittswert aller Noten und liefert diesen als Rückgabewert.
 
-die Methode `bestesFach()` liefert eine Referenz auf das `Fach` mit der besten Note als Rückgabewert. _(Wenn mehrere Fächer gleich gut sind, wird das erste gefundene geliefert.)_
+Die Methode `bestesFach()` liefert eine Referenz auf das `Fach` mit der besten Note als Rückgabewert. _(Wenn mehrere Fächer gleich gut sind, wird das erste gefundene geliefert.)_
 
 Die Methode `bestanden()` liefert `true`, falls keine Note den Wert 5 hat, ansonsten `false`.
