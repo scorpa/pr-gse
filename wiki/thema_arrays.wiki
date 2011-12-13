@@ -212,6 +212,7 @@ Siehe auch Übungen zum Thema [thema_arraylist ArrayList].
 ||  [uebung_arrays_tischlerei Tischlerei] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/plattenverwaltung plattenverwaltung] || Prüfungsaufgabe ||
 ||  [uebung_arrays_cdverwaltung CD-Verwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/cdverwaltung cdverwaltung] || Prüfungsaufgabe ||
 ||  [uebung_arrays_temperatur TemperaturStatistik] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/temp_stat temp_stat] || Prüfungsaufgabe ||
+|| [uebung_arrays_zeugnis Zeugnis] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/zeugnis zeugnis] || Prüfungsaufgabe ||
 
 
 Es gibt auch einige Übungen auf [http://www.griesmayer.com/?menu=GSE diesem Server]
