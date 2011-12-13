@@ -12,6 +12,7 @@ public class Fach
     public Fach(String kuerzel)
     {
         this.kuerzel = kuerzel;
+        note = 1;
     }
 
     public String getKuerzel()
