@@ -17,6 +17,11 @@
 ----
 
 === Beurteilung ===
+
+<p>
+http://pr-gse.googlecode.com/svn/wiki/images/Baustelle.jpeg
+</p>
+
   * 2 praktische Leistungsfeststellungen (jeweils 50 Punkte), davon 1 Streichresultat
   * 1 Semesterprogramm (50 Punkte)
   * Übungen: jeweils 2 Punkte, wenn eine der folgenden [liste_uebungen2 Übungen] hergezeigt wird
