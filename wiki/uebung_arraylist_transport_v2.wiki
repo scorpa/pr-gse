@@ -14,3 +14,5 @@ Das zugehörige UML-Klassendiagramm könnte folgendermaßen aussehen:
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/transport_v2.jpg
 </p>
+
+[http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/transport_v2 Musterlösung]
