@@ -25,3 +25,10 @@ http://pr-gse.googlecode.com/svn/wiki/images/Baustelle.jpeg
   * 1 praktische Leistungsfeststellung mit Wiederholungsmöglichkeit (50 Punkte)
   * 10 Übungen: jeweils 5 Punkte; abzugeben bis zu vorgegebenem Datum
   * Semesterprogramm: bis zu 20 Zusatzpunkte bei laufender Mitarbeit und gutem Resultat
+
+|| *Punkte* || *Note* ||
+|| > 90 || 1 ||
+|| 77 - 89 || 2 ||
+|| 64 - 76 || 3 ||
+|| 51 - 63 || 4 ||
+|| 0 - 50 || 5 ||
