@@ -2,15 +2,15 @@
 
 = Lehrstoffverteilung 2. Semester Tageskolleg =
 
-|| *Wochen* || *Thema* || *Bemerkungen* ||
-|| 1 || [thema_klassendesign Klassendesign] || ||
-|| 2-4 || [thema_interface Interface] || ||
-|| 5-6 || [thema_vererbung Vererbung] || ||
-|| 7-8 || [thema_exceptions Exceptions] || ||
-|| 9 || [thema_collections Collections] || ||
-|| 10-11 || [thema_programm1 GUI: Aufbau der Oberfläche] || ||
-||12-13 || [thema_swing GUI: Ereignisbehandlung] || ||
-|| 14-15 || [thema_streams Dateianbindung] || ||
+|| *bis KW* || *Thema* || *Bemerkungen* ||
+|| 8 || [thema_klassendesign Klassendesign] || ||
+|| 8 || [thema_interface Interface] || ||
+|| 10 || [thema_vererbung Vererbung] || ||
+|| 11 || [thema_exceptions Exceptions] || ||
+|| 12 || [thema_collections Collections] || ||
+|| 16 || [thema_programm1 GUI: Aufbau der Oberfläche] || ||
+|| 19 || [thema_swing GUI: Ereignisbehandlung] || ||
+|| 23 || [thema_streams Dateianbindung] || ||
 
 
 
@@ -22,6 +22,6 @@
 http://pr-gse.googlecode.com/svn/wiki/images/Baustelle.jpeg
 </p>
 
-  * 2 praktische Leistungsfeststellungen (jeweils 50 Punkte), davon 1 Streichresultat
-  * 1 Semesterprogramm (50 Punkte)
-  * Übungen: jeweils 2 Punkte, wenn eine der folgenden [liste_uebungen2 Übungen] hergezeigt wird
+  * 1 praktische Leistungsfeststellung mit Wiederholungsmöglichkeit (50 Punkte)
+  * 10 Übungen: jeweils 5 Punkte; abzugeben bis zu vorgegebenem Datum
+  * Semesterprogramm: bis zu 20 Zusatzpunkte bei laufender Mitarbeit und gutem Resultat
