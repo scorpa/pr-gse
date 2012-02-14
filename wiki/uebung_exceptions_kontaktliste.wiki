@@ -28,7 +28,7 @@ Die Methode `toString()` liefert einen String, welcher eine Liste der Kontakte e
 
 Die Methode `sortieren(...)` sortiert nach dem übergebenen Kriterium. Als Kriterien sind folgende Strings erlaubt: "name", "email", "tel". Wird etwas anderes übergeben, dann wird ebenfalls eine `KontaktException` ausgelöst.
 
-=== Zusatzaufgabe ===
+----
 
 Kopieren Sie die Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/src/eingabe/Input.java `Input`] und fügen Sie eine Klassenmethode 
 {{{
