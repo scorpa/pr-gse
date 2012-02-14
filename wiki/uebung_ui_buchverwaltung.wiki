@@ -2,7 +2,7 @@
 
 = Buchverwaltung mit Benutzerinteraktion =
 
-Erstellen Sie eine zeilenorientierte Benutzerschnittstelle für die [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/bibliothek Buchverwaltung] von der Übung [http://pr-gse.googlecode.com/svn/wiki/uebungen/bibliothek.doc Bibliothek].
+Erstellen Sie eine zeilenorientierte Benutzerschnittstelle für die [http://pr-gse.googlecode.com/svn/trunk/uebungen/musterloesungen/src/bibliothek Buchverwaltung] von der Übung [uebung_arraylist_bibliothek Bibliothek].
 
 Für das Einlesen von Informationen vom Benutzer verwenden Sie die Klasse [http://pr-gse.googlecode.com/svn/trunk/vorgabe/src/eingabe/Input.java Input.java]
 ----
