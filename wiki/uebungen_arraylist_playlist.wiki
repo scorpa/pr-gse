@@ -4,6 +4,10 @@
 
 Erstellen Sie für die Verwaltung von MP3s die folgenden Klassen `PlayList` und `Song`: 
  
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/uml/PlayList.jpg
+</p>
+
 
 === Klasse Song ===
 
