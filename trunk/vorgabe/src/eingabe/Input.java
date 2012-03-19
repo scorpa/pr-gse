@@ -247,7 +247,7 @@ public class Input
 
     public static Date readDate(String prompt)
     {
-        return readDate(prompt, "d.m.y");
+        return readDate(prompt, "d.M.y");
     }
     
     
