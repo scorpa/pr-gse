@@ -28,7 +28,6 @@
     * [thema_web_verzeichnisstruktur Aufbau einer Java Webapplikation]
     * [thema_web_servlets Servlets]
     * [thema_web_jsp Java Server Pages (JSP)]
-    * [thema_web_taglib JSP tag libraries]
     * [thema_komplexe_aufgabenstellungen Komplexe Aufgabenstellungen]
   * XML-Processing
     * [thema_xml Extensible Markup Language (XML)]
