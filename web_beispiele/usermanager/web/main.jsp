@@ -11,12 +11,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Manager</title>
+        <link rel="stylesheet" type="text/css" href="usermanager.css" />
     </head>
     <body>
         <jsp:include page="welcome.jsp"/>
         
+        <p class="error">
+      	${error}
+      	</p>
+        
         <c:if test="${user.admin}">
-            <jsp:include page="new_user.html"/>
+            <jsp:include page="user_editor.jsp"/>
         </c:if>
         
         <jsp:include page="list.jsp" />
