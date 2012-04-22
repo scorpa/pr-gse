@@ -16,6 +16,7 @@
             	<c:if test="${edit.id > 0}">
             		<td>ID</td>
             		<td>${edit.id}</td>
+            		<input type="hidden" name="id" value="${edit.id}"/>
             	</c:if>
                 <tr>
                     <td>Name</td>
@@ -44,7 +45,7 @@
                 <tr>
                     <td>Admin user</td>
                     <td>
-                        <input type="checkbox" name="admin" value="admin" <c:if test="${edit.admin}">checked="checked"</c:if>/>
+                        <input type="checkbox" name="admin" value="true" <c:if test="${edit.admin}">checked="checked"</c:if>/>
                     </td>
                 </tr>
             </tbody>

@@ -41,12 +41,18 @@ public class SaveUserServlet extends HttpServlet {
 		String uname = request.getParameter("uname");
 		String pwd = request.getParameter("pwd");
 		String pwd2 = request.getParameter("pwd2");
+		String id = request.getParameter("id");
+		String admin = request.getParameter("admin");
 		if (!pwd.equals(pwd2))
 			throw new ServletException("passwords are not equal");
 		User u = new User();
 		u.setName(name);
 		u.setUname(uname);
 		u.setPwd(pwd);
+		if (id != null)
+			u.setId(Integer.parseInt(id));
+		if ("true".equals(admin))
+			u.setAdmin(true);
 		
 		UserManager manager = (UserManager) request.getServletContext().getAttribute(UserManagerLoader.USER_MANAGER_NAME);
 		if (manager == null)

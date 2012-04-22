@@ -20,14 +20,18 @@
                     <th>Id</th>
                     <th>Name</th>
                     <th>User name</th>
+                    <th>Administrator</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach var="u" items="${manager.users}">
                     <tr>
                         <td>${u.id}</td>
+                        <td>${u.name}</td>
                         <td>${u.uname}</td>
-                        <td>${u.pwd}</td>
+                        <td align="center">
+                        	<c:if test="${u.admin}">x</c:if>
+                        </td>
                         <c:if test="${user.admin}">
                             <td>
                                 <input type="radio" name="id" value="${u.id}" /> 
