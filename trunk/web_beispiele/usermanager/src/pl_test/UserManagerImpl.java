@@ -59,12 +59,12 @@ public class UserManagerImpl implements UserManager
     	int max = 0;
 		for (User u1 : userMap.values())
 		{
-			if (u != u1 && u1.getUname().equals(u.getUname()))
+			if (u.getId() != u1.getId() && u1.getUname().equals(u.getUname()))
 				throw new UserManagerException("a user with this user name already exists");
 			if (max < u1.getId())
 				max = u1.getId();
 		}
-		
+    	
     	User original = userMap.get(u.getId());
     	if (original != null)
     	{
