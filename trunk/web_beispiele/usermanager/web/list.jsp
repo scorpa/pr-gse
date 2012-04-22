@@ -25,10 +25,10 @@
             <tbody>
                 <c:forEach var="u" items="${manager.users}">
                     <tr>
-                        <td>${u.name}</td>
+                        <td>${u.id}</td>
                         <td>${u.uname}</td>
                         <td>${u.pwd}</td>
-                        <c:if test="${u.admin}">
+                        <c:if test="${user.admin}">
                             <td>
                                 <input type="radio" name="id" value="${u.id}" /> 
                             </td>
