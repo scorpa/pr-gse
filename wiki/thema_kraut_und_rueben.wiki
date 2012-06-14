@@ -40,7 +40,19 @@ Siehe dazu auch das Thema [thema_innere_klassen Innere Klassen]
 
 === Exceptions Version 7 ===
 
+http://docs.oracle.com/javase/7/docs/technotes/guides/language/try-with-resources.html
+
+http://openbook.galileocomputing.de/java7/1507_01_001.html#dodtp840fab39-061c-4aae-96e4-4b0760cc2e09
+
+http://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html
+
+http://openbook.galileocomputing.de/java7/1507_01_001.html#dodtp72eab4f3-0cfe-4098-8ac4-6af7e550501f
+
 === Annotations ===
+
+http://openbook.galileocomputing.de/java7/1507_18_001.html#dodtpebdb3b3a-a5ca-4e44-ae17-cadfccd6f517
+
+http://docs.oracle.com/javase/tutorial/java/javaOO/annotations.html
 
 === Javadoc Tool ===
 
