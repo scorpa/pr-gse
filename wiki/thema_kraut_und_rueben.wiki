@@ -1,0 +1,20 @@
+#summary Verschiedene Themen quer durcheinander
+
+
+= Kraut und Rüben =
+
+Hier sind einige Themen, die im Unterricht meistens zu kurz kommen, aufgelistet.
+
+=== Typumwandlung (Type Cast) ===
+
+Die Typumwandlung von primitiven Datentypen ist [http://openbook.galileocomputing.de/javainsel/javainsel_02_004.html#dodtp6da52db5-da51-45ac-b690-bda1a07e51c6 hier] beschrieben.
+
+Zum Thema Typumwandlung von Klassendatentypen kann man [http://openbook.galileocomputing.de/javainsel/javainsel_05_009.html#dodtp033506df-a7c2-48a5-8677-335830c6b7ba hier] nachlesen.
+
+=== Access-Modifiers ===
+
+[http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html Beschreibung im Java Tutorial]
+
+=== Wrapper-Klassen und Autoboxing ===
+
+[http://openbook.galileocomputing.de/javainsel/javainsel_08_002.html#dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c Zum Nachlesen]
