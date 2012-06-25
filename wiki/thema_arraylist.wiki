@@ -13,5 +13,5 @@
 || [http://pr-gse.googlecode.com/svn/wiki/uebungen/plue03_Uni.doc Uni] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/uni uni] || Prüfungsaufgabe ||
 || [uebung_arraylist_anrufstatistik Anrufstatistik] ||  || ||
 || [uebungen_arraylist_neujahrsvorsatz Neujahrsvorsatz] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/neujahrsvorsatz neujahrsvorsatz] || Prüfungsaufgabe ||
-|| [uebungen_arraylist_kontobuchungen Konto mit Buchungen] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/kontobuchungen kontobuchungen] || Prüfungsaufgabe ||
-|| [uebungen_arraylist_playlist MP3 Verwaltung] || [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/playlist playlist] || Prüfungsaufgabe ||
+|| [uebungen_arraylist_kontobuchungen Konto mit Buchungen] || <wiki:comment> [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/kontobuchungen kontobuchungen] </wiki:comment> || Prüfungsaufgabe ||
+|| [uebungen_arraylist_playlist MP3 Verwaltung] || <wiki:comment> [http://code.google.com/p/pr-gse/source/browse/#svn/trunk/uebungen/musterloesungen/src/playlist playlist] </wiki:comment> || Prüfungsaufgabe ||
