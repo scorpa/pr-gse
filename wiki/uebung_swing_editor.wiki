@@ -1,0 +1,5 @@
+#summary Editor
+
+= Editor =
+
+Erstellen Sie einen Editor, der dem Windows-Editor ähnlich ist. Er besteht aus einem großen Text-Bereich (TextArea), in welchen der Text eingetippt bzw. geladen wird.
