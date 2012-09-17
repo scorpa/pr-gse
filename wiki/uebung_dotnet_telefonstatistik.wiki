@@ -61,6 +61,8 @@ Bei Betätigung des Menus `Anzeigen - Liste` wird ein zusätzliches Fenster geö
 
 === Aufbau der Applikation ===
 
-Die Applikation ist sauber mit Schichtentrennung aufzubauen (GUI - Fachlogik - Dateianbindung).
+Die Applikation ist sauber mit Schichtentrennung und entsprechendem Exception-Handling aufzubauen (GUI - Fachlogik - Dateianbindung).
+
+Alle Fehler sind mit einer entsprechenden Fehlermeldung an den Benutzer zu behandeln.
 
 Die vom WPF unterstützte Datenbindung ist anzuwenden.
