@@ -1,0 +1,11 @@
+# C# und WPF
+
+= C# und WPF =
+
+=== Literatur ===
+
+[http://openbook.galileocomputing.de/visual_csharp_2010/ Visual C# 2010] von Galileo Open Books
+
+=== Übungen ===
+
+
