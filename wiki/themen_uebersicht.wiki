@@ -42,6 +42,8 @@
     * [thema_netbeans Netbeans]
     * [thema_subversion Versionskontrolle (mit Subversion)]
     * [thema_kraut_und_rueben Kraut und Rüben]
+  * .NET
+    * [thema_csharp_und_wpf C# und WPF]
   * Unterrichtsspezifisches
     * [lehrstoffverteilung_tageskolleg1 Lehrstoffverteilung 1. Semester Tageskolleg]
     * [lehrstoffverteilung_tageskolleg2 Lehrstoffverteilung 2. Semester Tageskolleg]
