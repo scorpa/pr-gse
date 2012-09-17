@@ -20,19 +20,17 @@ Erstellen Sie ein C#-Programm mit WPF-Oberfläche, welches folgende Funktionalit
 
 Im Menu `Datei` gibt es folgende Einträge:
 
-  * neu - es wird eine neue Telefonstatistik erstellt; davor wird der Benutzer gefragt, ob er die aktuelle Statistik speichern will.
-  * öffnen - eine früher abgespeicherte Telefonstatistik wird geladen.
-  * CSV - eine CSV-Datei im oben beschriebenen Format wird eingelesen, und die Datensätze werden der aktuellen Telefonstatistik hinzugefügt.
-  * speichern - die aktuelle Statistik wird gespeichert.
-  * beenden - das Programm wird beendet; davor wird der Benutzer gefragt, ob er die aktuelle Statistik speichern will.
+  * `neu` - es wird eine neue Telefonstatistik erstellt; davor wird der Benutzer gefragt, ob er die aktuelle Statistik speichern will.
+  * `öffnen` - eine früher abgespeicherte Telefonstatistik wird geladen.
+  * `CSV hinzufügen` - eine CSV-Datei im oben beschriebenen Format wird eingelesen, und die Datensätze werden der aktuellen Telefonstatistik hinzugefügt.
+  * `speichern` - die aktuelle Statistik wird gespeichert.
+  * `beenden` - das Programm wird beendet; davor wird der Benutzer gefragt, ob er die aktuelle Statistik speichern will.
 
 Im Menu `Anzeigen` gibt es den Eintrag `Liste`. Dieser ist weiter unten beschrieben.
 
 === Aufbau der Oberfläche ===
 
-Die Oberfläche enthält eine Liste aller angerufenen Telefonnummern. Darin kommt jede Nummer nur ein Mal vor. Neben der Nummer steht die Anzahl der Anrufe zur 
-
-jeweiligen Nummer. Der Benutzer kann auswählen, wonach die Nummern sortiert werden:
+Die Oberfläche enthält eine Liste aller angerufenen Telefonnummern. Darin kommt jede Nummer nur ein Mal vor. Neben der Nummer steht die Anzahl der Anrufe zur jeweiligen Nummer. Der Benutzer kann auswählen, wonach die Nummern sortiert werden:
   * nach Nummer
   * nach Anzahl der Anrufe zu dieser Nummer.
 
@@ -60,3 +58,9 @@ Ein weiterer Bereich der Oberfläche enthält eine Gesamtstatistik mit folgendem
 
 === Detail-Liste ===
 Bei Betätigung des Menus `Anzeigen - Liste` wird ein zusätzliches Fenster geöffnet, in welchem alle Anrufe zur aktuell ausgewählten Nummer aufgelistet sind.
+
+=== Aufbau der Applikation ===
+
+Die Applikation ist sauber mit Schichtentrennung aufzubauen (GUI - Fachlogik - Dateianbindung).
+
+Die vom WPF unterstützte Datenbindung ist anzuwenden.
