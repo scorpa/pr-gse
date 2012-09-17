@@ -1,4 +1,4 @@
-# C# und WPF
+#summary C# und WPF
 
 = C# und WPF =
 
@@ -8,4 +8,5 @@
 
 === Übungen ===
 
-
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [uebung_dotnet_telefonstatistik  Telefonstatistik] || ||  ||
