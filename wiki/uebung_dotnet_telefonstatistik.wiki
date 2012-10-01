@@ -13,6 +13,12 @@ Jede Zeile der Datei enthält einen Datensatz mit folgenden Feldern (jeweils get
   * Rufnummer
   * Kosten
 
+Hier können Sie 2 solche Dateien herunterladen:
+
+  [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/Anrufe1.csv Anrufe1.csv]
+
+  [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/Anrufe2.csv Anrufe2.csv]
+
 
 Erstellen Sie ein C#-Programm mit WPF-Oberfläche, welches folgende Funktionalität anbietet:
 
