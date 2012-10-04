@@ -14,14 +14,14 @@ namespace Dateizugriff
             FileInfo datei = new FileInfo(@"..\..\Personen.txt");
             FileInfo datei2 = new FileInfo(@"..\..\Personen.xml");
 
-            IList<Person> personen = DateiAnbindung.einlesen(datei);
+            List<Person> personen = DateiAnbindung.einlesen(datei);
 
             foreach (Person p in personen)
                 Console.WriteLine(p);
 
 
 
-            DateiAnbindung.speichern(personen[0], datei);
+            DateiAnbindung.speichern(personen, datei2);
 
 
 
