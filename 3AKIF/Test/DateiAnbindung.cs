@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace Dateizugriff
 {
-    class DateiAnbindung
+    public class DateiAnbindung
     {
         public static List<Person> einlesen(FileInfo file)
         {
