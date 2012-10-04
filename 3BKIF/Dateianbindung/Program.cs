@@ -24,6 +24,14 @@ namespace Dateianbindung
 
             List<Person> liste = DateiAnbindung.laden(datei2);
 
+
+            Console.WriteLine("===============================");
+
+            liste.Sort(new PersonComparer() { Kriterium = KRITERIUM.NACHNAME });
+
+            foreach (Person p in personen)
+                Console.WriteLine(p);
+
             Console.ReadLine();
 
         }

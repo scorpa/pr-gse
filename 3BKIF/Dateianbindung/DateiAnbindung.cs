@@ -39,7 +39,9 @@ namespace Dateianbindung
         public static void speichern(List<Person> personen, FileInfo datei)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
-            serializer.Serialize(datei.OpenWrite(), personen);
+            FileStream stream = datei.OpenWrite();
+            serializer.Serialize(stream, personen);
+            stream.Close();
 
         }
 
