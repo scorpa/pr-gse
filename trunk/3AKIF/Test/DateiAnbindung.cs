@@ -11,9 +11,9 @@ namespace Dateizugriff
 {
     class DateiAnbindung
     {
-        public static IList<Person> einlesen(FileInfo file)
+        public static List<Person> einlesen(FileInfo file)
         {
-            IList<Person> personen = new List<Person>();
+            List<Person> personen = new List<Person>();
             StreamReader reader = new StreamReader(file.OpenRead());
 
             string zeile;
@@ -36,10 +36,10 @@ namespace Dateizugriff
         }
 
 
-        public static void speichern(Person p, FileInfo datei)
+        public static void speichern(List<Person> personen, FileInfo datei)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Person));
-            serializer.Serialize(datei.OpenWrite(), p);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+            serializer.Serialize(datei.OpenWrite(), personen);
 
         }
 
