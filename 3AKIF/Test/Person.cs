@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Dateizugriff
 {
-    [Serializable()]
+
     public class Person 
     {
         public string Vorname { get; set; }
