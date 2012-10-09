@@ -43,5 +43,12 @@ namespace Dateizugriff
 
         }
 
+        public static List<Person> laden(FileInfo datei)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Person>));
+            return (List<Person>) serializer.Deserialize(datei.OpenRead());
+        }
+
+
     }
 }

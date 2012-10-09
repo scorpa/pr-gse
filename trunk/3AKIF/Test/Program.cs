@@ -20,10 +20,9 @@ namespace Dateizugriff
                 Console.WriteLine(p);
 
 
-
             DateiAnbindung.speichern(personen, datei2);
 
-
+            List<Person> liste = DateiAnbindung.laden(datei2);
 
             Console.ReadLine();
 
