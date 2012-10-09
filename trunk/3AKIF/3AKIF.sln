@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dateizugriff", "Test\Dateizugriff.csproj", "{003E2FA0-C28D-4D73-A46C-746875CAAB5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dateizugriff", "Dateianbindung\Dateizugriff.csproj", "{003E2FA0-C28D-4D73-A46C-746875CAAB5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberflaeche", "Oberflaeche\Oberflaeche.csproj", "{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{003E2FA0-C28D-4D73-A46C-746875CAAB5D}.Debug|x86.Build.0 = Debug|x86
 		{003E2FA0-C28D-4D73-A46C-746875CAAB5D}.Release|x86.ActiveCfg = Release|x86
 		{003E2FA0-C28D-4D73-A46C-746875CAAB5D}.Release|x86.Build.0 = Release|x86
+		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Debug|x86.ActiveCfg = Debug|x86
+		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Debug|x86.Build.0 = Debug|x86
+		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Release|x86.ActiveCfg = Release|x86
+		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
