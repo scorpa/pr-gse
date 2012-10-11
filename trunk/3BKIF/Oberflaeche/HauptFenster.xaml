@@ -13,7 +13,7 @@
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="123*" />
         </Grid.ColumnDefinitions>
-        <ListView  Name="personenListe" Grid.RowSpan="2" Grid.Row="1" DisplayMemberPath="Nachname" SelectionChanged="personenListe_SelectionChanged" />
+        <ListView  Name="personenListe" Grid.RowSpan="2" Grid.Row="1" DisplayMemberPath="Nachname" />
         <Button Name="bOK" Content="OK" Grid.Column="2"
                 Grid.Row="1" Margin="14,108,30,0" Click="bOK_Click" />
         <Menu  Name="menu1" >
