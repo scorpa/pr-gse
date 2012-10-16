@@ -1,0 +1,65 @@
+﻿<Window x:Class="Datenbindung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataSampleBinding"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Window.Resources>
+        <local:SampleDataAccess x:Key="daten" />
+        
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="56*" />
+            <RowDefinition Height="76*" />
+            <RowDefinition Height="123*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102*" />
+            <ColumnDefinition Width="84*" />
+            <ColumnDefinition Width="156*" />
+            <ColumnDefinition Width="161*" />
+        </Grid.ColumnDefinitions>
+        
+        <ListBox  Name="authorsList" 
+                  ItemsSource="{Binding Source={StaticResource ResourceKey=daten}, Path=DAuthors}"
+                  Grid.RowSpan="4">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=FirstName}" Margin="0,0,5,0" />
+                        <TextBlock Text="{Binding Path=LastName}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+        
+        
+        
+        <Label Content="Vorname" Grid.Column="2" 
+               FontSize="{Binding ElementName=fontSize, Path=Value}" Margin="0,0,0,8" Grid.RowSpan="2" />
+        <TextBox Name="firstName" Text="{Binding ElementName=authorsList, Path=SelectedItem.FirstName, Mode=OneWay}" Grid.Column="3" Height="30" HorizontalAlignment="Left" Margin="9,-1,0,0" VerticalAlignment="Top" Width="125" />
+        <TextBox Name="lastName" Text="{Binding ElementName=firstName, Path=Text, Mode=TwoWay}" Grid.Column="3" Height="36" HorizontalAlignment="Left" Margin="9,1,0,0" VerticalAlignment="Top" Width="126" Grid.Row="1" />
+        <Label Content="Nachname" Grid.Column="2" Margin="0,50,0,19" Grid.RowSpan="2" />
+        
+        
+        <Slider 
+            Name="fontSize" 
+            
+            
+            Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" Height="21" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" Width="260" Minimum="8" Maximum="50" />
+        <ListBox Grid.Column="1" Grid.RowSpan="4"  Name="listBox1" 
+                 ItemsSource="{Binding Source={StaticResource ResourceKey=daten}, Path=DBooks}" 
+                 DisplayMemberPath="Isbn"/>
+        <DataGrid AutoGenerateColumns="True" 
+                  Grid.Column="2" 
+                  Grid.ColumnSpan="2" 
+                  Grid.Row="3" 
+                  Name="bookTable" 
+                  ItemsSource="{Binding}" />
+    </Grid>
+</Window>

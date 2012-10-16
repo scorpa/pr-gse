@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dateizugriff", "Dateianbind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberflaeche", "Oberflaeche\Oberflaeche.csproj", "{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datenbindung", "Datenbindung\Datenbindung.csproj", "{1DD317F3-7134-4387-9AFD-D76208103354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Debug|x86.Build.0 = Debug|x86
 		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Release|x86.ActiveCfg = Release|x86
 		{8C7C7071-9015-4D60-A07A-8BD777DC2E6C}.Release|x86.Build.0 = Release|x86
+		{1DD317F3-7134-4387-9AFD-D76208103354}.Debug|x86.ActiveCfg = Debug|x86
+		{1DD317F3-7134-4387-9AFD-D76208103354}.Debug|x86.Build.0 = Debug|x86
+		{1DD317F3-7134-4387-9AFD-D76208103354}.Release|x86.ActiveCfg = Release|x86
+		{1DD317F3-7134-4387-9AFD-D76208103354}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
