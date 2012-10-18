@@ -13,13 +13,14 @@
             <ColumnDefinition Width="75*" />
             <ColumnDefinition Width="123*" />
         </Grid.ColumnDefinitions>
-        <ListView  Name="personenListe" Grid.RowSpan="2" Grid.Row="1" DisplayMemberPath="Nachname" />
+        <ListView  Name="personenListe" Grid.RowSpan="2" Grid.Row="1" DisplayMemberPath="Nachname" SelectionChanged="auswahl" />
         <Button Name="bOK" Content="OK" Grid.Column="2"
                 Grid.Row="1" Margin="14,108,30,0" Click="bOK_Click" />
-        <Menu  Name="menu1" >
+        <Menu  Name="menu1" Grid.Row="0" Grid.Column="0">
             <MenuItem Header="Datei">
                 <MenuItem Header="einlesen" Click="MenuItem_Click" />
             </MenuItem>
         </Menu>
+        <TextBox Grid.Column="2" Grid.Row="1" Height="27" HorizontalAlignment="Left" Margin="25,42,0,0" Name="textBox1" VerticalAlignment="Top" Width="75" />
     </Grid>
 </Window>
