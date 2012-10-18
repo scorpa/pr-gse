@@ -11,29 +11,31 @@ namespace Dateianbindung
     {
         static void Main(string[] args)
         {
-            FileInfo datei = new FileInfo(@"..\..\Personen.txt");
-            FileInfo datei2 = new FileInfo(@"..\..\Personen.xml");
+            //FileInfo datei = new FileInfo(@"..\..\Personen.txt");
+            //FileInfo datei2 = new FileInfo(@"..\..\Personen.xml");
 
-            List<Person> personen = DateiAnbindung.einlesen(datei);
+            //List<Person> personen = DateiAnbindung.einlesen(datei);
 
-            foreach (Person p in personen)
-                Console.WriteLine(p);
-
-
-            DateiAnbindung.speichern(personen, datei2);
-
-            List<Person> liste = DateiAnbindung.laden(datei2);
+            //foreach (Person p in personen)
+            //    Console.WriteLine(p);
 
 
-            Console.WriteLine("===============================");
+            //DateiAnbindung.speichern(personen, datei2);
 
-            liste.Sort(new PersonComparer() { Kriterium = KRITERIUM.NACHNAME });
+            //List<Person> liste = DateiAnbindung.laden(datei2);
 
-            foreach (Person p in personen)
-                Console.WriteLine(p);
 
-            Console.ReadLine();
+            //Console.WriteLine("===============================");
 
+            //liste.Sort(new PersonComparer() { Kriterium = KRITERIUM.NACHNAME });
+
+            //foreach (Person p in personen)
+            //    Console.WriteLine(p);
+
+            //Console.ReadLine();
+
+
+            Test.test();
         }
 
     }

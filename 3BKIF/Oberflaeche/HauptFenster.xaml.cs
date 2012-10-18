@@ -52,6 +52,13 @@ namespace Oberflaeche
             }
         }
 
+        private void auswahl(object sender, SelectionChangedEventArgs e)
+        {
+            string nummer = (string)personenListe.SelectedItem;
+
+            textBox1.Text = ....
+        }
+
  
     }
 }
