@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberflaeche", "Oberflaeche\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datenbindung", "Datenbindung\Datenbindung.csproj", "{1DD317F3-7134-4387-9AFD-D76208103354}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.csproj", "{6E6A8A72-136F-429D-BB93-BC73F613DDAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "..\WpfDemo\WpfDemo\WpfDemo.csproj", "{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -25,6 +29,14 @@ Global
 		{1DD317F3-7134-4387-9AFD-D76208103354}.Debug|x86.Build.0 = Debug|x86
 		{1DD317F3-7134-4387-9AFD-D76208103354}.Release|x86.ActiveCfg = Release|x86
 		{1DD317F3-7134-4387-9AFD-D76208103354}.Release|x86.Build.0 = Release|x86
+		{6E6A8A72-136F-429D-BB93-BC73F613DDAB}.Debug|x86.ActiveCfg = Debug|x86
+		{6E6A8A72-136F-429D-BB93-BC73F613DDAB}.Debug|x86.Build.0 = Debug|x86
+		{6E6A8A72-136F-429D-BB93-BC73F613DDAB}.Release|x86.ActiveCfg = Release|x86
+		{6E6A8A72-136F-429D-BB93-BC73F613DDAB}.Release|x86.Build.0 = Release|x86
+		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Debug|x86.ActiveCfg = Debug|x86
+		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Debug|x86.Build.0 = Debug|x86
+		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Release|x86.ActiveCfg = Release|x86
+		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
