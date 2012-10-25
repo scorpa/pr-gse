@@ -27,11 +27,24 @@ namespace Linq
                          join r in SampleDataAccess.DReviews on b equals r.Book
                          group r by b.Title into g
                          select new { Titel = g.Key, Anzahl = g.Count() };
-                        
-            
 
 
-            foreach (var b in liste2)
+            var liste3 = from b in books
+                         where b.Publisher.Name == "FunBooks"
+                         select b.Title;
+
+            Author a = (from author in SampleDataAccess.DAuthors
+                        where author.LastName == "Good"
+                        select author).First();
+
+            var liste4 = from b in books
+                         where b.Authors.Contains(a)
+                         select b.Title;
+
+
+
+
+            foreach (var b in liste4)
             {
                 Console.WriteLine(b);
             }
