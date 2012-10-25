@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberflaeche", "Oberflaeche\Oberflaeche.csproj", "{2207BB79-3BFD-493C-8C6D-6D9CA05DF3E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anrufe", "Anrufe\Anrufe.csproj", "{FD2BECE6-F7A3-4AE1-80E5-AC3712155E7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,10 @@ Global
 		{2207BB79-3BFD-493C-8C6D-6D9CA05DF3E7}.Debug|x86.Build.0 = Debug|x86
 		{2207BB79-3BFD-493C-8C6D-6D9CA05DF3E7}.Release|x86.ActiveCfg = Release|x86
 		{2207BB79-3BFD-493C-8C6D-6D9CA05DF3E7}.Release|x86.Build.0 = Release|x86
-		{FD2BECE6-F7A3-4AE1-80E5-AC3712155E7C}.Debug|x86.ActiveCfg = Debug|x86
-		{FD2BECE6-F7A3-4AE1-80E5-AC3712155E7C}.Debug|x86.Build.0 = Debug|x86
-		{FD2BECE6-F7A3-4AE1-80E5-AC3712155E7C}.Release|x86.ActiveCfg = Release|x86
-		{FD2BECE6-F7A3-4AE1-80E5-AC3712155E7C}.Release|x86.Build.0 = Release|x86
+		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Debug|x86.ActiveCfg = Debug|x86
+		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Debug|x86.Build.0 = Debug|x86
+		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Release|x86.ActiveCfg = Release|x86
+		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

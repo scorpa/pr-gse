@@ -26,5 +26,21 @@ namespace Anrufe
             InitializeComponent();
             DataContext = statistik;
         }
+
+        private void neuerAnruf(object sender, RoutedEventArgs e)
+        {
+            statistik.Add(new Anruf() { Nummer = "9876654443" });
+            listBox1.GetBindingExpression(ListBox.ItemsSourceProperty).UpdateTarget();
+            //listBox1.Items.Refresh();
+
+          
+
+        }
+
+        private void select(object sender, SelectionChangedEventArgs e)
+        {
+            AnrufInfo i = (AnrufInfo)listBox1.SelectedItem;
+            MessageBox.Show(i.ToString());
+        }
     }
 }

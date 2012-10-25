@@ -56,7 +56,6 @@ namespace Oberflaeche
         {
             string nummer = (string)personenListe.SelectedItem;
 
-            textBox1.Text = ....
         }
 
  
