@@ -1,0 +1,30 @@
+﻿<Window x:Class="AnrufGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*" />
+            <ColumnDefinition Width="345*" />
+        </Grid.ColumnDefinitions>
+        <ListBox 
+            ItemsSource="{Binding Path=NummernInfo}"
+            Name="lbNummern" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UniformGrid Columns="2">
+                        <TextBlock Text="{Binding Path=Rufnummer, Mode=OneWay}" Width="100"/>
+                        <TextBlock Text="{Binding Path=Anzahl, Mode=OneWay}" />
+                    </UniformGrid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+        <Button Content="Button" Grid.Column="1" Height="38" HorizontalAlignment="Left" Margin="44,31,0,0" Name="button1" VerticalAlignment="Top" Width="67" Click="button1_Click" />
+        <TextBlock Grid.Column="1" Height="32" HorizontalAlignment="Left" Margin="30,95,0,0" Name="textBlock1" Text="Gesamtdauer" VerticalAlignment="Top" Width="94" />
+        <TextBlock 
+            Text="{Binding ElementName=lbNummern, Path=SelectedItem.GesamtDauer}"
+            Grid.Column="1" Height="36" HorizontalAlignment="Left" Margin="159,95,0,0" VerticalAlignment="Top" Width="125" />
+    </Grid>
+</Window>
