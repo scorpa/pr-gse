@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberflaeche", "Oberflaeche\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anrufstatistik", "Anrufstatistik\Anrufstatistik.csproj", "{C4E1C127-2FF8-4C82-A2C8-050550D735DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +33,10 @@ Global
 		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Debug|x86.Build.0 = Debug|x86
 		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Release|x86.ActiveCfg = Release|x86
 		{D977E1B0-FF1D-4E6B-9426-5C0AD7A79BB8}.Release|x86.Build.0 = Release|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Debug|x86.ActiveCfg = Debug|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Debug|x86.Build.0 = Debug|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Release|x86.ActiveCfg = Release|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
