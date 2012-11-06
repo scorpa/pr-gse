@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "..\WpfDemo\WpfDemo\WpfDemo.csproj", "{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wetter", "Wetter\Wetter.csproj", "{B791E087-1F10-42E1-9135-3345CEEFC67C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQDemo", "LINQDemo\LINQDemo.csproj", "{86F10CBD-744F-4906-BBD2-669E0ACF31EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anrufstatistik", "Anrufstatistik\Anrufstatistik.csproj", "{C4E1C127-2FF8-4C82-A2C8-050550D735DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -37,6 +43,18 @@ Global
 		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Debug|x86.Build.0 = Debug|x86
 		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Release|x86.ActiveCfg = Release|x86
 		{867A6B14-CD25-4940-9C9B-C1FF67BE6BF0}.Release|x86.Build.0 = Release|x86
+		{B791E087-1F10-42E1-9135-3345CEEFC67C}.Debug|x86.ActiveCfg = Debug|x86
+		{B791E087-1F10-42E1-9135-3345CEEFC67C}.Debug|x86.Build.0 = Debug|x86
+		{B791E087-1F10-42E1-9135-3345CEEFC67C}.Release|x86.ActiveCfg = Release|x86
+		{B791E087-1F10-42E1-9135-3345CEEFC67C}.Release|x86.Build.0 = Release|x86
+		{86F10CBD-744F-4906-BBD2-669E0ACF31EC}.Debug|x86.ActiveCfg = Debug|x86
+		{86F10CBD-744F-4906-BBD2-669E0ACF31EC}.Debug|x86.Build.0 = Debug|x86
+		{86F10CBD-744F-4906-BBD2-669E0ACF31EC}.Release|x86.ActiveCfg = Release|x86
+		{86F10CBD-744F-4906-BBD2-669E0ACF31EC}.Release|x86.Build.0 = Release|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Debug|x86.ActiveCfg = Debug|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Debug|x86.Build.0 = Debug|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Release|x86.ActiveCfg = Release|x86
+		{C4E1C127-2FF8-4C82-A2C8-050550D735DF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
