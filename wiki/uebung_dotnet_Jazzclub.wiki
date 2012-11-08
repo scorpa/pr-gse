@@ -2,7 +2,7 @@
 
 = Jazz-Club =
 
-Die folgenden Aufgaben sind mit den Objekten aus den Dateien [http://pr-gse.googlecode.com/svn/wiki/uebbungen/data/LINQ/Klassen.cs Klassen.cs] und Beispieldaten.cs zu lösen. Die Klasse ObjectDumper kann als Hilfsklasse verwendet werden.
+Die folgenden Aufgaben sind mit den Objekten aus den Dateien [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/LINQ/Klassen.cs Klassen.cs] und [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/LINQ/Beispieldaten.cs Beispieldaten.cs] zu lösen. Die Klasse [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/LINQ/ObjectDumper.cs ObjectDumper]ObjectDumper kann als Hilfsklasse verwendet werden.
 
 
   a.)	Zeige für alle Konzerte, die nach dem 1.11.2012 stattfinden an: Die Bezeichnung der Veranstaltung, das Datum und die Uhrzeit und die Liste der auftretenden Gruppen.
