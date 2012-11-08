@@ -11,4 +11,4 @@
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_dotnet_telefonstatistik  Telefonstatistik] || ||  ||
 || [uebung_dotnet_flugplaner Flugplaner] || || ||
-|| [uebung_dotnet_LINQ LINQ Aufgaben] || || ||
+|| [uebung_dotnet_Jazzverein Jazzverein] || || ||
