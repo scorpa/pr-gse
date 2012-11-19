@@ -1,0 +1,7 @@
+#summary Schule 2000
+
+= Schule 2000 =
+
+Erstellen Sie eine WPF-Applikation, welche mit Hilfe des Entity Frameworks auf die Datenbank Schule2000 zugreift und eine der folgenden Aufgaben ermöglicht. Dabei ist besonders auf Benutzerfreundlichkeit zu achten, und es sind alle möglichen Fehler (Fehleingaben, Datenbankprobleme) so zu behandeln, dass der Benutzer eine entsprechende Fehlermeldung sieht. 
+
+Die Applikation ist in 3-Schicht-Architektur zu erstellen.
