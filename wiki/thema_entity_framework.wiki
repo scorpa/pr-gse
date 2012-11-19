@@ -1,0 +1,6 @@
+#summary .Net Entity Framework
+
+= .Net Entity Framework =
+
+|| *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
+|| [uebung_entity_framework_schule2000  Schule 2000] || ||  ||
