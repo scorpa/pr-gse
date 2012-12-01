@@ -72,3 +72,15 @@ Dieses Modul kann nur von Benutzern des Typs admin verwendet werden. Es ermögli
   * das Anlegen neuer Standorte
   * das Ändern und Löschen von Standorten
   * das Einkaufen von Produkten (und Einlagern an einem Standort). In diesem Fall muss auch eine entsprechende Kontobuchung durchgeführt werden.
+
+
+=== Reklamationen ===
+
+Dieses Modul ermöglicht das Erfassen und Bearbeiten von Reklamationen. Reklamationen können von einem Benutzer nur für seine eigenen Kunden erfasst werden.
+ 
+Das Bearbeiten von Reklamationen kann nur ein Benutzer vom Typ admin durchführen.
+
+Der Status einer Reklamation kann folgenden Status haben:
+neu, bearbeitet, behoben, erstattet.
+
+Für eine Erstattung ist eine entsprechende Kontobuchung notwendig.
