@@ -83,7 +83,7 @@ Dieses Modul ermöglicht das Erfassen und Bearbeiten von Reklamationen. Reklamat
  
 Das Bearbeiten von Reklamationen kann nur ein Benutzer vom Typ admin durchführen.
 
-Der Status einer Reklamation kann folgenden Status haben:
+Der Status einer Reklamation kann folgende Werte haben:
 neu, bearbeitet, behoben, erstattet.
 
 Für eine Erstattung ist eine entsprechende Kontobuchung notwendig.
