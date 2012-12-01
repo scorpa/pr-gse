@@ -1,5 +1,7 @@
 #summary Übung: Nordwind
 
+work in progress !!!
+
 = Nordwind =
 
 Die Datenbank Northwind enthält die nötigen Tabellen für die Abwicklung eines Lebensmittelhandels.
@@ -11,4 +13,3 @@ Die Applikation soll in 3-Schichten-Architektur erstellt werden, so dass es spä
 Außerdem soll die Applikation in verschieden Module aufgeteilt werden. Ihre Aufgabe ist es, eines der folgenden Module zu erstellen:
 
 === Modul Kundenverwaltung ===
-
