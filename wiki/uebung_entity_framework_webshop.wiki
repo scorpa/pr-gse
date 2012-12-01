@@ -1,0 +1,52 @@
+#summary Übung: WEB-shop
+
+
+= WEB-Shop =
+
+In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die Abwicklung der Geschäfte eines WEB-Shops notwendig sind.
+
+Der WEB-Shop soll nicht nur als WEB-Applikation verfügbar sein, sondern auch als WPF-Applikation. Daher muss die Fachlogik so konzipiert sein, dass beide Oberflächen-Arten daran angebunden werden können.
+
+Außerdem soll die Applikation modular aufgebaut sein, so dass mehrere Entwickler gleichzeitig daran arbeiten können.
+
+Jedes Modul enthält eine Anmelde-Funktionalität. Das heißt, ein Benutzer muss sich erst mit gültigem Benutzernamen und Kennwort anmelden, um Zugriff auf die Funktionalitäten des Moduls zu haben.
+
+Ein Benutzer kann mehrere Kunden verwalten.
+
+Es gibt folgende Benutzertypen: admin, normal, inaktiv. Manche Funktionalitäten können nur von admin-Benutzern angewendet werden. Inaktive Benutzer haben keinerlei Rechte.
+
+=== Benutzerverwaltung ===
+
+Dieses Modul kann nur von einem Benutzer vom Typ admin verwendet werden. Es ermöglicht
+
+  * das Auflisten aller Benutzer
+  * das Erstellen und Ändern eines Benutzers
+  * das Löschen von Benuzern
+  * die Neuzuordnung eines Kunden an einen anderen Benutzer
+
+
+=== Kundenverwaltung ===
+
+Dieses Modul ermöglicht
+
+  * das Anlegen eines neuen Kunden (wird dem angemeldeten Benutzer zugeordnet)
+  * das Ändern von Kundendaten
+  * das Löschen von Kunden
+
+
+=== Einkaufen ===
+
+Dieses Modul ermöglicht
+
+  * das Anlegen eines neuen Warenkorbs für einen Kunden
+  * das Einfügen von Produkten in den Warenkorb.
+  * das Löschen / Ändern von Produkten im Warenkorb.
+
+=== Produktverwaltung ===
+
+Dieses Modul kann nur von Benutzern mit dem Typ admin verwendet werden. Es ermöglicht
+
+  * Das Anlegen von neuen Kategorien
+  * Das Ändern und Löschen von Kategorien
+  * Das Anlegen von Produkten
+  * Das Ändern und Löschen von Produkten
