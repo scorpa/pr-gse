@@ -24,9 +24,7 @@ In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die
 
   * *warenkoerbe:* Jeder Kunde kann einen oder mehrere Warenkörbe anlegen (Fremdschlüssel `fk_w_kunde`)
 
-  * *warenkorb_positionen:* für jedes Produkt in einem Warenkorb wird eine Warenkorb-Position erstellt. Zusätzlich zu einer 
-
-Spalte für die Menge gibt es daher einen Fremdschlüssel auf den Warenkorb (`fk_pw_warenkorb`) und einen Fremdschlüssel auf das Produkt (`fp_wp_produkt`).
+  * *warenkorb_positionen:* für jedes Produkt in einem Warenkorb wird eine Warenkorb-Position erstellt. Zusätzlich zu einer Spalte für die Menge gibt es daher einen Fremdschlüssel auf den Warenkorb (`fk_pw_warenkorb`) und einen Fremdschlüssel auf das Produkt (`fp_wp_produkt`).
 
   * *standorte:* Die Produkte sind an verschiedenen Standorten gelagert, wobei jeder Standort wiederum eine Adresse hat (`fk_s_adresse`).
 
@@ -36,9 +34,7 @@ Spalte für die Menge gibt es daher einen Fremdschlüssel auf den Warenkorb (`fk
 
   * *konto_buchungen:* Sowohl für Verkaufte Produkte als auch für den Einkauf von Produkten werden jeweils Buchungen fällig.
 
-  * *bestellungen:* Wenn ein Kunde die Produkte eines Warenkorbs bestellt, wird ein Datensatz in dieser Tabelle angelegt. Sie enthält eine Fremdschlüssel auf den Warenkorb (`fk_b_warenkorb`) und auch einen Fremdschlüssel auf die Adresse, wohin die 
-
-Produkte versandt werden (`fk_b_adresse`). Es gibt ein Datum für das Anlegen der Bestellung und ein Versanddatum.
+  * *bestellungen:* Wenn ein Kunde die Produkte eines Warenkorbs bestellt, wird ein Datensatz in dieser Tabelle angelegt. Sie enthält eine Fremdschlüssel auf den Warenkorb (`fk_b_warenkorb`) und auch einen Fremdschlüssel auf die Adresse, wohin die Produkte versandt werden (`fk_b_adresse`). Es gibt ein Datum für das Anlegen der Bestellung und ein Versanddatum.
 
   * *rechnungen:* Für jede Bestellung wird auch eine Rechnung angelegt. Diese hat einen Fremdschlüssel auf die Bestellung (`fk_r_bestellung`), einen Fremdschlüssel für die Rechnungsadresse (`fk_r_adresse`) und einen Fremdschlüssel auf die Kontobuchungen, wenn die Rechnung bezahlt wird (`fk_r_buchung`). Das Rechnungsdatum entspricht dem Versanddatum der Rechnung.
 
