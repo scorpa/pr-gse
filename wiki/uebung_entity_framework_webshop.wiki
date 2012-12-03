@@ -3,7 +3,7 @@
 
 = WEB-Shop =
 
-In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die Abwicklung der Geschäfte eines WEB-Shops notwendig sind:
+In der SQL-Server-Datenbank `webshop.mdf` befinden sich die Tabellen für die Abwicklung der Geschäfte eines WEB-Shops.
 
 == Beschreibung der Datenbank ==
 
@@ -22,7 +22,7 @@ In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die
   * *produkte:* Neben den Spalten für Produktname, Ein- und Verkaufspreis, etc. enthält diese Tabelle einen Fremdschlüssel auf die Tabelle *kategorien* (`fk_p_kategorie`)
 
 
-  * *warenkoerbe:* Jeder Kunde kann einen oder mehrere Warenkörbe anlegen (Fremdschlüssel `fk_w_kunde`)
+  * *warenkoerbe:* Jeder Kunde kann mehrere Warenkörbe anlegen (Fremdschlüssel `fk_w_kunde`)
 
   * *warenkorb_positionen:* für jedes Produkt in einem Warenkorb wird eine Warenkorb-Position erstellt. Zusätzlich zu einer Spalte für die Menge gibt es daher einen Fremdschlüssel auf den Warenkorb (`fk_pw_warenkorb`) und einen Fremdschlüssel auf das Produkt (`fp_wp_produkt`).
 
@@ -32,7 +32,7 @@ In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die
 
   * *einkaufs_positionen:* Bevor die Produkte verkauft werden können, müssen sie natürlich eingekauft werden. Für die Dokumentation der Einkäufe dient diese Tabelle. Es gibt einen Fremdschlüssel auf das eingekaufte Produkt (`fk_ep_produkt`), einen Fremdschlüssel auf den Lagerstandort, wo das gekaufte Produkt gelagert wird (`fk_ep_standort`) und einen Fremdschlüssel auf die Kontobuchung für den Einkauf (`fk_ep_buchung`).
 
-  * *konto_buchungen:* Sowohl für Verkaufte Produkte als auch für den Einkauf von Produkten werden jeweils Buchungen fällig.
+  * *konto_buchungen:* Sowohl für Verkäufe als auch für Einkäufe von  Produkten werden jeweils Buchungen fällig.
 
   * *bestellungen:* Wenn ein Kunde die Produkte eines Warenkorbs bestellt, wird ein Datensatz in dieser Tabelle angelegt. Sie enthält eine Fremdschlüssel auf den Warenkorb (`fk_b_warenkorb`) und auch einen Fremdschlüssel auf die Adresse, wohin die Produkte versandt werden (`fk_b_adresse`). Es gibt ein Datum für das Anlegen der Bestellung und ein Versanddatum.
 
