@@ -105,10 +105,9 @@ Dieses Modul kann nur von Benutzern mit dem Typ admin verwendet werden. Es ermö
 
 Dieses Modul kann nur von Benutzern mit dem Typ admin verwendet werden. Es ermöglicht
 
-  * das Anlegen von neuen Kategorien
-  * das Ändern und Löschen von Kategorien
   * das Anlegen von Produkten
   * das Ändern und Löschen von Produkten
+  * die Neuzuordnung von Produkten zu Kategorien
 
 
 === Einkauf ===
