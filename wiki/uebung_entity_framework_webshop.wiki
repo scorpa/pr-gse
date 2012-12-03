@@ -3,7 +3,15 @@
 
 = WEB-Shop =
 
-In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die Abwicklung der Geschäfte eines WEB-Shops notwendig sind.
+In der SQL-Server-Datenbank webshop.mdf befinden sich die Tabellen, die für die Abwicklung der Geschäfte eines WEB-Shops notwendig sind:
+
+  * *benutzer:* In dieser Tabelle sind Benutzername und Kennwort sowie Benutzer-Typ abgelegt. Es gibt die Benutzer-Typen `admin`, `normal` und `inaktiv`. Manche Funktionalitäten können nur von `admin`-Benutzern angewendet werden. `Inaktive` Benutzer müssen erst wieder aktiviert werden, um sich anmelden zu können. 
+
+  * *kunden:* Ein Benutzer kann mehrere Kunden verwalten. (Fremdschlüssel `fk_k_benutzer`). In der *kunden*-Tabelle sind die Daten der Kunden gespeichert.
+
+  * *adressen:* Jeder Kunde hat eine oder mehrere Adressen (Fremdschlüssel `fk_a_kunde`).
+
+  * *telefonnummern:* Jeder Kunde hat eine oder mehrere Telefonnummern (Fremdschlüssel `fk_t_kunde`)
 
 Der WEB-Shop soll nicht nur als WEB-Applikation verfügbar sein, sondern auch als WPF-Applikation. Daher muss die Fachlogik so konzipiert sein, dass beide Oberflächen-Arten daran angebunden werden können.
 
@@ -11,9 +19,7 @@ Außerdem soll die Applikation modular aufgebaut sein, so dass mehrere Entwickle
 
 Jedes Modul enthält eine Anmelde-Funktionalität. Das heißt, ein Benutzer muss sich erst mit gültigem Benutzernamen und Kennwort anmelden, um Zugriff auf die Funktionalitäten des Moduls zu haben.
 
-Ein Benutzer kann mehrere Kunden verwalten.
 
-Es gibt folgende Benutzertypen: admin, normal, inaktiv. Manche Funktionalitäten können nur von admin-Benutzern angewendet werden. Inaktive Benutzer haben keinerlei Rechte.
 
 === Benutzerverwaltung ===
 
