@@ -4,3 +4,5 @@
 
 || *Aufgabe* || *Musterlösung (Projekt)* || *Kommentare* ||
 || [uebung_entity_framework_schule2000  Schule 2000] || ||  ||
+|| [uebung_entity_framework_webshop  WEB-Shop] || ||  ||
+
