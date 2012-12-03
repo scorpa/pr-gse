@@ -42,9 +42,7 @@ Produkte versandt werden (`fk_b_adresse`). Es gibt ein Datum für das Anlegen de
 
   * *rechnungen:* Für jede Bestellung wird auch eine Rechnung angelegt. Diese hat einen Fremdschlüssel auf die Bestellung (`fk_r_bestellung`), einen Fremdschlüssel für die Rechnungsadresse (`fk_r_adresse`) und einen Fremdschlüssel auf die Kontobuchungen, wenn die Rechnung bezahlt wird (`fk_r_buchung`). Das Rechnungsdatum entspricht dem Versanddatum der Rechnung.
 
-  * *reklamationen:* Wenn ein Kunde ein Produkt reklamiert, wird hier ein Datensatz eingetragen. Es gibt einen Fremdschlüssel für das betroffene Produkt (`fk_rek_produkt`), für die betroffene Bestellung (`fk_rek_bestellung`) und für den Fall einer 
-
-Erstattung einen Fremdschlüssel für die zugehörige Konto-Buchung (`fk_rek_buchung`). Eine Reklamation hat eine Status, welcher folgende Werte einnehmen kann: `neu`, `in Arbeit`, `behoben` oder `erstattet`.
+  * *reklamationen:* Wenn ein Kunde ein Produkt reklamiert, wird hier ein Datensatz eingetragen. Es gibt einen Fremdschlüssel für das betroffene Produkt (`fk_rek_produkt`), für die betroffene Bestellung (`fk_rek_bestellung`) und für den Fall einer Erstattung einen Fremdschlüssel für die zugehörige Konto-Buchung (`fk_rek_buchung`). Eine Reklamation hat eine Status, welcher folgende Werte einnehmen kann: `neu`, `in Arbeit`, `behoben` oder `erstattet`.
 
 
 
