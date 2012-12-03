@@ -57,8 +57,8 @@ Jedes Modul enthält eine Anmelde-Funktionalität. Das heißt, ein Benutzer muss
 
 Dieses Modul kann nur von einem Benutzer vom Typ admin verwendet werden. Es ermöglicht
 
-  * das Auflisten aller Benutzer
-  * das Erstellen und Ändern eines Benutzers
+
+  * das Erstellen und Ändern von Benutzern
   * das Löschen von Benuzern
   * die Neuzuordnung eines Kunden an einen anderen Benutzer
 
@@ -91,8 +91,15 @@ Außerdem kann mit diesem Modul eine Bestellung storniert werden, falls sie noch
 
 Dieses Modul kann nur von Benutzern des Typs admin verwendet werden. Es ermöglicht den Versand von offenen Bestellungen und Rechnungen.
 
-Mit diesem Modul können auch Rechnungen gebucht werden (Kontobuchung erstellt)
+Mit diesem Modul können auch Rechnungen gebucht werden (Kontobuchung erstellt und bei der Rechnung eingetragen)
 
+=== Kategorienverwaltung ===
+
+Dieses Modul kann nur von Benutzern mit dem Typ admin verwendet werden. Es ermöglicht
+
+  * das Erstellen und Ändern von Kategorien
+  * das Löschen von Kategorien
+  * die Neuzuordnung von Produkten zu Kategorien
 
 === Produktverwaltung ===
 
