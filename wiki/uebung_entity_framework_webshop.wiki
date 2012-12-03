@@ -3,7 +3,7 @@
 
 = WEB-Shop =
 
-In der SQL-Server-Datenbank `webshop.mdf` befinden sich die Tabellen für die Abwicklung der Geschäfte eines WEB-Shops.
+In der SQL-Server-Datenbank [http://pr-gse.googlecode.com/svn/wiki/uebungen/data/Webshop.mdf `webshop.mdf`] befinden sich die Tabellen für die Abwicklung der Geschäfte eines WEB-Shops.
 
 == Beschreibung der Datenbank ==
 
