@@ -45,9 +45,7 @@ In der SQL-Server-Datenbank [http://pr-gse.googlecode.com/svn/wiki/uebungen/data
 == Aufbau der Applikation ==
 
 
-Der WEB-Shop soll nicht nur als WEB-Applikation verfügbar sein, sondern auch als WPF-Applikation. Daher muss die Fachlogik so konzipiert sein, dass beide Oberflächen-Arten daran angebunden werden können.
-
-Außerdem soll die Applikation modular aufgebaut sein, so dass mehrere Entwickler gleichzeitig daran arbeiten können.
+Die Applikation soll modular aufgebaut sein, so dass mehrere Entwickler gleichzeitig daran arbeiten können.
 
 Jedes Modul enthält eine Anmelde-Funktionalität. Das heißt, ein Benutzer muss sich erst mit gültigem Benutzernamen und Kennwort anmelden, um Zugriff auf die Funktionalitäten des Moduls zu haben.
 
