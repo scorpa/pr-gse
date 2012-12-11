@@ -31,9 +31,14 @@
         </table>
 
         <asp:Button ID="BnNeu" runat="server" Text="Neu" OnClick="BnNeu_Click" />
+
+        <asp:Button ID="BnWarenkorb" runat="server" Text="zum Warenkorb" OnClick="BnWarenkorb_Click" />
  
 
     </div>
     </form>
+
+    <a href="WarenkorbVerwaltung.aspx">Warenkorbverwaltung</a>
+
 </body>
 </html>

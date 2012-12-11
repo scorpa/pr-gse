@@ -35,5 +35,12 @@ namespace Bibliothek
             verwaltung.Add(b);
             GBuecher.DataBind();
         }
+
+        protected void BnWarenkorb_Click(object sender, EventArgs e)
+        {
+            // was zu tun ist 
+            Response.Redirect("WarenkorbVerwaltung.aspx");
+            //Server.Transfer("WarenkorbVerwaltung.aspx");
+        }
     }
 }
