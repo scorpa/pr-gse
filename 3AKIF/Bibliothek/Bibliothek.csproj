@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Verwaltung.aspx" />
+    <Content Include="Warenkorb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +71,13 @@
     </Compile>
     <Compile Include="Verwaltung.aspx.designer.cs">
       <DependentUpon>Verwaltung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Warenkorb.aspx.cs">
+      <DependentUpon>Warenkorb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Warenkorb.aspx.designer.cs">
+      <DependentUpon>Warenkorb.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
