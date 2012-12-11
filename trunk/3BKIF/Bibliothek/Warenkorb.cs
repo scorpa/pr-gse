@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Bibliothek
 {
-    public class BuchVerwaltung
+    public class Warenkorb
     {
         private List<Buch> buecher = new List<Buch>();
 
@@ -17,6 +17,5 @@ namespace Bibliothek
         }
 
         
-
     }
 }
