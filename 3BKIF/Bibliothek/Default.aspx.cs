@@ -19,6 +19,21 @@ namespace Bibliothek
                 verwaltung = new BuchVerwaltung();
                 Application["verwaltung"] = verwaltung;
             }
+
+            GBuecher.DataSource = verwaltung.Buecher;
+            GBuecher.DataBind();
+        }
+
+        protected void BnNeu_Click(object sender, EventArgs e)
+        {
+            Buch b = new Buch
+            {
+                Titel = TBTitel.Text,
+                Isbn = TBIsbn.Text,
+                Seiten = int.Parse(TBSeiten.Text)
+            };
+            verwaltung.Add(b);
+            GBuecher.DataBind();
         }
     }
 }

@@ -10,7 +10,7 @@
 namespace Bibliothek {
     
     
-    public partial class Default {
+    public partial class WarenkorbVerwaltung {
         
         /// <summary>
         /// form1 control.
@@ -22,48 +22,30 @@ namespace Bibliothek {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// GBuecher control.
+        /// GWarenkorb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GBuecher;
+        protected global::System.Web.UI.WebControls.GridView GWarenkorb;
         
         /// <summary>
-        /// TBTitel control.
+        /// DAuswahl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBTitel;
+        protected global::System.Web.UI.WebControls.DropDownList DAuswahl;
         
         /// <summary>
-        /// TBIsbn control.
+        /// BnHinzu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBIsbn;
-        
-        /// <summary>
-        /// TBSeiten control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBSeiten;
-        
-        /// <summary>
-        /// BnNeu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BnNeu;
+        protected global::System.Web.UI.WebControls.Button BnHinzu;
     }
 }

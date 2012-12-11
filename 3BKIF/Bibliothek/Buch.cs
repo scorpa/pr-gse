@@ -10,5 +10,10 @@ namespace Bibliothek
         public string Titel { get; set; }
         public string Isbn { get; set; }
         public int Seiten { get; set; }
+
+        public override string ToString()
+        {
+            return Titel;
+        }
     }
 }
