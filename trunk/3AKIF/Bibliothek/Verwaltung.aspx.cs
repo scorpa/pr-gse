@@ -42,6 +42,10 @@ namespace Bibliothek
             };
             bvw.Add(b);
             BuchListe.DataBind();
+
+//            Response.Redirect("Warenkorb.aspx");
+
+            Server.Transfer("Warenkorb.aspx");
         }
     }
 }
