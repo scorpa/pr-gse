@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="jquery-1.7.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
