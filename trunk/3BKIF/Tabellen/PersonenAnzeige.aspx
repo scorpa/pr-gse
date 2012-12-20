@@ -12,14 +12,23 @@
     
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ObjectDataSource1" PageSize="3" ShowFooter="True">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" CancelText="abbrechen" DeleteText="löschen" EditText="bearbeiten" />
+                <asp:TemplateField ShowHeader="False">
+                    <EditItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+                        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="abbrechen"></asp:LinkButton>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="bearbeiten"></asp:LinkButton>
+                        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" Text="löschen"></asp:LinkButton>
+                    </ItemTemplate>
+                    <FooterTemplate>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Neu" />
+                    </FooterTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="Id" SortExpression="Id">
                     <EditItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
                     </EditItemTemplate>
-                    <FooterTemplate>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                    </FooterTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
                     </ItemTemplate>
@@ -29,7 +38,7 @@
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <FooterTemplate>
-                        <asp:TextBox ID="Textbox3" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TbName" runat="server"></asp:TextBox>
                        
                     </FooterTemplate>
                     <ItemTemplate>
@@ -68,13 +77,9 @@
                 <asp:Parameter Name="Kinder" Type="String" />
             </UpdateParameters>
         </asp:ObjectDataSource>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
-        Geburtsdatum<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        <br />
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Neue Person" />
         <br />
     
     </div>
