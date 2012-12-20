@@ -16,6 +16,14 @@ namespace Tabellen
             new Person{ Id=5, Name="Sepp", Geburtstag = new DateTime(1994, 1,1)}
         };
 
+        public List<string> AuswahlListe()
+        {
+            return new List<string>
+            {
+                "eins", "zwei", "drei"
+            };
+        }
+
 
         public List<Person> Select()
         {
@@ -28,11 +36,18 @@ namespace Tabellen
             personen.Remove(pers);
         }
 
-        public void Update(int Id, string Name, DateTime Geburtstag)
+        public void Update(int Id, string Name, DateTime Geburtstag, string Kinder)
         {
-            Person pers = personen.Single(p => p.Id == Id);
+            Person pers = personen.Single(x => x.Id == Id);
             pers.Name = Name;
             pers.Geburtstag = Geburtstag;
+            pers.Kinder = Kinder;
+        }
+
+        public void Insert(Person p)
+        {
+            p.Id = (from x in personen select x.Id).Max() + 1;
+            personen.Add(p);
         }
 
     }

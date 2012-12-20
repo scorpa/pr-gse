@@ -13,5 +13,16 @@ namespace Tabellen
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+     
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Person p = new Person { Name = TextBox4.Text };
+            new PersonenVerwaltung().Insert(p);
+        }
     }
 }
