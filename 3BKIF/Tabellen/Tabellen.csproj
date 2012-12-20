@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="jquery-1.7.1.js" />
+    <Content Include="PersonenAnzeige.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +71,14 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
+    <Compile Include="PersonenAnzeige.aspx.cs">
+      <DependentUpon>PersonenAnzeige.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonenAnzeige.aspx.designer.cs">
+      <DependentUpon>PersonenAnzeige.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonenVerwaltung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
