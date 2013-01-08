@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="schule2000Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="schule2000ModelStoreContainer">
+          <EntitySet Name="gegenstaende" EntityType="schule2000Model.Store.gegenstaende" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="klassen" EntityType="schule2000Model.Store.klassen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="lehrer" EntityType="schule2000Model.Store.lehrer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="pruefungen" EntityType="schule2000Model.Store.pruefungen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="raeume" EntityType="schule2000Model.Store.raeume" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="schueler" EntityType="schule2000Model.Store.schueler" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="stunden" EntityType="schule2000Model.Store.stunden" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="schule2000Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vorgesetzte" EntityType="schule2000Model.Store.vorgesetzte" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_klassen_lehrer" Association="schule2000Model.Store.FK_klassen_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="klassen" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_klassen_schueler" Association="schule2000Model.Store.FK_klassen_schueler">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="klassen" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_klassen_schueler1" Association="schule2000Model.Store.FK_klassen_schueler1">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="klassen" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lehrer_lehrer" Association="schule2000Model.Store.FK_lehrer_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="lehrer1" EntitySet="lehrer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pruefungen_gegenstaende" Association="schule2000Model.Store.FK_pruefungen_gegenstaende">
+            <End Role="gegenstaende" EntitySet="gegenstaende" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pruefungen_lehrer" Association="schule2000Model.Store.FK_pruefungen_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pruefungen_schueler" Association="schule2000Model.Store.FK_pruefungen_schueler">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_schueler_klassen" Association="schule2000Model.Store.FK_schueler_klassen">
+            <End Role="klassen" EntitySet="klassen" />
+            <End Role="schueler" EntitySet="schueler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_gegenstaende" Association="schule2000Model.Store.FK_stunden_gegenstaende">
+            <End Role="gegenstaende" EntitySet="gegenstaende" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_klassen" Association="schule2000Model.Store.FK_stunden_klassen">
+            <End Role="klassen" EntitySet="klassen" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_lehrer" Association="schule2000Model.Store.FK_stunden_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_raeume" Association="schule2000Model.Store.FK_stunden_raeume">
+            <End Role="raeume" EntitySet="raeume" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vorgesetzte_lehrer" Association="schule2000Model.Store.FK_vorgesetzte_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="vorgesetzte" EntitySet="vorgesetzte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vorgesetzte_lehrer1" Association="schule2000Model.Store.FK_vorgesetzte_lehrer1">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="vorgesetzte" EntitySet="vorgesetzte" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="gegenstaende">
+          <Key>
+            <PropertyRef Name="G_ID" />
+          </Key>
+          <Property Name="G_ID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="G_Bez" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="klassen">
+          <Key>
+            <PropertyRef Name="K_ID" />
+          </Key>
+          <Property Name="K_ID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="K_Bez" Type="nvarchar" MaxLength="50" />
+          <Property Name="K_S_Klaspr" Type="smallint" />
+          <Property Name="K_S_Klasprstv" Type="smallint" />
+          <Property Name="K_L_Klavst" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="lehrer">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="L_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="L_Vorname" Type="nvarchar" MaxLength="50" />
+          <Property Name="L_Gebdat" Type="datetime" />
+          <Property Name="L_Gehalt" Type="real" />
+          <Property Name="L_L_Chef" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="pruefungen">
+          <Key>
+            <PropertyRef Name="P_Datum" />
+            <PropertyRef Name="P_S_Kandidat" />
+            <PropertyRef Name="P_L_Pruefer" />
+            <PropertyRef Name="P_G_Fach" />
+          </Key>
+          <Property Name="P_Datum" Type="datetime" Nullable="false" />
+          <Property Name="P_S_Kandidat" Type="smallint" Nullable="false" />
+          <Property Name="P_L_Pruefer" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="P_G_Fach" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="P_Art" Type="nvarchar" MaxLength="3" />
+          <Property Name="P_Note" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="raeume">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="R_Plaetze" Type="smallint" />
+        </EntityType>
+        <EntityType Name="schueler">
+          <Key>
+            <PropertyRef Name="S_SCHNR" />
+          </Key>
+          <Property Name="S_SCHNR" Type="smallint" Nullable="false" />
+          <Property Name="S_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="S_Vorname" Type="nvarchar" MaxLength="50" />
+          <Property Name="S_Gebdat" Type="datetime" />
+          <Property Name="S_Adresse" Type="nvarchar" MaxLength="50" />
+          <Property Name="S_K_Klasse" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="stunden">
+          <Key>
+            <PropertyRef Name="ST_K_Klasse" />
+            <PropertyRef Name="ST_Stunde" />
+          </Key>
+          <Property Name="ST_K_Klasse" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="ST_L_Lehrer" Type="nvarchar" MaxLength="5" />
+          <Property Name="ST_G_Fach" Type="nvarchar" MaxLength="10" />
+          <Property Name="ST_Stunde" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="ST_R_Raum" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="vorgesetzte">
+          <Key>
+            <PropertyRef Name="V_L_Vorg" />
+            <PropertyRef Name="V_Art" />
+            <PropertyRef Name="V_L_Unt" />
+          </Key>
+          <Property Name="V_L_Vorg" Type="nvarchar" Nullable="false" MaxLength="5" />
+          <Property Name="V_Art" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="V_L_Unt" Type="nvarchar" Nullable="false" MaxLength="5" />
+        </EntityType>
+        <Association Name="FK_klassen_lehrer">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="0..1" />
+          <End Role="klassen" Type="schule2000Model.Store.klassen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="klassen">
+              <PropertyRef Name="K_L_Klavst" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_klassen_schueler">
+          <End Role="schueler" Type="schule2000Model.Store.schueler" Multiplicity="0..1" />
+          <End Role="klassen" Type="schule2000Model.Store.klassen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="schueler">
+              <PropertyRef Name="S_SCHNR" />
+            </Principal>
+            <Dependent Role="klassen">
+              <PropertyRef Name="K_S_Klaspr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_klassen_schueler1">
+          <End Role="schueler" Type="schule2000Model.Store.schueler" Multiplicity="0..1" />
+          <End Role="klassen" Type="schule2000Model.Store.klassen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="schueler">
+              <PropertyRef Name="S_SCHNR" />
+            </Principal>
+            <Dependent Role="klassen">
+              <PropertyRef Name="K_S_Klasprstv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lehrer_lehrer">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="0..1" />
+          <End Role="lehrer1" Type="schule2000Model.Store.lehrer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="lehrer1">
+              <PropertyRef Name="L_L_Chef" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pruefungen_gegenstaende">
+          <End Role="gegenstaende" Type="schule2000Model.Store.gegenstaende" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.Store.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gegenstaende">
+              <PropertyRef Name="G_ID" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_G_Fach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pruefungen_lehrer">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.Store.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_L_Pruefer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pruefungen_schueler">
+          <End Role="schueler" Type="schule2000Model.Store.schueler" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.Store.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="schueler">
+              <PropertyRef Name="S_SCHNR" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_S_Kandidat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_schueler_klassen">
+          <End Role="klassen" Type="schule2000Model.Store.klassen" Multiplicity="0..1" />
+          <End Role="schueler" Type="schule2000Model.Store.schueler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="klassen">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="schueler">
+              <PropertyRef Name="S_K_Klasse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_gegenstaende">
+          <End Role="gegenstaende" Type="schule2000Model.Store.gegenstaende" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.Store.stunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gegenstaende">
+              <PropertyRef Name="G_ID" />
+            </Principal>
+            <Dependent Role="stunden">
+              <PropertyRef Name="ST_G_Fach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_klassen">
+          <End Role="klassen" Type="schule2000Model.Store.klassen" Multiplicity="1" />
+          <End Role="stunden" Type="schule2000Model.Store.stunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="klassen">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="stunden">
+              <PropertyRef Name="ST_K_Klasse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_lehrer">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.Store.stunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="stunden">
+              <PropertyRef Name="ST_L_Lehrer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_raeume">
+          <End Role="raeume" Type="schule2000Model.Store.raeume" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.Store.stunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="raeume">
+              <PropertyRef Name="R_ID" />
+            </Principal>
+            <Dependent Role="stunden">
+              <PropertyRef Name="ST_R_Raum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vorgesetzte_lehrer">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="1" />
+          <End Role="vorgesetzte" Type="schule2000Model.Store.vorgesetzte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="vorgesetzte">
+              <PropertyRef Name="V_L_Vorg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vorgesetzte_lehrer1">
+          <End Role="lehrer" Type="schule2000Model.Store.lehrer" Multiplicity="1" />
+          <End Role="vorgesetzte" Type="schule2000Model.Store.vorgesetzte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="vorgesetzte">
+              <PropertyRef Name="V_L_Unt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="schule2000Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Schule2000" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="gegenstaende" EntityType="schule2000Model.gegenstaende" />
+          <EntitySet Name="klassen" EntityType="schule2000Model.Klasse" />
+          <EntitySet Name="lehrer" EntityType="schule2000Model.lehrer" />
+          <EntitySet Name="pruefungen" EntityType="schule2000Model.pruefungen" />
+          <EntitySet Name="raeume" EntityType="schule2000Model.raeume" />
+          <EntitySet Name="schueler" EntityType="schule2000Model.Schueler" />
+          <EntitySet Name="stunden" EntityType="schule2000Model.stunden" />
+          <EntitySet Name="sysdiagrams" EntityType="schule2000Model.sysdiagrams" />
+          <EntitySet Name="vorgesetzte" EntityType="schule2000Model.vorgesetzte" />
+          <AssociationSet Name="FK_pruefungen_gegenstaende" Association="schule2000Model.FK_pruefungen_gegenstaende">
+            <End Role="gegenstaende" EntitySet="gegenstaende" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_gegenstaende" Association="schule2000Model.FK_stunden_gegenstaende">
+            <End Role="gegenstaende" EntitySet="gegenstaende" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_klassen_lehrer" Association="schule2000Model.FK_klassen_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="klassen" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_klassen_schueler" Association="schule2000Model.FK_klassen_schueler">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="klassensprecher" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_klassen_schueler1" Association="schule2000Model.FK_klassen_schueler1">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="stellvertreter" EntitySet="klassen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_schueler_klassen" Association="schule2000Model.FK_schueler_klassen">
+            <End Role="klassen" EntitySet="klassen" />
+            <End Role="schueler" EntitySet="schueler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_klassen" Association="schule2000Model.FK_stunden_klassen">
+            <End Role="klassen" EntitySet="klassen" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lehrer_lehrer" Association="schule2000Model.FK_lehrer_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="lehrer1" EntitySet="lehrer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pruefungen_lehrer" Association="schule2000Model.FK_pruefungen_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_lehrer" Association="schule2000Model.FK_stunden_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vorgesetzte_lehrer" Association="schule2000Model.FK_vorgesetzte_lehrer">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="vorgesetzte" EntitySet="vorgesetzte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vorgesetzte_lehrer1" Association="schule2000Model.FK_vorgesetzte_lehrer1">
+            <End Role="lehrer" EntitySet="lehrer" />
+            <End Role="vorgesetzte" EntitySet="vorgesetzte" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pruefungen_schueler" Association="schule2000Model.FK_pruefungen_schueler">
+            <End Role="schueler" EntitySet="schueler" />
+            <End Role="pruefungen" EntitySet="pruefungen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_stunden_raeume" Association="schule2000Model.FK_stunden_raeume">
+            <End Role="raeume" EntitySet="raeume" />
+            <End Role="stunden" EntitySet="stunden" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="gegenstaende">
+          <Key>
+            <PropertyRef Name="G_ID" />
+          </Key>
+          <Property Name="G_ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="G_Bez" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="pruefungen" Relationship="schule2000Model.FK_pruefungen_gegenstaende" FromRole="gegenstaende" ToRole="pruefungen" />
+          <NavigationProperty Name="stunden" Relationship="schule2000Model.FK_stunden_gegenstaende" FromRole="gegenstaende" ToRole="stunden" />
+        </EntityType>
+        <EntityType Name="Klasse">
+          <Key>
+            <PropertyRef Name="K_ID" />
+          </Key>
+          <Property Name="K_ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="K_Bez" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="lehrer" Relationship="schule2000Model.FK_klassen_lehrer" FromRole="klassen" ToRole="lehrer" />
+          <NavigationProperty Name="klassensprecher" Relationship="schule2000Model.FK_klassen_schueler" FromRole="klassensprecher" ToRole="schueler" />
+          <NavigationProperty Name="stellvertreter" Relationship="schule2000Model.FK_klassen_schueler1" FromRole="stellvertreter" ToRole="schueler" />
+          <NavigationProperty Name="schueler" Relationship="schule2000Model.FK_schueler_klassen" FromRole="klassen" ToRole="schueler" />
+          <NavigationProperty Name="stunden" Relationship="schule2000Model.FK_stunden_klassen" FromRole="klassen" ToRole="stunden" />
+        </EntityType>
+        <EntityType Name="lehrer">
+          <Key>
+            <PropertyRef Name="L_ID" />
+          </Key>
+          <Property Name="L_ID" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="L_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="L_Vorname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="L_Gebdat" Type="DateTime" Precision="3" />
+          <Property Name="L_Gehalt" Type="Single" />
+          <NavigationProperty Name="klassen" Relationship="schule2000Model.FK_klassen_lehrer" FromRole="lehrer" ToRole="klassen" />
+          <NavigationProperty Name="lehrer1" Relationship="schule2000Model.FK_lehrer_lehrer" FromRole="lehrer" ToRole="lehrer1" />
+          <NavigationProperty Name="lehrer2" Relationship="schule2000Model.FK_lehrer_lehrer" FromRole="lehrer1" ToRole="lehrer" />
+          <NavigationProperty Name="pruefungen" Relationship="schule2000Model.FK_pruefungen_lehrer" FromRole="lehrer" ToRole="pruefungen" />
+          <NavigationProperty Name="stunden" Relationship="schule2000Model.FK_stunden_lehrer" FromRole="lehrer" ToRole="stunden" />
+          <NavigationProperty Name="vorgesetzte" Relationship="schule2000Model.FK_vorgesetzte_lehrer" FromRole="lehrer" ToRole="vorgesetzte" />
+          <NavigationProperty Name="vorgesetzte1" Relationship="schule2000Model.FK_vorgesetzte_lehrer1" FromRole="lehrer" ToRole="vorgesetzte" />
+        </EntityType>
+        <EntityType Name="pruefungen">
+          <Key>
+            <PropertyRef Name="P_Datum" />
+            <PropertyRef Name="P_S_Kandidat" />
+            <PropertyRef Name="P_L_Pruefer" />
+            <PropertyRef Name="P_G_Fach" />
+          </Key>
+          <Property Name="P_Datum" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="P_S_Kandidat" Type="Int16" Nullable="false" />
+          <Property Name="P_L_Pruefer" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="P_G_Fach" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="P_Art" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+          <Property Name="P_Note" Type="Byte" />
+          <NavigationProperty Name="gegenstaende" Relationship="schule2000Model.FK_pruefungen_gegenstaende" FromRole="pruefungen" ToRole="gegenstaende" />
+          <NavigationProperty Name="lehrer" Relationship="schule2000Model.FK_pruefungen_lehrer" FromRole="pruefungen" ToRole="lehrer" />
+          <NavigationProperty Name="schueler" Relationship="schule2000Model.FK_pruefungen_schueler" FromRole="pruefungen" ToRole="schueler" />
+        </EntityType>
+        <EntityType Name="raeume">
+          <Key>
+            <PropertyRef Name="R_ID" />
+          </Key>
+          <Property Name="R_ID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="R_Plaetze" Type="Int16" />
+          <NavigationProperty Name="stunden" Relationship="schule2000Model.FK_stunden_raeume" FromRole="raeume" ToRole="stunden" />
+        </EntityType>
+        <EntityType Name="Schueler">
+          <Key>
+            <PropertyRef Name="S_SCHNR" />
+          </Key>
+          <Property Name="S_SCHNR" Type="Int16" Nullable="false" />
+          <Property Name="S_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="S_Vorname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="S_Gebdat" Type="DateTime" Precision="3" />
+          <Property Name="S_Adresse" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="klassensprecher" Relationship="schule2000Model.FK_klassen_schueler" FromRole="schueler" ToRole="klassensprecher" />
+          <NavigationProperty Name="stellvertreter" Relationship="schule2000Model.FK_klassen_schueler1" FromRole="schueler" ToRole="stellvertreter" />
+          <NavigationProperty Name="klasse" Relationship="schule2000Model.FK_schueler_klassen" FromRole="schueler" ToRole="klassen" />
+          <NavigationProperty Name="pruefungen" Relationship="schule2000Model.FK_pruefungen_schueler" FromRole="schueler" ToRole="pruefungen" />
+        </EntityType>
+        <EntityType Name="stunden">
+          <Key>
+            <PropertyRef Name="ST_K_Klasse" />
+            <PropertyRef Name="ST_Stunde" />
+          </Key>
+          <Property Name="ST_K_Klasse" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ST_Stunde" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="gegenstaende" Relationship="schule2000Model.FK_stunden_gegenstaende" FromRole="stunden" ToRole="gegenstaende" />
+          <NavigationProperty Name="klassen" Relationship="schule2000Model.FK_stunden_klassen" FromRole="stunden" ToRole="klassen" />
+          <NavigationProperty Name="lehrer" Relationship="schule2000Model.FK_stunden_lehrer" FromRole="stunden" ToRole="lehrer" />
+          <NavigationProperty Name="raeume" Relationship="schule2000Model.FK_stunden_raeume" FromRole="stunden" ToRole="raeume" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vorgesetzte">
+          <Key>
+            <PropertyRef Name="V_L_Vorg" />
+            <PropertyRef Name="V_Art" />
+            <PropertyRef Name="V_L_Unt" />
+          </Key>
+          <Property Name="V_L_Vorg" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="V_Art" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="V_L_Unt" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="lehrer" Relationship="schule2000Model.FK_vorgesetzte_lehrer" FromRole="vorgesetzte" ToRole="lehrer" />
+          <NavigationProperty Name="lehrer1" Relationship="schule2000Model.FK_vorgesetzte_lehrer1" FromRole="vorgesetzte" ToRole="lehrer" />
+        </EntityType>
+        <Association Name="FK_pruefungen_gegenstaende">
+          <End Role="gegenstaende" Type="schule2000Model.gegenstaende" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gegenstaende">
+              <PropertyRef Name="G_ID" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_G_Fach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_gegenstaende">
+          <End Role="gegenstaende" Type="schule2000Model.gegenstaende" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.stunden" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_klassen_lehrer">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="0..1" />
+          <End Role="klassen" Type="schule2000Model.Klasse" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_klassen_schueler">
+          <End Role="schueler" Type="schule2000Model.Schueler" Multiplicity="0..1" />
+          <End Role="klassensprecher" Type="schule2000Model.Klasse" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_klassen_schueler1">
+          <End Role="schueler" Type="schule2000Model.Schueler" Multiplicity="0..1" />
+          <End Role="stellvertreter" Type="schule2000Model.Klasse" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_schueler_klassen">
+          <End Role="klassen" Type="schule2000Model.Klasse" Multiplicity="0..1" />
+          <End Role="schueler" Type="schule2000Model.Schueler" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_stunden_klassen">
+          <End Role="klassen" Type="schule2000Model.Klasse" Multiplicity="1" />
+          <End Role="stunden" Type="schule2000Model.stunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="klassen">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="stunden">
+              <PropertyRef Name="ST_K_Klasse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lehrer_lehrer">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="0..1" />
+          <End Role="lehrer1" Type="schule2000Model.lehrer" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_pruefungen_lehrer">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_L_Pruefer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_lehrer">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.stunden" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_vorgesetzte_lehrer">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="1" />
+          <End Role="vorgesetzte" Type="schule2000Model.vorgesetzte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="vorgesetzte">
+              <PropertyRef Name="V_L_Vorg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vorgesetzte_lehrer1">
+          <End Role="lehrer" Type="schule2000Model.lehrer" Multiplicity="1" />
+          <End Role="vorgesetzte" Type="schule2000Model.vorgesetzte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lehrer">
+              <PropertyRef Name="L_ID" />
+            </Principal>
+            <Dependent Role="vorgesetzte">
+              <PropertyRef Name="V_L_Unt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pruefungen_schueler">
+          <End Role="schueler" Type="schule2000Model.Schueler" Multiplicity="1" />
+          <End Role="pruefungen" Type="schule2000Model.pruefungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="schueler">
+              <PropertyRef Name="S_SCHNR" />
+            </Principal>
+            <Dependent Role="pruefungen">
+              <PropertyRef Name="P_S_Kandidat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_stunden_raeume">
+          <End Role="raeume" Type="schule2000Model.raeume" Multiplicity="0..1" />
+          <End Role="stunden" Type="schule2000Model.stunden" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="schule2000ModelStoreContainer" CdmEntityContainer="Schule2000">
+          <EntitySetMapping Name="gegenstaende">
+            <EntityTypeMapping TypeName="schule2000Model.gegenstaende">
+              <MappingFragment StoreEntitySet="gegenstaende">
+                <ScalarProperty Name="G_ID" ColumnName="G_ID" />
+                <ScalarProperty Name="G_Bez" ColumnName="G_Bez" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="klassen">
+            <EntityTypeMapping TypeName="schule2000Model.Klasse">
+              <MappingFragment StoreEntitySet="klassen">
+                <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+                <ScalarProperty Name="K_Bez" ColumnName="K_Bez" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lehrer">
+            <EntityTypeMapping TypeName="schule2000Model.lehrer">
+              <MappingFragment StoreEntitySet="lehrer">
+                <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+                <ScalarProperty Name="L_Name" ColumnName="L_Name" />
+                <ScalarProperty Name="L_Vorname" ColumnName="L_Vorname" />
+                <ScalarProperty Name="L_Gebdat" ColumnName="L_Gebdat" />
+                <ScalarProperty Name="L_Gehalt" ColumnName="L_Gehalt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pruefungen">
+            <EntityTypeMapping TypeName="schule2000Model.pruefungen">
+              <MappingFragment StoreEntitySet="pruefungen">
+                <ScalarProperty Name="P_Datum" ColumnName="P_Datum" />
+                <ScalarProperty Name="P_S_Kandidat" ColumnName="P_S_Kandidat" />
+                <ScalarProperty Name="P_L_Pruefer" ColumnName="P_L_Pruefer" />
+                <ScalarProperty Name="P_G_Fach" ColumnName="P_G_Fach" />
+                <ScalarProperty Name="P_Art" ColumnName="P_Art" />
+                <ScalarProperty Name="P_Note" ColumnName="P_Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="raeume">
+            <EntityTypeMapping TypeName="schule2000Model.raeume">
+              <MappingFragment StoreEntitySet="raeume">
+                <ScalarProperty Name="R_ID" ColumnName="R_ID" />
+                <ScalarProperty Name="R_Plaetze" ColumnName="R_Plaetze" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="schueler">
+            <EntityTypeMapping TypeName="schule2000Model.Schueler">
+              <MappingFragment StoreEntitySet="schueler">
+                <ScalarProperty Name="S_SCHNR" ColumnName="S_SCHNR" />
+                <ScalarProperty Name="S_Name" ColumnName="S_Name" />
+                <ScalarProperty Name="S_Vorname" ColumnName="S_Vorname" />
+                <ScalarProperty Name="S_Gebdat" ColumnName="S_Gebdat" />
+                <ScalarProperty Name="S_Adresse" ColumnName="S_Adresse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stunden">
+            <EntityTypeMapping TypeName="schule2000Model.stunden">
+              <MappingFragment StoreEntitySet="stunden">
+                <ScalarProperty Name="ST_K_Klasse" ColumnName="ST_K_Klasse" />
+                <ScalarProperty Name="ST_Stunde" ColumnName="ST_Stunde" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="schule2000Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vorgesetzte">
+            <EntityTypeMapping TypeName="schule2000Model.vorgesetzte">
+              <MappingFragment StoreEntitySet="vorgesetzte">
+                <ScalarProperty Name="V_L_Vorg" ColumnName="V_L_Vorg" />
+                <ScalarProperty Name="V_Art" ColumnName="V_Art" />
+                <ScalarProperty Name="V_L_Unt" ColumnName="V_L_Unt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_stunden_gegenstaende" TypeName="schule2000Model.FK_stunden_gegenstaende" StoreEntitySet="stunden">
+            <EndProperty Name="gegenstaende">
+              <ScalarProperty Name="G_ID" ColumnName="ST_G_Fach" />
+            </EndProperty>
+            <EndProperty Name="stunden">
+              <ScalarProperty Name="ST_K_Klasse" ColumnName="ST_K_Klasse" />
+              <ScalarProperty Name="ST_Stunde" ColumnName="ST_Stunde" />
+            </EndProperty>
+            <Condition ColumnName="ST_G_Fach" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_klassen_lehrer" TypeName="schule2000Model.FK_klassen_lehrer" StoreEntitySet="klassen">
+            <EndProperty Name="lehrer">
+              <ScalarProperty Name="L_ID" ColumnName="K_L_Klavst" />
+            </EndProperty>
+            <EndProperty Name="klassen">
+              <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+            </EndProperty>
+            <Condition ColumnName="K_L_Klavst" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_klassen_schueler" TypeName="schule2000Model.FK_klassen_schueler" StoreEntitySet="klassen">
+            <EndProperty Name="schueler">
+              <ScalarProperty Name="S_SCHNR" ColumnName="K_S_Klaspr" />
+            </EndProperty>
+            <EndProperty Name="klassensprecher">
+              <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+            </EndProperty>
+            <Condition ColumnName="K_S_Klaspr" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_klassen_schueler1" TypeName="schule2000Model.FK_klassen_schueler1" StoreEntitySet="klassen">
+            <EndProperty Name="schueler">
+              <ScalarProperty Name="S_SCHNR" ColumnName="K_S_Klasprstv" />
+            </EndProperty>
+            <EndProperty Name="stellvertreter">
+              <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+            </EndProperty>
+            <Condition ColumnName="K_S_Klasprstv" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_schueler_klassen" TypeName="schule2000Model.FK_schueler_klassen" StoreEntitySet="schueler">
+            <EndProperty Name="klassen">
+              <ScalarProperty Name="K_ID" ColumnName="S_K_Klasse" />
+            </EndProperty>
+            <EndProperty Name="schueler">
+              <ScalarProperty Name="S_SCHNR" ColumnName="S_SCHNR" />
+            </EndProperty>
+            <Condition ColumnName="S_K_Klasse" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_lehrer_lehrer" TypeName="schule2000Model.FK_lehrer_lehrer" StoreEntitySet="lehrer">
+            <EndProperty Name="lehrer">
+              <ScalarProperty Name="L_ID" ColumnName="L_L_Chef" />
+            </EndProperty>
+            <EndProperty Name="lehrer1">
+              <ScalarProperty Name="L_ID" ColumnName="L_ID" />
+            </EndProperty>
+            <Condition ColumnName="L_L_Chef" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_stunden_lehrer" TypeName="schule2000Model.FK_stunden_lehrer" StoreEntitySet="stunden">
+            <EndProperty Name="lehrer">
+              <ScalarProperty Name="L_ID" ColumnName="ST_L_Lehrer" />
+            </EndProperty>
+            <EndProperty Name="stunden">
+              <ScalarProperty Name="ST_K_Klasse" ColumnName="ST_K_Klasse" />
+              <ScalarProperty Name="ST_Stunde" ColumnName="ST_Stunde" />
+            </EndProperty>
+            <Condition ColumnName="ST_L_Lehrer" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_stunden_raeume" TypeName="schule2000Model.FK_stunden_raeume" StoreEntitySet="stunden">
+            <EndProperty Name="raeume">
+              <ScalarProperty Name="R_ID" ColumnName="ST_R_Raum" />
+            </EndProperty>
+            <EndProperty Name="stunden">
+              <ScalarProperty Name="ST_K_Klasse" ColumnName="ST_K_Klasse" />
+              <ScalarProperty Name="ST_Stunde" ColumnName="ST_Stunde" />
+            </EndProperty>
+            <Condition ColumnName="ST_R_Raum" IsNull="false" />
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
