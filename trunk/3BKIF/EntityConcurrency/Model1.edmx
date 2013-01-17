@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WebshopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WebshopModelStoreContainer">
+          <EntitySet Name="adressen" EntityType="WebshopModel.Store.adressen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="benutzer" EntityType="WebshopModel.Store.benutzer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="bestellungen" EntityType="WebshopModel.Store.bestellungen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="einkaufs_positionen" EntityType="WebshopModel.Store.einkaufs_positionen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="kategorien" EntityType="WebshopModel.Store.kategorien" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="konto_buchungen" EntityType="WebshopModel.Store.konto_buchungen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="kunden" EntityType="WebshopModel.Store.kunden" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="laender" EntityType="WebshopModel.Store.laender" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="lagerpositionen" EntityType="WebshopModel.Store.lagerpositionen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produkte" EntityType="WebshopModel.Store.produkte" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rechnungen" EntityType="WebshopModel.Store.rechnungen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="reklamationen" EntityType="WebshopModel.Store.reklamationen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="standorte" EntityType="WebshopModel.Store.standorte" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="WebshopModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="telefonnummern" EntityType="WebshopModel.Store.telefonnummern" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="warenkoerbe" EntityType="WebshopModel.Store.warenkoerbe" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="warenkorb_positionen" EntityType="WebshopModel.Store.warenkorb_positionen" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="fk_a_kunde" Association="WebshopModel.Store.fk_a_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="adressen" EntitySet="adressen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_a_land" Association="WebshopModel.Store.fk_a_land">
+            <End Role="laender" EntitySet="laender" />
+            <End Role="adressen" EntitySet="adressen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_b_adresse" Association="WebshopModel.Store.fk_b_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="bestellungen" EntitySet="bestellungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_b_warenkorb" Association="WebshopModel.Store.fk_b_warenkorb">
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+            <End Role="bestellungen" EntitySet="bestellungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_buchung" Association="WebshopModel.Store.fk_ep_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_produkt" Association="WebshopModel.Store.fk_ep_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_standort" Association="WebshopModel.Store.fk_ep_standort">
+            <End Role="standorte" EntitySet="standorte" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_k_benutzer" Association="WebshopModel.Store.fk_k_benutzer">
+            <End Role="benutzer" EntitySet="benutzer" />
+            <End Role="kunden" EntitySet="kunden" />
+          </AssociationSet>
+          <AssociationSet Name="FK_kat_super_kategorie" Association="WebshopModel.Store.FK_kat_super_kategorie">
+            <End Role="kategorien" EntitySet="kategorien" />
+            <End Role="kategorien1" EntitySet="kategorien" />
+          </AssociationSet>
+          <AssociationSet Name="fk_lp_produkt" Association="WebshopModel.Store.fk_lp_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="lagerpositionen" EntitySet="lagerpositionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_lp_standort" Association="WebshopModel.Store.fk_lp_standort">
+            <End Role="standorte" EntitySet="standorte" />
+            <End Role="lagerpositionen" EntitySet="lagerpositionen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_p_kategorie" Association="WebshopModel.Store.FK_p_kategorie">
+            <End Role="kategorien" EntitySet="kategorien" />
+            <End Role="produkte" EntitySet="produkte" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_adresse" Association="WebshopModel.Store.fk_r_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_bestellung" Association="WebshopModel.Store.fk_r_bestellung">
+            <End Role="bestellungen" EntitySet="bestellungen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_buchung" Association="WebshopModel.Store.fk_r_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_bestellung" Association="WebshopModel.Store.fk_rek_bestellung">
+            <End Role="bestellungen" EntitySet="bestellungen" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_buchung" Association="WebshopModel.Store.fk_rek_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_produkt" Association="WebshopModel.Store.fk_rek_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_s_adresse" Association="WebshopModel.Store.fk_s_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="standorte" EntitySet="standorte" />
+          </AssociationSet>
+          <AssociationSet Name="fk_t_kunde" Association="WebshopModel.Store.fk_t_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="telefonnummern" EntitySet="telefonnummern" />
+          </AssociationSet>
+          <AssociationSet Name="FK_w_kunde" Association="WebshopModel.Store.FK_w_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+          </AssociationSet>
+          <AssociationSet Name="fk_wp_produkt" Association="WebshopModel.Store.fk_wp_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="warenkorb_positionen" EntitySet="warenkorb_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_wp_warenkorb" Association="WebshopModel.Store.fk_wp_warenkorb">
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+            <End Role="warenkorb_positionen" EntitySet="warenkorb_positionen" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="adressen">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="a_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="a_strasse" Type="text" Nullable="false" />
+          <Property Name="a_ort" Type="text" Nullable="false" />
+          <Property Name="a_plz" Type="int" Nullable="false" />
+          <Property Name="fk_a_land" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="fk_a_kunde" Type="int" />
+          <Property Name="a_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="benutzer">
+          <Key>
+            <PropertyRef Name="ben_name" />
+          </Key>
+          <Property Name="ben_name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ben_kennwort" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ben_typ" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ben_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="bestellungen">
+          <Key>
+            <PropertyRef Name="b_id" />
+          </Key>
+          <Property Name="b_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="b_datum" Type="date" Nullable="false" />
+          <Property Name="b_versand_datum" Type="date" />
+          <Property Name="fk_b_warenkorb" Type="int" Nullable="false" />
+          <Property Name="fk_b_adresse" Type="int" Nullable="false" />
+          <Property Name="b_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="einkaufs_positionen">
+          <Key>
+            <PropertyRef Name="ep_id" />
+          </Key>
+          <Property Name="ep_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fk_ep_produkt" Type="int" Nullable="false" />
+          <Property Name="fk_ep_standort" Type="int" Nullable="false" />
+          <Property Name="fk_ep_buchung" Type="int" Nullable="false" />
+          <Property Name="ep_anzahl" Type="int" Nullable="false" />
+          <Property Name="ep_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="kategorien">
+          <Key>
+            <PropertyRef Name="kat_id" />
+          </Key>
+          <Property Name="kat_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kat_name" Type="text" Nullable="false" />
+          <Property Name="fk_kat_super_kategorie" Type="int" />
+          <Property Name="kat_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="konto_buchungen">
+          <Key>
+            <PropertyRef Name="kb_id" />
+          </Key>
+          <Property Name="kb_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="kb_betrag" Type="float" Nullable="false" />
+          <Property Name="kb_text" Type="text" />
+          <Property Name="kb_datum" Type="date" Nullable="false" />
+          <Property Name="kb_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="kunden">
+          <Key>
+            <PropertyRef Name="k_id" />
+          </Key>
+          <Property Name="k_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="k_name" Type="text" Nullable="false" />
+          <Property Name="k_email" Type="text" />
+          <Property Name="fk_k_benutzer" Type="varchar" MaxLength="50" />
+          <Property Name="k_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="laender">
+          <Key>
+            <PropertyRef Name="l_code" />
+          </Key>
+          <Property Name="l_code" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="l_name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="l_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="lagerpositionen">
+          <Key>
+            <PropertyRef Name="fk_lp_standort" />
+            <PropertyRef Name="fk_lp_produkt" />
+          </Key>
+          <Property Name="fk_lp_standort" Type="int" Nullable="false" />
+          <Property Name="fk_lp_produkt" Type="int" Nullable="false" />
+          <Property Name="lp_anzahl" Type="int" Nullable="false" />
+          <Property Name="lp_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="produkte">
+          <Key>
+            <PropertyRef Name="p_id" />
+          </Key>
+          <Property Name="p_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="p_name" Type="text" Nullable="false" />
+          <Property Name="p_mengeneinheit" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="p_einkaufspreis" Type="float" Nullable="false" />
+          <Property Name="p_verkaufspreis" Type="float" Nullable="false" />
+          <Property Name="fk_p_kategorie" Type="int" Nullable="false" />
+          <Property Name="p_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="rechnungen">
+          <Key>
+            <PropertyRef Name="r_nummer" />
+          </Key>
+          <Property Name="r_nummer" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="r_datum" Type="date" />
+          <Property Name="fk_r_bestellung" Type="int" Nullable="false" />
+          <Property Name="fk_r_adresse" Type="int" Nullable="false" />
+          <Property Name="fk_r_buchung" Type="int" />
+          <Property Name="r_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="reklamationen">
+          <Key>
+            <PropertyRef Name="rek_id" />
+          </Key>
+          <Property Name="rek_id" Type="int" Nullable="false" />
+          <Property Name="rek_datum" Type="date" />
+          <Property Name="fk_rek_bestellung" Type="int" />
+          <Property Name="fk_rek_produkt" Type="int" />
+          <Property Name="fk_rek_buchung" Type="int" />
+          <Property Name="rek_menge" Type="int" />
+          <Property Name="rek_status" Type="varchar" MaxLength="16" />
+          <Property Name="rek_bemerkung" Type="text" />
+          <Property Name="rek_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="standorte">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="s_name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="fk_s_adresse" Type="int" />
+          <Property Name="s_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="telefonnummern">
+          <Key>
+            <PropertyRef Name="t_nummer" />
+          </Key>
+          <Property Name="t_nummer" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="fk_t_kunde" Type="int" Nullable="false" />
+          <Property Name="t_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="warenkoerbe">
+          <Key>
+            <PropertyRef Name="w_id" />
+          </Key>
+          <Property Name="w_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fk_w_kunde" Type="int" Nullable="false" />
+          <Property Name="w_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="warenkorb_positionen">
+          <Key>
+            <PropertyRef Name="fk_wp_warenkorb" />
+            <PropertyRef Name="fk_wp_produkt" />
+          </Key>
+          <Property Name="fk_wp_warenkorb" Type="int" Nullable="false" />
+          <Property Name="fk_wp_produkt" Type="int" Nullable="false" />
+          <Property Name="wp_menge" Type="int" Nullable="false" />
+          <Property Name="wp_version" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="fk_a_kunde">
+          <End Role="kunden" Type="WebshopModel.Store.kunden" Multiplicity="0..1" />
+          <End Role="adressen" Type="WebshopModel.Store.adressen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kunden">
+              <PropertyRef Name="k_id" />
+            </Principal>
+            <Dependent Role="adressen">
+              <PropertyRef Name="fk_a_kunde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_a_land">
+          <End Role="laender" Type="WebshopModel.Store.laender" Multiplicity="1" />
+          <End Role="adressen" Type="WebshopModel.Store.adressen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="laender">
+              <PropertyRef Name="l_code" />
+            </Principal>
+            <Dependent Role="adressen">
+              <PropertyRef Name="fk_a_land" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_b_adresse">
+          <End Role="adressen" Type="WebshopModel.Store.adressen" Multiplicity="1" />
+          <End Role="bestellungen" Type="WebshopModel.Store.bestellungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="adressen">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="bestellungen">
+              <PropertyRef Name="fk_b_adresse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_b_warenkorb">
+          <End Role="warenkoerbe" Type="WebshopModel.Store.warenkoerbe" Multiplicity="1" />
+          <End Role="bestellungen" Type="WebshopModel.Store.bestellungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="warenkoerbe">
+              <PropertyRef Name="w_id" />
+            </Principal>
+            <Dependent Role="bestellungen">
+              <PropertyRef Name="fk_b_warenkorb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ep_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.Store.konto_buchungen" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.Store.einkaufs_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="konto_buchungen">
+              <PropertyRef Name="kb_id" />
+            </Principal>
+            <Dependent Role="einkaufs_positionen">
+              <PropertyRef Name="fk_ep_buchung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ep_produkt">
+          <End Role="produkte" Type="WebshopModel.Store.produkte" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.Store.einkaufs_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="einkaufs_positionen">
+              <PropertyRef Name="fk_ep_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ep_standort">
+          <End Role="standorte" Type="WebshopModel.Store.standorte" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.Store.einkaufs_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="standorte">
+              <PropertyRef Name="s_id" />
+            </Principal>
+            <Dependent Role="einkaufs_positionen">
+              <PropertyRef Name="fk_ep_standort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_k_benutzer">
+          <End Role="benutzer" Type="WebshopModel.Store.benutzer" Multiplicity="0..1" />
+          <End Role="kunden" Type="WebshopModel.Store.kunden" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="benutzer">
+              <PropertyRef Name="ben_name" />
+            </Principal>
+            <Dependent Role="kunden">
+              <PropertyRef Name="fk_k_benutzer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_kat_super_kategorie">
+          <End Role="kategorien" Type="WebshopModel.Store.kategorien" Multiplicity="0..1" />
+          <End Role="kategorien1" Type="WebshopModel.Store.kategorien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategorien">
+              <PropertyRef Name="kat_id" />
+            </Principal>
+            <Dependent Role="kategorien1">
+              <PropertyRef Name="fk_kat_super_kategorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_lp_produkt">
+          <End Role="produkte" Type="WebshopModel.Store.produkte" Multiplicity="1" />
+          <End Role="lagerpositionen" Type="WebshopModel.Store.lagerpositionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="lagerpositionen">
+              <PropertyRef Name="fk_lp_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_lp_standort">
+          <End Role="standorte" Type="WebshopModel.Store.standorte" Multiplicity="1" />
+          <End Role="lagerpositionen" Type="WebshopModel.Store.lagerpositionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="standorte">
+              <PropertyRef Name="s_id" />
+            </Principal>
+            <Dependent Role="lagerpositionen">
+              <PropertyRef Name="fk_lp_standort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_p_kategorie">
+          <End Role="kategorien" Type="WebshopModel.Store.kategorien" Multiplicity="1" />
+          <End Role="produkte" Type="WebshopModel.Store.produkte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kategorien">
+              <PropertyRef Name="kat_id" />
+            </Principal>
+            <Dependent Role="produkte">
+              <PropertyRef Name="fk_p_kategorie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_r_adresse">
+          <End Role="adressen" Type="WebshopModel.Store.adressen" Multiplicity="1" />
+          <End Role="rechnungen" Type="WebshopModel.Store.rechnungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="adressen">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="rechnungen">
+              <PropertyRef Name="fk_r_adresse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_r_bestellung">
+          <End Role="bestellungen" Type="WebshopModel.Store.bestellungen" Multiplicity="1" />
+          <End Role="rechnungen" Type="WebshopModel.Store.rechnungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bestellungen">
+              <PropertyRef Name="b_id" />
+            </Principal>
+            <Dependent Role="rechnungen">
+              <PropertyRef Name="fk_r_bestellung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_r_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.Store.konto_buchungen" Multiplicity="0..1" />
+          <End Role="rechnungen" Type="WebshopModel.Store.rechnungen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="konto_buchungen">
+              <PropertyRef Name="kb_id" />
+            </Principal>
+            <Dependent Role="rechnungen">
+              <PropertyRef Name="fk_r_buchung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rek_bestellung">
+          <End Role="bestellungen" Type="WebshopModel.Store.bestellungen" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.Store.reklamationen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bestellungen">
+              <PropertyRef Name="b_id" />
+            </Principal>
+            <Dependent Role="reklamationen">
+              <PropertyRef Name="fk_rek_bestellung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rek_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.Store.konto_buchungen" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.Store.reklamationen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="konto_buchungen">
+              <PropertyRef Name="kb_id" />
+            </Principal>
+            <Dependent Role="reklamationen">
+              <PropertyRef Name="fk_rek_buchung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rek_produkt">
+          <End Role="produkte" Type="WebshopModel.Store.produkte" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.Store.reklamationen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="reklamationen">
+              <PropertyRef Name="fk_rek_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_s_adresse">
+          <End Role="adressen" Type="WebshopModel.Store.adressen" Multiplicity="0..1" />
+          <End Role="standorte" Type="WebshopModel.Store.standorte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="adressen">
+              <PropertyRef Name="a_id" />
+            </Principal>
+            <Dependent Role="standorte">
+              <PropertyRef Name="fk_s_adresse" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_t_kunde">
+          <End Role="kunden" Type="WebshopModel.Store.kunden" Multiplicity="1" />
+          <End Role="telefonnummern" Type="WebshopModel.Store.telefonnummern" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kunden">
+              <PropertyRef Name="k_id" />
+            </Principal>
+            <Dependent Role="telefonnummern">
+              <PropertyRef Name="fk_t_kunde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_w_kunde">
+          <End Role="kunden" Type="WebshopModel.Store.kunden" Multiplicity="1" />
+          <End Role="warenkoerbe" Type="WebshopModel.Store.warenkoerbe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="kunden">
+              <PropertyRef Name="k_id" />
+            </Principal>
+            <Dependent Role="warenkoerbe">
+              <PropertyRef Name="fk_w_kunde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_wp_produkt">
+          <End Role="produkte" Type="WebshopModel.Store.produkte" Multiplicity="1" />
+          <End Role="warenkorb_positionen" Type="WebshopModel.Store.warenkorb_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="warenkorb_positionen">
+              <PropertyRef Name="fk_wp_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_wp_warenkorb">
+          <End Role="warenkoerbe" Type="WebshopModel.Store.warenkoerbe" Multiplicity="1" />
+          <End Role="warenkorb_positionen" Type="WebshopModel.Store.warenkorb_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="warenkoerbe">
+              <PropertyRef Name="w_id" />
+            </Principal>
+            <Dependent Role="warenkorb_positionen">
+              <PropertyRef Name="fk_wp_warenkorb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebshopModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Webshop" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="adressen" EntityType="WebshopModel.Adresse" />
+          <EntitySet Name="benutzer" EntityType="WebshopModel.benutzer" />
+          <EntitySet Name="bestellungen" EntityType="WebshopModel.bestellungen" />
+          <EntitySet Name="einkaufs_positionen" EntityType="WebshopModel.einkaufs_positionen" />
+          <EntitySet Name="kategorien" EntityType="WebshopModel.kategorien" />
+          <EntitySet Name="konto_buchungen" EntityType="WebshopModel.konto_buchungen" />
+          <EntitySet Name="kunden" EntityType="WebshopModel.kunden" />
+          <EntitySet Name="laender" EntityType="WebshopModel.laender" />
+          <EntitySet Name="lagerpositionen" EntityType="WebshopModel.lagerpositionen" />
+          <EntitySet Name="produkte" EntityType="WebshopModel.produkte" />
+          <EntitySet Name="rechnungen" EntityType="WebshopModel.rechnungen" />
+          <EntitySet Name="reklamationen" EntityType="WebshopModel.reklamationen" />
+          <EntitySet Name="standorte" EntityType="WebshopModel.standorte" />
+          <EntitySet Name="sysdiagrams" EntityType="WebshopModel.sysdiagrams" />
+          <EntitySet Name="telefonnummern" EntityType="WebshopModel.telefonnummern" />
+          <EntitySet Name="warenkoerbe" EntityType="WebshopModel.warenkoerbe" />
+          <EntitySet Name="warenkorb_positionen" EntityType="WebshopModel.warenkorb_positionen" />
+          <AssociationSet Name="fk_a_kunde" Association="WebshopModel.fk_a_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="adressen" EntitySet="adressen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_a_land" Association="WebshopModel.fk_a_land">
+            <End Role="laender" EntitySet="laender" />
+            <End Role="adressen" EntitySet="adressen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_b_adresse" Association="WebshopModel.fk_b_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="bestellungen" EntitySet="bestellungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_adresse" Association="WebshopModel.fk_r_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_s_adresse" Association="WebshopModel.fk_s_adresse">
+            <End Role="adressen" EntitySet="adressen" />
+            <End Role="standorte" EntitySet="standorte" />
+          </AssociationSet>
+          <AssociationSet Name="fk_k_benutzer" Association="WebshopModel.fk_k_benutzer">
+            <End Role="benutzer" EntitySet="benutzer" />
+            <End Role="kunden" EntitySet="kunden" />
+          </AssociationSet>
+          <AssociationSet Name="fk_b_warenkorb" Association="WebshopModel.fk_b_warenkorb">
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+            <End Role="bestellungen" EntitySet="bestellungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_bestellung" Association="WebshopModel.fk_r_bestellung">
+            <End Role="bestellungen" EntitySet="bestellungen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_bestellung" Association="WebshopModel.fk_rek_bestellung">
+            <End Role="bestellungen" EntitySet="bestellungen" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_buchung" Association="WebshopModel.fk_ep_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_produkt" Association="WebshopModel.fk_ep_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ep_standort" Association="WebshopModel.fk_ep_standort">
+            <End Role="standorte" EntitySet="standorte" />
+            <End Role="einkaufs_positionen" EntitySet="einkaufs_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_kat_super_kategorie" Association="WebshopModel.FK_kat_super_kategorie">
+            <End Role="kategorien" EntitySet="kategorien" />
+            <End Role="kategorien1" EntitySet="kategorien" />
+          </AssociationSet>
+          <AssociationSet Name="FK_p_kategorie" Association="WebshopModel.FK_p_kategorie">
+            <End Role="kategorien" EntitySet="kategorien" />
+            <End Role="produkte" EntitySet="produkte" />
+          </AssociationSet>
+          <AssociationSet Name="fk_r_buchung" Association="WebshopModel.fk_r_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="rechnungen" EntitySet="rechnungen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_buchung" Association="WebshopModel.fk_rek_buchung">
+            <End Role="konto_buchungen" EntitySet="konto_buchungen" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_t_kunde" Association="WebshopModel.fk_t_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="telefonnummern" EntitySet="telefonnummern" />
+          </AssociationSet>
+          <AssociationSet Name="FK_w_kunde" Association="WebshopModel.FK_w_kunde">
+            <End Role="kunden" EntitySet="kunden" />
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+          </AssociationSet>
+          <AssociationSet Name="fk_lp_produkt" Association="WebshopModel.fk_lp_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="lagerpositionen" EntitySet="lagerpositionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_lp_standort" Association="WebshopModel.fk_lp_standort">
+            <End Role="standorte" EntitySet="standorte" />
+            <End Role="lagerpositionen" EntitySet="lagerpositionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rek_produkt" Association="WebshopModel.fk_rek_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="reklamationen" EntitySet="reklamationen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_wp_produkt" Association="WebshopModel.fk_wp_produkt">
+            <End Role="produkte" EntitySet="produkte" />
+            <End Role="warenkorb_positionen" EntitySet="warenkorb_positionen" />
+          </AssociationSet>
+          <AssociationSet Name="fk_wp_warenkorb" Association="WebshopModel.fk_wp_warenkorb">
+            <End Role="warenkoerbe" EntitySet="warenkoerbe" />
+            <End Role="warenkorb_positionen" EntitySet="warenkorb_positionen" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Adresse">
+          <Key>
+            <PropertyRef Name="a_id" />
+          </Key>
+          <Property Name="a_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="a_strasse" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="a_ort" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="a_plz" Type="Int32" Nullable="false" />
+          <Property Name="a_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="kunden" Relationship="WebshopModel.fk_a_kunde" FromRole="adressen" ToRole="kunden" />
+          <NavigationProperty Name="laender" Relationship="WebshopModel.fk_a_land" FromRole="adressen" ToRole="laender" />
+          <NavigationProperty Name="bestellungen" Relationship="WebshopModel.fk_b_adresse" FromRole="adressen" ToRole="bestellungen" />
+          <NavigationProperty Name="rechnungen" Relationship="WebshopModel.fk_r_adresse" FromRole="adressen" ToRole="rechnungen" />
+          <NavigationProperty Name="standorte" Relationship="WebshopModel.fk_s_adresse" FromRole="adressen" ToRole="standorte" />
+        </EntityType>
+        <EntityType Name="benutzer">
+          <Key>
+            <PropertyRef Name="ben_name" />
+          </Key>
+          <Property Name="ben_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ben_kennwort" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ben_typ" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ben_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="kunden" Relationship="WebshopModel.fk_k_benutzer" FromRole="benutzer" ToRole="kunden" />
+        </EntityType>
+        <EntityType Name="bestellungen">
+          <Key>
+            <PropertyRef Name="b_id" />
+          </Key>
+          <Property Name="b_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="b_datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="b_versand_datum" Type="DateTime" Precision="0" />
+          <Property Name="b_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="adressen" Relationship="WebshopModel.fk_b_adresse" FromRole="bestellungen" ToRole="adressen" />
+          <NavigationProperty Name="warenkoerbe" Relationship="WebshopModel.fk_b_warenkorb" FromRole="bestellungen" ToRole="warenkoerbe" />
+          <NavigationProperty Name="rechnungen" Relationship="WebshopModel.fk_r_bestellung" FromRole="bestellungen" ToRole="rechnungen" />
+          <NavigationProperty Name="reklamationen" Relationship="WebshopModel.fk_rek_bestellung" FromRole="bestellungen" ToRole="reklamationen" />
+        </EntityType>
+        <EntityType Name="einkaufs_positionen">
+          <Key>
+            <PropertyRef Name="ep_id" />
+          </Key>
+          <Property Name="ep_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ep_anzahl" Type="Int32" Nullable="false" />
+          <Property Name="ep_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="konto_buchungen" Relationship="WebshopModel.fk_ep_buchung" FromRole="einkaufs_positionen" ToRole="konto_buchungen" />
+          <NavigationProperty Name="produkte" Relationship="WebshopModel.fk_ep_produkt" FromRole="einkaufs_positionen" ToRole="produkte" />
+          <NavigationProperty Name="standorte" Relationship="WebshopModel.fk_ep_standort" FromRole="einkaufs_positionen" ToRole="standorte" />
+        </EntityType>
+        <EntityType Name="kategorien">
+          <Key>
+            <PropertyRef Name="kat_id" />
+          </Key>
+          <Property Name="kat_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="kat_name" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="kat_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="kategorien1" Relationship="WebshopModel.FK_kat_super_kategorie" FromRole="kategorien" ToRole="kategorien1" />
+          <NavigationProperty Name="kategorien2" Relationship="WebshopModel.FK_kat_super_kategorie" FromRole="kategorien1" ToRole="kategorien" />
+          <NavigationProperty Name="produkte" Relationship="WebshopModel.FK_p_kategorie" FromRole="kategorien" ToRole="produkte" />
+        </EntityType>
+        <EntityType Name="konto_buchungen">
+          <Key>
+            <PropertyRef Name="kb_id" />
+          </Key>
+          <Property Name="kb_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="kb_betrag" Type="Double" Nullable="false" />
+          <Property Name="kb_text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="kb_datum" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="kb_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="einkaufs_positionen" Relationship="WebshopModel.fk_ep_buchung" FromRole="konto_buchungen" ToRole="einkaufs_positionen" />
+          <NavigationProperty Name="rechnungen" Relationship="WebshopModel.fk_r_buchung" FromRole="konto_buchungen" ToRole="rechnungen" />
+          <NavigationProperty Name="reklamationen" Relationship="WebshopModel.fk_rek_buchung" FromRole="konto_buchungen" ToRole="reklamationen" />
+        </EntityType>
+        <EntityType Name="kunden">
+          <Key>
+            <PropertyRef Name="k_id" />
+          </Key>
+          <Property Name="k_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="k_name" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="k_email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="k_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="adressen" Relationship="WebshopModel.fk_a_kunde" FromRole="kunden" ToRole="adressen" />
+          <NavigationProperty Name="benutzer" Relationship="WebshopModel.fk_k_benutzer" FromRole="kunden" ToRole="benutzer" />
+          <NavigationProperty Name="telefonnummern" Relationship="WebshopModel.fk_t_kunde" FromRole="kunden" ToRole="telefonnummern" />
+          <NavigationProperty Name="warenkoerbe" Relationship="WebshopModel.FK_w_kunde" FromRole="kunden" ToRole="warenkoerbe" />
+        </EntityType>
+        <EntityType Name="laender">
+          <Key>
+            <PropertyRef Name="l_code" />
+          </Key>
+          <Property Name="l_code" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="l_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="l_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="adressen" Relationship="WebshopModel.fk_a_land" FromRole="laender" ToRole="adressen" />
+        </EntityType>
+        <EntityType Name="lagerpositionen">
+          <Key>
+            <PropertyRef Name="fk_lp_standort" />
+            <PropertyRef Name="fk_lp_produkt" />
+          </Key>
+          <Property Name="fk_lp_standort" Type="Int32" Nullable="false" />
+          <Property Name="fk_lp_produkt" Type="Int32" Nullable="false" />
+          <Property Name="lp_anzahl" Type="Int32" Nullable="false" />
+          <Property Name="lp_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="produkte" Relationship="WebshopModel.fk_lp_produkt" FromRole="lagerpositionen" ToRole="produkte" />
+          <NavigationProperty Name="standorte" Relationship="WebshopModel.fk_lp_standort" FromRole="lagerpositionen" ToRole="standorte" />
+        </EntityType>
+        <EntityType Name="produkte">
+          <Key>
+            <PropertyRef Name="p_id" />
+          </Key>
+          <Property Name="p_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="p_name" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="p_mengeneinheit" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="p_einkaufspreis" Type="Double" Nullable="false" />
+          <Property Name="p_verkaufspreis" Type="Double" Nullable="false" />
+          <Property Name="p_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="einkaufs_positionen" Relationship="WebshopModel.fk_ep_produkt" FromRole="produkte" ToRole="einkaufs_positionen" />
+          <NavigationProperty Name="kategorien" Relationship="WebshopModel.FK_p_kategorie" FromRole="produkte" ToRole="kategorien" />
+          <NavigationProperty Name="lagerpositionen" Relationship="WebshopModel.fk_lp_produkt" FromRole="produkte" ToRole="lagerpositionen" />
+          <NavigationProperty Name="reklamationen" Relationship="WebshopModel.fk_rek_produkt" FromRole="produkte" ToRole="reklamationen" />
+          <NavigationProperty Name="warenkorb_positionen" Relationship="WebshopModel.fk_wp_produkt" FromRole="produkte" ToRole="warenkorb_positionen" />
+        </EntityType>
+        <EntityType Name="rechnungen">
+          <Key>
+            <PropertyRef Name="r_nummer" />
+          </Key>
+          <Property Name="r_nummer" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="r_datum" Type="DateTime" Precision="0" />
+          <Property Name="r_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="adressen" Relationship="WebshopModel.fk_r_adresse" FromRole="rechnungen" ToRole="adressen" />
+          <NavigationProperty Name="bestellungen" Relationship="WebshopModel.fk_r_bestellung" FromRole="rechnungen" ToRole="bestellungen" />
+          <NavigationProperty Name="konto_buchungen" Relationship="WebshopModel.fk_r_buchung" FromRole="rechnungen" ToRole="konto_buchungen" />
+        </EntityType>
+        <EntityType Name="reklamationen">
+          <Key>
+            <PropertyRef Name="rek_id" />
+          </Key>
+          <Property Name="rek_id" Type="Int32" Nullable="false" />
+          <Property Name="rek_datum" Type="DateTime" Precision="0" />
+          <Property Name="rek_menge" Type="Int32" />
+          <Property Name="rek_status" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="rek_bemerkung" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="rek_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="bestellungen" Relationship="WebshopModel.fk_rek_bestellung" FromRole="reklamationen" ToRole="bestellungen" />
+          <NavigationProperty Name="konto_buchungen" Relationship="WebshopModel.fk_rek_buchung" FromRole="reklamationen" ToRole="konto_buchungen" />
+          <NavigationProperty Name="produkte" Relationship="WebshopModel.fk_rek_produkt" FromRole="reklamationen" ToRole="produkte" />
+        </EntityType>
+        <EntityType Name="standorte">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="s_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="s_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="adressen" Relationship="WebshopModel.fk_s_adresse" FromRole="standorte" ToRole="adressen" />
+          <NavigationProperty Name="einkaufs_positionen" Relationship="WebshopModel.fk_ep_standort" FromRole="standorte" ToRole="einkaufs_positionen" />
+          <NavigationProperty Name="lagerpositionen" Relationship="WebshopModel.fk_lp_standort" FromRole="standorte" ToRole="lagerpositionen" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="telefonnummern">
+          <Key>
+            <PropertyRef Name="t_nummer" />
+          </Key>
+          <Property Name="t_nummer" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="t_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="kunden" Relationship="WebshopModel.fk_t_kunde" FromRole="telefonnummern" ToRole="kunden" />
+        </EntityType>
+        <EntityType Name="warenkoerbe">
+          <Key>
+            <PropertyRef Name="w_id" />
+          </Key>
+          <Property Name="w_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="w_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="bestellungen" Relationship="WebshopModel.fk_b_warenkorb" FromRole="warenkoerbe" ToRole="bestellungen" />
+          <NavigationProperty Name="kunden" Relationship="WebshopModel.FK_w_kunde" FromRole="warenkoerbe" ToRole="kunden" />
+          <NavigationProperty Name="warenkorb_positionen" Relationship="WebshopModel.fk_wp_warenkorb" FromRole="warenkoerbe" ToRole="warenkorb_positionen" />
+        </EntityType>
+        <EntityType Name="warenkorb_positionen">
+          <Key>
+            <PropertyRef Name="fk_wp_warenkorb" />
+            <PropertyRef Name="fk_wp_produkt" />
+          </Key>
+          <Property Name="fk_wp_warenkorb" Type="Int32" Nullable="false" />
+          <Property Name="fk_wp_produkt" Type="Int32" Nullable="false" />
+          <Property Name="wp_menge" Type="Int32" Nullable="false" />
+          <Property Name="wp_version" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="produkte" Relationship="WebshopModel.fk_wp_produkt" FromRole="warenkorb_positionen" ToRole="produkte" />
+          <NavigationProperty Name="warenkoerbe" Relationship="WebshopModel.fk_wp_warenkorb" FromRole="warenkorb_positionen" ToRole="warenkoerbe" />
+        </EntityType>
+        <Association Name="fk_a_kunde">
+          <End Role="kunden" Type="WebshopModel.kunden" Multiplicity="0..1" />
+          <End Role="adressen" Type="WebshopModel.Adresse" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_a_land">
+          <End Role="laender" Type="WebshopModel.laender" Multiplicity="1" />
+          <End Role="adressen" Type="WebshopModel.Adresse" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_b_adresse">
+          <End Role="adressen" Type="WebshopModel.Adresse" Multiplicity="1" />
+          <End Role="bestellungen" Type="WebshopModel.bestellungen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_r_adresse">
+          <End Role="adressen" Type="WebshopModel.Adresse" Multiplicity="1" />
+          <End Role="rechnungen" Type="WebshopModel.rechnungen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_s_adresse">
+          <End Role="adressen" Type="WebshopModel.Adresse" Multiplicity="0..1" />
+          <End Role="standorte" Type="WebshopModel.standorte" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_k_benutzer">
+          <End Role="benutzer" Type="WebshopModel.benutzer" Multiplicity="0..1" />
+          <End Role="kunden" Type="WebshopModel.kunden" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_b_warenkorb">
+          <End Role="warenkoerbe" Type="WebshopModel.warenkoerbe" Multiplicity="1" />
+          <End Role="bestellungen" Type="WebshopModel.bestellungen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_r_bestellung">
+          <End Role="bestellungen" Type="WebshopModel.bestellungen" Multiplicity="1" />
+          <End Role="rechnungen" Type="WebshopModel.rechnungen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_rek_bestellung">
+          <End Role="bestellungen" Type="WebshopModel.bestellungen" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.reklamationen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_ep_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.konto_buchungen" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.einkaufs_positionen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_ep_produkt">
+          <End Role="produkte" Type="WebshopModel.produkte" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.einkaufs_positionen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_ep_standort">
+          <End Role="standorte" Type="WebshopModel.standorte" Multiplicity="1" />
+          <End Role="einkaufs_positionen" Type="WebshopModel.einkaufs_positionen" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_kat_super_kategorie">
+          <End Role="kategorien" Type="WebshopModel.kategorien" Multiplicity="0..1" />
+          <End Role="kategorien1" Type="WebshopModel.kategorien" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_p_kategorie">
+          <End Role="kategorien" Type="WebshopModel.kategorien" Multiplicity="1" />
+          <End Role="produkte" Type="WebshopModel.produkte" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_r_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.konto_buchungen" Multiplicity="0..1" />
+          <End Role="rechnungen" Type="WebshopModel.rechnungen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_rek_buchung">
+          <End Role="konto_buchungen" Type="WebshopModel.konto_buchungen" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.reklamationen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_t_kunde">
+          <End Role="kunden" Type="WebshopModel.kunden" Multiplicity="1" />
+          <End Role="telefonnummern" Type="WebshopModel.telefonnummern" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_w_kunde">
+          <End Role="kunden" Type="WebshopModel.kunden" Multiplicity="1" />
+          <End Role="warenkoerbe" Type="WebshopModel.warenkoerbe" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_lp_produkt">
+          <End Role="produkte" Type="WebshopModel.produkte" Multiplicity="1" />
+          <End Role="lagerpositionen" Type="WebshopModel.lagerpositionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="lagerpositionen">
+              <PropertyRef Name="fk_lp_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_lp_standort">
+          <End Role="standorte" Type="WebshopModel.standorte" Multiplicity="1" />
+          <End Role="lagerpositionen" Type="WebshopModel.lagerpositionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="standorte">
+              <PropertyRef Name="s_id" />
+            </Principal>
+            <Dependent Role="lagerpositionen">
+              <PropertyRef Name="fk_lp_standort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rek_produkt">
+          <End Role="produkte" Type="WebshopModel.produkte" Multiplicity="0..1" />
+          <End Role="reklamationen" Type="WebshopModel.reklamationen" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_wp_produkt">
+          <End Role="produkte" Type="WebshopModel.produkte" Multiplicity="1" />
+          <End Role="warenkorb_positionen" Type="WebshopModel.warenkorb_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="produkte">
+              <PropertyRef Name="p_id" />
+            </Principal>
+            <Dependent Role="warenkorb_positionen">
+              <PropertyRef Name="fk_wp_produkt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_wp_warenkorb">
+          <End Role="warenkoerbe" Type="WebshopModel.warenkoerbe" Multiplicity="1" />
+          <End Role="warenkorb_positionen" Type="WebshopModel.warenkorb_positionen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="warenkoerbe">
+              <PropertyRef Name="w_id" />
+            </Principal>
+            <Dependent Role="warenkorb_positionen">
+              <PropertyRef Name="fk_wp_warenkorb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebshopModelStoreContainer" CdmEntityContainer="Webshop">
+          <EntitySetMapping Name="adressen">
+            <EntityTypeMapping TypeName="WebshopModel.Adresse">
+              <MappingFragment StoreEntitySet="adressen">
+                <ScalarProperty Name="a_id" ColumnName="a_id" />
+                <ScalarProperty Name="a_strasse" ColumnName="a_strasse" />
+                <ScalarProperty Name="a_ort" ColumnName="a_ort" />
+                <ScalarProperty Name="a_plz" ColumnName="a_plz" />
+                <ScalarProperty Name="a_version" ColumnName="a_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="benutzer">
+            <EntityTypeMapping TypeName="WebshopModel.benutzer">
+              <MappingFragment StoreEntitySet="benutzer">
+                <ScalarProperty Name="ben_name" ColumnName="ben_name" />
+                <ScalarProperty Name="ben_kennwort" ColumnName="ben_kennwort" />
+                <ScalarProperty Name="ben_typ" ColumnName="ben_typ" />
+                <ScalarProperty Name="ben_version" ColumnName="ben_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bestellungen">
+            <EntityTypeMapping TypeName="WebshopModel.bestellungen">
+              <MappingFragment StoreEntitySet="bestellungen">
+                <ScalarProperty Name="b_id" ColumnName="b_id" />
+                <ScalarProperty Name="b_datum" ColumnName="b_datum" />
+                <ScalarProperty Name="b_versand_datum" ColumnName="b_versand_datum" />
+                <ScalarProperty Name="b_version" ColumnName="b_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="einkaufs_positionen">
+            <EntityTypeMapping TypeName="WebshopModel.einkaufs_positionen">
+              <MappingFragment StoreEntitySet="einkaufs_positionen">
+                <ScalarProperty Name="ep_id" ColumnName="ep_id" />
+                <ScalarProperty Name="ep_anzahl" ColumnName="ep_anzahl" />
+                <ScalarProperty Name="ep_version" ColumnName="ep_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kategorien">
+            <EntityTypeMapping TypeName="WebshopModel.kategorien">
+              <MappingFragment StoreEntitySet="kategorien">
+                <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+                <ScalarProperty Name="kat_name" ColumnName="kat_name" />
+                <ScalarProperty Name="kat_version" ColumnName="kat_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="konto_buchungen">
+            <EntityTypeMapping TypeName="WebshopModel.konto_buchungen">
+              <MappingFragment StoreEntitySet="konto_buchungen">
+                <ScalarProperty Name="kb_id" ColumnName="kb_id" />
+                <ScalarProperty Name="kb_betrag" ColumnName="kb_betrag" />
+                <ScalarProperty Name="kb_text" ColumnName="kb_text" />
+                <ScalarProperty Name="kb_datum" ColumnName="kb_datum" />
+                <ScalarProperty Name="kb_version" ColumnName="kb_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kunden">
+            <EntityTypeMapping TypeName="WebshopModel.kunden">
+              <MappingFragment StoreEntitySet="kunden">
+                <ScalarProperty Name="k_id" ColumnName="k_id" />
+                <ScalarProperty Name="k_name" ColumnName="k_name" />
+                <ScalarProperty Name="k_email" ColumnName="k_email" />
+                <ScalarProperty Name="k_version" ColumnName="k_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="laender">
+            <EntityTypeMapping TypeName="WebshopModel.laender">
+              <MappingFragment StoreEntitySet="laender">
+                <ScalarProperty Name="l_code" ColumnName="l_code" />
+                <ScalarProperty Name="l_name" ColumnName="l_name" />
+                <ScalarProperty Name="l_version" ColumnName="l_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lagerpositionen">
+            <EntityTypeMapping TypeName="WebshopModel.lagerpositionen">
+              <MappingFragment StoreEntitySet="lagerpositionen">
+                <ScalarProperty Name="fk_lp_standort" ColumnName="fk_lp_standort" />
+                <ScalarProperty Name="fk_lp_produkt" ColumnName="fk_lp_produkt" />
+                <ScalarProperty Name="lp_anzahl" ColumnName="lp_anzahl" />
+                <ScalarProperty Name="lp_version" ColumnName="lp_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="produkte">
+            <EntityTypeMapping TypeName="WebshopModel.produkte">
+              <MappingFragment StoreEntitySet="produkte">
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="p_mengeneinheit" ColumnName="p_mengeneinheit" />
+                <ScalarProperty Name="p_einkaufspreis" ColumnName="p_einkaufspreis" />
+                <ScalarProperty Name="p_verkaufspreis" ColumnName="p_verkaufspreis" />
+                <ScalarProperty Name="p_version" ColumnName="p_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rechnungen">
+            <EntityTypeMapping TypeName="WebshopModel.rechnungen">
+              <MappingFragment StoreEntitySet="rechnungen">
+                <ScalarProperty Name="r_nummer" ColumnName="r_nummer" />
+                <ScalarProperty Name="r_datum" ColumnName="r_datum" />
+                <ScalarProperty Name="r_version" ColumnName="r_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reklamationen">
+            <EntityTypeMapping TypeName="WebshopModel.reklamationen">
+              <MappingFragment StoreEntitySet="reklamationen">
+                <ScalarProperty Name="rek_id" ColumnName="rek_id" />
+                <ScalarProperty Name="rek_datum" ColumnName="rek_datum" />
+                <ScalarProperty Name="rek_menge" ColumnName="rek_menge" />
+                <ScalarProperty Name="rek_status" ColumnName="rek_status" />
+                <ScalarProperty Name="rek_bemerkung" ColumnName="rek_bemerkung" />
+                <ScalarProperty Name="rek_version" ColumnName="rek_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="standorte">
+            <EntityTypeMapping TypeName="WebshopModel.standorte">
+              <MappingFragment StoreEntitySet="standorte">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_name" ColumnName="s_name" />
+                <ScalarProperty Name="s_version" ColumnName="s_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="WebshopModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="telefonnummern">
+            <EntityTypeMapping TypeName="WebshopModel.telefonnummern">
+              <MappingFragment StoreEntitySet="telefonnummern">
+                <ScalarProperty Name="t_nummer" ColumnName="t_nummer" />
+                <ScalarProperty Name="t_version" ColumnName="t_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="warenkoerbe">
+            <EntityTypeMapping TypeName="WebshopModel.warenkoerbe">
+              <MappingFragment StoreEntitySet="warenkoerbe">
+                <ScalarProperty Name="w_id" ColumnName="w_id" />
+                <ScalarProperty Name="w_version" ColumnName="w_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="warenkorb_positionen">
+            <EntityTypeMapping TypeName="WebshopModel.warenkorb_positionen">
+              <MappingFragment StoreEntitySet="warenkorb_positionen">
+                <ScalarProperty Name="fk_wp_warenkorb" ColumnName="fk_wp_warenkorb" />
+                <ScalarProperty Name="fk_wp_produkt" ColumnName="fk_wp_produkt" />
+                <ScalarProperty Name="wp_menge" ColumnName="wp_menge" />
+                <ScalarProperty Name="wp_version" ColumnName="wp_version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="fk_a_kunde" TypeName="WebshopModel.fk_a_kunde" StoreEntitySet="adressen">
+            <EndProperty Name="kunden">
+              <ScalarProperty Name="k_id" ColumnName="fk_a_kunde" />
+            </EndProperty>
+            <EndProperty Name="adressen">
+              <ScalarProperty Name="a_id" ColumnName="a_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_a_kunde" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_a_land" TypeName="WebshopModel.fk_a_land" StoreEntitySet="adressen">
+            <EndProperty Name="laender">
+              <ScalarProperty Name="l_code" ColumnName="fk_a_land" />
+            </EndProperty>
+            <EndProperty Name="adressen">
+              <ScalarProperty Name="a_id" ColumnName="a_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_b_adresse" TypeName="WebshopModel.fk_b_adresse" StoreEntitySet="bestellungen">
+            <EndProperty Name="adressen">
+              <ScalarProperty Name="a_id" ColumnName="fk_b_adresse" />
+            </EndProperty>
+            <EndProperty Name="bestellungen">
+              <ScalarProperty Name="b_id" ColumnName="b_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_r_adresse" TypeName="WebshopModel.fk_r_adresse" StoreEntitySet="rechnungen">
+            <EndProperty Name="adressen">
+              <ScalarProperty Name="a_id" ColumnName="fk_r_adresse" />
+            </EndProperty>
+            <EndProperty Name="rechnungen">
+              <ScalarProperty Name="r_nummer" ColumnName="r_nummer" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_s_adresse" TypeName="WebshopModel.fk_s_adresse" StoreEntitySet="standorte">
+            <EndProperty Name="adressen">
+              <ScalarProperty Name="a_id" ColumnName="fk_s_adresse" />
+            </EndProperty>
+            <EndProperty Name="standorte">
+              <ScalarProperty Name="s_id" ColumnName="s_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_s_adresse" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_k_benutzer" TypeName="WebshopModel.fk_k_benutzer" StoreEntitySet="kunden">
+            <EndProperty Name="benutzer">
+              <ScalarProperty Name="ben_name" ColumnName="fk_k_benutzer" />
+            </EndProperty>
+            <EndProperty Name="kunden">
+              <ScalarProperty Name="k_id" ColumnName="k_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_k_benutzer" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_b_warenkorb" TypeName="WebshopModel.fk_b_warenkorb" StoreEntitySet="bestellungen">
+            <EndProperty Name="warenkoerbe">
+              <ScalarProperty Name="w_id" ColumnName="fk_b_warenkorb" />
+            </EndProperty>
+            <EndProperty Name="bestellungen">
+              <ScalarProperty Name="b_id" ColumnName="b_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_r_bestellung" TypeName="WebshopModel.fk_r_bestellung" StoreEntitySet="rechnungen">
+            <EndProperty Name="bestellungen">
+              <ScalarProperty Name="b_id" ColumnName="fk_r_bestellung" />
+            </EndProperty>
+            <EndProperty Name="rechnungen">
+              <ScalarProperty Name="r_nummer" ColumnName="r_nummer" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_rek_bestellung" TypeName="WebshopModel.fk_rek_bestellung" StoreEntitySet="reklamationen">
+            <EndProperty Name="bestellungen">
+              <ScalarProperty Name="b_id" ColumnName="fk_rek_bestellung" />
+            </EndProperty>
+            <EndProperty Name="reklamationen">
+              <ScalarProperty Name="rek_id" ColumnName="rek_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_rek_bestellung" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_ep_buchung" TypeName="WebshopModel.fk_ep_buchung" StoreEntitySet="einkaufs_positionen">
+            <EndProperty Name="konto_buchungen">
+              <ScalarProperty Name="kb_id" ColumnName="fk_ep_buchung" />
+            </EndProperty>
+            <EndProperty Name="einkaufs_positionen">
+              <ScalarProperty Name="ep_id" ColumnName="ep_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_ep_produkt" TypeName="WebshopModel.fk_ep_produkt" StoreEntitySet="einkaufs_positionen">
+            <EndProperty Name="produkte">
+              <ScalarProperty Name="p_id" ColumnName="fk_ep_produkt" />
+            </EndProperty>
+            <EndProperty Name="einkaufs_positionen">
+              <ScalarProperty Name="ep_id" ColumnName="ep_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_ep_standort" TypeName="WebshopModel.fk_ep_standort" StoreEntitySet="einkaufs_positionen">
+            <EndProperty Name="standorte">
+              <ScalarProperty Name="s_id" ColumnName="fk_ep_standort" />
+            </EndProperty>
+            <EndProperty Name="einkaufs_positionen">
+              <ScalarProperty Name="ep_id" ColumnName="ep_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_kat_super_kategorie" TypeName="WebshopModel.FK_kat_super_kategorie" StoreEntitySet="kategorien">
+            <EndProperty Name="kategorien">
+              <ScalarProperty Name="kat_id" ColumnName="fk_kat_super_kategorie" />
+            </EndProperty>
+            <EndProperty Name="kategorien1">
+              <ScalarProperty Name="kat_id" ColumnName="kat_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_kat_super_kategorie" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_p_kategorie" TypeName="WebshopModel.FK_p_kategorie" StoreEntitySet="produkte">
+            <EndProperty Name="kategorien">
+              <ScalarProperty Name="kat_id" ColumnName="fk_p_kategorie" />
+            </EndProperty>
+            <EndProperty Name="produkte">
+              <ScalarProperty Name="p_id" ColumnName="p_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_r_buchung" TypeName="WebshopModel.fk_r_buchung" StoreEntitySet="rechnungen">
+            <EndProperty Name="konto_buchungen">
+              <ScalarProperty Name="kb_id" ColumnName="fk_r_buchung" />
+            </EndProperty>
+            <EndProperty Name="rechnungen">
+              <ScalarProperty Name="r_nummer" ColumnName="r_nummer" />
+            </EndProperty>
+            <Condition ColumnName="fk_r_buchung" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_rek_buchung" TypeName="WebshopModel.fk_rek_buchung" StoreEntitySet="reklamationen">
+            <EndProperty Name="konto_buchungen">
+              <ScalarProperty Name="kb_id" ColumnName="fk_rek_buchung" />
+            </EndProperty>
+            <EndProperty Name="reklamationen">
+              <ScalarProperty Name="rek_id" ColumnName="rek_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_rek_buchung" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_t_kunde" TypeName="WebshopModel.fk_t_kunde" StoreEntitySet="telefonnummern">
+            <EndProperty Name="kunden">
+              <ScalarProperty Name="k_id" ColumnName="fk_t_kunde" />
+            </EndProperty>
+            <EndProperty Name="telefonnummern">
+              <ScalarProperty Name="t_nummer" ColumnName="t_nummer" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_w_kunde" TypeName="WebshopModel.FK_w_kunde" StoreEntitySet="warenkoerbe">
+            <EndProperty Name="kunden">
+              <ScalarProperty Name="k_id" ColumnName="fk_w_kunde" />
+            </EndProperty>
+            <EndProperty Name="warenkoerbe">
+              <ScalarProperty Name="w_id" ColumnName="w_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_rek_produkt" TypeName="WebshopModel.fk_rek_produkt" StoreEntitySet="reklamationen">
+            <EndProperty Name="produkte">
+              <ScalarProperty Name="p_id" ColumnName="fk_rek_produkt" />
+            </EndProperty>
+            <EndProperty Name="reklamationen">
+              <ScalarProperty Name="rek_id" ColumnName="rek_id" />
+            </EndProperty>
+            <Condition ColumnName="fk_rek_produkt" IsNull="false" />
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

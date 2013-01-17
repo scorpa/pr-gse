@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70bad8f31c7c411c8493bfbca3df6127" Name="Diagram1">
+        <EntityTypeShape EntityType="WebshopModel.Adresse" Width="1.5" PointX="1.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.benutzer" Width="1.5" PointX="1.5" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.bestellungen" Width="1.5" PointX="3.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.einkaufs_positionen" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.kategorien" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.konto_buchungen" Width="1.5" PointX="0.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.kunden" Width="1.5" PointX="1.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.laender" Width="1.5" PointX="1.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.lagerpositionen" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.produkte" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.rechnungen" Width="1.5" PointX="6" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.reklamationen" Width="1.5" PointX="6" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.standorte" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.telefonnummern" Width="1.5" PointX="3.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.warenkoerbe" Width="1.5" PointX="1.5" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebshopModel.warenkorb_positionen" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="WebshopModel.fk_a_kunde" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_a_land" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_b_adresse" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_r_adresse" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_s_adresse" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_k_benutzer" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_b_warenkorb" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_r_bestellung" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_rek_bestellung" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_ep_buchung" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_ep_produkt" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_ep_standort" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.FK_kat_super_kategorie" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.FK_p_kategorie" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_r_buchung" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_rek_buchung" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_t_kunde" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.FK_w_kunde" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_lp_produkt" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_lp_standort" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_rek_produkt" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_wp_produkt" ManuallyRouted="false" />
+        <AssociationConnector Association="WebshopModel.fk_wp_warenkorb" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
