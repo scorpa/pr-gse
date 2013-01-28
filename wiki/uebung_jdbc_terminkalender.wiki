@@ -2,4 +2,4 @@
 
 = Terminkalender =
 
-Importieren Sie das Projekt [http://pr-gse.googlecode.com/svn/wiki/uebungen/projects/terminkalender.zip terminkalender.zip] und implementieren Sie das Interface `Dao` entsprechend der Kommentare.
+Importieren Sie das Projekt [http://pr-gse.googlecode.com/svn/wiki/uebungen/projects/terminkalender.zip terminkalender.zip] und implementieren Sie das Interface `DataAccessObject` entsprechend der Kommentare mit einer Datenbankanbindung an die Datenbank, welche mit dem Script termine.mysql.sql / termine.derby.sql erstellt wird.
