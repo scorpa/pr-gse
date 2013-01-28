@@ -1,0 +1,5 @@
+#summary Terminkalender (JDBC)
+
+= Terminkalender =
+
+Importieren Sie das Projekt [http://pr-gse.googlecode.com/svn/wiki/uebungen/projects/terminkalender.zip terminkalender.zip] und implementieren Sie das Interface `Dao` entsprechend der Kommentare.
