@@ -5,6 +5,6 @@
 = Persistence Frameworks =
 
 
-=== Übungen ===
-|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+=== Ãœbungen ===
+|| *Aufgabe* || *MusterlÃ¶sung* || *Bemerkungen* ||
 || [uebung_persistence_frameworks_wanderverein Wanderverein] || || ||
