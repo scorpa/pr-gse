@@ -1,5 +1,10 @@
 #summary Persistence Frameworks
 
+
+
 = Persistence Frameworks =
 
-under construction
+
+=== Übungen ===
+|| *Aufgabe* || *Musterlösung* || *Bemerkungen* ||
+|| [uebung_persistence_frameworks_wanderverein Wanderverein] || || ||
