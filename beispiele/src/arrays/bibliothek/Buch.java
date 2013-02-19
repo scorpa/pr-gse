@@ -4,6 +4,7 @@
  */
 package arrays.bibliothek;
 
+
 /**
  * Buch-Klasse für Buchverwaltungs-Beispiel.
  * Eine einfache Datenhaltungsklasse mit gettern und settern
