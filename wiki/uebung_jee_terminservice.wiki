@@ -23,3 +23,19 @@ Es gibt eine WEB-Applikation, über welche sich Benutzer als Abonnenten registri
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/TerminService.png
 </p>
+
+=== Komponenten ===
+
+Die Applikation soll aus folgenden Komponenten aufgebaut werden:
+
+  * Session-Bean für die Registrierung
+  Diese Komponente bietet ein Service für das Erstellen eines neuen Abonnenten. Der neue Abonnent wird in der Datenbank persistiert.
+
+  * WEB-Applikation (JSF) für die Registrierung
+  Front-End für die Registrierung; verwendet das Service der oben beschriebenen Session-Bean.
+
+  * Message-Driven Bean für das Versenden von Termin-Informationen per E-Mail.
+  Diese Komponente empfängt Nachrichten aus einer JMS-Queue, welche die Informationen eines neuen Termins enthalten. Aus der Persistenz-Schicht holt sich die Komponente die Informationen über die Abonnenten. Dann sendet sie an alle Abonnenten die Termin-Informationen per E-Mail.
+
+  * Reminder
+  Diese Komponente wird als Timer implementiert, welcher Informationen über einen neuen Termin entgegennimmt und dann 24 Stunden vor dem Datum des Termins eine Nachricht an die oben beschriebene Message-Driven Bean in die JMS-Queue stellt um das Versenden von Erinnerungs-EMails zu veranlassen.  
