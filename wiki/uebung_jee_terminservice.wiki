@@ -39,3 +39,8 @@ Die Applikation soll aus folgenden Komponenten aufgebaut werden:
 
   * Reminder
   Diese Komponente wird als Timer implementiert, welcher Informationen über einen neuen Termin entgegennimmt und dann 24 Stunden vor dem Datum des Termins eine Nachricht an die oben beschriebene Message-Driven Bean in die JMS-Queue stellt um das Versenden von Erinnerungs-EMails zu veranlassen.  
+
+  * Session-Bean zum Entgegennehmen neuer Termine
+  Diese Komponente bietet ein Remote-Interface, über welches ein Standalone-Client einen neuen Termin übermitteln kann. Der neue Termin wird einerseits mit Hilfe der oben beschriebenen Message-Driven Bean an alle Abonnenten versandt, andererseits wird er an die Reminder-Komponente weitergereicht, um ein Erinnerungs-EMail zu veranlassen. 
+
+  Weiters soll jeder Termin auch persistiert werden.
