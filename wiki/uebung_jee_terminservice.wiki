@@ -16,6 +16,8 @@ Ein Administrator-User kann über einen Standalone-Client neue Termine erstellen
 Diese Informationen werden sofort per E-Mail an alle Abonnenten versandt. Zusätzlich werden die neuen Termin-Informationen persistiert.
 Weiters bekommen die Abonnenten noch einmal 24 Stunden vor dem Datum des Termins ein Erinnerungs-EMail.
 
+Es gibt eine WEB-Applikation, über welche sich Benutzer als Abonnenten registrieren können. Sie geben dort ihre EMail-Adresse und ihren Namen ein und bekommen künftig alle neuen Termin-Informationen zugesandt.
+
 
 
 <p align="center">
