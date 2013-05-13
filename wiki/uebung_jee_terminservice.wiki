@@ -2,6 +2,22 @@
 
 = Termin-Service =
 
+Es soll eine JEE-Applikation erstellt werden, welche ein Service zum Versenden von Terminen anbietet:
+
+Ein Administrator-User kann über einen Standalone-Client neue Termine erstellen, die dann an alle Abonnenten versendet werden.
+
+=== Die Applikation im Detail ===
+
+Über den Admin-Client können neue Termine erfasst werden:
+  * Datum und Uhrzeit
+  * Kurzfassung
+  * Details zum Termin
+
+Diese Informationen werden sofort per E-Mail an alle Abonnenten versandt. Zusätzlich werden die neuen Termin-Informationen persistiert.
+Weiters bekommen die Abonnenten noch einmal 24 Stunden vor dem Datum des Termins ein Erinnerungs-EMail.
+
+
+
 <p align="center">
 http://pr-gse.googlecode.com/svn/wiki/uebungen/images/TerminService.png
 </p>
