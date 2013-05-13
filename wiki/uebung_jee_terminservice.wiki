@@ -1,3 +1,7 @@
 #summary Übung: Termin-Service
 
 = Termin-Service =
+
+<p align="center">
+http://pr-gse.googlecode.com/svn/wiki/uebungen/images/TerminService.png
+</p>
