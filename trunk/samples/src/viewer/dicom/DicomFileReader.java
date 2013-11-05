@@ -40,6 +40,11 @@ public class DicomFileReader
 	// reader for loading the pixel data
 	private ImageReader imageReader;
 
+	/**
+	 * finds a reader for DICOM images;
+	 * this will only work if dcm4che libraries are in the classpath
+	 * @throws Exception
+	 */
 	public DicomFileReader() throws Exception
 	{
 		Iterator<ImageReader> readers = ImageIO.getImageReadersByFormatName("DICOM");
@@ -49,12 +54,24 @@ public class DicomFileReader
 			throw new Exception("no DICOM image reader found");
 	}
 	
+	/**
+	 * reads a DICOM file and returns a BufferedImage
+	 * @param dicomFile DICOM file to read
+	 * @return loaded image
+	 * @throws IOException on read errors
+	 */
 	public BufferedImage readImage(File dicomFile) throws IOException
 	{
 		imageReader.setInput(new FileImageInputStream(dicomFile));
 		return imageReader.read(0);
 	}
 	
+	/**
+	 * reads the header of all the DICOM files contained in the folder - or just the file if it's a single file
+	 * @param directory
+	 * @throws IOException in case of errors the method goes on trying to read the other files 
+	 * but throws an exception at the end
+	 */
 	public void readHeaders(File directory) throws IOException
 	{
 		if(!add(directory, patientMap))
