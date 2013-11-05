@@ -55,7 +55,7 @@ public class DicomFileReader
 	}
 	
 	/**
-	 * reads a DICOM file and returns a BufferedImage
+	 * reads a DICOM file and returns a BufferedImage;
 	 * @param dicomFile DICOM file to read
 	 * @return loaded image
 	 * @throws IOException on read errors
@@ -74,7 +74,7 @@ public class DicomFileReader
 	 */
 	public void readHeaders(File directory) throws IOException
 	{
-		if(!add(directory, patientMap))
+		if(!add(directory))
 			throw new IOException("there were errors when reading DICOM files - see log file for details");
 		
 	}
@@ -90,7 +90,13 @@ public class DicomFileReader
 		patientMap.clear();
 	}
 	
-	private boolean add(File f, Map<String, Patient> patients)
+	/**
+	 * reads a file and constructs the Patient, Study, Series and Image instance which are added to the 
+	 * patients map if not yet there
+	 * @param f file
+	 * @return true if there were no errors
+	 */
+	private boolean add(File f)
 	{
 		boolean ok = true;
 		if (f.isFile())
@@ -100,11 +106,11 @@ public class DicomFileReader
 				DicomInputStream input = new DicomInputStream(f);
 				DicomObject dcm = input.readDicomObject();
 				Patient p = readPatient(dcm);
-				Patient existing = patients.get(p.getPatientID());
+				Patient existing = patientMap.get(p.getPatientID());
 				if (existing == null)
 				{
 					existing = p;
-					patients.put(p.getPatientID(), existing);
+					patientMap.put(p.getPatientID(), existing);
 				}
 				Study study = existing.add(readStudy(dcm));
 				Series series = study.add(readSeries(dcm));
@@ -120,7 +126,7 @@ public class DicomFileReader
 		{
 			for (File sub : f.listFiles())
 			{
-				if (!add(sub, patients))
+				if (!add(sub))
 					ok = false;
 			}
 		}
@@ -128,7 +134,11 @@ public class DicomFileReader
 	}
 	
 	
-	
+	/**
+	 * reads the Patient-specific data from a DicomObject and constructs a Patient instance
+	 * @param dcm
+	 * @return
+	 */
 	private Patient readPatient(DicomObject dcm)
 	{
 		Patient p = new Patient();
@@ -139,6 +149,11 @@ public class DicomFileReader
 		return p;
 	}
 	
+	/**
+	 * reads the Study-specific data from a DicomObject and constructs a Study instance 
+	 * @param dcm
+	 * @return
+	 */
 	private Study readStudy(DicomObject dcm)
 	{
 		Study s = new Study();
@@ -148,6 +163,11 @@ public class DicomFileReader
 		return s;
 	}
 	
+	/**
+	 * reads the Series-specific data from a DicomObject and constructs a Series instance
+	 * @param dcm
+	 * @return
+	 */
 	private Series readSeries(DicomObject dcm)
 	{
 		Series s = new Series();
@@ -158,6 +178,11 @@ public class DicomFileReader
 		return s;
 	}
 	
+	/**
+	 * reads the Image-specific data from a DicomObject and constructs an Image instance
+	 * @param dcm
+	 * @return
+	 */
 	private Image readImage(DicomObject dcm)
 	{
 		Image image = new Image();
