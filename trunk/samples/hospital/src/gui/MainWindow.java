@@ -93,7 +93,7 @@ public class MainWindow extends JFrame
 		jlPatients = new JList();
 		jlPatients.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent arg0) {
-				do_jlPatients_valueChanged(arg0);
+				patientSelected(arg0);
 			}
 		});
 		jlPatients.setModel(new AbstractListModel() {
@@ -135,7 +135,7 @@ public class MainWindow extends JFrame
 		JButton btnSave = new JButton("Save");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				do_btnSave_actionPerformed(arg0);
+				savePatient(arg0);
 			}
 		});
 		
@@ -150,30 +150,27 @@ public class MainWindow extends JFrame
 		JButton btnCancel = new JButton("New");
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				do_btnCancel_actionPerformed(e);
+				newPatient(e);
 			}
 		});
 		panel.add(btnCancel);
 	}
 
-	protected void do_btnSave_actionPerformed(ActionEvent arg0) 
+	
+	
+	protected void savePatient(ActionEvent ae) 
 	{
 		try
 		{
-			
-			String name = tfName.getText();
-			Date birth = sdf.parse(tfBirth.getText());
-			int ssn = Integer.parseInt(tfSvnr.getText());
-			String city = tfCity.getText();
-			
-			Patient p = new Patient(ssn);
-			p.setBirth(birth);
-			p.setName(name);
-			Adress a = new Adress();
-			a.setCity(city);
-			p.setAdress(a);
-			
-			patientModel.addElement(p);
+			Patient p = jlPatients.getSelectedValue();
+			if (p == null)
+			{
+				newPatient(ae);
+			}
+			else
+			{
+				updatePatient(p);
+			}
 			
 		} catch (ParseException e)
 		{
@@ -184,26 +181,57 @@ public class MainWindow extends JFrame
 		}
 	}
 	
-	protected void do_btnCancel_actionPerformed(ActionEvent e) 
+	protected void newPatient(ActionEvent ae) 
 	{
-		tfName.setText("");
-		tfBirth.setText("");
-		tfSvnr.setText("");
-		tfCity.setText("");
+		try
+		{
+			Patient p = new Patient(Integer.parseInt(tfSvnr.getText()));
+			updatePatient(p);
+			patientModel.addElement(p);
+			jlPatients.setSelectedValue(p, true);
+		} catch (ParseException e)
+		{
+			JOptionPane.showMessageDialog(this, "Date format is not correct");
+		} catch(NumberFormatException e)
+		{
+			JOptionPane.showMessageDialog(this, "not a number");
+		}
 	}
 	
 	
-	protected void do_jlPatients_valueChanged(ListSelectionEvent arg0) 
+	protected void patientSelected(ListSelectionEvent lse) 
 	{
 		Patient p = jlPatients.getSelectedValue();
 		if (p != null)
 		{
-			tfName.setText(p.getName());
-			tfBirth.setText(sdf.format(p.getBirth()));
-			tfSvnr.setText(String.valueOf(p.getSvnr()));
-			
+			updateFields(p);
 		}
-		
-		
 	}
+	
+	private void updatePatient(Patient p) throws ParseException, NumberFormatException
+	{
+		String name = tfName.getText();
+		Date birth = sdf.parse(tfBirth.getText());
+		String city = tfCity.getText();
+		
+		p.setBirth(birth);
+		p.setName(name);
+		Adress a = new Adress();
+		a.setCity(city);
+		p.setAdress(a);
+		
+		
+		jlPatients.repaint();
+	}
+	
+	
+	private void updateFields(Patient p)
+	{
+		tfName.setText(p.getName());
+		tfBirth.setText(sdf.format(p.getBirth()));
+		tfSvnr.setText(String.valueOf(p.getSvnr()));
+		tfCity.setText(p.getAdress().getCity());
+	}
+	
+	
 }
