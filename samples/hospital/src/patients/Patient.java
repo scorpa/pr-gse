@@ -17,6 +17,7 @@ public class Patient
 	public Patient(int svnr)
 	{
 		this.svnr = svnr;
+		this.adress = new Adress();
 	}
 
 

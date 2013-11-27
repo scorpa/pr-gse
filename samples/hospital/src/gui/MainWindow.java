@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
@@ -27,18 +28,27 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
+import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
 
 public class MainWindow extends JFrame
 {
 
+	// Oberflächenelemente
 	private JPanel contentPane;
 	private JList<Patient> jlPatients;
 	private JTextField tfName;
 	private JTextField tfBirth;
 	private JTextField tfSvnr;
 	private JTextField tfCity;
+	private JRadioButton rdbtnFemale;
+	private JRadioButton rdbtnMale;
+
 	
+	// references to data
 	private DefaultListModel<Patient> patientModel = new DefaultListModel<>();
+
+	// additional tools
 	private SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 	
 	
@@ -70,8 +80,14 @@ public class MainWindow extends JFrame
 	public MainWindow()
 	{
 		initFrame();
+		
+		// JList a reference to its data model
 		jlPatients.setModel(patientModel);
-		// hierher Code, welcher nicht zum Fensteraufbau gehört
+		
+		// add the radio buttons to a button group
+		ButtonGroup group = new ButtonGroup();
+		group.add(rdbtnFemale);
+		group.add(rdbtnMale);
 	}
 	
 	private void initFrame()
@@ -118,6 +134,12 @@ public class MainWindow extends JFrame
 		panel.add(tfName);
 		tfName.setColumns(10);
 		
+		rdbtnMale = new JRadioButton("male");
+		panel.add(rdbtnMale);
+		
+		rdbtnFemale = new JRadioButton("female");
+		panel.add(rdbtnFemale);
+		
 		JLabel lblDateOfBirth = new JLabel("Date of Birth (dd.MM.yyyyy)");
 		panel.add(lblDateOfBirth);
 		
@@ -157,7 +179,7 @@ public class MainWindow extends JFrame
 	}
 
 	
-	
+	// will be invoked by clicking the SAVE button
 	protected void savePatient(ActionEvent ae) 
 	{
 		try
@@ -181,6 +203,7 @@ public class MainWindow extends JFrame
 		}
 	}
 	
+	// will be invoked by clicking the NEW button
 	protected void newPatient(ActionEvent ae) 
 	{
 		try
@@ -199,6 +222,7 @@ public class MainWindow extends JFrame
 	}
 	
 	
+	// will be invoked when a patient is selected in the list
 	protected void patientSelected(ListSelectionEvent lse) 
 	{
 		Patient p = jlPatients.getSelectedValue();
@@ -208,6 +232,7 @@ public class MainWindow extends JFrame
 		}
 	}
 	
+	// used by newPatient() and savePatient()
 	private void updatePatient(Patient p) throws ParseException, NumberFormatException
 	{
 		String name = tfName.getText();
@@ -216,21 +241,31 @@ public class MainWindow extends JFrame
 		
 		p.setBirth(birth);
 		p.setName(name);
-		Adress a = new Adress();
+		Adress a = p.getAdress();
 		a.setCity(city);
 		p.setAdress(a);
+		
+		if (rdbtnFemale.isSelected())
+			p.setFemale(true);
+		else
+			p.setFemale(false);
 		
 		
 		jlPatients.repaint();
 	}
 	
-	
+	// used by patientSelected()
 	private void updateFields(Patient p)
 	{
 		tfName.setText(p.getName());
 		tfBirth.setText(sdf.format(p.getBirth()));
 		tfSvnr.setText(String.valueOf(p.getSvnr()));
 		tfCity.setText(p.getAdress().getCity());
+		if (p.isFemale())
+			rdbtnFemale.setSelected(true);
+		else
+			rdbtnMale.setSelected(true);
+			
 	}
 	
 	
